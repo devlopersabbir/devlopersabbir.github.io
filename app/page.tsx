@@ -1,13 +1,21 @@
-import React from "react";
+import About from "@/components/about";
+import Contact from "@/components/contact";
+import Experience from "@/components/experience";
+import Intro from "@/components/intro";
+import Projects from "@/components/projects";
+import SectionDivider from "@/components/section-divider";
+import Skills from "@/components/skills";
 
-const Home = () => {
+export default function Home() {
   return (
-    <div className="flex w-full h-[100vh] justify-center items-center">
-      <h1 className="flex justify-center items-center text-2xl font-semibold">
-        Comming soon
-      </h1>
-    </div>
+    <main className="flex flex-col items-center px-4">
+      <Intro />
+      <SectionDivider />
+      <About />
+      <Projects />
+      <Skills />
+      <Experience />
+      <Contact />
+    </main>
   );
-};
-
-export default Home;
+}
