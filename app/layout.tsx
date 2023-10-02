@@ -1,6 +1,7 @@
 import React from "react";
 import { Metadata } from "next";
 import { __about } from "@/constants";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: __about.title,
