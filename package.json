@@ -7,7 +7,7 @@
     "url": "https://devlopersabbir.github.io"
   },
   "description": "Developer Sabbir | Personal Portfolio website",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
