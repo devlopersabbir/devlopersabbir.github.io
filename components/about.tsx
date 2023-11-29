@@ -19,10 +19,10 @@ export default function About() {
     >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
-        Hi, this is Sabbir—a senior developer specializing in ReactJs, NodeJs,
-        React-native, ElectronJs, NextJs, and Spring boot. I have been
-        developing full-stack applications for more than 4 years. I am an expert
-        in JavaScript because I love it so much.😍
+        Hi, this is Sabbir—a senior developer specializing in Spring-boot,
+        ReactJs, NodeJs, FastAPI, React-native, ElectronJs, and also NextJs. I
+        have been developing full-stack applications for more than 4 years. I am
+        an expert in JavaScript because I love it so much.😍
       </p>
 
       <p>
@@ -39,7 +39,7 @@ export default function About() {
         >
           "ST Sabbir"
         </a>{" "}
-        to more than 400 subscribers.
+        to more than <span className="font-semibold">650+</span> subscribers.
       </p>
     </motion.section>
   );
