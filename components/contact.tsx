@@ -33,23 +33,21 @@ export default function Contact() {
 
       <p className="text-gray-700 -mt-6 dark:text-white/80">
         Please contact me directly at{" "}
-        <a className="underline" href="mailto:example@gmail.com">
-          example@gmail.com
+        <a className="underline" href="mailto:devlopersabbir@gmail.com">
+          devlopersabbir@gmail.com
         </a>{" "}
         or through this form.
       </p>
 
       <form
         className="mt-10 flex flex-col dark:text-black"
-        action={async (formData) => {
-          const { data, error } = await sendEmail(formData);
+        action={async (formData: FormData) => {
+          const { error } = await sendEmail(formData);
 
-          if (error) {
-            toast.error(error);
-            return;
-          }
-
+          if (error) return toast.error(error);
           toast.success("Email sent successfully!");
+          formData.set("senderEmail", "");
+          formData.set("message", "");
         }}
       >
         <input
