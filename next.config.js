@@ -3,7 +3,7 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: "https",
+        protocol: "https" && "http",
         hostname: "images.unsplash.com",
       },
     ],
@@ -11,7 +11,6 @@ const nextConfig = {
   experimental: {
     serverActions: true,
   },
-  output: "export",
 };
 
 module.exports = nextConfig;
