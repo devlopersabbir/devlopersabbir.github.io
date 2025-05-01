@@ -1,0 +1,24 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+import { getEntry, render } from "astro:content";
+
+const { slug } = Astro.params;
+const post = await getEntry("blog", `${slug}`);
+
+if (!post) {
+  throw new Error(`Post not found: ${slug}`);
+}
+
+const { Content, remarkPluginFrontmatter } = await render(post);
+const { data } = post;
+---
+
+<BlogLayout title={data.title}>
+  <article class="max-w-3xl mx-auto py-16 px-6">
+    <h1 class="text-4xl font-bold mb-4">{data.title}</h1>
+    <p class="text-sm text-gray-500 mb-8">
+      Published on {data.pubDate} — By {data.author}
+    </p>
+    <Content />
+  </article>
+</BlogLayout>
