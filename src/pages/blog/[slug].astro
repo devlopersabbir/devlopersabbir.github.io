@@ -2,14 +2,23 @@
 import BlogLayout from "../../layouts/BlogLayout.astro";
 import { getEntry, render } from "astro:content";
 
-const { slug } = Astro.params;
-const post = await getEntry("blog", `${slug}`);
+export async function getStaticPaths() {
+  const { getCollection } = await import("astro:content");
+  const blogPosts = await getCollection("blog");
 
-if (!post) {
-  throw new Error(`Post not found: ${slug}`);
+  return blogPosts.map((post) => ({
+    params: { slug: post.slug },
+  }));
 }
 
-const { Content, remarkPluginFrontmatter } = await render(post);
+const { slug } = Astro.params;
+const post = await getEntry("blog", slug);
+
+if (!post) {
+  return Astro.redirect("/404");
+}
+
+const { Content } = await render(post);
 const { data } = post;
 ---
 
