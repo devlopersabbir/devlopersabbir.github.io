@@ -1,0 +1,19 @@
+---
+import { menus } from "../../constants";
+---
+
+<header class="shadow-zinc-800 shadow">
+  <nav class="container mx-auto px-2 py-2.5">
+    <div class="flex-between-center">
+      <ul class="flex space-x-3">
+        {
+          menus.map((menu) => (
+            <li class="nav-item">
+              <a href={menu.path}>{menu.label}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </nav>
+</header>

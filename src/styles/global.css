@@ -1,9 +1,17 @@
 @import "tailwindcss";
-html {
-  font-family: "Inter", sans-serif;
+
+/* theme */
+
+/* apply */
+.nav-item {
+  @apply py-1 px-3 bg-zinc-800 border border-zinc-700 rounded;
 }
-h1,
-h2,
-h3 {
-  font-family: "Sora", sans-serif;
+.flex-center {
+  @apply flex justify-center items-center;
+}
+.flex-between-center {
+  @apply flex justify-between items-center;
+}
+.flex-col-center {
+  @apply flex flex-col items-center;
 }

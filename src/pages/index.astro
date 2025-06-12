@@ -1,18 +1,20 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Hero from "../components/Hero.astro";
-import Skills from "../components/Skills.astro";
-import Projects from "../components/Projects.astro";
-import Contact from "../components/Contact.astro";
-import About from "../components/About2.astro";
-import RecentArticles from "../components/RecentArticles.astro";
+import RootLayout from "../layouts/root-layout.astro";
+import { about } from "../constants";
 ---
 
-<Layout title="Sabbir Hossain – Software Engineer">
-  <Hero />
-  <About />
-  <Skills />
-  <Projects />
-  <RecentArticles />
-  <Contact />
-</Layout>
+<RootLayout>
+  <div class="flex-between-center gap-6 my-5 md:my-2">
+    <div class="flex flex-col flex-1">
+      <h1 class="text-2xl font-bold">{about.name}</h1>
+      <h3 class="text-xl font-semibold mb-4">{about.title}</h3>
+      <p class="font-normal opacity-80 leading-relaxed mb-4">
+        {about.description}
+      </p>
+    </div>
+
+    <div class="flex-shrink-0 rounded-full h-40 w-40 border-2 overflow-hidden">
+      <img src={about.image} class="rounded-full w-full h-full object-cover" />
+    </div>
+  </div>
+</RootLayout>
