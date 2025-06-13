@@ -15,3 +15,10 @@
 .flex-col-center {
   @apply flex flex-col items-center;
 }
+.flex-col-between {
+  @apply flex flex-col justify-between items-center;
+}
+
+.container {
+  max-width: 55rem;
+}

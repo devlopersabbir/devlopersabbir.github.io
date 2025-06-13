@@ -1,20 +1,20 @@
 ---
+import Hero from "../components/hero.astro";
+import RecentBlog from "../components/recent-blog.astro";
+import RecentProjects from "../components/recent-project.astro";
 import RootLayout from "../layouts/root-layout.astro";
-import { about } from "../constants";
 ---
 
-<RootLayout>
-  <div class="flex-between-center gap-6 my-5 md:my-2">
-    <div class="flex flex-col flex-1">
-      <h1 class="text-2xl font-bold">{about.name}</h1>
-      <h3 class="text-xl font-semibold mb-4">{about.title}</h3>
-      <p class="font-normal opacity-80 leading-relaxed mb-4">
-        {about.description}
-      </p>
-    </div>
-
-    <div class="flex-shrink-0 rounded-full h-40 w-40 border-2 overflow-hidden">
-      <img src={about.image} class="rounded-full w-full h-full object-cover" />
-    </div>
-  </div>
+<RootLayout pageTitle="Personal Portfolio website">
+  <section
+    class="hero-section flex flex-col-reverse md:flex-row md:items-center gap-6 my-5"
+  >
+    <Hero />
+  </section>
+  <section class="recent-projects mb-4">
+    <RecentProjects />
+  </section>
+  <section class="recent-articles mb-4">
+    <RecentBlog />
+  </section>
 </RootLayout>
