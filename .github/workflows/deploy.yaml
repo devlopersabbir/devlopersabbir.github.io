@@ -15,7 +15,7 @@ jobs:
     steps:
       - name: Checkout repository using git
         uses: actions/checkout@v4
-      - nmae: Install, Build and upload site
+      - name: Install, Build and upload site
         uses: withastro/action@v3
         with:
           node-version: 20,
