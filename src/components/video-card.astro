@@ -1,0 +1,45 @@
+---
+import PlayButton from "../assets/play-button.astro";
+import { formatDate } from "../libs/utils";
+type Props = {
+  video: {
+    title: string;
+    videoId: string;
+    link: string;
+    thumbnail: string;
+    pubDate: string; // ISO 8601 string from RSS feed
+  };
+};
+
+const { video } = Astro.props;
+const formattedDate = formatDate(video.pubDate);
+---
+
+<div
+  class="block bg-zinc-900 border border-zinc-700 rounded-lg p-3 hover:border-blue-500 transition-all overflow-hidden"
+>
+  <a href={video.link} target="_blank" rel="noopener noreferrer" class="block">
+    <!-- Video Thumbnail -->
+    <div class="relative w-full aspect-video rounded-md overflow-hidden mb-3">
+      <img
+        src={video.thumbnail}
+        alt={`Thumbnail for ${video.title}`}
+        class="w-full h-full object-cover transition-transform duration-300 ease-in-out hover:scale-105"
+        loading="lazy"
+        onerror="this.onerror=null;this.src='https://placehold.co/480x270/27272a/FFF?text=Video+Thumbnail';"
+      />
+      <!-- Play button overlay (simple SVG for visual flair) -->
+      <PlayButton />
+    </div>
+
+    <!-- Title and Date Section -->
+    <div class="flex justify-between items-start mb-3">
+      <h3
+        class="text-md font-semibold cursor-pointer text-white hover:text-blue-400 transition-colors line-clamp-2"
+      >
+        {video.title}
+      </h3>
+      <span class="text-xs text-zinc-400 min-w-max ml-2">{formattedDate}</span>
+    </div>
+  </a>
+</div>
