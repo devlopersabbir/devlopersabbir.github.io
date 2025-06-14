@@ -1,0 +1,33 @@
+name: Deploy to the Github Pages
+
+on:
+  push:
+    branches: ["main"]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository using git
+        uses: actions/checkout@v4
+      - nmae: Install, Build and upload site
+        uses: withastro/action@v3
+        with:
+          node-version: 20,
+          package-manager: pnpm@latest
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{steps.deployment.ouputs.page_url}}
+    steps:
+      - name: Deploy to Github Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
