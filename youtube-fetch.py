@@ -7,7 +7,7 @@ FEED_URL = f"https://www.youtube.com/feeds/videos.xml?channel_id={CHANNEL_ID}"
 feed = feedparser.parse(FEED_URL)
 
 videos = []
-for entry in feed.entries[:5]:  # latest 5
+for entry in feed.entries[:4]:  # latest 4
     video_id = entry['yt_videoid']
     videos.append({
         'title': entry['title'],
