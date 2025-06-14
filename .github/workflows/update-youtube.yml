@@ -24,7 +24,7 @@ jobs:
       - name: Run fetch script
         run: python youtube-fetch.py
 
-      - name: Commit and push
+      - name: Commit and Push to GitHub
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
         run: |
@@ -33,4 +33,4 @@ jobs:
           git add src/content/youtube/card.json
           git commit -m "📺 update: latest YouTube RSS (Python)" || echo "No changes to commit"
           git remote set-url origin https://x-access-token:${GH_PAT}@github.com/${{ github.repository }}
-          git push
+          git push origin HEAD:main
