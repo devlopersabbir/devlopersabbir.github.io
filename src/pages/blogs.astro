@@ -4,7 +4,7 @@ import RootLayout from "../layouts/blog-layout.astro";
 const posts = Object.values(
   import.meta.glob("../articles/*.md", { eager: true })
 );
-posts.map((post: any) => console.log(post));
+// posts.map((post: any) => console.log(post));
 ---
 
 <RootLayout>
