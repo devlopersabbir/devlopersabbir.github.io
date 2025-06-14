@@ -22,7 +22,7 @@ jobs:
         run: pip install feedparser
 
       - name: Run fetch script
-        run: python youtube_fetch.py
+        run: python youtube-fetch.py
 
       - name: Commit and push
         run: |
