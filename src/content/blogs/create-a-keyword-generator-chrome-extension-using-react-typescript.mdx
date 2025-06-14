@@ -1,0 +1,550 @@
+---
+title: Create a Keyword Generator Chrome Extension Using React TypeScript🔥
+description: How to create google chrome extension using typescript and react js.
+pubDate: 2025-06-14
+author: "Sabbir Hossain Shuvo"
+image: "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/rijpotn04cyud4x4su71.png"
+tags: ["chrome-extension", "typescript", "react"]
+---
+
+## Introduction
+
+Browser extensions have become increasingly popular in recent times. They are no longer just simple mini applications, but rather well-tailored, profitable products that are used by hundreds of users every day. As these extensions grow in size and complexity, it becomes important to consider building them using helpful JavaScript libraries. By leveraging these libraries, developers can create more attractive and engaging extensions that offer a better user experience. With the right tools and techniques, browser extensions can be transformed into powerful tools that users rely on every day.
+
+In this tutorial I'm going to teach you, how you can create a a use-full and very power-full google chrome extension. Anyway, to do this we are goin to use [CRXJS](https://crxjs.dev/vite-plugin/) which is a [vite](https://vitejs.dev/) plugin and also most famous and use-full [ReactJs](https://react.dev/).
+
+Here's a little sneak peek 👀
+
+- Main screen
+  ![@devlopersabbir extension screen1](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/3h33334twusocsnsnxq1.png)
+- Modal screen
+  ![@devlopersabbir extension screen2](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/0hy2veaw4rp2kxfuq23r.png)
+
+## Technology
+
+Let's talk about about technology which we are goin to use in this tutorial.
+
+## Vite
+
+[Vite](https://vitejs.dev/) is a build tool for modern web applications. It is designed to be fast and efficient allowing developers to quickly build prototype their applications. Vite supports a variety of modern web technologies, including ES modules, TypeScript, and CSS preprocessors. It also includes a built-in development server with hot module replacement, making it easy to develop and test applications in real-time. Vite is a popular choice for building Vue.js applications, but it can also be used with other frameworks and libraries. Overall, Vite is a powerful and flexible tool that can help streamline the development process for modern web applications.
+
+## React | Preact
+
+ReactJS is a JavaScript library for building user interfaces. It uses a component-based and a virtual DOM to efficiently update the UI. ReactJS is fast, flexible, and widely used in modern web development.
+
+**or**
+
+If you want you can use [Preact](https://peerjs.com/). PreactJS is a lightweight alternative to ReactJS, designed for high performance and compatibility. is often used in applications where performance is critical and has a small footprint.
+
+I think you need know what is CRXJS. So, here is my the question and answer for you🙂
+
+## What is CRXJS?
+
+CRXJS Vite Plugin is a tool that helps you make Chrome Extensions using modern web development technology.
+
+Alright now we can jump to start coding 🚀
+
+## Code
+
+To create our CRXJS project just we need to run this code into our terminal. There was a funny thing @jacksteamdev does predict to create a CRXJS project it take only 60 second.😍
+
+```console
+npm init vite@latest
+```
+
+Now select typescript as a template and choice React for this project.
+
+> When init finished then run this command to install plugin.
+
+```console
+yarn add @crxjs/vite-plugin@latest -D
+```
+
+Finally we are ready to see our output🙂. Just 1 step is left.
+
+### We have to update the Vite config
+
+To do that just go to your project directory and find `vite.config.ts`. Open this file then delete everything and paste this code right there.
+
+```ts
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import { crx } from "@crxjs/vite-plugin";
+import manifest from "./manifest.json";
+
+export default defineConfig({
+  plugins: [react(), crx({ manifest })],
+});
+```
+
+Now if I don't wrong currently your are face a error message in the 4 line.😅
+Howerver to fixed this issue just call `manifest.json` from `tsconfig.node.json`.
+Open `tsconfig.node.json` from the project dir. Now you have to add `manifest.json` file in the include array. Anyway here is the code example.
+
+```json
+{
+  "compilerOptions": {
+    "composite": true,
+    "skipLibCheck": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["vite.config.ts", "manifest.json"]
+}
+```
+
+Now create a file called `manifest.json` with this command
+
+```console
+touch manifest.json
+```
+
+After creating `manifest.json` file then past this code into your new manifest.json file.
+
+```json
+{
+  "name": "Keyword Maker",
+  "description": "A powerfull keyword maker google chrome extension. Give a paragraph it's make keyword for you.",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Keyword Maker",
+    "default_icon": {
+      "16": "icon.png",
+      "24": "icon.png",
+      "32": "icon.png"
+    }
+  },
+  "icons": {
+    "128": "icon.png",
+    "16": "icon.png",
+    "256": "icon.png",
+    "48": "icon.png"
+  }
+}
+```
+
+As you can see I'm using icon. Bu we don't have any icon yet. However, you can download a icon from anywhere and paste into your `/public` folder.
+
+I hope now your project directory should look like this:
+
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5chnftvlua01xgfbxpo5.png)
+
+## Run run the development server
+
+```console
+yarn run dev
+```
+
+That's it! CRXJS will do the rest.
+
+Now it's ready to add to our chrome. to do this follow this step. or if you know to load manifest in extension then continue this...
+
+## Add the extension to Chrome
+
+Let's try it out.
+
+When the build completes, open Chrome or Edge and navigate to chrome://extensions. Make sure to turn on the developer mode switch.
+Drag your `dist` folder into the Extensions Dashboard to install it. Your extension icon will be in the top bar. The icon will be the first letter of the extension's name.
+
+Now just change the App `width`;
+
+```css
+/* App.css */
+.App {
+  text-align: center;
+  min-width: 350px;
+}
+```
+
+Now can see like this output. 🚀
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5430tp5mvsx4tpv47o0t.png)
+
+## Add UI library and another dependencies.
+
+For the UI purpose I'm going to use [Chakra-UI](https://chakra-ui.com/getting-started) which is very popular `component based UI` library. Also we will a use a [react-hot-toast](https://react-hot-toast.com/) for make a awesome toast.
+
+```console
+yarn add @chakra-ui/react @emotion/react @emotion/styled framer-motion react-hot-toast axios && yarn dev
+```
+
+So far, we have ready to create awesome UI and functionality.
+Anyway, we have to set `ChakraProvider` from the `Chakra-UI` also we have to set Toaster in the `main.tsx` file. To do that just go to the src -> main.tsx
+
+```tsx
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.tsx";
+// import "./index.css";
+import { ChakraProvider } from "@chakra-ui/react";
+import { Toaster } from "react-hot-toast";
+
+ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
+  <React.StrictMode>
+    <ChakraProvider>
+      {" "}
+      // chakra provider setup
+      <Toaster position="bottom-center" reverseOrder={false} /> // toaster
+      provider setup
+      <App />
+    </ChakraProvider>
+  </React.StrictMode>
+);
+```
+
+**let's create main screen UI**
+Here is the code. for App.tsx
+
+```tsx
+import {
+  Button,
+  Center,
+  Container,
+  HStack,
+  Heading,
+  Image,
+  Text,
+  Textarea,
+  VStack,
+} from "@chakra-ui/react";
+
+const App = () => {
+  return (
+    <Container w="400px" h="auto" mx="auto" p={4}>
+      <Center>
+        <Image w="16" src="icon.png" alt="logo" />
+      </Center>
+      <VStack spacing={0} my={2}>
+        <Heading as="h1" fontSize="xl" fontWeight="bold">
+          Keyword Macker AI
+        </Heading>
+        <Text
+          fontSize="sm"
+          color="gray.600"
+          fontWeight="400"
+          textAlign="center"
+        >
+          Past your text in the bellow section and it will generate{" "}
+          <strong>Keyword</strong> for you. 🙂
+        </Text>
+      </VStack>
+      <VStack my={4}>
+        <Textarea w="full" h="auto" placeholder="Past your text here..." />
+        <Button colorScheme="twitter">Generate Keyworld</Button>
+      </VStack>
+      <HStack
+        w="full"
+        textAlign="center"
+        fontWeight="semibold"
+        mt={3}
+        justify="center"
+      >
+        <Text>Created by </Text>
+        <Text
+          cursor="pointer"
+          color="green"
+          textDecor="underline"
+          onClick={() =>
+            window.open("https://www.showwcase.com/devlopersabbir")
+          }
+        >
+          @devlopersabbir
+        </Text>
+      </HStack>
+    </Container>
+  );
+};
+
+export default App;
+```
+
+Now create some `state` using `useState` React hooks. I'm going to create `text` state for store prompt text. And 2nd one is `keyword` state that will be help us to store our response data as keyword. 3rd is `loading` state to make `spinner` when `HTTP` request is pending... And the last one is `useDisclosure` hooks from the `@chakra-ui/react` because of we will create a modal later.
+
+Also we have to take text from the `onChange` method. after then now set a click handler into our generate button.
+
+**State**
+
+```tsx
+const [text, setText] = useState<string>("");
+const [keyword, setKeyword] = useState<string>("");
+const [loading, setLoading] = useState<boolean>(false);
+const { isOpen, onOpen, onClose } = useDisclosure();
+```
+
+**Handler Function**
+
+```tsx
+const generate = async () => {};
+```
+
+**Update our code**
+
+```tsx
+<Textarea
+          onChange={(event: any) => setText(event.target.value)}
+          w="full"
+          value={text}
+          h="auto"
+          placeholder="Past your text here..."
+        />
+        <Button disabled={loading} colorScheme="twitter" onClick={generate}>
+          {loading ? <Spinner /> : "Generate Keyword"}
+        </Button>
+```
+
+Our function should be async because of we will make `HTTP` request.
+
+## OpenAI integration
+
+Now we are going to create api_key for generate our keyword. We will use [OpenAI](https://openai.com/) platform. If you have openAi account then okey or if not then create a new account. And now go to this url to create api key [Click me to create api_key](https://platform.openai.com/account/api-keys).
+
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/w0hdwod3370j6t7rsjh2.png)
+Copy secret key and paste anywhere because of we will never see this key again.
+
+Now create a variable in the `App.tsx` file called `YOUR_API_KEY`.
+
+```tsx
+const YOUR_API_KEY = "Enter your secret key here...";
+```
+
+So far, we have finished a lot's of thing. At this time we are ready to make a `http` request using axios and our `api key`.
+
+# Configure body data & header
+
+Make a object using `data` variable for prompt data.
+
+```tsx
+const datas: any = {
+  model: "text-davinci-003",
+  prompt: `Make some keyword with this text. For example prompt is javascript and we expect response should be like js, javascript, javascript course, js tutorial, JavaScript Programing.. etc. Here is the text prompt: ${text}`,
+  temperature: 0.5,
+  max_tokens: 200,
+  top_p: 1.0,
+  frequency_penalty: 0.8,
+  presence_penalty: 0.0,
+};
+```
+
+Now set up our header with bearer token.
+
+```tsx
+ headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${YOUR_API_KEY}`,
+          },
+```
+
+# Alright now you are ready to seen full `App.tsx` file???
+
+Here is our complete `App.tsx` code.
+
+```tsx
+import {
+  Button,
+  Center,
+  Container,
+  HStack,
+  Heading,
+  Image,
+  Spinner,
+  Text,
+  Textarea,
+  VStack,
+  useDisclosure,
+} from "@chakra-ui/react";
+import { useState } from "react";
+import Modals from "./components/Modals";
+import axios from "axios";
+import { toast } from "react-hot-toast";
+
+const App = () => {
+  const YOUR_API_KEY = "sk-xxxxxxxxxxxxxxxxxxxxxxxx";
+  const [text, setText] = useState<string>("");
+  const [keyword, setKeyword] = useState<string>("");
+  const [loading, setLoading] = useState<boolean>(false);
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
+  const generate = async () => {
+    setLoading(true);
+    const datas: any = {
+      model: "text-davinci-003",
+      prompt: `Make some keyword with this text. For example prompt is javascript and we expect response should be like js, javascript, javascript course, js tutorial, JavaScript Programing.. etc. Here is the text prompt: ${text}`,
+      temperature: 0.5,
+      max_tokens: 200,
+      top_p: 1.0,
+      frequency_penalty: 0.8,
+      presence_penalty: 0.0,
+    };
+    try {
+      const { data } = await axios.post(
+        "https://api.openai.com/v1/completions",
+        datas,
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${YOUR_API_KEY}`,
+          },
+        }
+      );
+      const keyword = data.choices[0]?.text?.trim();
+      toast.success("Keyword generated😍");
+      setText("");
+      onOpen();
+      return setKeyword(keyword);
+    } catch (error: any) {
+      if (!error?.response?.data || !error?.response)
+        return toast.error("Something went wrong!😒");
+
+      const mess = error?.response.data?.message;
+      if (mess) return toast.error(mess);
+      toast.error("Fail to generate keyword😪");
+    } finally {
+      setLoading(false);
+    }
+  };
+  return (
+    <Container w="400px" h="auto" mx="auto" p={4}>
+      <Center>
+        <Image w="16" src="icon.png" alt="logo" />
+      </Center>
+      <VStack spacing={0} my={2}>
+        <Heading as="h1" fontSize="xl" fontWeight="bold">
+          Keyword Macker AI
+        </Heading>
+        <Text
+          fontSize="sm"
+          color="gray.600"
+          fontWeight="400"
+          textAlign="center"
+        >
+          Past your text in the bellow section and it will generate{" "}
+          <strong>Keyword</strong> for you. 🙂
+        </Text>
+      </VStack>
+      <VStack my={4}>
+        <Textarea
+          onChange={(event: any) => setText(event.target.value)}
+          w="full"
+          value={text}
+          h="auto"
+          placeholder="Past your text here..."
+        />
+        <Button disabled={loading} colorScheme="twitter" onClick={generate}>
+          {loading ? <Spinner /> : "Generate Keyworld"}
+        </Button>
+      </VStack>
+      <HStack
+        w="full"
+        textAlign="center"
+        fontWeight="semibold"
+        mt={3}
+        justify="center"
+      >
+        <Text>Created by </Text>
+        <Text
+          cursor="pointer"
+          color="green"
+          textDecor="underline"
+          onClick={() =>
+            window.open("https://www.showwcase.com/devlopersabbir")
+          }
+        >
+          @devlopersabbir
+        </Text>
+      </HStack>
+      <Modals data={keyword} isOpen={isOpen} onClose={onClose} />
+    </Container>
+  );
+};
+
+export default App;
+```
+
+> Note: As we can see here have a `Modals` component. But we haven't create like this component yet.
+> To do that let's create a component folder into src -> component -> and create a component called `Modals`.
+
+So, here is our modal component code.
+
+```tsx
+import {
+  Button,
+  Modal,
+  ModalBody,
+  ModalCloseButton,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
+  ModalOverlay,
+  Text,
+} from "@chakra-ui/react";
+import { toast } from "react-hot-toast";
+
+interface IModals {
+  isOpen: boolean;
+  onClose: () => void;
+  data: string;
+}
+
+const Modals = ({ isOpen, onClose, data }: IModals) => {
+  return (
+    <Modal size="sm" isOpen={isOpen} onClose={onClose}>
+      <ModalOverlay />
+      <ModalContent>
+        <ModalHeader>Keyword</ModalHeader>
+        <ModalCloseButton />
+        <ModalBody>
+          <Text fontSize="lg" fontWeight="500">
+            {data}
+          </Text>
+        </ModalBody>
+        <ModalFooter>
+          <Button colorScheme="blue" mr={3} onClick={onClose}>
+            Close
+          </Button>
+          <Button colorScheme="green">Copy</Button>
+        </ModalFooter>
+      </ModalContent>
+    </Modal>
+  );
+};
+
+export default Modals;
+```
+
+As we can see in the `Modals` component we receive 3 parameter as a props. Also we use a `interface`. However, have you seen this?? we have `copy button`😎.
+What do you thing??🤣
+Sorry for lot's of fun. We will create a simple functionality for copy our `result keyword`. Okey, let's create...
+
+## Copy keyword in clipboard
+
+```tsx
+const handleCopyClick = async () => {
+  try {
+    await navigator.clipboard.writeText(data);
+    toast.success("🚀 Keyword copied🥹");
+  } catch (error) {
+    toast.error("Fail to copy the keyword!");
+  }
+};
+
+// add replace copy button line with this line.
+<Button onClick={handleCopyClick} colorScheme="green">
+  Copy
+</Button>;
+```
+
+# Finished
+
+Finished our extension😁
+Anyway, if you want you see full source code into my [GitHub](https://github.com/devlopersabbir) profile [Repo Link](https://github.com/devlopersabbir/keyword-generator-chrome-extension). Also here is the [YouTube](https://www.youtube.com/c/stsabbir) video [tutorial link](https://youtu.be/LOcWxUQbYPY)
+.
+.
+
+## Author
+
+Full Name [Sabbir Hossain Shuvo](https://www.showwcase.com/devlopersabbir). And the GitHub profile is [https://github.com/devlopersabbir](https://github.com/devlopersabbir).
+
+For support just [Buy Me A Coffee](https://www.buymeacoffee.com/devlopersabbir)
+[https://www.buymeacoffee.com/devlopersabbir](https://www.buymeacoffee.com/devlopersabbir)

@@ -1,0 +1,60 @@
+---
+title: My Second Blog Post
+author: Astro Learner
+description: "After learning some Astro, I couldn't stop!"
+image: "https://docs.astro.build/assets/rose.webp"
+pubDate: 2022-07-08
+tags: ["astro", "blogging", "learning in public", "successes"]
+---
+
+**Important:** The `---` blocks at the top are called "frontmatter." This is where you define the metadata for your blog post, which Astro uses to generate your pages. Make sure the `pubDate` is a valid date format.
+
+### Step 5: Display Your Blog Posts
+
+Now, let's create a page to list all your blog posts.
+
+Modify `src/pages/index.astro` to display a list of your blog posts.
+
+```astro
+---
+import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('blog');
+const sortedPosts = allPosts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+---
+
+<Layout title="My Awesome Programming Blog">
+  <main class="container mx-auto p-4">
+    <h1 class="text-4xl font-bold mb-8">Latest Programming Articles</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {sortedPosts.map((post) => (
+        <a href={`/blog/${post.slug}`} class="block border rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+          {post.data.image && (
+            <img src={post.data.image} alt={post.data.title} class="w-full h-48 object-cover rounded-t-lg" />
+          )}
+          <div class="p-6">
+            <h2 class="text-2xl font-semibold mb-2">{post.data.title}</h2>
+            <p class="text-gray-600 text-sm mb-4">Published on: {new Date(post.data.pubDate).toLocaleDateString()}</p>
+            <p class="text-gray-700">{post.data.description}</p>
+            {post.data.tags && (
+              <div class="mt-4 flex flex-wrap gap-2">
+                {post.data.tags.map((tag) => (
+                  <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">{tag}</span>
+                ))}
+              </div>
+            )}
+          </div>
+        </a>
+      ))}
+    </div>
+  </main>
+</Layout>
+
+<style>
+  /* You can add some basic styling here or use a CSS framework like Tailwind CSS */
+  .container {
+    max-width: 1200px;
+  }
+</style>
+```

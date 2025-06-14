@@ -1,0 +1,53 @@
+<!-- ---
+const res = await fetch(
+  `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${
+    CHANNEL_ID
+  }&part=snippet,id&order=date&maxResults=${MAX_RESULTS}`
+);
+const data = await res.json();
+const videos = data.items.filter((item) => item.id.kind === "youtube#video");
+---
+
+<div class="flex-between-center mb-4">
+  <h4 class="text-lg font-semibold">Recent YouTube Videos</h4>
+  <a
+    href={`https://www.youtube.com/channel/${CHANNEL_ID}/videos`}
+    target="_blank"
+    class="underline text-blue-400 text-sm hover:text-blue-300">View all</a
+  >
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+  {
+    videos.map((video) => {
+      const videoUrl = `https://www.youtube.com/watch?v=${video.id.videoId}`;
+      const thumbnail = video.snippet.thumbnails.medium.url;
+      const title = video.snippet.title;
+      const publishedAt = new Date(
+        video.snippet.publishedAt
+      ).toLocaleDateString();
+
+      return (
+        <a
+          href={videoUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block bg-zinc-900 border border-zinc-700 rounded-lg p-4 hover:border-blue-500 transition-all group"
+        >
+          <div class="overflow-hidden rounded-md mb-3">
+            <img
+              src={thumbnail}
+              alt={title}
+              loading="lazy"
+              class="w-full h-auto transform group-hover:scale-105 transition-transform duration-300 ease-in-out"
+            />
+          </div>
+          <h5 class="text-md font-semibold text-white line-clamp-2 mb-1 group-hover:text-blue-400">
+            {title}
+          </h5>
+          <p class="text-xs text-zinc-400">{publishedAt}</p>
+        </a>
+      );
+    })
+  }
+</div> -->

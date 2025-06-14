@@ -1,5 +1,8 @@
 ---
+import { getCollection } from "astro:content";
+import moment from "moment";
 
+const posts = await getCollection("blogs");
 ---
 
 <div class="flex-between-center mb-4">
@@ -11,25 +14,27 @@
 
 <div class="flex-col gap-1">
   {
-    [0, 1, 2, 3].map(() => (
+    posts.map((post) => (
       <div class="flex-between-center mt-2">
         <div class="flex font-medium">
           <a
-            href="/blogs"
+            href={`/blogs/${post.slug}`}
             class="hover:text-zinc-200 overflow-hidden text-ellipsis"
           >
-            How to deploy nodejs applications
+            {post.data.title}
           </a>
-          <span class="px-2 md:visible sm:flex hidden">-</span>
+          {/* <span class="px-2 md:visible sm:flex hidden">-</span>
           <div class="gap-1 mask-r-from-70% sm:flex hidden">
             {["Typescript", "Astrojs", "Tailwindcss"].map((tech) => (
               <span class="bg-zinc-800 px-1 py-0.5 rounded-sm cursor-pointer hover:bg-zinc-700 transition-all">
                 #{tech}
               </span>
             ))}
-          </div>
+          </div> */}
         </div>
-        <span class="text-zinc-300">June 14, 2025</span>
+        <span class="text-zinc-300">
+          {moment(post.data.pubDate).format("ll")}
+        </span>
       </div>
     ))
   }
