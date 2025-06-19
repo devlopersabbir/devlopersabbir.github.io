@@ -1,5 +1,12 @@
 export const projects = [
   {
+    title: "Click Counter Pro",
+    date: "Jul 13, 2023",
+    tech: ["Expo", "React-Native", "TypeScript", "Native-base UI"],
+    link: "https://play.google.com/store/apps/details?id=com.devlopersabbir.countnativeapp",
+    repo_link: "https://github.com/devlopersabbir/count-native-app",
+  },
+  {
     title: "Full-stack Digital Shop",
     date: "June 14, 2025",
     tech: ["NestJs", "NextJs", "Socket.Io"],

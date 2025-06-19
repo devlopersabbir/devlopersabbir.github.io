@@ -17,7 +17,7 @@ for entry in feed.entries[:4]:  # latest 4
         'pubDate': entry['published'],
     })
 
-with open("src/content/youtube/card.json", "w", encoding="utf-8") as f:
+with open("src/services/youtube/card.json", "w", encoding="utf-8") as f:
     json.dump(videos, f, indent=2, ensure_ascii=False)
 
 print("✅ YouTube JSON updated.")
