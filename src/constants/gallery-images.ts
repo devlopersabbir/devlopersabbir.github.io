@@ -6,4 +6,6 @@ export const galleryImages = [
   "/sabbir5.jpg",
   "/sabbir6.jpg",
   "/sabbir7.jpeg",
+  "/sabbir8.jpg",
+  "/sabbir9.jpg",
 ];
