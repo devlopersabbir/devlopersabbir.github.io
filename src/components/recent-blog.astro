@@ -2,7 +2,11 @@
 import { getCollection } from "astro:content";
 import moment from "moment";
 
-const posts = await getCollection("blogs");
+let posts = await getCollection("blogs");
+posts = posts.sort(
+  (a, b) =>
+    new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
+);
 ---
 
 <div class="flex-between-center mb-4">

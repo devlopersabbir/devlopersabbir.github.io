@@ -1,10 +1,10 @@
 ---
-title: Unleash Your Code: Introducing executeme - A Secure & Scalable Code Execution Backend
-description: Whether you're building an online judge, a coding playground, an educational platform, or even an automated testing service, executing user-submitted code in a safe and isolated environment is a fundamental challenge. That's where executeme comes in.
+title: Introducing executeme - A Secure & Scalable Code Execution Backend
+description: A robust and secure backend service for executing user-submitted code in isolated Docker containers.
 pubDate: 2025-06-27
 author: "Sabbir Hossain Shuvo"
-image: "https://github.com/user-attachments/assets/5b8fcd10-3b72-47ca-ba61-059662c46cda"
-tags: ["executeme", "compiler"]
+image: "https://github-production-user-asset-6210df.s3.amazonaws.com/82939905/460045516-5b8fcd10-3b72-47ca-ba61-059662c46cda.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20250627%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250627T171515Z&X-Amz-Expires=300&X-Amz-Signature=df94a1dfcb8c3b56fd7efddf4fb44ee672e1461b398e45c30d09eb638be28203&X-Amz-SignedHeaders=host"
+tags: ["executeme", "compiler", "high-performance"]
 ---
 
 # Unleash Your Code: Introducing `executeme` - A Secure & Scalable Code Execution Backend
@@ -21,27 +21,27 @@ At its core, `executeme` is a Node.js-powered API that acts as an intermediary b
 
 Here are some of its standout features:
 
-* **Multi-Language Support:** Out-of-the-box, `executeme` supports Python, Node.js, and Java. Its modular design makes it straightforward to extend support to even more languages based on your needs.
+- **Multi-Language Support:** Out-of-the-box, `executeme` supports Python, Node.js, and Java. Its modular design makes it straightforward to extend support to even more languages based on your needs.
 
-* **Secure Docker Isolation:** Security is paramount. Every code execution happens within its own ephemeral Docker container. This ensures that user code cannot interfere with other executions or the host system, providing a secure sandbox.
+- **Secure Docker Isolation:** Security is paramount. Every code execution happens within its own ephemeral Docker container. This ensures that user code cannot interfere with other executions or the host system, providing a secure sandbox.
 
-* **Resource Limiting:** To prevent malicious code from consuming excessive resources (e.g., infinite loops, memory bombs), `executeme` applies configurable memory and CPU limits to each execution. This safeguards your infrastructure.
+- **Resource Limiting:** To prevent malicious code from consuming excessive resources (e.g., infinite loops, memory bombs), `executeme` applies configurable memory and CPU limits to each execution. This safeguards your infrastructure.
 
-* **API-Driven:** Designed with integration in mind, `executeme` exposes a simple RESTful API endpoint. This makes it easy to hook it into your frontend applications or any other service requiring code execution capabilities.
+- **API-Driven:** Designed with integration in mind, `executeme` exposes a simple RESTful API endpoint. This makes it easy to hook it into your frontend applications or any other service requiring code execution capabilities.
 
-* **Automated Cleanup:** No lingering artifacts! `executeme` automatically manages temporary directories and files created for each execution, ensuring a clean and efficient system.
+- **Automated Cleanup:** No lingering artifacts! `executeme` automatically manages temporary directories and files created for each execution, ensuring a clean and efficient system.
 
 ## 💡 Why Choose `executeme`?
 
 `executeme` simplifies a complex problem. Instead of wrestling with container orchestration, security hardening, and managing multiple language runtimes yourself, you can integrate this ready-to-use backend. It’s perfect for:
 
-* **Online Compilers/Editors:** Give your users a place to write and test code live.
+- **Online Compilers/Editors:** Give your users a place to write and test code live.
 
-* **Coding Challenge Platforms:** Automate the execution and evaluation of user solutions.
+- **Coding Challenge Platforms:** Automate the execution and evaluation of user solutions.
 
-* **Educational Tools:** Provide interactive coding exercises and immediate feedback.
+- **Educational Tools:** Provide interactive coding exercises and immediate feedback.
 
-* **DevTools:** Quickly test snippets or automate code-dependent workflows.
+- **DevTools:** Quickly test snippets or automate code-dependent workflows.
 
 ## 🚀 Getting Started with `executeme`
 
@@ -51,21 +51,23 @@ Setting up `executeme` is designed to be quick and easy thanks to Docker Compose
 
 Make sure you have:
 
-* **Docker** (Engine & Compose) installed.
+- **Docker** (Engine & Compose) installed.
 
-* **Node.js** (LTS version, e.g., 20.x+) and **npm**.
+- **Node.js** (LTS version, e.g., 20.x+) and **npm**.
 
 ### Installation & Setup Steps
 
 1.  **Clone the Repository:**
     Start by cloning the `executeme` GitHub repository to your local machine:
+
     ```bash
-    git clone [https://github.com/devlopersabbir/executeme.git](https://github.com/devlopersabbir/executeme.git)
+    git clone https://github.com/devlopersabbir/executeme.git
     cd executeme
     ```
 
 2.  **Install Node.js Dependencies:**
     Navigate into the `app` directory where the Node.js server is located and install its dependencies:
+
     ```bash
     cd app
     npm install
@@ -74,14 +76,17 @@ Make sure you have:
 
 3.  **Build Docker Images:**
     This is a crucial step! `executeme` relies on pre-built Docker images for each language runtime. Build them using Docker Compose:
+
     ```bash
     docker compose build
     ```
+
     This command will build the following images:
-    * `executor-nodejs:latest`
-    * `executor-python:latest`
-    * `executor-java:latest`
-    * `executeme-nodejs-server:latest` (your main backend service)
+
+    - `executor-nodejs:latest`
+    - `executor-python:latest`
+    - `executor-java:latest`
+    - `executeme-nodejs-server:latest` (your main backend service)
 
 4.  **Run the Services:**
     Once all images are built, you can launch the `executeme` backend service using Docker Compose. This will bring up your Node.js server and prepare the environment for code execution.
@@ -108,19 +113,24 @@ The primary way to interact with `executeme` is through its `/run` POST endpoint
   "language": "python"
 }
 ```
+
 ### Success Response (Status: `200 OK`):
+
 ```json
 {
   "output": "Hello, World!\n"
 }
 ```
+
 ### Error Response (Status: `400 Bad Request` or `500 Internal Server Error`):
+
 ```json
 {
   "error": "Runtime error",
   "details": "Traceback (most recent call last):\n  File \"main.py\", line 1, in <module>\n    print(\"Hello, World\""
 }
 ```
+
 ### `curl` Examples
 
 Here's how you can test it directly from your terminal:
@@ -135,6 +145,7 @@ curl -X POST -H "Content-Type: application/json" \
 }' \
 http://localhost:3000/run
 ```
+
 **Node.js Example:**
 
 ```bash
@@ -145,6 +156,7 @@ curl -X POST -H "Content-Type: application/json" \
 }' \
 http://localhost:3000/run
 ```
+
 **Java Example:**
 
 ```bash
@@ -178,4 +190,3 @@ If `executeme` helps you or your project, consider showing your support. Your co
 ## 🏁 Conclusion
 
 `executeme` offers a powerful, secure, and flexible solution for executing code in a sandboxed environment. By leveraging Docker, it provides the isolation needed for production use cases while remaining easy to integrate and extend. Give it a try for your next project that requires dynamic code execution!
-
