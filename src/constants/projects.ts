@@ -1,6 +1,13 @@
 export const projects = [
   {
-    title: "Code Executor Server",
+    title: "ExecuteMe - Code Execution Platform",
+    date: "Jun 15, 2025",
+    tech: ["NextJs", "TypeScript", "TailwindCSS"],
+    link: "https://executeme.vercel.app",
+    repo_link: "https://github.com/devlopersabbir/executeme",
+  },
+  {
+    title: "Code Executor Engine",
     date: "Jun 15, 2025",
     tech: ["DevOps", "Docker", "Compile", "Executions"],
     link: "https://devlopersabbir.github.io/executeme",
@@ -12,13 +19,6 @@ export const projects = [
     tech: ["React", "Safari", "Chrome/Firefox", "Extension"],
     link: "https://github.com/devlopersabbir/amazon-sells-booster/tree/main/release",
     repo_link: "https://github.com/devlopersabbir/amazon-sells-booster",
-  },
-  {
-    title: "Full-stack Digital Shop",
-    date: "June 14, 2025",
-    tech: ["NestJs", "NextJs", "Socket.Io"],
-    link: "/",
-    repo_link: "",
   },
   {
     title: "Online Car Shop - Buy/Sell/Rent",
