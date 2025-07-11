@@ -6,6 +6,14 @@ export const projects = [
     link: "https://executeme.vercel.app",
     repo_link: "https://github.com/devlopersabbir/executeme",
   },
+
+  {
+    title: "Random Kana - Japaness Learing",
+    date: "Jul 11, 2025",
+    tech: ["Vite", "TypeScript", "React", "TailwindCSS"],
+    link: "https://randomkana.vercel.app",
+    repo_link: "https://github.com/devlopersabbir/randomkana",
+  },
   {
     title: "Code Executor Engine",
     date: "Jun 15, 2025",

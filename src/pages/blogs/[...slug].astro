@@ -1,8 +1,8 @@
 ---
+export const prerender = true;
 import moment from "moment";
 import { getCollection } from "astro:content";
 import BlogLayout from "../../layouts/blog-layout.astro";
-import Prose from "../../components/Prose.astro";
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection("blogs");

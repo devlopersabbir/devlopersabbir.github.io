@@ -70,7 +70,6 @@
       )
     } -->
     <button
-      onclick="alert('this features is not avaiable.')"
       type="submit"
       class="w-full py-3 rounded bg-blue-500 hover:bg-blue-400 transition-colors text-white font-semibold cursor-pointer"
     >
@@ -78,3 +77,15 @@
     </button>
   </form>
 </div>
+<script>
+  import { actions } from "astro:actions";
+
+  const form = document.querySelector("form");
+  form?.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const formData = new FormData(form);
+    const { error, data } = await actions.sendMail(formData);
+    console.log(error);
+    console.log(data);
+  });
+</script>
