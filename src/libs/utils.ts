@@ -1,4 +1,3 @@
-// Function to format the date string into a more readable format
 export const formatDate = (dateString: string) => {
   try {
     const date = new Date(dateString);

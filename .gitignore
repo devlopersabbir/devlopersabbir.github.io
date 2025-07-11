@@ -26,3 +26,5 @@ pnpm-debug.log*
 
 # python env remove
 env
+.vercel
+.vercel
