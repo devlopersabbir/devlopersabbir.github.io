@@ -3,10 +3,7 @@ import tailwindcss from "@tailwindcss/vite";
 import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
 import remarkGfm from "remark-gfm";
-// import vercel from "@astrojs/vercel";
-// import node from "@astrojs/node";
 import react from "@astrojs/react";
-// import vercelServerless from "@astrojs/vercel";
 import deno from "@deno/astro-adapter";
 
 // https://astro.build/config

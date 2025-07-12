@@ -1,0 +1,5 @@
+{
+  "imports": {
+    "clsx": "https://esm.sh/clsx"
+  }
+}
