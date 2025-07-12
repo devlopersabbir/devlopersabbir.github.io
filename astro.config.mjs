@@ -6,7 +6,7 @@ import remarkGfm from "remark-gfm";
 // import vercel from "@astrojs/vercel";
 import node from "@astrojs/node";
 import react from "@astrojs/react";
-import vercelServerless from "@astrojs/vercel/serverless";
+import vercelServerless from "@astrojs/vercel";
 
 // https://astro.build/config
 export default defineConfig({
@@ -23,15 +23,10 @@ export default defineConfig({
     remarkPlugins: [remarkGfm],
   },
 
-  adapter: [
-    node({
-      mode: "standalone",
-    }),
-    vercelServerless({
-      webAnalytics: {
-        enabled: true,
-      },
-      maxDuration: 8,
-    }),
-  ],
+  adapter: vercelServerless({
+    webAnalytics: {
+      enabled: true,
+    },
+    maxDuration: 8,
+  }),
 });
