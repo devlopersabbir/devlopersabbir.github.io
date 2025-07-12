@@ -6,19 +6,24 @@ import remarkGfm from "remark-gfm";
 import react from "@astrojs/react";
 import deno from "@deno/astro-adapter";
 
-// https://astro.build/config
 export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
+    build: {
+      ssr: true,
+      rollupOptions: {
+        external: [], // <-- empty array means no external deps
+      },
+      ssr: {
+        noExternal: true, // <-- bundle all dependencies, no externals
+      },
+    },
   },
-
   site: "https://devlopersabbir.github.io",
   integrations: [sitemap(), mdx(), react()],
-
   markdown: {
     remarkPlugins: [remarkGfm],
   },
-
   output: "server",
   adapter: deno(),
 });
