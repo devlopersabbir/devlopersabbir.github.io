@@ -2,8 +2,6 @@ name: Deploy
 on:
   push:
     branches: main
-  pull_request:
-    branches: main
 
 jobs:
   deploy:
@@ -40,5 +38,3 @@ jobs:
           project: "sabbirhossa-devlopersab-37"
           entrypoint: "server/entry.mjs"
           root: "dist"
-          
-          
