@@ -1,3 +1,5 @@
+export const prerender = false;
+
 import { ActionError, defineAction } from "astro:actions";
 import { Resend } from "resend";
 import { formSchema, type FormSchema } from "../libs/form-validation";
@@ -8,8 +10,8 @@ const sendHandler = async ({ name, email, message }: FormSchema) => {
   console.log(name, email, message);
   try {
     const { error } = await resend.emails.send({
-      from: "Sabbir - <onboarding@resend.dev>",
-      to: [email],
+      from: "Acme <onboarding@resend.dev>",
+      to: ["delivered@resend.dev"],
       subject: `New Contact Form Message from ${name}`,
       html: `
         <p><strong>Name:</strong> ${name}</p>

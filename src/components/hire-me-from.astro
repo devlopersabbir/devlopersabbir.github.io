@@ -62,13 +62,13 @@
       } -->
     </div>
 
-    <!-- {
-      result?.data && (
-        <p class="text-blue-600 transition-all ease-in-out py-0">
-          {result?.data.message}
-        </p>
-      )
-    } -->
+    <!-- Feedback messages -->
+    <div
+      id="statusMessage"
+      class="text-sm text-center transition-all duration-300"
+    >
+    </div>
+
     <button
       type="submit"
       class="w-full py-3 rounded bg-blue-500 hover:bg-blue-400 transition-colors text-white font-semibold cursor-pointer"
@@ -81,11 +81,35 @@
   import { actions } from "astro:actions";
 
   const form = document.querySelector("form");
+  const statusMessage = document.getElementById("statusMessage");
+
   form?.addEventListener("submit", async (event) => {
     event.preventDefault();
+
+    if (!statusMessage) return;
+    statusMessage.textContent = "Sending message...";
+    statusMessage.className =
+      "text-blue-400 text-sm text-center transition-all duration-300";
+
     const formData = new FormData(form);
-    const { error, data } = await actions.sendMail(formData);
-    console.log(error);
-    console.log(data);
+    try {
+      const { error, data } = await actions.sendMail(formData);
+
+      if (error) {
+        const errMsg = error.message || "Something went wrong.";
+        statusMessage.textContent = errMsg;
+        statusMessage.className =
+          "text-red-500 text-sm text-center transition-all duration-300";
+      } else if (data?.message) {
+        statusMessage.textContent = data.message;
+        statusMessage.className =
+          "text-green-500 text-sm text-center transition-all duration-300";
+        form.reset(); // Optional: Clear the form on success
+      }
+    } catch (err) {
+      statusMessage.textContent = "Unexpected error. Please try again.";
+      statusMessage.className =
+        "text-red-500 text-sm text-center transition-all duration-300";
+    }
   });
 </script>
