@@ -14,8 +14,8 @@ jobs:
         uses: actions/checkout@v4
 
       # Not using npm? Change `npm ci` to `yarn install` or `pnpm i`
-      - name: Install dependencies
-        run: npm ci
+      # - name: Install dependencies
+      #   run: npm ci
 
       # Not using npm? Change `npm run build` to `yarn build` or `pnpm run build`
       - name: Build Astro
