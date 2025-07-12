@@ -1,5 +1,6 @@
 {
   "imports": {
-    "clsx": "https://esm.sh/clsx"
+    "clsx": "https://esm.sh/clsx",
+    "kleur/colors": "https://esm.sh/kleur/colors"
   }
 }
