@@ -7,7 +7,6 @@ import { formSchema, type FormSchema } from "../libs/form-validation";
 const resend = new Resend(import.meta.env.RESEND_API_KEY);
 
 const sendHandler = async ({ name, email, message }: FormSchema) => {
-  console.log(name, email, message);
   try {
     const { error } = await resend.emails.send({
       from: "Acme <onboarding@resend.dev>",

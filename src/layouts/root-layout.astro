@@ -5,6 +5,7 @@ interface Props {
 const { pageTitle } = Astro.props;
 import SiteHeader from "../components/common/site-header.astro";
 import SiteFooter from "../components/common/site-footer.astro";
+import { Toaster } from "sonner";
 import "../styles/global.css";
 ---
 
@@ -21,6 +22,7 @@ import "../styles/global.css";
     <main class="container mx-auto px-2">
       <slot />
     </main>
+    <Toaster />
     <SiteFooter />
   </body>
 </html>

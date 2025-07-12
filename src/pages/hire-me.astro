@@ -1,7 +1,7 @@
 ---
 import RootLayout from "../layouts/root-layout.astro";
 import { galleryImages } from "../constants";
-import HireMeFrom from "../components/hire-me-from.astro";
+import HireMeForm from "./_components/hire-me-form";
 const selectedImages = [...galleryImages].sort(() => 0.5 - Math.random());
 ---
 
@@ -22,6 +22,6 @@ const selectedImages = [...galleryImages].sort(() => 0.5 - Math.random());
       }
     </div>
     <!-- Contact Form -->
-    <HireMeFrom />
+    <HireMeForm client:load />
   </section>
 </RootLayout>

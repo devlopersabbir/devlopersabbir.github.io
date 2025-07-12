@@ -3,7 +3,9 @@ import tailwindcss from "@tailwindcss/vite";
 import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
 import remarkGfm from "remark-gfm";
-import vercel from "@astrojs/vercel";
+// import vercel from "@astrojs/vercel";
+import node from "@astrojs/node";
+import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
@@ -14,11 +16,13 @@ export default defineConfig({
   },
 
   site: "https://devlopersabbir.github.io",
-  integrations: [sitemap(), mdx()],
+  integrations: [sitemap(), mdx(), react()],
 
   markdown: {
     remarkPlugins: [remarkGfm],
   },
 
-  adapter: vercel(),
+  adapter: node({
+    mode: "standalone",
+  }),
 });
