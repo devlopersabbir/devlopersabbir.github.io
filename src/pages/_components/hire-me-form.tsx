@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useRef, useState, useTransition, type FormEvent } from "react";
 import { formSchema, type FormSchema } from "../../libs/form-validation";
-import { toast } from "sonner";
+import { toast, Toaster } from "sonner";
 
 const HireMeForm = () => {
   const [pending, startTransition] = useTransition();
@@ -109,6 +109,7 @@ const HireMeForm = () => {
           {pending ? "Sending..." : "Send Message"}
         </button>
       </form>
+      <Toaster />
     </div>
   );
 };
