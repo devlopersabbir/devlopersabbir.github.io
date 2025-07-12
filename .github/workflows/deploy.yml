@@ -38,7 +38,7 @@ jobs:
         uses: denoland/deployctl@v1
         with:
           project: "sabbirhossa-devlopersab-41"
-          entrypoint: "server/entry.mjs"
+          entrypoint: jsr:@std/http/file-server
           root: "dist"
 
           
