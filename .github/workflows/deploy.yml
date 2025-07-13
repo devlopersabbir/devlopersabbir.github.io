@@ -27,6 +27,8 @@ jobs:
 
       - name: Build with Astro
         uses: withastro/action@v3
+        with:
+          package-manager: pnpm@8.15.4 # Replace with your actual pnpm version
 
   deploy:
     needs: build
