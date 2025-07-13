@@ -2,6 +2,7 @@ import axios from "axios";
 import { useRef, useState, useTransition, type FormEvent } from "react";
 import { formSchema, type FormSchema } from "../../libs/form-validation";
 import { toast, Toaster } from "sonner";
+import { baseUrl } from "../../constants";
 
 const HireMeForm = () => {
   const [pending, startTransition] = useTransition();
@@ -13,6 +14,7 @@ const HireMeForm = () => {
     setErrors({}); // Clear previous errors
 
     const formData = new FormData(event.currentTarget);
+    // @ts-ignore
     const data = Object.fromEntries(formData) as FormSchema;
 
     const parsed = formSchema.safeParse(data);
@@ -29,9 +31,9 @@ const HireMeForm = () => {
 
     startTransition(async () => {
       try {
-        await axios.post("/api/send-email", parsed.data);
+        await axios.post(`${baseUrl}/api/v1/mail/send`, parsed.data);
         toast.success("Your message has been sent successfully!");
-        event.currentTarget.reset();
+
         formRef.current?.reset();
       } catch (err: any) {
         toast.error("Failed to send the message. Please try again.");
