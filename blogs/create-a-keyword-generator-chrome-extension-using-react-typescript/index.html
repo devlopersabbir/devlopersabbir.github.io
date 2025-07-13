@@ -1,0 +1,427 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="sitemap" href="/sitemap-index.xml"><meta name="generator" content="Astro v5.11.0"><title>Sabbir - Create a Keyword Generator Chrome Extension Using React TypeScript🔥</title><link rel="stylesheet" href="/_astro/_slug_.ZztAOc5B.css">
+<link rel="stylesheet" href="/_astro/_slug_.aMvUKmrS.css"></head> <body class="bg-zinc-900 text-zinc-50"> <header class="shadow-zinc-800 shadow"> <nav class="container mx-auto px-2 py-2.5"> <div class="flex-between-center"> <ul class="flex space-x-3"> <li class="nav-item"> <a href="/">Home</a> </li><li class="nav-item"> <a href="/projects">Projects</a> </li><li class="nav-item"> <a href="/blogs">Blogs</a> </li><li class="nav-item"> <a href="/hire-me">Hire Me</a> </li> </ul> <!-- TODO: need to show a mode changer button --> <!-- <button class="bg-zinc-800 border border-zinc-700 rounded"> theme</button> --> </div> </nav> </header> <main class="container mx-auto px-2">   <section class="container mx-auto px-4 py-10 max-w-4xl"> <div class="rounded-lg overflow-hidden shadow-md transition-all duration-300"> <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/rijpotn04cyud4x4su71.png" alt="Create a Keyword Generator Chrome Extension Using React TypeScript🔥" class="w-full h-72 object-cover"> <div class="p-6"> <h1 class="text-4xl font-extrabold mb-4 text-gray-900 dark:text-white"> Create a Keyword Generator Chrome Extension Using React TypeScript🔥 </h1> <p class="text-gray-500 dark:text-gray-400 text-sm mb-6">
+By <span class="font-semibold">Sabbir Hossain Shuvo</span> on  June 14, 2025 </p> <article class="markdown-body !bg-transparent"> <h2 id="introduction">Introduction</h2>
+<p>Browser extensions have become increasingly popular in recent times. They are no longer just simple mini applications, but rather well-tailored, profitable products that are used by hundreds of users every day. As these extensions grow in size and complexity, it becomes important to consider building them using helpful JavaScript libraries. By leveraging these libraries, developers can create more attractive and engaging extensions that offer a better user experience. With the right tools and techniques, browser extensions can be transformed into powerful tools that users rely on every day.</p>
+<p>In this tutorial I’m going to teach you, how you can create a a use-full and very power-full google chrome extension. Anyway, to do this we are goin to use <a href="https://crxjs.dev/vite-plugin/">CRXJS</a> which is a <a href="https://vitejs.dev/">vite</a> plugin and also most famous and use-full <a href="https://react.dev/">ReactJs</a>.</p>
+<p>Here’s a little sneak peek 👀</p>
+<ul>
+<li>Main screen
+<img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/3h33334twusocsnsnxq1.png" alt="@devlopersabbir extension screen1"/></li>
+<li>Modal screen
+<img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/0hy2veaw4rp2kxfuq23r.png" alt="@devlopersabbir extension screen2"/></li>
+</ul>
+<h2 id="technology">Technology</h2>
+<p>Let’s talk about about technology which we are goin to use in this tutorial.</p>
+<h2 id="vite">Vite</h2>
+<p><a href="https://vitejs.dev/">Vite</a> is a build tool for modern web applications. It is designed to be fast and efficient allowing developers to quickly build prototype their applications. Vite supports a variety of modern web technologies, including ES modules, TypeScript, and CSS preprocessors. It also includes a built-in development server with hot module replacement, making it easy to develop and test applications in real-time. Vite is a popular choice for building Vue.js applications, but it can also be used with other frameworks and libraries. Overall, Vite is a powerful and flexible tool that can help streamline the development process for modern web applications.</p>
+<h2 id="react--preact">React | Preact</h2>
+<p>ReactJS is a JavaScript library for building user interfaces. It uses a component-based and a virtual DOM to efficiently update the UI. ReactJS is fast, flexible, and widely used in modern web development.</p>
+<p><strong>or</strong></p>
+<p>If you want you can use <a href="https://peerjs.com/">Preact</a>. PreactJS is a lightweight alternative to ReactJS, designed for high performance and compatibility. is often used in applications where performance is critical and has a small footprint.</p>
+<p>I think you need know what is CRXJS. So, here is my the question and answer for you🙂</p>
+<h2 id="what-is-crxjs">What is CRXJS?</h2>
+<p>CRXJS Vite Plugin is a tool that helps you make Chrome Extensions using modern web development technology.</p>
+<p>Alright now we can jump to start coding 🚀</p>
+<h2 id="code">Code</h2>
+<p>To create our CRXJS project just we need to run this code into our terminal. There was a funny thing @jacksteamdev does predict to create a CRXJS project it take only 60 second.😍</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="console"><code><span class="line"><span style="color:#79B8FF">npm init vite@latest</span></span></code></pre>
+<p>Now select typescript as a template and choice React for this project.</p>
+<blockquote>
+<p>When init finished then run this command to install plugin.</p>
+</blockquote>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="console"><code><span class="line"><span style="color:#79B8FF">yarn add @crxjs/vite-plugin@latest -D</span></span></code></pre>
+<p>Finally we are ready to see our output🙂. Just 1 step is left.</p>
+<h3 id="we-have-to-update-the-vite-config">We have to update the Vite config</h3>
+<p>To do that just go to your project directory and find <code>vite.config.ts</code>. Open this file then delete everything and paste this code right there.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="ts"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> { defineConfig } </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> &quot;vite&quot;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> react </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> &quot;@vitejs/plugin-react&quot;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> { crx } </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> &quot;@crxjs/vite-plugin&quot;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> manifest </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> &quot;./manifest.json&quot;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">export</span><span style="color:#F97583"> default</span><span style="color:#B392F0"> defineConfig</span><span style="color:#E1E4E8">({</span></span>
+<span class="line"><span style="color:#E1E4E8">  plugins: [</span><span style="color:#B392F0">react</span><span style="color:#E1E4E8">(), </span><span style="color:#B392F0">crx</span><span style="color:#E1E4E8">({ manifest })],</span></span>
+<span class="line"><span style="color:#E1E4E8">});</span></span></code></pre>
+<p>Now if I don’t wrong currently your are face a error message in the 4 line.😅
+Howerver to fixed this issue just call <code>manifest.json</code> from <code>tsconfig.node.json</code>.
+Open <code>tsconfig.node.json</code> from the project dir. Now you have to add <code>manifest.json</code> file in the include array. Anyway here is the code example.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  &quot;compilerOptions&quot;</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    &quot;composite&quot;</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">true</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    &quot;skipLibCheck&quot;</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">true</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    &quot;module&quot;</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">&quot;ESNext&quot;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    &quot;moduleResolution&quot;</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">&quot;bundler&quot;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    &quot;allowSyntheticDefaultImports&quot;</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">true</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  &quot;include&quot;</span><span style="color:#E1E4E8">: [</span><span style="color:#9ECBFF">&quot;vite.config.ts&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&quot;manifest.json&quot;</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p>Now create a file called <code>manifest.json</code> with this command</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="console"><code><span class="line"><span style="color:#79B8FF">touch manifest.json</span></span></code></pre>
+<p>After creating <code>manifest.json</code> file then past this code into your new manifest.json file.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  &quot;name&quot;</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">&quot;Keyword Maker&quot;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  &quot;description&quot;</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">&quot;A powerfull keyword maker google chrome extension. Give a paragraph it&#39;s make keyword for you.&quot;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  &quot;version&quot;</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">&quot;0.0.1&quot;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  &quot;manifest_version&quot;</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">3</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  &quot;action&quot;</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    &quot;default_popup&quot;</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">&quot;index.html&quot;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    &quot;default_title&quot;</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">&quot;Keyword Maker&quot;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    &quot;default_icon&quot;</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">      &quot;16&quot;</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">&quot;icon.png&quot;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">      &quot;24&quot;</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">&quot;icon.png&quot;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">      &quot;32&quot;</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">&quot;icon.png&quot;</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  &quot;icons&quot;</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    &quot;128&quot;</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">&quot;icon.png&quot;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    &quot;16&quot;</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">&quot;icon.png&quot;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    &quot;256&quot;</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">&quot;icon.png&quot;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    &quot;48&quot;</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">&quot;icon.png&quot;</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p>As you can see I’m using icon. Bu we don’t have any icon yet. However, you can download a icon from anywhere and paste into your <code>/public</code> folder.</p>
+<p>I hope now your project directory should look like this:</p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5chnftvlua01xgfbxpo5.png" alt="Image description"/></p>
+<h2 id="run-run-the-development-server">Run run the development server</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="console"><code><span class="line"><span style="color:#79B8FF">yarn run dev</span></span></code></pre>
+<p>That’s it! CRXJS will do the rest.</p>
+<p>Now it’s ready to add to our chrome. to do this follow this step. or if you know to load manifest in extension then continue this…</p>
+<h2 id="add-the-extension-to-chrome">Add the extension to Chrome</h2>
+<p>Let’s try it out.</p>
+<p>When the build completes, open Chrome or Edge and navigate to chrome://extensions. Make sure to turn on the developer mode switch.
+Drag your <code>dist</code> folder into the Extensions Dashboard to install it. Your extension icon will be in the top bar. The icon will be the first letter of the extension’s name.</p>
+<p>Now just change the App <code>width</code>;</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="css"><code><span class="line"><span style="color:#6A737D">/* App.css */</span></span>
+<span class="line"><span style="color:#B392F0">.App</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">  text-align</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">center</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#79B8FF">  min-width</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">350</span><span style="color:#F97583">px</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p>Now can see like this output. 🚀
+<img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5430tp5mvsx4tpv47o0t.png" alt="Image description"/></p>
+<h2 id="add-ui-library-and-another-dependencies">Add UI library and another dependencies.</h2>
+<p>For the UI purpose I’m going to use <a href="https://chakra-ui.com/getting-started">Chakra-UI</a> which is very popular <code>component based UI</code> library. Also we will a use a <a href="https://react-hot-toast.com/">react-hot-toast</a> for make a awesome toast.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="console"><code><span class="line"><span style="color:#79B8FF">yarn add @chakra-ui/react @emotion/react @emotion/styled framer-motion react-hot-toast axios &amp;&amp; yarn dev</span></span></code></pre>
+<p>So far, we have ready to create awesome UI and functionality.
+Anyway, we have to set <code>ChakraProvider</code> from the <code>Chakra-UI</code> also we have to set Toaster in the <code>main.tsx</code> file. To do that just go to the src -&gt; main.tsx</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="tsx"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> React </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> &quot;react&quot;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> ReactDOM </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> &quot;react-dom/client&quot;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> App </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> &quot;./App.tsx&quot;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#6A737D">// import &quot;./index.css&quot;;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> { ChakraProvider } </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> &quot;@chakra-ui/react&quot;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> { Toaster } </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> &quot;react-hot-toast&quot;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">ReactDOM.</span><span style="color:#B392F0">createRoot</span><span style="color:#E1E4E8">(document.</span><span style="color:#B392F0">getElementById</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;root&quot;</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">as</span><span style="color:#B392F0"> HTMLElement</span><span style="color:#E1E4E8">).</span><span style="color:#B392F0">render</span><span style="color:#E1E4E8">(</span></span>
+<span class="line"><span style="color:#E1E4E8">  &lt;</span><span style="color:#79B8FF">React.StrictMode</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">    &lt;</span><span style="color:#79B8FF">ChakraProvider</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">      {</span><span style="color:#9ECBFF">&quot; &quot;</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#E1E4E8">      // chakra provider setup</span></span>
+<span class="line"><span style="color:#E1E4E8">      &lt;</span><span style="color:#79B8FF">Toaster</span><span style="color:#B392F0"> position</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;bottom-center&quot;</span><span style="color:#B392F0"> reverseOrder</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">{</span><span style="color:#79B8FF">false</span><span style="color:#E1E4E8">} /&gt; // toaster</span></span>
+<span class="line"><span style="color:#E1E4E8">      provider setup</span></span>
+<span class="line"><span style="color:#E1E4E8">      &lt;</span><span style="color:#79B8FF">App</span><span style="color:#E1E4E8"> /&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">    &lt;/</span><span style="color:#79B8FF">ChakraProvider</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">  &lt;/</span><span style="color:#79B8FF">React.StrictMode</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">);</span></span></code></pre>
+<p><strong>let’s create main screen UI</strong>
+Here is the code. for App.tsx</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="tsx"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8">  Button,</span></span>
+<span class="line"><span style="color:#E1E4E8">  Center,</span></span>
+<span class="line"><span style="color:#E1E4E8">  Container,</span></span>
+<span class="line"><span style="color:#E1E4E8">  HStack,</span></span>
+<span class="line"><span style="color:#E1E4E8">  Heading,</span></span>
+<span class="line"><span style="color:#E1E4E8">  Image,</span></span>
+<span class="line"><span style="color:#E1E4E8">  Text,</span></span>
+<span class="line"><span style="color:#E1E4E8">  Textarea,</span></span>
+<span class="line"><span style="color:#E1E4E8">  VStack,</span></span>
+<span class="line"><span style="color:#E1E4E8">} </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> &quot;@chakra-ui/react&quot;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">const</span><span style="color:#B392F0"> App</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> () </span><span style="color:#F97583">=&gt;</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583">  return</span><span style="color:#E1E4E8"> (</span></span>
+<span class="line"><span style="color:#E1E4E8">    &lt;</span><span style="color:#79B8FF">Container</span><span style="color:#B392F0"> w</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;400px&quot;</span><span style="color:#B392F0"> h</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;auto&quot;</span><span style="color:#B392F0"> mx</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;auto&quot;</span><span style="color:#B392F0"> p</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">{</span><span style="color:#79B8FF">4</span><span style="color:#E1E4E8">}&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">      &lt;</span><span style="color:#79B8FF">Center</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">        &lt;</span><span style="color:#79B8FF">Image</span><span style="color:#B392F0"> w</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;16&quot;</span><span style="color:#B392F0"> src</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;icon.png&quot;</span><span style="color:#B392F0"> alt</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;logo&quot;</span><span style="color:#E1E4E8"> /&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">      &lt;/</span><span style="color:#79B8FF">Center</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">      &lt;</span><span style="color:#79B8FF">VStack</span><span style="color:#B392F0"> spacing</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">{</span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">} </span><span style="color:#B392F0">my</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">{</span><span style="color:#79B8FF">2</span><span style="color:#E1E4E8">}&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">        &lt;</span><span style="color:#79B8FF">Heading</span><span style="color:#B392F0"> as</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;h1&quot;</span><span style="color:#B392F0"> fontSize</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;xl&quot;</span><span style="color:#B392F0"> fontWeight</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;bold&quot;</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">          Keyword Macker AI</span></span>
+<span class="line"><span style="color:#E1E4E8">        &lt;/</span><span style="color:#79B8FF">Heading</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">        &lt;</span><span style="color:#79B8FF">Text</span></span>
+<span class="line"><span style="color:#B392F0">          fontSize</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;sm&quot;</span></span>
+<span class="line"><span style="color:#B392F0">          color</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;gray.600&quot;</span></span>
+<span class="line"><span style="color:#B392F0">          fontWeight</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;400&quot;</span></span>
+<span class="line"><span style="color:#B392F0">          textAlign</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;center&quot;</span></span>
+<span class="line"><span style="color:#E1E4E8">        &gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">          Past your text in the bellow section and it will generate{</span><span style="color:#9ECBFF">&quot; &quot;</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#E1E4E8">          &lt;</span><span style="color:#85E89D">strong</span><span style="color:#E1E4E8">&gt;Keyword&lt;/</span><span style="color:#85E89D">strong</span><span style="color:#E1E4E8">&gt; for you. 🙂</span></span>
+<span class="line"><span style="color:#E1E4E8">        &lt;/</span><span style="color:#79B8FF">Text</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">      &lt;/</span><span style="color:#79B8FF">VStack</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">      &lt;</span><span style="color:#79B8FF">VStack</span><span style="color:#B392F0"> my</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">{</span><span style="color:#79B8FF">4</span><span style="color:#E1E4E8">}&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">        &lt;</span><span style="color:#79B8FF">Textarea</span><span style="color:#B392F0"> w</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;full&quot;</span><span style="color:#B392F0"> h</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;auto&quot;</span><span style="color:#B392F0"> placeholder</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;Past your text here...&quot;</span><span style="color:#E1E4E8"> /&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">        &lt;</span><span style="color:#79B8FF">Button</span><span style="color:#B392F0"> colorScheme</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;twitter&quot;</span><span style="color:#E1E4E8">&gt;Generate Keyworld&lt;/</span><span style="color:#79B8FF">Button</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">      &lt;/</span><span style="color:#79B8FF">VStack</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">      &lt;</span><span style="color:#79B8FF">HStack</span></span>
+<span class="line"><span style="color:#B392F0">        w</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;full&quot;</span></span>
+<span class="line"><span style="color:#B392F0">        textAlign</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;center&quot;</span></span>
+<span class="line"><span style="color:#B392F0">        fontWeight</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;semibold&quot;</span></span>
+<span class="line"><span style="color:#B392F0">        mt</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">{</span><span style="color:#79B8FF">3</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#B392F0">        justify</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;center&quot;</span></span>
+<span class="line"><span style="color:#E1E4E8">      &gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">        &lt;</span><span style="color:#79B8FF">Text</span><span style="color:#E1E4E8">&gt;Created by &lt;/</span><span style="color:#79B8FF">Text</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">        &lt;</span><span style="color:#79B8FF">Text</span></span>
+<span class="line"><span style="color:#B392F0">          cursor</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;pointer&quot;</span></span>
+<span class="line"><span style="color:#B392F0">          color</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;green&quot;</span></span>
+<span class="line"><span style="color:#B392F0">          textDecor</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;underline&quot;</span></span>
+<span class="line"><span style="color:#B392F0">          onClick</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">{() </span><span style="color:#F97583">=&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">            window.</span><span style="color:#B392F0">open</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;https://www.showwcase.com/devlopersabbir&quot;</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">          }</span></span>
+<span class="line"><span style="color:#E1E4E8">        &gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">          @devlopersabbir</span></span>
+<span class="line"><span style="color:#E1E4E8">        &lt;/</span><span style="color:#79B8FF">Text</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">      &lt;/</span><span style="color:#79B8FF">HStack</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">    &lt;/</span><span style="color:#79B8FF">Container</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">  );</span></span>
+<span class="line"><span style="color:#E1E4E8">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">export</span><span style="color:#F97583"> default</span><span style="color:#E1E4E8"> App;</span></span></code></pre>
+<p>Now create some <code>state</code> using <code>useState</code> React hooks. I’m going to create <code>text</code> state for store prompt text. And 2nd one is <code>keyword</code> state that will be help us to store our response data as keyword. 3rd is <code>loading</code> state to make <code>spinner</code> when <code>HTTP</code> request is pending… And the last one is <code>useDisclosure</code> hooks from the <code>@chakra-ui/react</code> because of we will create a modal later.</p>
+<p>Also we have to take text from the <code>onChange</code> method. after then now set a click handler into our generate button.</p>
+<p><strong>State</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="tsx"><code><span class="line"><span style="color:#F97583">const</span><span style="color:#E1E4E8"> [</span><span style="color:#79B8FF">text</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">setText</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#B392F0"> useState</span><span style="color:#E1E4E8">&lt;</span><span style="color:#79B8FF">string</span><span style="color:#E1E4E8">&gt;(</span><span style="color:#9ECBFF">&quot;&quot;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#F97583">const</span><span style="color:#E1E4E8"> [</span><span style="color:#79B8FF">keyword</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">setKeyword</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#B392F0"> useState</span><span style="color:#E1E4E8">&lt;</span><span style="color:#79B8FF">string</span><span style="color:#E1E4E8">&gt;(</span><span style="color:#9ECBFF">&quot;&quot;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#F97583">const</span><span style="color:#E1E4E8"> [</span><span style="color:#79B8FF">loading</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">setLoading</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#B392F0"> useState</span><span style="color:#E1E4E8">&lt;</span><span style="color:#79B8FF">boolean</span><span style="color:#E1E4E8">&gt;(</span><span style="color:#79B8FF">false</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#F97583">const</span><span style="color:#E1E4E8"> { </span><span style="color:#79B8FF">isOpen</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">onOpen</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">onClose</span><span style="color:#E1E4E8"> } </span><span style="color:#F97583">=</span><span style="color:#B392F0"> useDisclosure</span><span style="color:#E1E4E8">();</span></span></code></pre>
+<p><strong>Handler Function</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="tsx"><code><span class="line"><span style="color:#F97583">const</span><span style="color:#B392F0"> generate</span><span style="color:#F97583"> =</span><span style="color:#F97583"> async</span><span style="color:#E1E4E8"> () </span><span style="color:#F97583">=&gt;</span><span style="color:#E1E4E8"> {};</span></span></code></pre>
+<p><strong>Update our code</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="tsx"><code><span class="line"><span style="color:#E1E4E8">&lt;</span><span style="color:#79B8FF">Textarea</span></span>
+<span class="line"><span style="color:#B392F0">          onChange</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">{(</span><span style="color:#FFAB70">event</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> any</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">=&gt;</span><span style="color:#B392F0"> setText</span><span style="color:#E1E4E8">(event.target.value)}</span></span>
+<span class="line"><span style="color:#B392F0">          w</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;full&quot;</span></span>
+<span class="line"><span style="color:#B392F0">          value</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">{text}</span></span>
+<span class="line"><span style="color:#B392F0">          h</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;auto&quot;</span></span>
+<span class="line"><span style="color:#B392F0">          placeholder</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;Past your text here...&quot;</span></span>
+<span class="line"><span style="color:#E1E4E8">        /&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">        &lt;</span><span style="color:#79B8FF">Button</span><span style="color:#B392F0"> disabled</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">{loading} </span><span style="color:#B392F0">colorScheme</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;twitter&quot;</span><span style="color:#B392F0"> onClick</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">{generate}&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">          {loading </span><span style="color:#F97583">?</span><span style="color:#E1E4E8"> &lt;</span><span style="color:#79B8FF">Spinner</span><span style="color:#E1E4E8"> /&gt; </span><span style="color:#F97583">:</span><span style="color:#9ECBFF"> &quot;Generate Keyword&quot;</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#E1E4E8">        &lt;/</span><span style="color:#79B8FF">Button</span><span style="color:#E1E4E8">&gt;</span></span></code></pre>
+<p>Our function should be async because of we will make <code>HTTP</code> request.</p>
+<h2 id="openai-integration">OpenAI integration</h2>
+<p>Now we are going to create api_key for generate our keyword. We will use <a href="https://openai.com/">OpenAI</a> platform. If you have openAi account then okey or if not then create a new account. And now go to this url to create api key <a href="https://platform.openai.com/account/api-keys">Click me to create api_key</a>.</p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/w0hdwod3370j6t7rsjh2.png" alt="Image description"/>
+Copy secret key and paste anywhere because of we will never see this key again.</p>
+<p>Now create a variable in the <code>App.tsx</code> file called <code>YOUR_API_KEY</code>.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="tsx"><code><span class="line"><span style="color:#F97583">const</span><span style="color:#79B8FF"> YOUR_API_KEY</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF"> &quot;Enter your secret key here...&quot;</span><span style="color:#E1E4E8">;</span></span></code></pre>
+<p>So far, we have finished a lot’s of thing. At this time we are ready to make a <code>http</code> request using axios and our <code>api key</code>.</p>
+<h1 id="configure-body-data--header">Configure body data &amp; header</h1>
+<p>Make a object using <code>data</code> variable for prompt data.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="tsx"><code><span class="line"><span style="color:#F97583">const</span><span style="color:#79B8FF"> datas</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> any</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8">  model: </span><span style="color:#9ECBFF">&quot;text-davinci-003&quot;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">  prompt: </span><span style="color:#9ECBFF">`Make some keyword with this text. For example prompt is javascript and we expect response should be like js, javascript, javascript course, js tutorial, JavaScript Programing.. etc. Here is the text prompt: ${</span><span style="color:#E1E4E8">text</span><span style="color:#9ECBFF">}`</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">  temperature: </span><span style="color:#79B8FF">0.5</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">  max_tokens: </span><span style="color:#79B8FF">200</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">  top_p: </span><span style="color:#79B8FF">1.0</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">  frequency_penalty: </span><span style="color:#79B8FF">0.8</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">  presence_penalty: </span><span style="color:#79B8FF">0.0</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">};</span></span></code></pre>
+<p>Now set up our header with bearer token.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="tsx"><code><span class="line"><span style="color:#B392F0"> headers</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#9ECBFF">            &quot;Content-Type&quot;</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">&quot;application/json&quot;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#B392F0">            Authorization</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">`Bearer ${</span><span style="color:#79B8FF">YOUR_API_KEY</span><span style="color:#9ECBFF">}`</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">          },</span></span></code></pre>
+<h1 id="alright-now-you-are-ready-to-seen-full-apptsx-file">Alright now you are ready to seen full <code>App.tsx</code> file???</h1>
+<p>Here is our complete <code>App.tsx</code> code.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="tsx"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8">  Button,</span></span>
+<span class="line"><span style="color:#E1E4E8">  Center,</span></span>
+<span class="line"><span style="color:#E1E4E8">  Container,</span></span>
+<span class="line"><span style="color:#E1E4E8">  HStack,</span></span>
+<span class="line"><span style="color:#E1E4E8">  Heading,</span></span>
+<span class="line"><span style="color:#E1E4E8">  Image,</span></span>
+<span class="line"><span style="color:#E1E4E8">  Spinner,</span></span>
+<span class="line"><span style="color:#E1E4E8">  Text,</span></span>
+<span class="line"><span style="color:#E1E4E8">  Textarea,</span></span>
+<span class="line"><span style="color:#E1E4E8">  VStack,</span></span>
+<span class="line"><span style="color:#E1E4E8">  useDisclosure,</span></span>
+<span class="line"><span style="color:#E1E4E8">} </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> &quot;@chakra-ui/react&quot;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> { useState } </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> &quot;react&quot;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> Modals </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> &quot;./components/Modals&quot;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> axios </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> &quot;axios&quot;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> { toast } </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> &quot;react-hot-toast&quot;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">const</span><span style="color:#B392F0"> App</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> () </span><span style="color:#F97583">=&gt;</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583">  const</span><span style="color:#79B8FF"> YOUR_API_KEY</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF"> &quot;sk-xxxxxxxxxxxxxxxxxxxxxxxx&quot;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">  const</span><span style="color:#E1E4E8"> [</span><span style="color:#79B8FF">text</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">setText</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#B392F0"> useState</span><span style="color:#E1E4E8">&lt;</span><span style="color:#79B8FF">string</span><span style="color:#E1E4E8">&gt;(</span><span style="color:#9ECBFF">&quot;&quot;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#F97583">  const</span><span style="color:#E1E4E8"> [</span><span style="color:#79B8FF">keyword</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">setKeyword</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#B392F0"> useState</span><span style="color:#E1E4E8">&lt;</span><span style="color:#79B8FF">string</span><span style="color:#E1E4E8">&gt;(</span><span style="color:#9ECBFF">&quot;&quot;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#F97583">  const</span><span style="color:#E1E4E8"> [</span><span style="color:#79B8FF">loading</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">setLoading</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#B392F0"> useState</span><span style="color:#E1E4E8">&lt;</span><span style="color:#79B8FF">boolean</span><span style="color:#E1E4E8">&gt;(</span><span style="color:#79B8FF">false</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#F97583">  const</span><span style="color:#E1E4E8"> { </span><span style="color:#79B8FF">isOpen</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">onOpen</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">onClose</span><span style="color:#E1E4E8"> } </span><span style="color:#F97583">=</span><span style="color:#B392F0"> useDisclosure</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">  const</span><span style="color:#B392F0"> generate</span><span style="color:#F97583"> =</span><span style="color:#F97583"> async</span><span style="color:#E1E4E8"> () </span><span style="color:#F97583">=&gt;</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#B392F0">    setLoading</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">true</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#F97583">    const</span><span style="color:#79B8FF"> datas</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> any</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8">      model: </span><span style="color:#9ECBFF">&quot;text-davinci-003&quot;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">      prompt: </span><span style="color:#9ECBFF">`Make some keyword with this text. For example prompt is javascript and we expect response should be like js, javascript, javascript course, js tutorial, JavaScript Programing.. etc. Here is the text prompt: ${</span><span style="color:#E1E4E8">text</span><span style="color:#9ECBFF">}`</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">      temperature: </span><span style="color:#79B8FF">0.5</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">      max_tokens: </span><span style="color:#79B8FF">200</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">      top_p: </span><span style="color:#79B8FF">1.0</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">      frequency_penalty: </span><span style="color:#79B8FF">0.8</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">      presence_penalty: </span><span style="color:#79B8FF">0.0</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">    };</span></span>
+<span class="line"><span style="color:#F97583">    try</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583">      const</span><span style="color:#E1E4E8"> { </span><span style="color:#79B8FF">data</span><span style="color:#E1E4E8"> } </span><span style="color:#F97583">=</span><span style="color:#F97583"> await</span><span style="color:#E1E4E8"> axios.</span><span style="color:#B392F0">post</span><span style="color:#E1E4E8">(</span></span>
+<span class="line"><span style="color:#9ECBFF">        &quot;https://api.openai.com/v1/completions&quot;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">        datas,</span></span>
+<span class="line"><span style="color:#E1E4E8">        {</span></span>
+<span class="line"><span style="color:#E1E4E8">          headers: {</span></span>
+<span class="line"><span style="color:#9ECBFF">            &quot;Content-Type&quot;</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">&quot;application/json&quot;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">            Authorization: </span><span style="color:#9ECBFF">`Bearer ${</span><span style="color:#79B8FF">YOUR_API_KEY</span><span style="color:#9ECBFF">}`</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">          },</span></span>
+<span class="line"><span style="color:#E1E4E8">        }</span></span>
+<span class="line"><span style="color:#E1E4E8">      );</span></span>
+<span class="line"><span style="color:#F97583">      const</span><span style="color:#79B8FF"> keyword</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> data.choices[</span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">]?.text?.</span><span style="color:#B392F0">trim</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#E1E4E8">      toast.</span><span style="color:#B392F0">success</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;Keyword generated😍&quot;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#B392F0">      setText</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;&quot;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#B392F0">      onOpen</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#F97583">      return</span><span style="color:#B392F0"> setKeyword</span><span style="color:#E1E4E8">(keyword);</span></span>
+<span class="line"><span style="color:#E1E4E8">    } </span><span style="color:#F97583">catch</span><span style="color:#E1E4E8"> (</span><span style="color:#FFAB70">error</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> any</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#F97583">      if</span><span style="color:#E1E4E8"> (</span><span style="color:#F97583">!</span><span style="color:#E1E4E8">error?.response?.data </span><span style="color:#F97583">||</span><span style="color:#F97583"> !</span><span style="color:#E1E4E8">error?.response)</span></span>
+<span class="line"><span style="color:#F97583">        return</span><span style="color:#E1E4E8"> toast.</span><span style="color:#B392F0">error</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;Something went wrong!😒&quot;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">      const</span><span style="color:#79B8FF"> mess</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> error?.response.data?.message;</span></span>
+<span class="line"><span style="color:#F97583">      if</span><span style="color:#E1E4E8"> (mess) </span><span style="color:#F97583">return</span><span style="color:#E1E4E8"> toast.</span><span style="color:#B392F0">error</span><span style="color:#E1E4E8">(mess);</span></span>
+<span class="line"><span style="color:#E1E4E8">      toast.</span><span style="color:#B392F0">error</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;Fail to generate keyword😪&quot;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">    } </span><span style="color:#F97583">finally</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#B392F0">      setLoading</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">false</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"><span style="color:#F97583">  return</span><span style="color:#E1E4E8"> (</span></span>
+<span class="line"><span style="color:#E1E4E8">    &lt;</span><span style="color:#79B8FF">Container</span><span style="color:#B392F0"> w</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;400px&quot;</span><span style="color:#B392F0"> h</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;auto&quot;</span><span style="color:#B392F0"> mx</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;auto&quot;</span><span style="color:#B392F0"> p</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">{</span><span style="color:#79B8FF">4</span><span style="color:#E1E4E8">}&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">      &lt;</span><span style="color:#79B8FF">Center</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">        &lt;</span><span style="color:#79B8FF">Image</span><span style="color:#B392F0"> w</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;16&quot;</span><span style="color:#B392F0"> src</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;icon.png&quot;</span><span style="color:#B392F0"> alt</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;logo&quot;</span><span style="color:#E1E4E8"> /&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">      &lt;/</span><span style="color:#79B8FF">Center</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">      &lt;</span><span style="color:#79B8FF">VStack</span><span style="color:#B392F0"> spacing</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">{</span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">} </span><span style="color:#B392F0">my</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">{</span><span style="color:#79B8FF">2</span><span style="color:#E1E4E8">}&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">        &lt;</span><span style="color:#79B8FF">Heading</span><span style="color:#B392F0"> as</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;h1&quot;</span><span style="color:#B392F0"> fontSize</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;xl&quot;</span><span style="color:#B392F0"> fontWeight</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;bold&quot;</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">          Keyword Macker AI</span></span>
+<span class="line"><span style="color:#E1E4E8">        &lt;/</span><span style="color:#79B8FF">Heading</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">        &lt;</span><span style="color:#79B8FF">Text</span></span>
+<span class="line"><span style="color:#B392F0">          fontSize</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;sm&quot;</span></span>
+<span class="line"><span style="color:#B392F0">          color</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;gray.600&quot;</span></span>
+<span class="line"><span style="color:#B392F0">          fontWeight</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;400&quot;</span></span>
+<span class="line"><span style="color:#B392F0">          textAlign</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;center&quot;</span></span>
+<span class="line"><span style="color:#E1E4E8">        &gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">          Past your text in the bellow section and it will generate{</span><span style="color:#9ECBFF">&quot; &quot;</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#E1E4E8">          &lt;</span><span style="color:#85E89D">strong</span><span style="color:#E1E4E8">&gt;Keyword&lt;/</span><span style="color:#85E89D">strong</span><span style="color:#E1E4E8">&gt; for you. 🙂</span></span>
+<span class="line"><span style="color:#E1E4E8">        &lt;/</span><span style="color:#79B8FF">Text</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">      &lt;/</span><span style="color:#79B8FF">VStack</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">      &lt;</span><span style="color:#79B8FF">VStack</span><span style="color:#B392F0"> my</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">{</span><span style="color:#79B8FF">4</span><span style="color:#E1E4E8">}&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">        &lt;</span><span style="color:#79B8FF">Textarea</span></span>
+<span class="line"><span style="color:#B392F0">          onChange</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">{(</span><span style="color:#FFAB70">event</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> any</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">=&gt;</span><span style="color:#B392F0"> setText</span><span style="color:#E1E4E8">(event.target.value)}</span></span>
+<span class="line"><span style="color:#B392F0">          w</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;full&quot;</span></span>
+<span class="line"><span style="color:#B392F0">          value</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">{text}</span></span>
+<span class="line"><span style="color:#B392F0">          h</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;auto&quot;</span></span>
+<span class="line"><span style="color:#B392F0">          placeholder</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;Past your text here...&quot;</span></span>
+<span class="line"><span style="color:#E1E4E8">        /&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">        &lt;</span><span style="color:#79B8FF">Button</span><span style="color:#B392F0"> disabled</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">{loading} </span><span style="color:#B392F0">colorScheme</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;twitter&quot;</span><span style="color:#B392F0"> onClick</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">{generate}&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">          {loading </span><span style="color:#F97583">?</span><span style="color:#E1E4E8"> &lt;</span><span style="color:#79B8FF">Spinner</span><span style="color:#E1E4E8"> /&gt; </span><span style="color:#F97583">:</span><span style="color:#9ECBFF"> &quot;Generate Keyworld&quot;</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#E1E4E8">        &lt;/</span><span style="color:#79B8FF">Button</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">      &lt;/</span><span style="color:#79B8FF">VStack</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">      &lt;</span><span style="color:#79B8FF">HStack</span></span>
+<span class="line"><span style="color:#B392F0">        w</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;full&quot;</span></span>
+<span class="line"><span style="color:#B392F0">        textAlign</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;center&quot;</span></span>
+<span class="line"><span style="color:#B392F0">        fontWeight</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;semibold&quot;</span></span>
+<span class="line"><span style="color:#B392F0">        mt</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">{</span><span style="color:#79B8FF">3</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#B392F0">        justify</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;center&quot;</span></span>
+<span class="line"><span style="color:#E1E4E8">      &gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">        &lt;</span><span style="color:#79B8FF">Text</span><span style="color:#E1E4E8">&gt;Created by &lt;/</span><span style="color:#79B8FF">Text</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">        &lt;</span><span style="color:#79B8FF">Text</span></span>
+<span class="line"><span style="color:#B392F0">          cursor</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;pointer&quot;</span></span>
+<span class="line"><span style="color:#B392F0">          color</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;green&quot;</span></span>
+<span class="line"><span style="color:#B392F0">          textDecor</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;underline&quot;</span></span>
+<span class="line"><span style="color:#B392F0">          onClick</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">{() </span><span style="color:#F97583">=&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">            window.</span><span style="color:#B392F0">open</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;https://www.showwcase.com/devlopersabbir&quot;</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">          }</span></span>
+<span class="line"><span style="color:#E1E4E8">        &gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">          @devlopersabbir</span></span>
+<span class="line"><span style="color:#E1E4E8">        &lt;/</span><span style="color:#79B8FF">Text</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">      &lt;/</span><span style="color:#79B8FF">HStack</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">      &lt;</span><span style="color:#79B8FF">Modals</span><span style="color:#B392F0"> data</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">{keyword} </span><span style="color:#B392F0">isOpen</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">{isOpen} </span><span style="color:#B392F0">onClose</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">{onClose} /&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">    &lt;/</span><span style="color:#79B8FF">Container</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">  );</span></span>
+<span class="line"><span style="color:#E1E4E8">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">export</span><span style="color:#F97583"> default</span><span style="color:#E1E4E8"> App;</span></span></code></pre>
+<blockquote>
+<p>Note: As we can see here have a <code>Modals</code> component. But we haven’t create like this component yet.
+To do that let’s create a component folder into src -&gt; component -&gt; and create a component called <code>Modals</code>.</p>
+</blockquote>
+<p>So, here is our modal component code.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="tsx"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8">  Button,</span></span>
+<span class="line"><span style="color:#E1E4E8">  Modal,</span></span>
+<span class="line"><span style="color:#E1E4E8">  ModalBody,</span></span>
+<span class="line"><span style="color:#E1E4E8">  ModalCloseButton,</span></span>
+<span class="line"><span style="color:#E1E4E8">  ModalContent,</span></span>
+<span class="line"><span style="color:#E1E4E8">  ModalFooter,</span></span>
+<span class="line"><span style="color:#E1E4E8">  ModalHeader,</span></span>
+<span class="line"><span style="color:#E1E4E8">  ModalOverlay,</span></span>
+<span class="line"><span style="color:#E1E4E8">  Text,</span></span>
+<span class="line"><span style="color:#E1E4E8">} </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> &quot;@chakra-ui/react&quot;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> { toast } </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> &quot;react-hot-toast&quot;</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">interface</span><span style="color:#B392F0"> IModals</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#FFAB70">  isOpen</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> boolean</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#B392F0">  onClose</span><span style="color:#F97583">:</span><span style="color:#E1E4E8"> () </span><span style="color:#F97583">=&gt;</span><span style="color:#79B8FF"> void</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#FFAB70">  data</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> string</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">const</span><span style="color:#B392F0"> Modals</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> ({ </span><span style="color:#FFAB70">isOpen</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">onClose</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">data</span><span style="color:#E1E4E8"> }</span><span style="color:#F97583">:</span><span style="color:#B392F0"> IModals</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">=&gt;</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583">  return</span><span style="color:#E1E4E8"> (</span></span>
+<span class="line"><span style="color:#E1E4E8">    &lt;</span><span style="color:#79B8FF">Modal</span><span style="color:#B392F0"> size</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;sm&quot;</span><span style="color:#B392F0"> isOpen</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">{isOpen} </span><span style="color:#B392F0">onClose</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">{onClose}&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">      &lt;</span><span style="color:#79B8FF">ModalOverlay</span><span style="color:#E1E4E8"> /&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">      &lt;</span><span style="color:#79B8FF">ModalContent</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">        &lt;</span><span style="color:#79B8FF">ModalHeader</span><span style="color:#E1E4E8">&gt;Keyword&lt;/</span><span style="color:#79B8FF">ModalHeader</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">        &lt;</span><span style="color:#79B8FF">ModalCloseButton</span><span style="color:#E1E4E8"> /&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">        &lt;</span><span style="color:#79B8FF">ModalBody</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">          &lt;</span><span style="color:#79B8FF">Text</span><span style="color:#B392F0"> fontSize</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;lg&quot;</span><span style="color:#B392F0"> fontWeight</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;500&quot;</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">            {data}</span></span>
+<span class="line"><span style="color:#E1E4E8">          &lt;/</span><span style="color:#79B8FF">Text</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">        &lt;/</span><span style="color:#79B8FF">ModalBody</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">        &lt;</span><span style="color:#79B8FF">ModalFooter</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">          &lt;</span><span style="color:#79B8FF">Button</span><span style="color:#B392F0"> colorScheme</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;blue&quot;</span><span style="color:#B392F0"> mr</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">{</span><span style="color:#79B8FF">3</span><span style="color:#E1E4E8">} </span><span style="color:#B392F0">onClick</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">{onClose}&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">            Close</span></span>
+<span class="line"><span style="color:#E1E4E8">          &lt;/</span><span style="color:#79B8FF">Button</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">          &lt;</span><span style="color:#79B8FF">Button</span><span style="color:#B392F0"> colorScheme</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;green&quot;</span><span style="color:#E1E4E8">&gt;Copy&lt;/</span><span style="color:#79B8FF">Button</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">        &lt;/</span><span style="color:#79B8FF">ModalFooter</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">      &lt;/</span><span style="color:#79B8FF">ModalContent</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">    &lt;/</span><span style="color:#79B8FF">Modal</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">  );</span></span>
+<span class="line"><span style="color:#E1E4E8">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">export</span><span style="color:#F97583"> default</span><span style="color:#E1E4E8"> Modals;</span></span></code></pre>
+<p>As we can see in the <code>Modals</code> component we receive 3 parameter as a props. Also we use a <code>interface</code>. However, have you seen this?? we have <code>copy button</code>😎.
+What do you thing??🤣
+Sorry for lot’s of fun. We will create a simple functionality for copy our <code>result keyword</code>. Okey, let’s create…</p>
+<h2 id="copy-keyword-in-clipboard">Copy keyword in clipboard</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="tsx"><code><span class="line"><span style="color:#F97583">const</span><span style="color:#B392F0"> handleCopyClick</span><span style="color:#F97583"> =</span><span style="color:#F97583"> async</span><span style="color:#E1E4E8"> () </span><span style="color:#F97583">=&gt;</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583">  try</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583">    await</span><span style="color:#E1E4E8"> navigator.clipboard.</span><span style="color:#B392F0">writeText</span><span style="color:#E1E4E8">(data);</span></span>
+<span class="line"><span style="color:#E1E4E8">    toast.</span><span style="color:#B392F0">success</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;🚀 Keyword copied🥹&quot;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">  } </span><span style="color:#F97583">catch</span><span style="color:#E1E4E8"> (error) {</span></span>
+<span class="line"><span style="color:#E1E4E8">    toast.</span><span style="color:#B392F0">error</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;Fail to copy the keyword!&quot;</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// add replace copy button line with this line.</span></span>
+<span class="line"><span style="color:#E1E4E8">&lt;</span><span style="color:#79B8FF">Button</span><span style="color:#B392F0"> onClick</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">{handleCopyClick} </span><span style="color:#B392F0">colorScheme</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;green&quot;</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">  Copy</span></span>
+<span class="line"><span style="color:#E1E4E8">&lt;/</span><span style="color:#79B8FF">Button</span><span style="color:#E1E4E8">&gt;;</span></span></code></pre>
+<h1 id="finished">Finished</h1>
+<p>Finished our extension😁
+Anyway, if you want you see full source code into my <a href="https://github.com/devlopersabbir">GitHub</a> profile <a href="https://github.com/devlopersabbir/keyword-generator-chrome-extension">Repo Link</a>. Also here is the <a href="https://www.youtube.com/c/stsabbir">YouTube</a> video <a href="https://youtu.be/LOcWxUQbYPY">tutorial link</a>
+.
+.</p>
+<h2 id="author">Author</h2>
+<p>Full Name <a href="https://www.showwcase.com/devlopersabbir">Sabbir Hossain Shuvo</a>. And the GitHub profile is <a href="https://github.com/devlopersabbir">https://github.com/devlopersabbir</a>.</p>
+<p>For support just <a href="https://www.buymeacoffee.com/devlopersabbir">Buy Me A Coffee</a>
+<a href="https://www.buymeacoffee.com/devlopersabbir">https://www.buymeacoffee.com/devlopersabbir</a></p> </article> <div class="mt-10"> <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-3">
+Tags:
+</h3> <div class="flex flex-wrap gap-2"> <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full shadow-sm dark:bg-blue-900 dark:text-blue-200"> chrome-extension </span><span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full shadow-sm dark:bg-blue-900 dark:text-blue-200"> typescript </span><span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full shadow-sm dark:bg-blue-900 dark:text-blue-200"> react </span> </div> </div> </div> </div> </section>   </main> <footer class="flex justify-center items-center font-semibold text-sm my-8">
+Made with 💚 by Sabbir - Powered by AstroJs
+</footer> </body></html> <!-- Optional Script for Click-to-Copy --> <script type="module">document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll("pre").forEach(e=>{if(!e)return;const t=document.createElement("button");t.innerText="📋 Copy",t.className="absolute top-2 right-2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-75 hover:opacity-100 transition cursor-pointer",t.onclick=()=>{navigator.clipboard.writeText(e.innerText.trim()),t.innerText="✅ Copied!",setTimeout(()=>t.innerText="📋 Copy",1500)};const n=document.createElement("div");n.className="relative",e.parentNode&&e.parentNode.insertBefore(n,e),n.appendChild(e),n.appendChild(t)})});</script>

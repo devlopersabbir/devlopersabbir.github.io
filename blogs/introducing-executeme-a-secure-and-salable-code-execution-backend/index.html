@@ -1,0 +1,153 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="sitemap" href="/sitemap-index.xml"><meta name="generator" content="Astro v5.11.0"><title>Sabbir - Introducing executeme - A Secure &amp; Scalable Code Execution Backend</title><link rel="stylesheet" href="/_astro/_slug_.ZztAOc5B.css">
+<link rel="stylesheet" href="/_astro/_slug_.aMvUKmrS.css"></head> <body class="bg-zinc-900 text-zinc-50"> <header class="shadow-zinc-800 shadow"> <nav class="container mx-auto px-2 py-2.5"> <div class="flex-between-center"> <ul class="flex space-x-3"> <li class="nav-item"> <a href="/">Home</a> </li><li class="nav-item"> <a href="/projects">Projects</a> </li><li class="nav-item"> <a href="/blogs">Blogs</a> </li><li class="nav-item"> <a href="/hire-me">Hire Me</a> </li> </ul> <!-- TODO: need to show a mode changer button --> <!-- <button class="bg-zinc-800 border border-zinc-700 rounded"> theme</button> --> </div> </nav> </header> <main class="container mx-auto px-2">   <section class="container mx-auto px-4 py-10 max-w-4xl"> <div class="rounded-lg overflow-hidden shadow-md transition-all duration-300"> <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/82939905/460045516-5b8fcd10-3b72-47ca-ba61-059662c46cda.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20250627%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250627T171515Z&X-Amz-Expires=300&X-Amz-Signature=df94a1dfcb8c3b56fd7efddf4fb44ee672e1461b398e45c30d09eb638be28203&X-Amz-SignedHeaders=host" alt="Introducing executeme - A Secure &#38; Scalable Code Execution Backend" class="w-full h-72 object-cover"> <div class="p-6"> <h1 class="text-4xl font-extrabold mb-4 text-gray-900 dark:text-white"> Introducing executeme - A Secure &amp; Scalable Code Execution Backend </h1> <p class="text-gray-500 dark:text-gray-400 text-sm mb-6">
+By <span class="font-semibold">Sabbir Hossain Shuvo</span> on  June 27, 2025 </p> <article class="markdown-body !bg-transparent"> <h1 id="unleash-your-code-introducing-executeme---a-secure--scalable-code-execution-backend">Unleash Your Code: Introducing <code>executeme</code> - A Secure &amp; Scalable Code Execution Backend</h1>
+<h2 id="ever-needed-to-run-arbitrary-code-securely-and-efficiently">Ever needed to run arbitrary code securely and efficiently?</h2>
+<p>Whether you’re building an online judge, a coding playground, an educational platform, or even an automated testing service, executing user-submitted code in a safe and isolated environment is a fundamental challenge. That’s where <strong><code>executeme</code></strong> comes in.</p>
+<p><code>executeme</code> is a robust and secure backend service designed precisely for this purpose. It allows you to run code snippets in various programming languages within isolated Docker containers, providing both security and scalability.</p>
+<h2 id="-what-is-executeme">✨ What is <code>executeme</code>?</h2>
+<p>At its core, <code>executeme</code> is a Node.js-powered API that acts as an intermediary between your application and various language runtimes. When a user submits code, <code>executeme</code> takes care of spinning up a dedicated, isolated Docker container for that specific execution, runs the code, captures its output (or errors), and then cleans up the environment.</p>
+<p>Here are some of its standout features:</p>
+<ul>
+<li>
+<p><strong>Multi-Language Support:</strong> Out-of-the-box, <code>executeme</code> supports Python, Node.js, and Java. Its modular design makes it straightforward to extend support to even more languages based on your needs.</p>
+</li>
+<li>
+<p><strong>Secure Docker Isolation:</strong> Security is paramount. Every code execution happens within its own ephemeral Docker container. This ensures that user code cannot interfere with other executions or the host system, providing a secure sandbox.</p>
+</li>
+<li>
+<p><strong>Resource Limiting:</strong> To prevent malicious code from consuming excessive resources (e.g., infinite loops, memory bombs), <code>executeme</code> applies configurable memory and CPU limits to each execution. This safeguards your infrastructure.</p>
+</li>
+<li>
+<p><strong>API-Driven:</strong> Designed with integration in mind, <code>executeme</code> exposes a simple RESTful API endpoint. This makes it easy to hook it into your frontend applications or any other service requiring code execution capabilities.</p>
+</li>
+<li>
+<p><strong>Automated Cleanup:</strong> No lingering artifacts! <code>executeme</code> automatically manages temporary directories and files created for each execution, ensuring a clean and efficient system.</p>
+</li>
+</ul>
+<h2 id="-why-choose-executeme">💡 Why Choose <code>executeme</code>?</h2>
+<p><code>executeme</code> simplifies a complex problem. Instead of wrestling with container orchestration, security hardening, and managing multiple language runtimes yourself, you can integrate this ready-to-use backend. It’s perfect for:</p>
+<ul>
+<li>
+<p><strong>Online Compilers/Editors:</strong> Give your users a place to write and test code live.</p>
+</li>
+<li>
+<p><strong>Coding Challenge Platforms:</strong> Automate the execution and evaluation of user solutions.</p>
+</li>
+<li>
+<p><strong>Educational Tools:</strong> Provide interactive coding exercises and immediate feedback.</p>
+</li>
+<li>
+<p><strong>DevTools:</strong> Quickly test snippets or automate code-dependent workflows.</p>
+</li>
+</ul>
+<h2 id="-getting-started-with-executeme">🚀 Getting Started with <code>executeme</code></h2>
+<p>Setting up <code>executeme</code> is designed to be quick and easy thanks to Docker Compose.</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>Make sure you have:</p>
+<ul>
+<li>
+<p><strong>Docker</strong> (Engine &amp; Compose) installed.</p>
+</li>
+<li>
+<p><strong>Node.js</strong> (LTS version, e.g., 20.x+) and <strong>npm</strong>.</p>
+</li>
+</ul>
+<h3 id="installation--setup-steps">Installation &amp; Setup Steps</h3>
+<ol>
+<li>
+<p><strong>Clone the Repository:</strong>
+Start by cloning the <code>executeme</code> GitHub repository to your local machine:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">git</span><span style="color:#9ECBFF"> clone</span><span style="color:#9ECBFF"> https://github.com/devlopersabbir/executeme.git</span></span>
+<span class="line"><span style="color:#79B8FF">cd</span><span style="color:#9ECBFF"> executeme</span></span></code></pre>
+</li>
+<li>
+<p><strong>Install Node.js Dependencies:</strong>
+Navigate into the <code>app</code> directory where the Node.js server is located and install its dependencies:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#79B8FF">cd</span><span style="color:#9ECBFF"> app</span></span>
+<span class="line"><span style="color:#B392F0">npm</span><span style="color:#9ECBFF"> install</span></span>
+<span class="line"><span style="color:#79B8FF">cd</span><span style="color:#9ECBFF"> ..</span></span></code></pre>
+</li>
+<li>
+<p><strong>Build Docker Images:</strong>
+This is a crucial step! <code>executeme</code> relies on pre-built Docker images for each language runtime. Build them using Docker Compose:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">docker</span><span style="color:#9ECBFF"> compose</span><span style="color:#9ECBFF"> build</span></span></code></pre>
+<p>This command will build the following images:</p>
+<ul>
+<li><code>executor-nodejs:latest</code></li>
+<li><code>executor-python:latest</code></li>
+<li><code>executor-java:latest</code></li>
+<li><code>executeme-nodejs-server:latest</code> (your main backend service)</li>
+</ul>
+</li>
+<li>
+<p><strong>Run the Services:</strong>
+Once all images are built, you can launch the <code>executeme</code> backend service using Docker Compose. This will bring up your Node.js server and prepare the environment for code execution.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">docker</span><span style="color:#9ECBFF"> compose</span><span style="color:#9ECBFF"> up</span></span></code></pre>
+<p>Your Node.js server should now be running and accessible on <code>http://localhost:3000</code>.</p>
+</li>
+</ol>
+<h2 id="️-how-to-use-the-api">⚙️ How to Use the API</h2>
+<p>The primary way to interact with <code>executeme</code> is through its <code>/run</code> POST endpoint. You send your code and the desired language, and it returns the execution output.</p>
+<h3 id="post-run"><code>POST /run</code></h3>
+<p><strong>Endpoint:</strong> <code>http://localhost:3000/run</code>
+<strong>Method:</strong> <code>POST</code>
+<strong>Content-Type:</strong> <code>application/json</code></p>
+<p><strong>Request Body Example:</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  &quot;code&quot;</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">&quot;print(&#39;Hello, World!&#39;)&quot;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  &quot;language&quot;</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">&quot;python&quot;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<h3 id="success-response-status-200-ok">Success Response (Status: <code>200 OK</code>):</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  &quot;output&quot;</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">&quot;Hello, World!</span><span style="color:#79B8FF">\n</span><span style="color:#9ECBFF">&quot;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<h3 id="error-response-status-400-bad-request-or-500-internal-server-error">Error Response (Status: <code>400 Bad Request</code> or <code>500 Internal Server Error</code>):</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  &quot;error&quot;</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">&quot;Runtime error&quot;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  &quot;details&quot;</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">&quot;Traceback (most recent call last):</span><span style="color:#79B8FF">\n</span><span style="color:#9ECBFF">  File </span><span style="color:#79B8FF">\&quot;</span><span style="color:#9ECBFF">main.py</span><span style="color:#79B8FF">\&quot;</span><span style="color:#9ECBFF">, line 1, in &lt;module&gt;</span><span style="color:#79B8FF">\n</span><span style="color:#9ECBFF">    print(</span><span style="color:#79B8FF">\&quot;</span><span style="color:#9ECBFF">Hello, World</span><span style="color:#79B8FF">\&quot;</span><span style="color:#9ECBFF">&quot;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<h3 id="curl-examples"><code>curl</code> Examples</h3>
+<p>Here’s how you can test it directly from your terminal:</p>
+<p><strong>Python Example:</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">curl</span><span style="color:#79B8FF"> -X</span><span style="color:#9ECBFF"> POST</span><span style="color:#79B8FF"> -H</span><span style="color:#9ECBFF"> &quot;Content-Type: application/json&quot;</span><span style="color:#79B8FF"> \</span></span>
+<span class="line"><span style="color:#E1E4E8">-d </span><span style="color:#9ECBFF">&#39;{</span></span>
+<span class="line"><span style="color:#9ECBFF">  &quot;language&quot;: &quot;python&quot;,</span></span>
+<span class="line"><span style="color:#9ECBFF">  &quot;code&quot;: &quot;print(\&quot;Hello from Python!\&quot;)\nimport sys\nprint(sys.version)&quot;</span></span>
+<span class="line"><span style="color:#9ECBFF">}&#39;</span><span style="color:#79B8FF"> \</span></span>
+<span class="line"><span style="color:#E1E4E8">http://localhost:3000/run</span></span></code></pre>
+<p><strong>Node.js Example:</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">curl</span><span style="color:#79B8FF"> -X</span><span style="color:#9ECBFF"> POST</span><span style="color:#79B8FF"> -H</span><span style="color:#9ECBFF"> &quot;Content-Type: application/json&quot;</span><span style="color:#79B8FF"> \</span></span>
+<span class="line"><span style="color:#E1E4E8">-d </span><span style="color:#9ECBFF">&#39;{</span></span>
+<span class="line"><span style="color:#9ECBFF">  &quot;language&quot;: &quot;nodejs&quot;,</span></span>
+<span class="line"><span style="color:#9ECBFF">  &quot;code&quot;: &quot;console.log(\&quot;Hello from Node.js!\&quot;);\nconsole.log(process.version);&quot;</span></span>
+<span class="line"><span style="color:#9ECBFF">}&#39;</span><span style="color:#79B8FF"> \</span></span>
+<span class="line"><span style="color:#E1E4E8">http://localhost:3000/run</span></span></code></pre>
+<p><strong>Java Example:</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">curl</span><span style="color:#79B8FF"> -X</span><span style="color:#9ECBFF"> POST</span><span style="color:#79B8FF"> -H</span><span style="color:#9ECBFF"> &quot;Content-Type: application/json&quot;</span><span style="color:#79B8FF"> \</span></span>
+<span class="line"><span style="color:#E1E4E8">-d </span><span style="color:#9ECBFF">&#39;{</span></span>
+<span class="line"><span style="color:#9ECBFF">  &quot;language&quot;: &quot;java&quot;,</span></span>
+<span class="line"><span style="color:#9ECBFF">  &quot;code&quot;: &quot;public class Main { public static void main(String[] args) { System.out.println(\&quot;Hello from Java executor!\&quot;); } }&quot;</span></span>
+<span class="line"><span style="color:#9ECBFF">}&#39;</span><span style="color:#79B8FF"> \</span></span>
+<span class="line"><span style="color:#E1E4E8">http://localhost:3000/run</span></span></code></pre>
+<h2 id="-contributing--supporting">🧑‍💻 Contributing &amp; Supporting</h2>
+<p><code>executeme</code> is a fully open-source project, and contributions are highly encouraged! Whether it’s adding new language support, improving performance, fixing bugs, or enhancing documentation, your input is valuable.</p>
+<h3 id="how-to-contribute">How to Contribute:</h3>
+<ol>
+<li>Fork the <a href="https://github.com/devlopersabbir/executeme">GitHub repository</a>.</li>
+<li>Clone your fork.</li>
+<li>Create a new branch for your feature or bug fix.</li>
+<li>Make your changes, write tests, and ensure code quality.</li>
+<li>Open a Pull Request with a clear description of your work.</li>
+</ol>
+<h3 id="support-the-project">Support the Project:</h3>
+<p>If <code>executeme</code> helps you or your project, consider showing your support. Your contributions help maintain and improve this tool for the entire developer community!</p>
+<ul>
+<li><strong>Sponsor on GitHub:</strong> <a href="https://github.com/sponsors/devlopersabbir">https://github.com/sponsors/devlopersabbir</a></li>
+<li><strong>Buy Me a Coffee:</strong> <a href="https://buymeacoffee.com/devlopersabbir">https://buymeacoffee.com/devlopersabbir</a></li>
+</ul>
+<h2 id="-conclusion">🏁 Conclusion</h2>
+<p><code>executeme</code> offers a powerful, secure, and flexible solution for executing code in a sandboxed environment. By leveraging Docker, it provides the isolation needed for production use cases while remaining easy to integrate and extend. Give it a try for your next project that requires dynamic code execution!</p> </article> <div class="mt-10"> <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-3">
+Tags:
+</h3> <div class="flex flex-wrap gap-2"> <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full shadow-sm dark:bg-blue-900 dark:text-blue-200"> executeme </span><span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full shadow-sm dark:bg-blue-900 dark:text-blue-200"> compiler </span><span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full shadow-sm dark:bg-blue-900 dark:text-blue-200"> high-performance </span> </div> </div> </div> </div> </section>   </main> <footer class="flex justify-center items-center font-semibold text-sm my-8">
+Made with 💚 by Sabbir - Powered by AstroJs
+</footer> </body></html> <!-- Optional Script for Click-to-Copy --> <script type="module">document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll("pre").forEach(e=>{if(!e)return;const t=document.createElement("button");t.innerText="📋 Copy",t.className="absolute top-2 right-2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-75 hover:opacity-100 transition cursor-pointer",t.onclick=()=>{navigator.clipboard.writeText(e.innerText.trim()),t.innerText="✅ Copied!",setTimeout(()=>t.innerText="📋 Copy",1500)};const n=document.createElement("div");n.className="relative",e.parentNode&&e.parentNode.insertBefore(n,e),n.appendChild(e),n.appendChild(t)})});</script>
