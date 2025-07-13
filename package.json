@@ -1,5 +1,6 @@
 {
   "name": "devlopersabbir.github.io",
+  "description": "This is the devlopersabbir personal portfolio website. Where he display his expertise and skills set.",
   "type": "module",
   "version": "1.2.5",
   "scripts": {
