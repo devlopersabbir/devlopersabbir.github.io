@@ -1,15 +1,15 @@
 ---
-import youtubeVideos from "../services/youtube/card.json";
+// import youtubeVideos from "../services/youtube/card.json";
+import youtubePlaylist from "../services/youtube/playlist.json";
 import VideoCard from "./video-card.astro";
 ---
 
 <div class="max-w-4xl mx-auto py-8">
   <!-- Section Header -->
   <div class="flex-between-center mb-4">
-    <h2 class="text-xl font-bold">Latest YouTube Videos</h2>
-    <!-- Optional: Link to a dedicated YouTube videos page if you have one -->
+    <h2 class="text-xl font-bold">Free Courses - YouTube Playlist</h2>
     <a
-      href="https://www.youtube.com/@STSabbir/videos"
+      href="https://www.youtube.com/@STSabbir/playlists"
       target="_blank"
       class="underline text-blue-400 text-sm hover:text-blue-300">Visite</a
     >
@@ -17,6 +17,6 @@ import VideoCard from "./video-card.astro";
 
   <!-- Grid for YouTube Cards -->
   <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-    {youtubeVideos.map((video) => <VideoCard video={video} />)}
+    {youtubePlaylist.map((item) => <VideoCard video={item} />)}
   </div>
 </div>
