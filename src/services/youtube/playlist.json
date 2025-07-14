@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Mastering Hono Framework & Deno.js: Build a Scalable Lightweight REST API - 2024",
+    "link": "https://www.youtube.com/watch?v=LGJLTFLE2Ek&list=PLdcGGiDG9Q0j7pLzVcWvFptCPbENkfl7S&index=1",
+    "thumbnail": "https://img.youtube.com/vi/LGJLTFLE2Ek/mqdefault.jpg",
+    "pubDate": "Oct 27, 2024"
+  },
+  {
+    "title": "dJango Complete Free Course - 2024",
+    "link": "https://www.youtube.com/watch?v=0oqqln82Hv0&list=PLdcGGiDG9Q0iQ8a5V8GQID35XQqOhMzUY&index=1",
+    "thumbnail": "https://img.youtube.com/vi/0oqqln82Hv0/mqdefault.jpg",
+    "pubDate": "Aug 6, 2024"
+  },
+  {
+    "title": "Develop Visual Studio Code Extension - 2023",
+    "link": "https://www.youtube.com/watch?v=1m4XO19bZMU&list=PLdcGGiDG9Q0gJ4MGWB5rHfVot5QzUfX5G&index=1",
+    "thumbnail": "https://img.youtube.com/vi/1m4XO19bZMU/mqdefault.jpg",
+    "pubDate": "Sep 15, 2023"
+  },
+  {
+    "title": "Python API Development with FastAPI - 2023",
+    "link": "https://www.youtube.com/watch?v=kjpGegMonUQ&list=PLdcGGiDG9Q0h60BxpzWWAStJmU6Ta2Pco&index=1",
+    "thumbnail": "https://img.youtube.com/vi/kjpGegMonUQ/mqdefault.jpg",
+    "pubDate": "Oct 18, 2023"
+  }
+]
