@@ -35,13 +35,6 @@ export const projects = [
     repo_link: "https://github.com/devlopersabbir/amazon-sells-booster",
   },
   {
-    title: "Online Car Shop - Buy/Sell/Rent",
-    date: "Aug 24, 2023",
-    tech: ["Vue", "Firebase", "Sass"],
-    link: "https://car-shop-sand.vercel.app/",
-    repo_link: "https://github.com/devlopersabbir/car-shop",
-  },
-  {
     title: "Shopping Cart - E-commerce",
     date: "Nov 15, 2023",
     tech: ["NextJs", "TypeScript", "Auth"],
