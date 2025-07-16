@@ -6,7 +6,13 @@ export const projects = [
     link: "https://executeme.vercel.app",
     repo_link: "https://github.com/devlopersabbir/executeme",
   },
-
+  {
+    title: "BrowserPlugins - Premium Extension Shop",
+    date: "Jul 13, 2025",
+    tech: ["NextJs15", "TypeScript", "TailwindCSS"],
+    link: "https://browserplugins.vercel.app",
+    repo_link: "https://github.com/devlopersabbir/browserplugins",
+  },
   {
     title: "Random Kana - Japaness Learing",
     date: "Jul 11, 2025",
