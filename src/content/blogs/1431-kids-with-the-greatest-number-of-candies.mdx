@@ -1,0 +1,51 @@
+---
+title: 1431. Kids With the Greatest Number of Candies
+description: Return a boolean array result of length n, where result[i] is true if, after giving the ith kid all the extraCandies, they will have the greatest number of candies among all the kids, or false otherwise.
+pubDate: 2025-07-24
+author: "Sabbir Hossain Shuvo"
+image: 
+tags: ["leetcode", "problem 1431", "typescript"]
+---
+
+# Intuition
+To determine which children can have the greatest number of candies after receiving extra candies, we first need to know the maximum number of candies that any child currently has. Then we can check for each child whether their current candies plus the extra candies are at least equal to that maximum.
+
+# Approach
+1. Find the maximum value in the `candies` array to determine the current highest candy count.
+2. Iterate over the `candies` array again and for each child, check if their candies plus `extraCandies` is greater than or equal to the maximum.
+3. Push `true` or `false` to the result array based on the condition.
+4. Return the result array.
+
+# Complexity
+- **Time complexity:**  
+  $$O(n)$$ — We iterate through the list twice: once to find the max, and once to compare each child's total.
+
+- **Space complexity:**  
+  $$O(n)$$ — We use an additional array of the same length to store the boolean results.
+
+# Code
+```typescript
+export function kidsWithCandies(
+    candies: number[],
+    extraCandies: number
+): boolean[] {
+    const result: boolean[] = [];
+    let highestCandy = candies[0];
+
+    // Find the maximum candy count
+    for (let i = 1; i < candies.length; i++) {
+        if (candies[i] > highestCandy) {
+            highestCandy = candies[i];
+        }
+    }
+
+    // Determine if each child can reach or exceed the max
+    for (let i = 0; i < candies.length; i++) {
+        const totalCandies = candies[i] + extraCandies;
+        result.push(totalCandies >= highestCandy);
+    }
+
+    return result;
+}
+```
+**NOTE:** It's a very basic way to solve this problem you can make it short.
