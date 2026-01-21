@@ -1,0 +1,19 @@
+<script is:inline>
+  const THEME_KEY = "theme";
+
+  const getPreferredTheme = () => {
+    const stored = localStorage.getItem(THEME_KEY);
+    if (stored) return stored;
+    return window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light";
+  };
+
+  const applyTheme = (theme) => {
+    document.documentElement.classList.toggle("dark", theme === "dark");
+    localStorage.setItem(THEME_KEY, theme);
+  };
+
+  const theme = getPreferredTheme();
+  applyTheme(theme);
+</script>

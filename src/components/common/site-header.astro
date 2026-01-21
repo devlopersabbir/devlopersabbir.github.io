@@ -2,20 +2,61 @@
 import { menus } from "../../constants/menus";
 ---
 
-<header class="shadow-zinc-800 shadow">
-  <nav class="container mx-auto px-2 py-2.5">
-    <div class="flex-between-center">
-      <ul class="flex space-x-3">
-        {
-          menus.map((menu) => (
-            <li class="nav-item">
-              <a href={menu.path}>{menu.label}</a>
+<header
+  class="
+    sticky top-0 z-50
+    bg-white/70 dark:bg-zinc-950/70
+    backdrop-blur
+    border-b border-zinc-200 dark:border-zinc-800
+  "
+>
+  <nav class="container mx-auto px-4 py-3">
+    <ul class="flex items-center gap-2">
+      {
+        menus.map((menu) => {
+          const isActive = Astro.url.pathname === menu.path;
+
+          return (
+            <li>
+              <a
+                href={menu.path}
+                class={`
+                  relative inline-flex items-center
+                  px-3 py-1
+                  text-sm font-medium
+                  rounded-md
+                  transition-colors duration-200
+                  ${
+                    isActive
+                      ? "text-zinc-900 dark:text-zinc-100"
+                      : "text-zinc-700 dark:text-zinc-300"
+                  }
+                  group
+                `}
+              >
+                {menu.label}
+
+                {/* Animated border */}
+                <span
+                  class={`
+                    pointer-events-none
+                    absolute inset-0
+                    rounded-md
+                    border
+                    transition-transform duration-300 ease-out
+                    ${
+                      isActive
+                        ? "border-zinc-400 dark:border-zinc-600 scale-x-100"
+                        : "border-transparent scale-x-0 group-hover:scale-x-100"
+                    }
+                    origin-left
+                  `}
+                ></span>
+              </a>
             </li>
-          ))
-        }
-      </ul>
-      <!-- TODO: need to show a mode changer button -->
-      <!-- <button class="bg-zinc-800 border border-zinc-700 rounded"> theme</button> -->
-    </div>
+          );
+        })
+      }
+    </ul>
   </nav>
 </header>

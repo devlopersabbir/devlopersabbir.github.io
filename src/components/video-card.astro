@@ -15,7 +15,7 @@ const formattedDate = formatDate(video.pubDate);
 ---
 
 <div
-  class="block bg-zinc-900 border border-zinc-700 rounded-lg p-3 hover:border-blue-500 transition-all overflow-hidden"
+  class="block dark:bg-zinc-900 bg-white rounded-xl p-0 shadow-md transition-all duration-300"
 >
   <a href={video.link} target="_blank" rel="noopener noreferrer" class="block">
     <!-- Video Thumbnail -->
@@ -31,14 +31,15 @@ const formattedDate = formatDate(video.pubDate);
       <PlayButton />
     </div>
 
+    <!-- Date Section -->
+    <span class="text-xs text-zinc-400 min-w-max px-4">{formattedDate}</span>
     <!-- Title and Date Section -->
-    <div class="flex justify-between items-start mb-3">
+    <div class="flex justify-between items-start px-4 mb-2">
       <h3
-        class="text-md font-semibold cursor-pointer text-white hover:text-blue-400 transition-colors line-clamp-2"
+        class="text-sm font-semibold cursor-pointer dark:text-white text-zinc-900 hover:text-zinc-600 transition-colors line-clamp-3"
       >
         {video.title}
       </h3>
-      <span class="text-xs text-zinc-400 min-w-max ml-2">{formattedDate}</span>
     </div>
   </a>
 </div>

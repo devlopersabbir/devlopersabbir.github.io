@@ -4,8 +4,11 @@
 /* theme */
 
 /* apply */
+.content-layout {
+  @apply max-w-4xl mx-auto py-4;
+}
 .nav-item {
-  @apply py-1 px-3 bg-zinc-800 border border-zinc-700 rounded;
+  @apply py-1 px-3 border rounded;
 }
 .flex-center {
   @apply flex justify-center items-center;
@@ -22,4 +25,7 @@
 
 .container {
   max-width: 55rem;
+}
+html {
+  transition: background-color 0.2s ease, color 0.2s ease;
 }

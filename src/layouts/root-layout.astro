@@ -6,6 +6,7 @@ const { pageTitle } = Astro.props;
 import SiteHeader from "../components/common/site-header.astro";
 import SiteFooter from "../components/common/site-footer.astro";
 import "../styles/global.css";
+import ThemeToggle from "../theme/ThemeToggle.astro";
 ---
 
 <html lang="en">
@@ -24,11 +25,12 @@ import "../styles/global.css";
     <meta property="al:web:url" content="https://devlopersabbir.github.io" />
     <title>Sabbir - {pageTitle}</title>
   </head>
-  <body class="bg-zinc-900 text-zinc-50">
+  <body class="bg-white dark:bg-zinc-900 transition-colors duration-300">
     <SiteHeader />
     <main class="container mx-auto px-2">
       <slot />
     </main>
     <SiteFooter />
+    <ThemeToggle />
   </body>
 </html>

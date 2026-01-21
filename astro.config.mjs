@@ -7,7 +7,8 @@ import react from "@astrojs/react";
 
 export default defineConfig({
   vite: {
-    plugins: [tailwindcss()],
+    plugins: [tailwindcss({})],
+    mode: "class",
   },
   site: "https://devlopersabbir.github.io",
   integrations: [sitemap(), mdx(), react()],

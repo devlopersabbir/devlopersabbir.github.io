@@ -1,45 +1,28 @@
 ---
 import { getCollection } from "astro:content";
-import moment from "moment";
+import RecentBlogCard from "./common/recent-blog-card.astro";
 
 let posts = await getCollection("blogs");
+
 posts = posts.sort(
   (a, b) =>
-    new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
+    new Date(b.data.pubDate).getTime() -
+    new Date(a.data.pubDate).getTime()
 );
 ---
 
 <div class="flex-between-center mb-4">
   <h4 class="text-lg font-semibold">Recent Articles</h4>
-  <a href="/blogs" class="underline text-blue-400 text-sm hover:text-blue-300"
-    >View all</a
+  <a
+    href="/blogs"
+    class="underline text-blue-400 text-sm hover:text-blue-300"
   >
+    View all
+  </a>
 </div>
 
-<div class="flex-col gap-1">
-  {
-    posts.map((post) => (
-      <div class="flex-between-center mt-2">
-        <div class="flex font-medium">
-          <a
-            href={`/blogs/${post.slug}`}
-            class="hover:text-zinc-200 overflow-hidden text-ellipsis"
-          >
-            {post.data.title}
-          </a>
-          {/* <span class="px-2 md:visible sm:flex hidden">-</span>
-          <div class="gap-1 mask-r-from-70% sm:flex hidden">
-            {["Typescript", "Astrojs", "Tailwindcss"].map((tech) => (
-              <span class="bg-zinc-800 px-1 py-0.5 rounded-sm cursor-pointer hover:bg-zinc-700 transition-all">
-                #{tech}
-              </span>
-            ))}
-          </div> */}
-        </div>
-        <span class="text-zinc-300">
-          {moment(post.data.pubDate).format("ll")}
-        </span>
-      </div>
-    ))
-  }
+<div class="flex flex-col gap-1">
+  {posts.map((post) => (
+    <RecentBlogCard post={post} />
+  ))}
 </div>

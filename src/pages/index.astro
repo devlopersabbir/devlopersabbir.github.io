@@ -8,17 +8,17 @@ import RootLayout from "../layouts/root-layout.astro";
 
 <RootLayout pageTitle="Personal Portfolio website">
   <section
-    class="hero-section flex flex-col-reverse md:flex-row md:items-center gap-6 my-5"
+    class="hero-section flex flex-col-reverse md:flex-row md:items-center gap-6 content-layout"
   >
     <HeroSection />
   </section>
-  <section class="recent-projects mb-4">
+  <section class="recent-projects content-layout">
     <RecentProjects />
   </section>
-  <section class="recent-articles mb-4">
+  <section class="recent-articles content-layout">
     <RecentBlog />
   </section>
-  <section class="recent-youtube-video mb-4">
+  <section class="recent-youtube-video content-layout">
     <RecentYoutube />
   </section>
 </RootLayout>

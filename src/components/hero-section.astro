@@ -4,7 +4,7 @@ import { Image } from "astro:assets";
 ---
 
 <div class="flex flex-col flex-1 text-left">
-  <h1 class="text-2xl font-bold">{about.name}</h1>
+  <h1 class="text-2xl font-bold mt-4">{about.name}</h1>
   <h3 class="text-xl font-semibold mb-4">{about.title}</h3>
   <p class="font-normal opacity-80 leading-relaxed mb-4">
     {about.description}
@@ -12,7 +12,7 @@ import { Image } from "astro:assets";
 </div>
 
 <div
-  class="flex-shrink-0 rounded-full h-40 w-40 border-2 border-zinc-300 overflow-hidden md:self-auto shadow"
+  class="flex-shrink-0 rounded-full h-52 w-52 border-2 border-zinc-300 overflow-hidden md:self-auto shadow"
 >
   <img
     src={about.image}

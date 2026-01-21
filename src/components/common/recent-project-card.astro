@@ -1,0 +1,39 @@
+---
+import Github from "../../assets/github.astro";
+import type { Projects } from "../../constants";
+
+const { project } = Astro.props as { project: Projects };
+---
+
+<div
+  class="block dark:bg-zinc-900 bg-white rounded-xl p-4 shadow-md transition-all duration-300"
+>
+  <div class="flex justify-between items-center mb-3">
+    <a
+      href={project.link}
+      target="_blank"
+      class="text-md font-semibold hover:text-zinc-600 line-clamp-1"
+    >
+      {project.title}
+    </a>
+    <span class="text-xs text-zinc-400">{project.date}</span>
+  </div>
+
+  <p class="text-sm text-zinc-600 dark:text-zinc-400 line-clamp-3 mb-3">
+    {project.description}
+  </p>
+
+  <div class="flex justify-between items-center">
+    <div class="flex flex-wrap gap-2">
+      {
+        project.tech.map((tech) => (
+          <span class="text-xs dark:bg-zinc-800 bg-zinc-100 text-zinc-700 px-2 py-1 rounded-xl">
+            #{tech}
+          </span>
+        ))
+      }
+    </div>
+
+    <Github link={project.repo_link} />
+  </div>
+</div>

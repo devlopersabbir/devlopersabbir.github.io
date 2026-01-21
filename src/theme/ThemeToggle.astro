@@ -1,0 +1,37 @@
+<button
+  id="theme-toggle"
+  aria-label="Toggle theme"
+  class="fixed bottom-5 right-5 z-50
+    flex h-11 w-11 items-center justify-center
+    rounded-md
+    border border-zinc-200 dark:border-zinc-800
+    bg-white dark:bg-zinc-900
+    text-zinc-800 dark:text-zinc-100
+    shadow-md
+    hover:bg-zinc-100 dark:hover:bg-zinc-800
+    transition"
+>
+  <span id="theme-icon" class="text-lg">🌙</span>
+</button>
+
+<script is:inline>
+  const htmlElement = document.documentElement;
+
+  const btn = document.getElementById("theme-toggle");
+  const icon = document.getElementById("theme-icon");
+
+  const updateIcon = () => {
+    icon.textContent = document.documentElement.classList.contains("dark")
+      ? "☀️"
+      : "🌙";
+  };
+
+  updateIcon();
+
+  btn.addEventListener("click", () => {
+    htmlElement.classList.toggle("dark");
+    const newTheme = htmlElement.classList.contains("dark") ? "dark" : "light";
+    localStorage.setItem("theme", newTheme);
+    updateIcon();
+  });
+</script>

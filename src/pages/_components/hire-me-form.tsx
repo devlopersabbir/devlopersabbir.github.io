@@ -29,6 +29,20 @@ const HireMeForm = () => {
       return toast.error("Please fix the form errors.");
     }
 
+    if (parsed.data.email.endsWith(".com")) {
+      setErrors({ email: "Please use a personal email address." });
+      return toast.error("Please use a personal email address.");
+    }
+
+    if (parsed.data.name.split(" ").length < 2) {
+      setErrors({ name: "Please provide your full name." });
+      return toast.error("Please provide your full name.");
+    }
+    if (parsed.data.message.split(" ").length < 10) {
+      setErrors({ message: "Please provide a message." });
+      return toast.error("Please provide a message.");
+    }
+
     startTransition(async () => {
       try {
         await axios.post(`${baseUrl}/api/v1/mail/send`, parsed.data);
@@ -42,11 +56,11 @@ const HireMeForm = () => {
   };
 
   return (
-    <div className="flex-1 bg-zinc-900 p-8 rounded-lg shadow-xl max-h-[700px] overflow-y-auto">
+    <div className="flex-1 dark:bg-zinc-900 p-8 rounded-lg shadow-xl max-h-[700px] overflow-y-auto">
       <h1 className="text-3xl font-bold mb-4 text-center text-blue-400">
         Let's Work Together
       </h1>
-      <p className="text-zinc-300 mb-6 text-center text-sm">
+      <p className="dark:text-zinc-300 text-zinc-600 mb-6 text-center text-sm">
         I'm currently available for freelance or full-time remote work. Fill out
         the form and I'll get back to you shortly.
       </p>
@@ -61,7 +75,7 @@ const HireMeForm = () => {
             id="name"
             name="name"
             required
-            className="w-full px-4 py-2 rounded bg-zinc-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="w-full px-4 py-2 rounded dark:bg-zinc-600 bg-zinc-100 dark:text-white focus:outline-none focus:ring-2 dark:focus:ring-blue-400"
             placeholder="Your full name"
           />
           {errors.name && (
@@ -78,7 +92,7 @@ const HireMeForm = () => {
             id="email"
             name="email"
             required
-            className="w-full px-4 py-2 rounded bg-zinc-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="w-full px-4 py-2 rounded dark:bg-zinc-600 bg-zinc-100 dark:text-white focus:outline-none focus:ring-2 dark:focus:ring-blue-400"
             placeholder="you@example.com"
           />
           {errors.email && (
@@ -95,7 +109,7 @@ const HireMeForm = () => {
             name="message"
             rows={5}
             required
-            className="w-full px-4 py-2 rounded bg-zinc-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="w-full px-4 py-2 rounded dark:bg-zinc-600 bg-zinc-100 dark:text-white focus:outline-none focus:ring-2 dark:focus:ring-blue-400"
             placeholder="Tell me about your project..."
           ></textarea>
           {errors.message && (

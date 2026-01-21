@@ -1,0 +1,25 @@
+---
+import moment from "moment";
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  post: CollectionEntry<"blogs">;
+}
+
+const { post } = Astro.props;
+---
+
+<div class="flex-between-center mt-2">
+  <div class="flex font-medium overflow-hidden">
+    <a
+      href={`/blogs/${post.slug}`}
+      class="hover:text-zinc-600 dark:text-zinc-600 dark:hover:text-zinc-900 overflow-hidden text-ellipsis whitespace-nowrap"
+    >
+      {post.data.title}
+    </a>
+  </div>
+
+  <span class="text-zinc-300 text-sm">
+    {moment(post.data.pubDate).format("ll")}
+  </span>
+</div>
