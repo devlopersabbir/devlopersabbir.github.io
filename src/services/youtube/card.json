@@ -1,5 +1,12 @@
 [
   {
+    "title": "CI/CD Crash Course: Deploy Docker Apps to AWS EC2 with GitHub Actions & Caddy (Beginner to Advanced)",
+    "videoId": "FRJ_C-sZJB8",
+    "link": "https://www.youtube.com/watch?v=FRJ_C-sZJB8",
+    "thumbnail": "https://img.youtube.com/vi/FRJ_C-sZJB8/mqdefault.jpg",
+    "pubDate": "2026-01-03T12:00:06+00:00"
+  },
+  {
     "title": "🧑🏻‍💻 Python API Development #31 Database Explain Part - 1 | In Bangla 2025 | By ST Sabbir",
     "videoId": "Ur-Bux7Qyh0",
     "link": "https://www.youtube.com/watch?v=Ur-Bux7Qyh0",
@@ -19,12 +26,5 @@
     "link": "https://www.youtube.com/watch?v=iFdokUQltgk",
     "thumbnail": "https://img.youtube.com/vi/iFdokUQltgk/mqdefault.jpg",
     "pubDate": "2025-02-23T17:03:15+00:00"
-  },
-  {
-    "title": "#17 Mastering Hono Framework with Deno.js: Build a Scalable Lightweight REST API - 2025",
-    "videoId": "L3iHA_ZKTN0",
-    "link": "https://www.youtube.com/watch?v=L3iHA_ZKTN0",
-    "thumbnail": "https://img.youtube.com/vi/L3iHA_ZKTN0/mqdefault.jpg",
-    "pubDate": "2025-01-30T14:25:57+00:00"
   }
 ]
