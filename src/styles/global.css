@@ -6,27 +6,33 @@
 
 /* apply */
 .content-layout {
-  @apply max-w-4xl mx-auto py-4;
+  @apply max-w-5xl mx-auto py-4;
 }
+
 .nav-item {
   @apply py-1 px-3 border rounded;
 }
+
 .flex-center {
   @apply flex justify-center items-center;
 }
+
 .flex-between-center {
   @apply flex justify-between items-center;
 }
+
 .flex-col-center {
   @apply flex flex-col items-center;
 }
+
 .flex-col-between {
   @apply flex flex-col justify-between items-center;
 }
 
 .container {
-  max-width: 55rem;
+  max-width: 67rem;
 }
+
 html {
   transition: background-color 0.2s ease, color 0.2s ease;
 }
