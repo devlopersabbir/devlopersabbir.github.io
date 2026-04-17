@@ -1,14 +1,14 @@
 ---
-import RootLayout from "../layouts/root-layout.astro";
-import { projects } from "../constants";
+import githubProjects from "../services/github/card.json";
 import RecentProjectCard from "../components/common/recent-project-card.astro";
+import RootLayout from "../layouts/root-layout.astro";
 ---
 
 <RootLayout pageTitle="Projects">
   <section class="all-projects my-4">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       {
-        projects.map((project) => (
+        githubProjects.map((project) => (
           <RecentProjectCard project={project} />
         ))
       }

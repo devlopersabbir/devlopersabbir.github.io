@@ -1,0 +1,150 @@
+[
+  {
+    "title": "devlopersabbir.github.io",
+    "description": "devlopersabbir.github.io",
+    "date": "Apr 2026",
+    "tech": [
+      "MDX",
+      "Astro",
+      "TypeScript",
+      "Python",
+      "CSS",
+      "JavaScript"
+    ],
+    "link": "https://devlopersabbir.github.io/",
+    "repo_link": "https://github.com/devlopersabbir/devlopersabbir.github.io"
+  },
+  {
+    "title": "randomkana",
+    "description": "A web app that will randomly generate Japanese hiragana, katakana, and romaji to be used as a quiz for Japanese language learning",
+    "date": "Apr 2026",
+    "tech": [
+      "TypeScript",
+      "CSS",
+      "JavaScript",
+      "HTML"
+    ],
+    "link": "https://randomkana.vercel.app",
+    "repo_link": "https://github.com/devlopersabbir/randomkana"
+  },
+  {
+    "title": "nextjs-starter-medusa",
+    "description": "A performant frontend ecommerce starter template with Next.js 15 and Medusa V2.",
+    "date": "Apr 2026",
+    "tech": [
+      "TypeScript",
+      "JavaScript",
+      "CSS"
+    ],
+    "link": "https://next.medusajs.com/",
+    "repo_link": "https://github.com/devlopersabbir/nextjs-starter-medusa"
+  },
+  {
+    "title": "dev-unique-id",
+    "description": "Unique ID generator npm package",
+    "date": "Apr 2026",
+    "tech": [
+      "TypeScript"
+    ],
+    "link": "https://devlopersabbir.github.io/dev-unique-id/",
+    "repo_link": "https://github.com/devlopersabbir/dev-unique-id"
+  },
+  {
+    "title": "chrome-extension-icon-generator",
+    "description": "Easily create the multiple icons in their sizes you need for your chrome extension",
+    "date": "Apr 2026",
+    "tech": [
+      "TypeScript",
+      "JavaScript",
+      "CSS"
+    ],
+    "link": "https://browser-extension-icon-generator.vercel.app",
+    "repo_link": "https://github.com/devlopersabbir/chrome-extension-icon-generator"
+  },
+  {
+    "title": "browserplugins",
+    "description": "Your trusted source for premium browser extensions. Handcrafted with care, tested for quality, and designed to enhance your digital experience.",
+    "date": "Apr 2026",
+    "tech": [
+      "TypeScript",
+      "JavaScript",
+      "CSS",
+      "Mermaid"
+    ],
+    "link": "https://browserplugins.vercel.app",
+    "repo_link": "https://github.com/devlopersabbir/browserplugins"
+  },
+  {
+    "title": "executeme",
+    "description": "ExecuteMe allows users to write, execute, and test code in various programming languages directly in the browser. https://devlopersabbir.github.io/executeme",
+    "date": "Jan 2026",
+    "tech": [
+      "TypeScript",
+      "HTML",
+      "JavaScript",
+      "Shell",
+      "CSS",
+      "Dockerfile",
+      "Java",
+      "Python",
+      "Kotlin"
+    ],
+    "link": "https://executeme.vercel.app",
+    "repo_link": "https://github.com/devlopersabbir/executeme"
+  },
+  {
+    "title": "devlopersabbir",
+    "description": "About myself 🙂",
+    "date": "Jan 2026",
+    "tech": [],
+    "link": "https://github.com/devlopersabbir/devlopersabbir",
+    "repo_link": "https://github.com/devlopersabbir/devlopersabbir"
+  },
+  {
+    "title": "python-api-development",
+    "description": "A python FastAPI framework",
+    "date": "Jan 2026",
+    "tech": [
+      "Python",
+      "HTML"
+    ],
+    "link": "https://github.com/devlopersabbir/python-api-development",
+    "repo_link": "https://github.com/devlopersabbir/python-api-development"
+  },
+  {
+    "title": "find-devs-pair",
+    "description": "FindDevs Pair application will help to pair programming with random devs online",
+    "date": "Jan 2026",
+    "tech": [
+      "TypeScript",
+      "CSS",
+      "JavaScript",
+      "Kotlin"
+    ],
+    "link": "https://find-devs-pair.vercel.app",
+    "repo_link": "https://github.com/devlopersabbir/find-devs-pair"
+  },
+  {
+    "title": "video-downloader-extension",
+    "description": "YouTube Video downloader chrome extension using CRXjs vite plugin",
+    "date": "Sep 2025",
+    "tech": [
+      "TypeScript",
+      "JavaScript",
+      "HTML"
+    ],
+    "link": "https://youtube-video-downloader-chrome-extension.vercel.app",
+    "repo_link": "https://github.com/devlopersabbir/video-downloader-extension"
+  },
+  {
+    "title": "count-native-app",
+    "description": "Use this tally clicker for counting people as they go into an event or to keep track of multiple people in the outdoors, at meetings. This clicker counter can be used to count anything: sheep, pets, mushrooms picked, trees climbed, corn planted, students, cars, wins, goals, laps ran or walked, etc.",
+    "date": "Aug 2025",
+    "tech": [
+      "TypeScript",
+      "JavaScript"
+    ],
+    "link": "https://play.google.com/store/apps/details?id=com.devlopersabbir.countnativeapp",
+    "repo_link": "https://github.com/devlopersabbir/count-native-app"
+  }
+]
