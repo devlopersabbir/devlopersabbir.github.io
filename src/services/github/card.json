@@ -1,20 +1,5 @@
 [
   {
-    "title": "devlopersabbir.github.io",
-    "description": "devlopersabbir.github.io",
-    "date": "Apr 2026",
-    "tech": [
-      "MDX",
-      "Astro",
-      "TypeScript",
-      "Python",
-      "CSS",
-      "JavaScript"
-    ],
-    "link": "https://devlopersabbir.github.io/",
-    "repo_link": "https://github.com/devlopersabbir/devlopersabbir.github.io"
-  },
-  {
     "title": "randomkana",
     "description": "A web app that will randomly generate Japanese hiragana, katakana, and romaji to be used as a quiz for Japanese language learning",
     "date": "Apr 2026",
@@ -135,16 +120,5 @@
     ],
     "link": "https://youtube-video-downloader-chrome-extension.vercel.app",
     "repo_link": "https://github.com/devlopersabbir/video-downloader-extension"
-  },
-  {
-    "title": "count-native-app",
-    "description": "Use this tally clicker for counting people as they go into an event or to keep track of multiple people in the outdoors, at meetings. This clicker counter can be used to count anything: sheep, pets, mushrooms picked, trees climbed, corn planted, students, cars, wins, goals, laps ran or walked, etc.",
-    "date": "Aug 2025",
-    "tech": [
-      "TypeScript",
-      "JavaScript"
-    ],
-    "link": "https://play.google.com/store/apps/details?id=com.devlopersabbir.countnativeapp",
-    "repo_link": "https://github.com/devlopersabbir/count-native-app"
   }
 ]
