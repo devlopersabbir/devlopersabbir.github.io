@@ -2,13 +2,17 @@
 const { link } = Astro.props;
 ---
 
-<a href={link} class="cursor-pointer" aria-label="View source on GitHub">
+<a
+  href={link}
+  class="cursor-pointer text-zinc-900 dark:text-zinc-100 hover:opacity-70 transition-opacity"
+  aria-label="View source on GitHub"
+>
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="25"
     height="25"
     viewBox="0 0 24 24"
-    fill="white"
+    fill="currentColor"
     aria-labelledby="githubTitle"
   >
     <title id="githubTitle">GitHub Repository Link</title>
