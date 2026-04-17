@@ -11,7 +11,6 @@ const require = createRequire(import.meta.url);
 export default defineConfig({
     vite: {
         plugins: [tailwindcss({})],
-        mode: "class",
     },
     site: "https://devlopersabbir.github.io",
     integrations: [sitemap(), mdx(), react()],

@@ -14,24 +14,33 @@
   <span id="theme-icon" class="text-lg">🌙</span>
 </button>
 
-<script is:inline>
-  const htmlElement = document.documentElement;
+<script>
+  function initTheme() {
+    const btn = document.getElementById("theme-toggle");
+    const icon = document.getElementById("theme-icon");
+    const htmlElement = document.documentElement;
 
-  const btn = document.getElementById("theme-toggle");
-  const icon = document.getElementById("theme-icon");
+    const updateIcon = () => {
+      if (icon) {
+        icon.textContent = htmlElement.classList.contains("dark") ? "☀️" : "🌙";
+      }
+    };
 
-  const updateIcon = () => {
-    icon.textContent = document.documentElement.classList.contains("dark")
-      ? "☀️"
-      : "🌙";
-  };
-
-  updateIcon();
-
-  btn.addEventListener("click", () => {
-    htmlElement.classList.toggle("dark");
-    const newTheme = htmlElement.classList.contains("dark") ? "dark" : "light";
-    localStorage.setItem("theme", newTheme);
     updateIcon();
-  });
+
+    if (btn) {
+      btn.addEventListener("click", () => {
+        htmlElement.classList.toggle("dark");
+        const newTheme = htmlElement.classList.contains("dark") ? "dark" : "light";
+        localStorage.setItem("theme", newTheme);
+        updateIcon();
+      });
+    }
+  }
+
+  // Initialize on load
+  initTheme();
+
+  // Re-run after view transitions
+  document.addEventListener("astro:after-swap", initTheme);
 </script>

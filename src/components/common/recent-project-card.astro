@@ -27,7 +27,7 @@ const { project } = Astro.props as { project: Projects };
     <div class="flex flex-wrap gap-2">
       {
         project.tech.map((tech) => (
-          <span class="text-xs dark:bg-zinc-800 bg-zinc-100 text-zinc-700 px-2 py-1 rounded-xl">
+          <span class="text-xs bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 px-2 py-1 rounded-md border border-zinc-200 dark:border-zinc-700">
             #{tech}
           </span>
         ))
