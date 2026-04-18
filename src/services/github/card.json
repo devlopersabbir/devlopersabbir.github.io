@@ -1,134 +1,127 @@
 [
   {
-    "title": "dev-unique-id",
-    "description": "Unique ID generator npm package",
+    "title": "website-blocker",
+    "description": "Website blocker",
+    "date": "Apr 2026",
+    "tech": [
+      "TypeScript",
+      "HTML",
+      "JavaScript"
+    ],
+    "link": "https://github.com/devlopersabbir/website-blocker",
+    "repo_link": "https://github.com/devlopersabbir/website-blocker"
+  },
+  {
+    "title": "todos-express-starter",
+    "description": "Starter todo app using Express, Passport, and SQLite for sign in.",
+    "date": "Apr 2026",
+    "tech": [
+      "CSS",
+      "JavaScript",
+      "EJS"
+    ],
+    "link": "https://github.com/devlopersabbir/todos-express-starter",
+    "repo_link": "https://github.com/devlopersabbir/todos-express-starter"
+  },
+  {
+    "title": "swift-all-about",
+    "description": "Learn swift programming language basic to advance",
+    "date": "Apr 2026",
+    "tech": [
+      "Swift"
+    ],
+    "link": "https://github.com/devlopersabbir/swift-all-about",
+    "repo_link": "https://github.com/devlopersabbir/swift-all-about"
+  },
+  {
+    "title": "stsabbir-npm",
+    "description": "simple npm package",
     "date": "Apr 2026",
     "tech": [
       "TypeScript"
     ],
-    "link": "https://devlopersabbir.github.io/dev-unique-id/",
-    "repo_link": "https://github.com/devlopersabbir/dev-unique-id"
+    "link": "https://github.com/devlopersabbir/stsabbir-npm",
+    "repo_link": "https://github.com/devlopersabbir/stsabbir-npm"
   },
   {
-    "title": "ops-toolkit",
-    "description": "A fast and interactive tool to safely remove services like Nginx, Caddy, and Docker from your system.",
+    "title": "spring-jwt",
+    "description": "Java Spring boot jwt security",
     "date": "Apr 2026",
     "tech": [
-      "Shell"
+      "Java"
     ],
-    "link": "https://github.com/devlopersabbir/ops-toolkit",
-    "repo_link": "https://github.com/devlopersabbir/ops-toolkit"
+    "link": "https://github.com/devlopersabbir/spring-jwt",
+    "repo_link": "https://github.com/devlopersabbir/spring-jwt"
   },
   {
-    "title": "randomkana",
-    "description": "A web app that will randomly generate Japanese hiragana, katakana, and romaji to be used as a quiz for Japanese language learning",
+    "title": "spring-crud-api",
+    "description": "Java Spring CRUD API",
     "date": "Apr 2026",
     "tech": [
-      "TypeScript",
-      "CSS",
-      "JavaScript",
-      "HTML"
-    ],
-    "link": "https://randomkana.vercel.app",
-    "repo_link": "https://github.com/devlopersabbir/randomkana"
-  },
-  {
-    "title": "nextjs-starter-medusa",
-    "description": "A performant frontend ecommerce starter template with Next.js 15 and Medusa V2.",
-    "date": "Apr 2026",
-    "tech": [
-      "TypeScript",
-      "JavaScript",
-      "CSS"
-    ],
-    "link": "https://next.medusajs.com/",
-    "repo_link": "https://github.com/devlopersabbir/nextjs-starter-medusa"
-  },
-  {
-    "title": "chrome-extension-icon-generator",
-    "description": "Easily create the multiple icons in their sizes you need for your chrome extension",
-    "date": "Apr 2026",
-    "tech": [
-      "TypeScript",
-      "JavaScript",
-      "CSS"
-    ],
-    "link": "https://browser-extension-icon-generator.vercel.app",
-    "repo_link": "https://github.com/devlopersabbir/chrome-extension-icon-generator"
-  },
-  {
-    "title": "browserplugins",
-    "description": "Your trusted source for premium browser extensions. Handcrafted with care, tested for quality, and designed to enhance your digital experience.",
-    "date": "Apr 2026",
-    "tech": [
-      "TypeScript",
-      "JavaScript",
-      "CSS",
-      "Mermaid"
-    ],
-    "link": "https://browserplugins.vercel.app",
-    "repo_link": "https://github.com/devlopersabbir/browserplugins"
-  },
-  {
-    "title": "executeme",
-    "description": "ExecuteMe allows users to write, execute, and test code in various programming languages directly in the browser. https://devlopersabbir.github.io/executeme",
-    "date": "Jan 2026",
-    "tech": [
-      "TypeScript",
-      "HTML",
-      "JavaScript",
-      "Shell",
-      "CSS",
-      "Dockerfile",
       "Java",
-      "Python",
-      "Kotlin"
+      "Dockerfile"
     ],
-    "link": "https://executeme.vercel.app",
-    "repo_link": "https://github.com/devlopersabbir/executeme"
+    "link": "https://github.com/devlopersabbir/spring-crud-api",
+    "repo_link": "https://github.com/devlopersabbir/spring-crud-api"
   },
   {
-    "title": "devlopersabbir",
-    "description": "About myself 🙂",
-    "date": "Jan 2026",
-    "tech": [],
-    "link": "https://github.com/devlopersabbir/devlopersabbir",
-    "repo_link": "https://github.com/devlopersabbir/devlopersabbir"
-  },
-  {
-    "title": "python-api-development",
-    "description": "A python FastAPI framework",
-    "date": "Jan 2026",
-    "tech": [
-      "Python",
-      "HTML"
-    ],
-    "link": "https://github.com/devlopersabbir/python-api-development",
-    "repo_link": "https://github.com/devlopersabbir/python-api-development"
-  },
-  {
-    "title": "find-devs-pair",
-    "description": "FindDevs Pair application will help to pair programming with random devs online",
-    "date": "Jan 2026",
-    "tech": [
-      "TypeScript",
-      "CSS",
-      "JavaScript",
-      "Kotlin"
-    ],
-    "link": "https://find-devs-pair.vercel.app",
-    "repo_link": "https://github.com/devlopersabbir/find-devs-pair"
-  },
-  {
-    "title": "video-downloader-extension",
-    "description": "YouTube Video downloader chrome extension using CRXjs vite plugin",
-    "date": "Sep 2025",
+    "title": "socket-io",
+    "description": "WebSocket | Socket.io",
+    "date": "Apr 2026",
     "tech": [
       "TypeScript",
       "JavaScript",
+      "HTML",
+      "CSS"
+    ],
+    "link": "https://github.com/devlopersabbir/socket-io",
+    "repo_link": "https://github.com/devlopersabbir/socket-io"
+  },
+  {
+    "title": "simple-translate",
+    "description": "WebExtensions for translating text on web pages",
+    "date": "Apr 2026",
+    "tech": [
+      "JavaScript",
+      "SCSS",
       "HTML"
     ],
-    "link": "https://youtube-video-downloader-chrome-extension.vercel.app",
-    "repo_link": "https://github.com/devlopersabbir/video-downloader-extension"
+    "link": "http://simple-translate.sienori.com/",
+    "repo_link": "https://github.com/devlopersabbir/simple-translate"
+  },
+  {
+    "title": "shall-scripting",
+    "description": "A Bourne Shell Programming / Scripting Tutorial for learning about using the Unix shell",
+    "date": "Apr 2026",
+    "tech": [
+      "Shell",
+      "R"
+    ],
+    "link": "https://github.com/devlopersabbir/shall-scripting",
+    "repo_link": "https://github.com/devlopersabbir/shall-scripting"
+  },
+  {
+    "title": "room-chat",
+    "description": "Web Socket Room Chat",
+    "date": "Apr 2026",
+    "tech": [
+      "Java",
+      "JavaScript",
+      "HTML",
+      "TypeScript"
+    ],
+    "link": "https://github.com/devlopersabbir/room-chat",
+    "repo_link": "https://github.com/devlopersabbir/room-chat"
+  },
+  {
+    "title": "resume",
+    "description": "resume",
+    "date": "Apr 2026",
+    "tech": [
+      "JavaScript",
+      "CSS"
+    ],
+    "link": "https://github.com/devlopersabbir/resume",
+    "repo_link": "https://github.com/devlopersabbir/resume"
   }
 ]
