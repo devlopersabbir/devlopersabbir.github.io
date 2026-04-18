@@ -1,5 +1,15 @@
 [
   {
+    "title": "ops-toolkit",
+    "description": "A fast and interactive tool to safely remove services like Nginx, Caddy, and Docker from your system.",
+    "date": "Apr 2026",
+    "tech": [
+      "Shell"
+    ],
+    "link": "https://github.com/devlopersabbir/ops-toolkit",
+    "repo_link": "https://github.com/devlopersabbir/ops-toolkit"
+  },
+  {
     "title": "randomkana",
     "description": "A web app that will randomly generate Japanese hiragana, katakana, and romaji to be used as a quiz for Japanese language learning",
     "date": "Apr 2026",
