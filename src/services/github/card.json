@@ -1,5 +1,15 @@
 [
   {
+    "title": "ops-toolkit",
+    "description": "A fast and interactive tool to safely remove services like Nginx, Caddy, and Docker from your system.",
+    "date": "Apr 2026",
+    "tech": [
+      "Shell"
+    ],
+    "link": "https://github.com/devlopersabbir/ops-toolkit",
+    "repo_link": "https://github.com/devlopersabbir/ops-toolkit"
+  },
+  {
     "title": "website-blocker",
     "description": "Website blocker",
     "date": "Apr 2026",
