@@ -1,13 +1,27 @@
 [
   {
-    "title": "ops-toolkit",
-    "description": "A fast and interactive tool to safely remove services like Nginx, Caddy, and Docker from your system.",
+    "title": "world-time-clock",
+    "description": "World Time Clock: Your Ultimate Digital Companion for Global Time Management",
     "date": "Apr 2026",
     "tech": [
-      "Shell"
+      "TypeScript",
+      "HTML",
+      "JavaScript",
+      "CSS"
     ],
-    "link": "https://github.com/devlopersabbir/ops-toolkit",
-    "repo_link": "https://github.com/devlopersabbir/ops-toolkit"
+    "link": "https://github.com/devlopersabbir/world-time-clock",
+    "repo_link": "https://github.com/devlopersabbir/world-time-clock"
+  },
+  {
+    "title": "windows-linux-macos-youtube-video-downloader-app",
+    "description": "Electron cors platform youtube video downloader app.",
+    "date": "Apr 2026",
+    "tech": [
+      "TypeScript",
+      "HTML"
+    ],
+    "link": "https://github.com/devlopersabbir/windows-linux-macos-youtube-video-downloader-app",
+    "repo_link": "https://github.com/devlopersabbir/windows-linux-macos-youtube-video-downloader-app"
   },
   {
     "title": "website-blocker",
@@ -22,61 +36,28 @@
     "repo_link": "https://github.com/devlopersabbir/website-blocker"
   },
   {
-    "title": "todos-express-starter",
-    "description": "Starter todo app using Express, Passport, and SQLite for sign in.",
+    "title": "tpm",
+    "description": "Tmux Plugin Manager",
     "date": "Apr 2026",
     "tech": [
-      "CSS",
-      "JavaScript",
-      "EJS"
+      "Shell"
     ],
-    "link": "https://github.com/devlopersabbir/todos-express-starter",
-    "repo_link": "https://github.com/devlopersabbir/todos-express-starter"
+    "link": "https://github.com/devlopersabbir/tpm",
+    "repo_link": "https://github.com/devlopersabbir/tpm"
   },
   {
-    "title": "swift-all-about",
-    "description": "Learn swift programming language basic to advance",
-    "date": "Apr 2026",
-    "tech": [
-      "Swift"
-    ],
-    "link": "https://github.com/devlopersabbir/swift-all-about",
-    "repo_link": "https://github.com/devlopersabbir/swift-all-about"
-  },
-  {
-    "title": "stsabbir-npm",
-    "description": "simple npm package",
-    "date": "Apr 2026",
-    "tech": [
-      "TypeScript"
-    ],
-    "link": "https://github.com/devlopersabbir/stsabbir-npm",
-    "repo_link": "https://github.com/devlopersabbir/stsabbir-npm"
-  },
-  {
-    "title": "spring-jwt",
-    "description": "Java Spring boot jwt security",
+    "title": "spring-boot-rest-api",
+    "description": "Java Spring Boot Rest API",
     "date": "Apr 2026",
     "tech": [
       "Java"
     ],
-    "link": "https://github.com/devlopersabbir/spring-jwt",
-    "repo_link": "https://github.com/devlopersabbir/spring-jwt"
+    "link": "https://github.com/devlopersabbir/spring-boot-rest-api",
+    "repo_link": "https://github.com/devlopersabbir/spring-boot-rest-api"
   },
   {
-    "title": "spring-crud-api",
-    "description": "Java Spring CRUD API",
-    "date": "Apr 2026",
-    "tech": [
-      "Java",
-      "Dockerfile"
-    ],
-    "link": "https://github.com/devlopersabbir/spring-crud-api",
-    "repo_link": "https://github.com/devlopersabbir/spring-crud-api"
-  },
-  {
-    "title": "socket-io",
-    "description": "WebSocket | Socket.io",
+    "title": "simple-cors-platform-calculator-app",
+    "description": "A simple cors platform calculator app. This app supported for both like Android, iOS, macOS, Windows, also chrome extesnion",
     "date": "Apr 2026",
     "tech": [
       "TypeScript",
@@ -84,20 +65,8 @@
       "HTML",
       "CSS"
     ],
-    "link": "https://github.com/devlopersabbir/socket-io",
-    "repo_link": "https://github.com/devlopersabbir/socket-io"
-  },
-  {
-    "title": "simple-translate",
-    "description": "WebExtensions for translating text on web pages",
-    "date": "Apr 2026",
-    "tech": [
-      "JavaScript",
-      "SCSS",
-      "HTML"
-    ],
-    "link": "http://simple-translate.sienori.com/",
-    "repo_link": "https://github.com/devlopersabbir/simple-translate"
+    "link": "https://github.com/devlopersabbir/simple-cors-platform-calculator-app",
+    "repo_link": "https://github.com/devlopersabbir/simple-cors-platform-calculator-app"
   },
   {
     "title": "shall-scripting",
@@ -111,6 +80,14 @@
     "repo_link": "https://github.com/devlopersabbir/shall-scripting"
   },
   {
+    "title": "sabbir-code-snippet",
+    "description": "This is a simple extension that provides code snippets for all programming, framework. It helps to speed up the coding process by providing handy snippets for commonly 😍",
+    "date": "Apr 2026",
+    "tech": [],
+    "link": "https://marketplace.visualstudio.com/items?itemName=devlopersabbir.sabbir-code-snippet",
+    "repo_link": "https://github.com/devlopersabbir/sabbir-code-snippet"
+  },
+  {
     "title": "room-chat",
     "description": "Web Socket Room Chat",
     "date": "Apr 2026",
@@ -122,5 +99,99 @@
     ],
     "link": "https://github.com/devlopersabbir/room-chat",
     "repo_link": "https://github.com/devlopersabbir/room-chat"
+  },
+  {
+    "title": "rizzui",
+    "description": "🎉 A Modern and Minimal React UI Library built with TailwindCSS",
+    "date": "Apr 2026",
+    "tech": [
+      "MDX",
+      "TypeScript",
+      "CSS",
+      "JavaScript",
+      "Shell"
+    ],
+    "link": "https://www.rizzui.com",
+    "repo_link": "https://github.com/devlopersabbir/rizzui"
+  },
+  {
+    "title": "react-tenstack-table",
+    "description": "Full Customizable and full functionality react tenstack table ",
+    "date": "Apr 2026",
+    "tech": [
+      "TypeScript",
+      "JavaScript",
+      "HTML"
+    ],
+    "link": "https://github.com/devlopersabbir/react-tenstack-table",
+    "repo_link": "https://github.com/devlopersabbir/react-tenstack-table"
+  },
+  {
+    "title": "react-19",
+    "description": "create react app git clone repository",
+    "date": "Apr 2026",
+    "tech": [
+      "CSS",
+      "TypeScript",
+      "JavaScript",
+      "HTML"
+    ],
+    "link": "create-react-app-rho-sable.vercel.app",
+    "repo_link": "https://github.com/devlopersabbir/react-19"
+  },
+  {
+    "title": "python-api-development",
+    "description": "A python FastAPI framework",
+    "date": "Apr 2026",
+    "tech": [
+      "Python",
+      "HTML"
+    ],
+    "link": "https://github.com/devlopersabbir/python-api-development",
+    "repo_link": "https://github.com/devlopersabbir/python-api-development"
+  },
+  {
+    "title": "profit-calculator",
+    "description": "Rust, with slint",
+    "date": "Apr 2026",
+    "tech": [
+      "Slint",
+      "Rust"
+    ],
+    "link": "https://github.com/devlopersabbir/profit-calculator",
+    "repo_link": "https://github.com/devlopersabbir/profit-calculator"
+  },
+  {
+    "title": "npm-file-uploader",
+    "description": "NPM file uploader",
+    "date": "Apr 2026",
+    "tech": [],
+    "link": "https://github.com/devlopersabbir/npm-file-uploader",
+    "repo_link": "https://github.com/devlopersabbir/npm-file-uploader"
+  },
+  {
+    "title": "news-feed-remover-pro",
+    "description": "FireFox | Chrome [ News Feed Remover Pro ] browser extension",
+    "date": "Apr 2026",
+    "tech": [
+      "TypeScript",
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "link": "https://github.com/devlopersabbir/news-feed-remover-pro",
+    "repo_link": "https://github.com/devlopersabbir/news-feed-remover-pro"
+  },
+  {
+    "title": "express",
+    "description": "Fast, unopinionated, minimalist web framework for node.",
+    "date": "Apr 2026",
+    "tech": [
+      "JavaScript",
+      "Makefile",
+      "Shell"
+    ],
+    "link": "https://expressjs.com",
+    "repo_link": "https://github.com/devlopersabbir/express"
   }
 ]
