@@ -181,17 +181,5 @@
     ],
     "link": "https://github.com/devlopersabbir/news-feed-remover-pro",
     "repo_link": "https://github.com/devlopersabbir/news-feed-remover-pro"
-  },
-  {
-    "title": "express",
-    "description": "Fast, unopinionated, minimalist web framework for node.",
-    "date": "Apr 2026",
-    "tech": [
-      "JavaScript",
-      "Makefile",
-      "Shell"
-    ],
-    "link": "https://expressjs.com",
-    "repo_link": "https://github.com/devlopersabbir/express"
   }
 ]
