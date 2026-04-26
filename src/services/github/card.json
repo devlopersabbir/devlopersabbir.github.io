@@ -1,5 +1,15 @@
 [
   {
+    "title": "ops-toolkit",
+    "description": "A fast and interactive tool to safely remove services like Nginx, Caddy, and Docker from your system.",
+    "date": "Apr 2026",
+    "tech": [
+      "Shell"
+    ],
+    "link": "https://github.com/devlopersabbir/ops-toolkit",
+    "repo_link": "https://github.com/devlopersabbir/ops-toolkit"
+  },
+  {
     "title": "world-time-clock",
     "description": "World Time Clock: Your Ultimate Digital Companion for Global Time Management",
     "date": "Apr 2026",
@@ -168,18 +178,5 @@
     "tech": [],
     "link": "https://github.com/devlopersabbir/npm-file-uploader",
     "repo_link": "https://github.com/devlopersabbir/npm-file-uploader"
-  },
-  {
-    "title": "news-feed-remover-pro",
-    "description": "FireFox | Chrome [ News Feed Remover Pro ] browser extension",
-    "date": "Apr 2026",
-    "tech": [
-      "TypeScript",
-      "HTML",
-      "CSS",
-      "JavaScript"
-    ],
-    "link": "https://github.com/devlopersabbir/news-feed-remover-pro",
-    "repo_link": "https://github.com/devlopersabbir/news-feed-remover-pro"
   }
 ]
