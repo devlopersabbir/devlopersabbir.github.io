@@ -49,7 +49,9 @@
     "title": "spring-boot-rest-api",
     "description": "Java Spring Boot Rest API",
     "date": "Apr 2026",
-    "tech": [],
+    "tech": [
+      "Java"
+    ],
     "link": "https://github.com/devlopersabbir/spring-boot-rest-api",
     "repo_link": "https://github.com/devlopersabbir/spring-boot-rest-api"
   },
@@ -57,7 +59,12 @@
     "title": "simple-cors-platform-calculator-app",
     "description": "A simple cors platform calculator app. This app supported for both like Android, iOS, macOS, Windows, also chrome extesnion",
     "date": "Apr 2026",
-    "tech": [],
+    "tech": [
+      "TypeScript",
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
     "link": "https://github.com/devlopersabbir/simple-cors-platform-calculator-app",
     "repo_link": "https://github.com/devlopersabbir/simple-cors-platform-calculator-app"
   },
@@ -65,7 +72,10 @@
     "title": "shall-scripting",
     "description": "A Bourne Shell Programming / Scripting Tutorial for learning about using the Unix shell",
     "date": "Apr 2026",
-    "tech": [],
+    "tech": [
+      "Shell",
+      "R"
+    ],
     "link": "https://github.com/devlopersabbir/shall-scripting",
     "repo_link": "https://github.com/devlopersabbir/shall-scripting"
   },
@@ -81,7 +91,12 @@
     "title": "room-chat",
     "description": "Web Socket Room Chat",
     "date": "Apr 2026",
-    "tech": [],
+    "tech": [
+      "Java",
+      "JavaScript",
+      "HTML",
+      "TypeScript"
+    ],
     "link": "https://github.com/devlopersabbir/room-chat",
     "repo_link": "https://github.com/devlopersabbir/room-chat"
   },
@@ -89,7 +104,13 @@
     "title": "rizzui",
     "description": "🎉 A Modern and Minimal React UI Library built with TailwindCSS",
     "date": "Apr 2026",
-    "tech": [],
+    "tech": [
+      "MDX",
+      "TypeScript",
+      "CSS",
+      "JavaScript",
+      "Shell"
+    ],
     "link": "https://www.rizzui.com",
     "repo_link": "https://github.com/devlopersabbir/rizzui"
   },
@@ -97,7 +118,11 @@
     "title": "react-tenstack-table",
     "description": "Full Customizable and full functionality react tenstack table ",
     "date": "Apr 2026",
-    "tech": [],
+    "tech": [
+      "TypeScript",
+      "JavaScript",
+      "HTML"
+    ],
     "link": "https://github.com/devlopersabbir/react-tenstack-table",
     "repo_link": "https://github.com/devlopersabbir/react-tenstack-table"
   },
@@ -105,7 +130,12 @@
     "title": "react-19",
     "description": "create react app git clone repository",
     "date": "Apr 2026",
-    "tech": [],
+    "tech": [
+      "CSS",
+      "TypeScript",
+      "JavaScript",
+      "HTML"
+    ],
     "link": "create-react-app-rho-sable.vercel.app",
     "repo_link": "https://github.com/devlopersabbir/react-19"
   },
@@ -113,7 +143,10 @@
     "title": "python-api-development",
     "description": "A python FastAPI framework",
     "date": "Apr 2026",
-    "tech": [],
+    "tech": [
+      "Python",
+      "HTML"
+    ],
     "link": "https://github.com/devlopersabbir/python-api-development",
     "repo_link": "https://github.com/devlopersabbir/python-api-development"
   },
@@ -121,7 +154,10 @@
     "title": "profit-calculator",
     "description": "Rust, with slint",
     "date": "Apr 2026",
-    "tech": [],
+    "tech": [
+      "Slint",
+      "Rust"
+    ],
     "link": "https://github.com/devlopersabbir/profit-calculator",
     "repo_link": "https://github.com/devlopersabbir/profit-calculator"
   },
@@ -137,7 +173,12 @@
     "title": "news-feed-remover-pro",
     "description": "FireFox | Chrome [ News Feed Remover Pro ] browser extension",
     "date": "Apr 2026",
-    "tech": [],
+    "tech": [
+      "TypeScript",
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
     "link": "https://github.com/devlopersabbir/news-feed-remover-pro",
     "repo_link": "https://github.com/devlopersabbir/news-feed-remover-pro"
   }
