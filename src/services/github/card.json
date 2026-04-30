@@ -3,7 +3,9 @@
     "title": "security-scanner",
     "description": "This is for scanning repository for detecting and informing to our developer to fix and safely send code to the remote repository.",
     "date": "Apr 2026",
-    "tech": [],
+    "tech": [
+      "Shell"
+    ],
     "link": "https://github.com/devlopersabbir/security-scanner",
     "repo_link": "https://github.com/devlopersabbir/security-scanner"
   },
