@@ -1,5 +1,13 @@
 [
   {
+    "title": "security-scanner",
+    "description": "This is for scanning repository for detecting and informing to our developer to fix and safely send code to the remote repository.",
+    "date": "Apr 2026",
+    "tech": [],
+    "link": "https://github.com/devlopersabbir/security-scanner",
+    "repo_link": "https://github.com/devlopersabbir/security-scanner"
+  },
+  {
     "title": "ops-toolkit",
     "description": "A fast and interactive tool to safely remove services like Nginx, Caddy, and Docker from your system.",
     "date": "Apr 2026",
@@ -159,16 +167,5 @@
     ],
     "link": "https://github.com/devlopersabbir/python-api-development",
     "repo_link": "https://github.com/devlopersabbir/python-api-development"
-  },
-  {
-    "title": "profit-calculator",
-    "description": "Rust, with slint",
-    "date": "Apr 2026",
-    "tech": [
-      "Slint",
-      "Rust"
-    ],
-    "link": "https://github.com/devlopersabbir/profit-calculator",
-    "repo_link": "https://github.com/devlopersabbir/profit-calculator"
   }
 ]
