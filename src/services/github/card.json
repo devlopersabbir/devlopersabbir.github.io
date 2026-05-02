@@ -1,13 +1,13 @@
 [
   {
-    "title": "security-scanner",
+    "title": "dose-scan",
     "description": "This is for scanning repository for detecting and informing to our developer to fix and safely send code to the remote repository.",
-    "date": "Apr 2026",
+    "date": "May 2026",
     "tech": [
       "Shell"
     ],
-    "link": "https://github.com/devlopersabbir/security-scanner",
-    "repo_link": "https://github.com/devlopersabbir/security-scanner"
+    "link": "https://github.com/devlopersabbir/dose-scan",
+    "repo_link": "https://github.com/devlopersabbir/dose-scan"
   },
   {
     "title": "ops-toolkit",
