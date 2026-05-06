@@ -171,5 +171,16 @@
     ],
     "link": "create-react-app-rho-sable.vercel.app",
     "repo_link": "https://github.com/devlopersabbir/react-19"
+  },
+  {
+    "title": "python-api-development",
+    "description": "A python FastAPI framework",
+    "date": "Apr 2026",
+    "tech": [
+      "Python",
+      "HTML"
+    ],
+    "link": "https://github.com/devlopersabbir/python-api-development",
+    "repo_link": "https://github.com/devlopersabbir/python-api-development"
   }
 ]
