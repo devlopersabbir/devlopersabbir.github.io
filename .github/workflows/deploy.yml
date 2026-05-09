@@ -1,19 +1,18 @@
-name: Deploy Astro to GitHub Pages
+name: Deploy Astro Site
 
 on:
   push:
     branches:
       - main
 
-  workflow_dispatch:
-
 permissions:
   contents: read
   pages: write
   id-token: write
-  
+
+# Prevent overlapping deploys
 concurrency:
-  group: "pages"
+  group: pages
   cancel-in-progress: true
 
 jobs:
@@ -42,32 +41,33 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      # Create env file
+      # Create environment file
       - name: Create .env
         run: |
           echo "API_KEY=${{ secrets.API_KEY }}" >> .env
 
-      # Build Astro project
+      # Build Astro
       - name: Build project
         run: pnpm build
 
-      # Disable Jekyll
+      # Disable Jekyll completely
       - name: Disable Jekyll
         run: touch dist/.nojekyll
 
-      # Upload build artifact
-      - name: Upload Pages Artifact
+      # Upload static files
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
 
   deploy:
+    needs: build
+
+    runs-on: ubuntu-latest
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-
-    needs: build
-    runs-on: ubuntu-latest
 
     steps:
       - name: Deploy to GitHub Pages
