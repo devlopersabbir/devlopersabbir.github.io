@@ -1,10 +1,24 @@
 [
   {
+    "title": "keyword-generator",
+    "description": "A powerfull keyword maker chrome extension. Give a paragraph/word it's make keyword for you.",
+    "date": "May 2026",
+    "tech": [
+      "TypeScript",
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
+    "link": "https://keyword-generator-chrome-extension.vercel.app",
+    "repo_link": "https://github.com/devlopersabbir/keyword-generator"
+  },
+  {
     "title": "dose-scan",
     "description": "This is for scanning repository for detecting and informing to our developer to fix and safely send code to the remote repository.",
     "date": "May 2026",
     "tech": [
-      "Shell"
+      "Shell",
+      "Makefile"
     ],
     "link": "https://github.com/devlopersabbir/dose-scan",
     "repo_link": "https://github.com/devlopersabbir/dose-scan"
@@ -171,16 +185,5 @@
     ],
     "link": "create-react-app-rho-sable.vercel.app",
     "repo_link": "https://github.com/devlopersabbir/react-19"
-  },
-  {
-    "title": "python-api-development",
-    "description": "A python FastAPI framework",
-    "date": "Apr 2026",
-    "tech": [
-      "Python",
-      "HTML"
-    ],
-    "link": "https://github.com/devlopersabbir/python-api-development",
-    "repo_link": "https://github.com/devlopersabbir/python-api-development"
   }
 ]
