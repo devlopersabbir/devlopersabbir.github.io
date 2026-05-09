@@ -1,41 +1,74 @@
-name: Deploy to GitHub Pages
+name: Deploy Astro to GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
+
   workflow_dispatch:
 
 permissions:
   contents: read
   pages: write
   id-token: write
+  
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout repo
+      # Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
+      # Setup pnpm
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
+
+      # Setup Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: pnpm
 
-      - name: Create .env file from secrets
-        run: echo "API_KEY=${{ secrets.API_KEY }}" >> .env
+      # Install dependencies
+      - name: Install dependencies
+        run: pnpm install
 
-      - name: Build with Astro
-        uses: withastro/action@v3
+      # Create env file
+      - name: Create .env
+        run: |
+          echo "API_KEY=${{ secrets.API_KEY }}" >> .env
+
+      # Build Astro project
+      - name: Build project
+        run: pnpm build
+
+      # Disable Jekyll
+      - name: Disable Jekyll
+        run: touch dist/.nojekyll
+
+      # Upload build artifact
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          package-manager: pnpm@8.15.4 # Replace with your actual pnpm version
+          path: ./dist
 
   deploy:
-    needs: build
-    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
+    needs: build
+    runs-on: ubuntu-latest
+
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
