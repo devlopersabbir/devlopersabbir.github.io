@@ -1,5 +1,31 @@
 [
   {
+    "title": "chrome-extension-icon-generator",
+    "description": "Easily create the multiple icons in their sizes you need for your chrome extension",
+    "date": "May 2026",
+    "tech": [
+      "TypeScript",
+      "Shell",
+      "CSS",
+      "JavaScript"
+    ],
+    "link": "https://browser-extension-icon-generator.vercel.app",
+    "repo_link": "https://github.com/devlopersabbir/chrome-extension-icon-generator"
+  },
+  {
+    "title": "browserplugins",
+    "description": "Your trusted source for premium browser extensions. Handcrafted with care, tested for quality, and designed to enhance your digital experience.",
+    "date": "May 2026",
+    "tech": [
+      "TypeScript",
+      "CSS",
+      "Mermaid",
+      "JavaScript"
+    ],
+    "link": "https://browserplugins.vercel.app",
+    "repo_link": "https://github.com/devlopersabbir/browserplugins"
+  },
+  {
     "title": "terrorserver",
     "description": "Terror Server is a small production-oriented HTTP router, reverse proxy, static file server, and automatic TLS gateway packaged as a single Go binary.",
     "date": "May 2026",
@@ -149,41 +175,5 @@
     ],
     "link": "https://www.rizzui.com",
     "repo_link": "https://github.com/devlopersabbir/rizzui"
-  },
-  {
-    "title": "react-tenstack-table",
-    "description": "Full Customizable and full functionality react tenstack table ",
-    "date": "Apr 2026",
-    "tech": [
-      "TypeScript",
-      "JavaScript",
-      "HTML"
-    ],
-    "link": "https://github.com/devlopersabbir/react-tenstack-table",
-    "repo_link": "https://github.com/devlopersabbir/react-tenstack-table"
-  },
-  {
-    "title": "react-19",
-    "description": "create react app git clone repository",
-    "date": "Apr 2026",
-    "tech": [
-      "CSS",
-      "TypeScript",
-      "JavaScript",
-      "HTML"
-    ],
-    "link": "create-react-app-rho-sable.vercel.app",
-    "repo_link": "https://github.com/devlopersabbir/react-19"
-  },
-  {
-    "title": "python-api-development",
-    "description": "A python FastAPI framework",
-    "date": "Apr 2026",
-    "tech": [
-      "Python",
-      "HTML"
-    ],
-    "link": "https://github.com/devlopersabbir/python-api-development",
-    "repo_link": "https://github.com/devlopersabbir/python-api-development"
   }
 ]
