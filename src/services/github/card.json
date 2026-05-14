@@ -5,7 +5,6 @@
     "date": "May 2026",
     "tech": [
       "TypeScript",
-      "Shell",
       "CSS",
       "JavaScript"
     ],
@@ -161,19 +160,5 @@
     ],
     "link": "https://github.com/devlopersabbir/room-chat",
     "repo_link": "https://github.com/devlopersabbir/room-chat"
-  },
-  {
-    "title": "rizzui",
-    "description": "🎉 A Modern and Minimal React UI Library built with TailwindCSS",
-    "date": "Apr 2026",
-    "tech": [
-      "MDX",
-      "TypeScript",
-      "CSS",
-      "JavaScript",
-      "Shell"
-    ],
-    "link": "https://www.rizzui.com",
-    "repo_link": "https://github.com/devlopersabbir/rizzui"
   }
 ]
