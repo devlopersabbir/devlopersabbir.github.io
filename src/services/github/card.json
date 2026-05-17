@@ -1,5 +1,49 @@
 [
   {
+    "title": "cross-browser-extension-builder",
+    "description": "Cross Platform Browser extension builder with React + TypeScript",
+    "date": "May 2026",
+    "tech": [
+      "TypeScript",
+      "HTML",
+      "JavaScript",
+      "CSS"
+    ],
+    "link": "https://github.com/devlopersabbir/cross-browser-extension-builder",
+    "repo_link": "https://github.com/devlopersabbir/cross-browser-extension-builder"
+  },
+  {
+    "title": "awesome-links",
+    "description": "Users browse through a list of curated links and bookmark their favorite ones. Code for prisma.io course. ",
+    "date": "May 2026",
+    "tech": [
+      "TypeScript",
+      "JavaScript",
+      "CSS"
+    ],
+    "link": "https://github.com/devlopersabbir/awesome-links",
+    "repo_link": "https://github.com/devlopersabbir/awesome-links"
+  },
+  {
+    "title": "async-storage",
+    "description": "An asynchronous, persistent, key-value storage system for React Native.",
+    "date": "May 2026",
+    "tech": [
+      "TypeScript",
+      "Objective-C",
+      "Java",
+      "C++",
+      "Kotlin",
+      "JavaScript",
+      "Shell",
+      "Ruby",
+      "CSS",
+      "C"
+    ],
+    "link": "https://react-native-async-storage.github.io/async-storage/",
+    "repo_link": "https://github.com/devlopersabbir/async-storage"
+  },
+  {
     "title": "chrome-extension-icon-generator",
     "description": "Easily create the multiple icons in their sizes you need for your chrome extension",
     "date": "May 2026",
@@ -139,26 +183,5 @@
     ],
     "link": "https://github.com/devlopersabbir/shall-scripting",
     "repo_link": "https://github.com/devlopersabbir/shall-scripting"
-  },
-  {
-    "title": "sabbir-code-snippet",
-    "description": "This is a simple extension that provides code snippets for all programming, framework. It helps to speed up the coding process by providing handy snippets for commonly 😍",
-    "date": "Apr 2026",
-    "tech": [],
-    "link": "https://marketplace.visualstudio.com/items?itemName=devlopersabbir.sabbir-code-snippet",
-    "repo_link": "https://github.com/devlopersabbir/sabbir-code-snippet"
-  },
-  {
-    "title": "room-chat",
-    "description": "Web Socket Room Chat",
-    "date": "Apr 2026",
-    "tech": [
-      "Java",
-      "JavaScript",
-      "HTML",
-      "TypeScript"
-    ],
-    "link": "https://github.com/devlopersabbir/room-chat",
-    "repo_link": "https://github.com/devlopersabbir/room-chat"
   }
 ]
