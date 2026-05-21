@@ -1,15 +1,26 @@
 [
   {
-    "title": "dose-scan",
-    "description": "This is for scanning repository for detecting and informing to our developer to fix and safely send code to the remote repository.",
+    "title": "count-native-app",
+    "description": "Use this tally clicker for counting people as they go into an event or to keep track of multiple people in the outdoors, at meetings. This clicker counter can be used to count anything: sheep, pets, mushrooms picked, trees climbed, corn planted, students, cars, wins, goals, laps ran or walked, etc.",
     "date": "May 2026",
     "tech": [
-      "Shell",
-      "Python",
-      "Makefile"
+      "TypeScript",
+      "JavaScript"
     ],
-    "link": "https://github.com/devlopersabbir/dose-scan",
-    "repo_link": "https://github.com/devlopersabbir/dose-scan"
+    "link": "https://play.google.com/store/apps/details?id=com.devlopersabbir.countnativeapp",
+    "repo_link": "https://github.com/devlopersabbir/count-native-app"
+  },
+  {
+    "title": "buy-me-coffee-clone",
+    "description": "Online payment application",
+    "date": "May 2026",
+    "tech": [
+      "TypeScript",
+      "CSS",
+      "JavaScript"
+    ],
+    "link": "https://github.com/devlopersabbir/buy-me-coffee-clone",
+    "repo_link": "https://github.com/devlopersabbir/buy-me-coffee-clone"
   },
   {
     "title": "cross-browser-extension-builder",
@@ -171,29 +182,5 @@
     ],
     "link": "https://github.com/devlopersabbir/spring-boot-rest-api",
     "repo_link": "https://github.com/devlopersabbir/spring-boot-rest-api"
-  },
-  {
-    "title": "simple-cors-platform-calculator-app",
-    "description": "A simple cors platform calculator app. This app supported for both like Android, iOS, macOS, Windows, also chrome extesnion",
-    "date": "Apr 2026",
-    "tech": [
-      "TypeScript",
-      "JavaScript",
-      "HTML",
-      "CSS"
-    ],
-    "link": "https://github.com/devlopersabbir/simple-cors-platform-calculator-app",
-    "repo_link": "https://github.com/devlopersabbir/simple-cors-platform-calculator-app"
-  },
-  {
-    "title": "shall-scripting",
-    "description": "A Bourne Shell Programming / Scripting Tutorial for learning about using the Unix shell",
-    "date": "Apr 2026",
-    "tech": [
-      "Shell",
-      "R"
-    ],
-    "link": "https://github.com/devlopersabbir/shall-scripting",
-    "repo_link": "https://github.com/devlopersabbir/shall-scripting"
   }
 ]
