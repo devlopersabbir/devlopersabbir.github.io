@@ -1,17 +1,5 @@
 [
   {
-    "title": "find-love",
-    "description": "Help you to Find out your actual love",
-    "date": "May 2026",
-    "tech": [
-      "TypeScript",
-      "CSS",
-      "JavaScript"
-    ],
-    "link": "https://github.com/devlopersabbir/find-love",
-    "repo_link": "https://github.com/devlopersabbir/find-love"
-  },
-  {
     "title": "extension-builder",
     "description": "Cross platform web extension builder.",
     "date": "May 2026",
