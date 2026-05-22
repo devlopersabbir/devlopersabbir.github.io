@@ -1,5 +1,17 @@
 [
   {
+    "title": "dose-scan",
+    "description": "This is for scanning repository for detecting and informing to our developer to fix and safely send code to the remote repository.",
+    "date": "May 2026",
+    "tech": [
+      "Shell",
+      "Python",
+      "Makefile"
+    ],
+    "link": "https://github.com/devlopersabbir/dose-scan",
+    "repo_link": "https://github.com/devlopersabbir/dose-scan"
+  },
+  {
     "title": "extension-builder",
     "description": "Cross platform web extension builder.",
     "date": "May 2026",
