@@ -1,29 +1,5 @@
 [
   {
-    "title": "extension-builder",
-    "description": "Cross platform web extension builder.",
-    "date": "May 2026",
-    "tech": [
-      "JavaScript",
-      "HTML",
-      "TypeScript"
-    ],
-    "link": "https://github.com/devlopersabbir/extension-builder",
-    "repo_link": "https://github.com/devlopersabbir/extension-builder"
-  },
-  {
-    "title": "dribbble-clone",
-    "description": "Full-stack next 13 dribbble clone ",
-    "date": "May 2026",
-    "tech": [
-      "TypeScript",
-      "CSS",
-      "JavaScript"
-    ],
-    "link": "https://dribbble-clone-roan.vercel.app",
-    "repo_link": "https://github.com/devlopersabbir/dribbble-clone"
-  },
-  {
     "title": "digital-marketplace",
     "description": "Multi-vendor Digital Product Selling Website With Next 14",
     "date": "May 2026",
@@ -36,15 +12,47 @@
     "repo_link": "https://github.com/devlopersabbir/digital-marketplace"
   },
   {
+    "title": "devlopersabbir",
+    "description": "About myself 🙂",
+    "date": "May 2026",
+    "tech": [],
+    "link": "https://github.com/devlopersabbir/devlopersabbir",
+    "repo_link": "https://github.com/devlopersabbir/devlopersabbir"
+  },
+  {
+    "title": "cross-browser-extension-builder",
+    "description": "Cross Platform Browser extension builder with React + TypeScript",
+    "date": "May 2026",
+    "tech": [
+      "TypeScript",
+      "HTML",
+      "JavaScript",
+      "CSS"
+    ],
+    "link": "https://github.com/devlopersabbir/cross-browser-extension-builder",
+    "repo_link": "https://github.com/devlopersabbir/cross-browser-extension-builder"
+  },
+  {
     "title": "count-native-app",
     "description": "Use this tally clicker for counting people as they go into an event or to keep track of multiple people in the outdoors, at meetings. This clicker counter can be used to count anything: sheep, pets, mushrooms picked, trees climbed, corn planted, students, cars, wins, goals, laps ran or walked, etc.",
     "date": "May 2026",
     "tech": [
-      "TypeScript",
-      "JavaScript"
+      "TypeScript"
     ],
     "link": "https://play.google.com/store/apps/details?id=com.devlopersabbir.countnativeapp",
     "repo_link": "https://github.com/devlopersabbir/count-native-app"
+  },
+  {
+    "title": "chrome-extension-icon-generator",
+    "description": "Easily create the multiple icons in their sizes you need for your chrome extension",
+    "date": "May 2026",
+    "tech": [
+      "TypeScript",
+      "JavaScript",
+      "CSS"
+    ],
+    "link": "https://browser-extension-icon-generator.vercel.app",
+    "repo_link": "https://github.com/devlopersabbir/chrome-extension-icon-generator"
   },
   {
     "title": "buy-me-coffee-clone",
@@ -59,17 +67,17 @@
     "repo_link": "https://github.com/devlopersabbir/buy-me-coffee-clone"
   },
   {
-    "title": "cross-browser-extension-builder",
-    "description": "Cross Platform Browser extension builder with React + TypeScript",
+    "title": "browserplugins",
+    "description": "Your trusted source for premium browser extensions. Handcrafted with care, tested for quality, and designed to enhance your digital experience.",
     "date": "May 2026",
     "tech": [
       "TypeScript",
-      "HTML",
       "JavaScript",
-      "CSS"
+      "CSS",
+      "Mermaid"
     ],
-    "link": "https://github.com/devlopersabbir/cross-browser-extension-builder",
-    "repo_link": "https://github.com/devlopersabbir/cross-browser-extension-builder"
+    "link": "https://browserplugins.vercel.app",
+    "repo_link": "https://github.com/devlopersabbir/browserplugins"
   },
   {
     "title": "awesome-links",
@@ -103,29 +111,28 @@
     "repo_link": "https://github.com/devlopersabbir/async-storage"
   },
   {
-    "title": "chrome-extension-icon-generator",
-    "description": "Easily create the multiple icons in their sizes you need for your chrome extension",
+    "title": "extension-builder",
+    "description": "Cross platform web extension builder.",
     "date": "May 2026",
     "tech": [
-      "TypeScript",
-      "CSS",
-      "JavaScript"
+      "JavaScript",
+      "HTML",
+      "TypeScript"
     ],
-    "link": "https://browser-extension-icon-generator.vercel.app",
-    "repo_link": "https://github.com/devlopersabbir/chrome-extension-icon-generator"
+    "link": "https://github.com/devlopersabbir/extension-builder",
+    "repo_link": "https://github.com/devlopersabbir/extension-builder"
   },
   {
-    "title": "browserplugins",
-    "description": "Your trusted source for premium browser extensions. Handcrafted with care, tested for quality, and designed to enhance your digital experience.",
+    "title": "dribbble-clone",
+    "description": "Full-stack next 13 dribbble clone ",
     "date": "May 2026",
     "tech": [
       "TypeScript",
       "CSS",
-      "Mermaid",
       "JavaScript"
     ],
-    "link": "https://browserplugins.vercel.app",
-    "repo_link": "https://github.com/devlopersabbir/browserplugins"
+    "link": "https://dribbble-clone-roan.vercel.app",
+    "repo_link": "https://github.com/devlopersabbir/dribbble-clone"
   },
   {
     "title": "terrorserver",
