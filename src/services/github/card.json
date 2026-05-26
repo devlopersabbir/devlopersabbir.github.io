@@ -149,18 +149,5 @@
     ],
     "link": "https://github.com/devlopersabbir/buy-me-coffee-clone",
     "repo_link": "https://github.com/devlopersabbir/buy-me-coffee-clone"
-  },
-  {
-    "title": "browserplugins",
-    "description": "Your trusted source for premium browser extensions. Handcrafted with care, tested for quality, and designed to enhance your digital experience.",
-    "date": "May 2026",
-    "tech": [
-      "TypeScript",
-      "JavaScript",
-      "CSS",
-      "Mermaid"
-    ],
-    "link": "https://browserplugins.vercel.app",
-    "repo_link": "https://github.com/devlopersabbir/browserplugins"
   }
 ]
