@@ -1,79 +1,49 @@
 [
   {
-    "title": "MERN-STACK-client-side",
-    "description": "full MERN-STACK client side with react and tailwind css",
+    "title": "next-auth-next13",
+    "description": "Next-auth with next13",
     "date": "May 2026",
     "tech": [
-      "JavaScript",
+      "TypeScript",
       "CSS",
-      "HTML"
+      "JavaScript"
     ],
-    "link": "https://github.com/devlopersabbir/MERN-STACK-client-side",
-    "repo_link": "https://github.com/devlopersabbir/MERN-STACK-client-side"
+    "link": "https://next-auth-next13-eight.vercel.app",
+    "repo_link": "https://github.com/devlopersabbir/next-auth-next13"
   },
   {
-    "title": "devlopersabbir",
-    "description": "About myself 🙂",
-    "date": "May 2026",
-    "tech": [],
-    "link": "https://github.com/devlopersabbir/devlopersabbir",
-    "repo_link": "https://github.com/devlopersabbir/devlopersabbir"
-  },
-  {
-    "title": "terrorserver",
-    "description": "Terror Server is a small production-oriented HTTP router, reverse proxy, static file server, and automatic TLS gateway packaged as a single Go binary.",
+    "title": "news-feed-remover-pro",
+    "description": "FireFox | Chrome [ News Feed Remover Pro ] browser extension",
     "date": "May 2026",
     "tech": [
-      "Go",
-      "Shell",
+      "TypeScript",
       "HTML",
-      "Makefile"
+      "JavaScript",
+      "CSS"
     ],
-    "link": "https://github.com/devlopersabbir/terrorserver",
-    "repo_link": "https://github.com/devlopersabbir/terrorserver"
+    "link": "https://github.com/devlopersabbir/news-feed-remover-pro",
+    "repo_link": "https://github.com/devlopersabbir/news-feed-remover-pro"
   },
   {
-    "title": "ops-toolkit",
-    "description": "A fast and interactive tool to safely remove services like Nginx, Caddy, and Docker from your system.",
-    "date": "May 2026",
-    "tech": [
-      "Shell"
-    ],
-    "link": "https://github.com/devlopersabbir/ops-toolkit",
-    "repo_link": "https://github.com/devlopersabbir/ops-toolkit"
-  },
-  {
-    "title": "nodejs.org",
-    "description": "The Node.js® Website",
+    "title": "image-genrator-extension",
+    "description": "AI image generator cors platfrom browser extension",
     "date": "May 2026",
     "tech": [
       "TypeScript",
       "JavaScript",
-      "CSS",
-      "MDX",
-      "Handlebars",
-      "Shell"
+      "HTML",
+      "CSS"
     ],
-    "link": "https://nodejs.org",
-    "repo_link": "https://github.com/devlopersabbir/nodejs.org"
-  },
-  {
-    "title": "java-bank-account-app",
-    "description": "Simple console java bank account app with full functionality ",
-    "date": "May 2026",
-    "tech": [
-      "Java"
-    ],
-    "link": "https://github.com/devlopersabbir/java-bank-account-app",
-    "repo_link": "https://github.com/devlopersabbir/java-bank-account-app"
+    "link": "https://github.com/devlopersabbir/image-genrator-extension",
+    "repo_link": "https://github.com/devlopersabbir/image-genrator-extension"
   },
   {
     "title": "extension-builder",
     "description": "Cross platform web extension builder.",
     "date": "May 2026",
     "tech": [
-      "HTML",
       "JavaScript",
+      "HTML",
       "TypeScript"
     ],
     "link": "https://github.com/devlopersabbir/extension-builder",
@@ -121,7 +91,8 @@
     "description": "Use this tally clicker for counting people as they go into an event or to keep track of multiple people in the outdoors, at meetings. This clicker counter can be used to count anything: sheep, pets, mushrooms picked, trees climbed, corn planted, students, cars, wins, goals, laps ran or walked, etc.",
     "date": "May 2026",
     "tech": [
-      "TypeScript"
+      "TypeScript",
+      "JavaScript"
     ],
     "link": "https://play.google.com/store/apps/details?id=com.devlopersabbir.countnativeapp",
     "repo_link": "https://github.com/devlopersabbir/count-native-app"
@@ -132,11 +103,42 @@
     "date": "May 2026",
     "tech": [
       "TypeScript",
-      "JavaScript",
-      "CSS"
+      "CSS",
+      "JavaScript"
     ],
     "link": "https://browser-extension-icon-generator.vercel.app",
     "repo_link": "https://github.com/devlopersabbir/chrome-extension-icon-generator"
+  },
+  {
+    "title": "awesome-links",
+    "description": "Users browse through a list of curated links and bookmark their favorite ones. Code for prisma.io course. ",
+    "date": "May 2026",
+    "tech": [
+      "TypeScript",
+      "JavaScript",
+      "CSS"
+    ],
+    "link": "https://github.com/devlopersabbir/awesome-links",
+    "repo_link": "https://github.com/devlopersabbir/awesome-links"
+  },
+  {
+    "title": "async-storage",
+    "description": "An asynchronous, persistent, key-value storage system for React Native.",
+    "date": "May 2026",
+    "tech": [
+      "TypeScript",
+      "Objective-C",
+      "Java",
+      "C++",
+      "Kotlin",
+      "JavaScript",
+      "Shell",
+      "Ruby",
+      "CSS",
+      "C"
+    ],
+    "link": "https://react-native-async-storage.github.io/async-storage/",
+    "repo_link": "https://github.com/devlopersabbir/async-storage"
   },
   {
     "title": "buy-me-coffee-clone",
@@ -149,5 +151,38 @@
     ],
     "link": "https://github.com/devlopersabbir/buy-me-coffee-clone",
     "repo_link": "https://github.com/devlopersabbir/buy-me-coffee-clone"
+  },
+  {
+    "title": "browserplugins",
+    "description": "Your trusted source for premium browser extensions. Handcrafted with care, tested for quality, and designed to enhance your digital experience.",
+    "date": "May 2026",
+    "tech": [
+      "TypeScript",
+      "CSS",
+      "Mermaid",
+      "JavaScript"
+    ],
+    "link": "https://browserplugins.vercel.app",
+    "repo_link": "https://github.com/devlopersabbir/browserplugins"
+  },
+  {
+    "title": "MERN-STACK-client-side",
+    "description": "full MERN-STACK client side with react and tailwind css",
+    "date": "May 2026",
+    "tech": [
+      "JavaScript",
+      "CSS",
+      "HTML"
+    ],
+    "link": "https://github.com/devlopersabbir/MERN-STACK-client-side",
+    "repo_link": "https://github.com/devlopersabbir/MERN-STACK-client-side"
+  },
+  {
+    "title": "devlopersabbir",
+    "description": "About myself 🙂",
+    "date": "May 2026",
+    "tech": [],
+    "link": "https://github.com/devlopersabbir/devlopersabbir",
+    "repo_link": "https://github.com/devlopersabbir/devlopersabbir"
   }
 ]
