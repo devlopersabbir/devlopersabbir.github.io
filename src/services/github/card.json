@@ -1,5 +1,16 @@
 [
   {
+    "title": "tview-cli",
+    "description": "tview is a terminal-based candlestick chart viewer built with Go, AsciiGraph, and Cobra. No browser required.",
+    "date": "Jun 2026",
+    "tech": [
+      "Go",
+      "Makefile"
+    ],
+    "link": "https://github.com/devlopersabbir/tview-cli",
+    "repo_link": "https://github.com/devlopersabbir/tview-cli"
+  },
+  {
     "title": "next-auth-next13",
     "description": "Next-auth with next13",
     "date": "May 2026",
