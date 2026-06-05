@@ -1,5 +1,43 @@
 [
   {
+    "title": "dose-scan",
+    "description": "This is for scanning repository for detecting and informing to our developer to fix and safely send code to the remote repository.",
+    "date": "Jun 2026",
+    "tech": [
+      "Shell",
+      "Python",
+      "PowerShell",
+      "Makefile"
+    ],
+    "link": "https://github.com/devlopersabbir/dose-scan",
+    "repo_link": "https://github.com/devlopersabbir/dose-scan"
+  },
+  {
+    "title": "simple-translate",
+    "description": "WebExtensions for translating text on web pages",
+    "date": "Jun 2026",
+    "tech": [
+      "JavaScript",
+      "SCSS",
+      "HTML"
+    ],
+    "link": "http://simple-translate.sienori.com/",
+    "repo_link": "https://github.com/devlopersabbir/simple-translate"
+  },
+  {
+    "title": "randomkana",
+    "description": "A web app that will randomly generate Japanese hiragana, katakana, and romaji to be used as a quiz for Japanese language learning",
+    "date": "Jun 2026",
+    "tech": [
+      "TypeScript",
+      "CSS",
+      "JavaScript",
+      "HTML"
+    ],
+    "link": "https://randomkana.vercel.app",
+    "repo_link": "https://github.com/devlopersabbir/randomkana"
+  },
+  {
     "title": "tview-cli",
     "description": "tview is a terminal-based candlestick chart viewer built with Go, AsciiGraph, and Cobra. No browser required.",
     "date": "Jun 2026",
@@ -132,69 +170,5 @@
     ],
     "link": "https://github.com/devlopersabbir/awesome-links",
     "repo_link": "https://github.com/devlopersabbir/awesome-links"
-  },
-  {
-    "title": "async-storage",
-    "description": "An asynchronous, persistent, key-value storage system for React Native.",
-    "date": "May 2026",
-    "tech": [
-      "TypeScript",
-      "Objective-C",
-      "Java",
-      "C++",
-      "Kotlin",
-      "JavaScript",
-      "Shell",
-      "Ruby",
-      "CSS",
-      "C"
-    ],
-    "link": "https://react-native-async-storage.github.io/async-storage/",
-    "repo_link": "https://github.com/devlopersabbir/async-storage"
-  },
-  {
-    "title": "buy-me-coffee-clone",
-    "description": "Online payment application",
-    "date": "May 2026",
-    "tech": [
-      "TypeScript",
-      "CSS",
-      "JavaScript"
-    ],
-    "link": "https://github.com/devlopersabbir/buy-me-coffee-clone",
-    "repo_link": "https://github.com/devlopersabbir/buy-me-coffee-clone"
-  },
-  {
-    "title": "browserplugins",
-    "description": "Your trusted source for premium browser extensions. Handcrafted with care, tested for quality, and designed to enhance your digital experience.",
-    "date": "May 2026",
-    "tech": [
-      "TypeScript",
-      "CSS",
-      "Mermaid",
-      "JavaScript"
-    ],
-    "link": "https://browserplugins.vercel.app",
-    "repo_link": "https://github.com/devlopersabbir/browserplugins"
-  },
-  {
-    "title": "MERN-STACK-client-side",
-    "description": "full MERN-STACK client side with react and tailwind css",
-    "date": "May 2026",
-    "tech": [
-      "JavaScript",
-      "CSS",
-      "HTML"
-    ],
-    "link": "https://github.com/devlopersabbir/MERN-STACK-client-side",
-    "repo_link": "https://github.com/devlopersabbir/MERN-STACK-client-side"
-  },
-  {
-    "title": "devlopersabbir",
-    "description": "About myself 🙂",
-    "date": "May 2026",
-    "tech": [],
-    "link": "https://github.com/devlopersabbir/devlopersabbir",
-    "repo_link": "https://github.com/devlopersabbir/devlopersabbir"
   }
 ]
