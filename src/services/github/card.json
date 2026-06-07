@@ -13,20 +13,6 @@
     "repo_link": "https://github.com/devlopersabbir/dose-scan"
   },
   {
-    "title": "tview-cli",
-    "description": "tview is a terminal-based candlestick chart viewer built with Go, AsciiGraph, and Cobra. No browser required.",
-    "date": "Jun 2026",
-    "tech": [
-      "Go",
-      "Ruby",
-      "Shell",
-      "PowerShell",
-      "Makefile"
-    ],
-    "link": "https://github.com/devlopersabbir/tview-cli",
-    "repo_link": "https://github.com/devlopersabbir/tview-cli"
-  },
-  {
     "title": "simple-translate",
     "description": "WebExtensions for translating text on web pages",
     "date": "Jun 2026",
@@ -160,5 +146,17 @@
     ],
     "link": "https://browser-extension-icon-generator.vercel.app",
     "repo_link": "https://github.com/devlopersabbir/chrome-extension-icon-generator"
+  },
+  {
+    "title": "awesome-links",
+    "description": "Users browse through a list of curated links and bookmark their favorite ones. Code for prisma.io course. ",
+    "date": "May 2026",
+    "tech": [
+      "TypeScript",
+      "JavaScript",
+      "CSS"
+    ],
+    "link": "https://github.com/devlopersabbir/awesome-links",
+    "repo_link": "https://github.com/devlopersabbir/awesome-links"
   }
 ]
