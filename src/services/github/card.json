@@ -13,6 +13,20 @@
     "repo_link": "https://github.com/devlopersabbir/dose-scan"
   },
   {
+    "title": "tview-cli",
+    "description": "tview is a terminal-based candlestick chart viewer built with Go, AsciiGraph, and Cobra. No browser required.",
+    "date": "Jun 2026",
+    "tech": [
+      "Go",
+      "Ruby",
+      "Shell",
+      "PowerShell",
+      "Makefile"
+    ],
+    "link": "https://github.com/devlopersabbir/tview-cli",
+    "repo_link": "https://github.com/devlopersabbir/tview-cli"
+  },
+  {
     "title": "simple-translate",
     "description": "WebExtensions for translating text on web pages",
     "date": "Jun 2026",
@@ -36,18 +50,6 @@
     ],
     "link": "https://randomkana.vercel.app",
     "repo_link": "https://github.com/devlopersabbir/randomkana"
-  },
-  {
-    "title": "tview-cli",
-    "description": "tview is a terminal-based candlestick chart viewer built with Go, AsciiGraph, and Cobra. No browser required.",
-    "date": "Jun 2026",
-    "tech": [
-      "Go",
-      "Ruby",
-      "Makefile"
-    ],
-    "link": "https://github.com/devlopersabbir/tview-cli",
-    "repo_link": "https://github.com/devlopersabbir/tview-cli"
   },
   {
     "title": "next-auth-next13",
