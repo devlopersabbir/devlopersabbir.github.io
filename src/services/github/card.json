@@ -5,8 +5,8 @@
     "date": "Jun 2026",
     "tech": [
       "Shell",
-      "PowerShell",
       "Python",
+      "PowerShell",
       "Makefile"
     ],
     "link": "https://github.com/devlopersabbir/dose-scan",
