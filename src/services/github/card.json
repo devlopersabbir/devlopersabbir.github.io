@@ -103,7 +103,11 @@
     "title": "digital-marketplace",
     "description": "Multi-vendor Digital Product Selling Website With Next 14",
     "date": "May 2026",
-    "tech": [],
+    "tech": [
+      "TypeScript",
+      "CSS",
+      "JavaScript"
+    ],
     "link": "https://digital-market-two.vercel.app",
     "repo_link": "https://github.com/devlopersabbir/digital-marketplace"
   },
@@ -111,7 +115,12 @@
     "title": "cross-browser-extension-builder",
     "description": "Cross Platform Browser extension builder with React + TypeScript",
     "date": "May 2026",
-    "tech": [],
+    "tech": [
+      "TypeScript",
+      "HTML",
+      "JavaScript",
+      "CSS"
+    ],
     "link": "https://github.com/devlopersabbir/cross-browser-extension-builder",
     "repo_link": "https://github.com/devlopersabbir/cross-browser-extension-builder"
   },
@@ -119,7 +128,10 @@
     "title": "count-native-app",
     "description": "Use this tally clicker for counting people as they go into an event or to keep track of multiple people in the outdoors, at meetings. This clicker counter can be used to count anything: sheep, pets, mushrooms picked, trees climbed, corn planted, students, cars, wins, goals, laps ran or walked, etc.",
     "date": "May 2026",
-    "tech": [],
+    "tech": [
+      "TypeScript",
+      "JavaScript"
+    ],
     "link": "https://play.google.com/store/apps/details?id=com.devlopersabbir.countnativeapp",
     "repo_link": "https://github.com/devlopersabbir/count-native-app"
   },
@@ -127,7 +139,11 @@
     "title": "chrome-extension-icon-generator",
     "description": "Easily create the multiple icons in their sizes you need for your chrome extension",
     "date": "May 2026",
-    "tech": [],
+    "tech": [
+      "TypeScript",
+      "CSS",
+      "JavaScript"
+    ],
     "link": "https://browser-extension-icon-generator.vercel.app",
     "repo_link": "https://github.com/devlopersabbir/chrome-extension-icon-generator"
   },
@@ -135,7 +151,11 @@
     "title": "awesome-links",
     "description": "Users browse through a list of curated links and bookmark their favorite ones. Code for prisma.io course. ",
     "date": "May 2026",
-    "tech": [],
+    "tech": [
+      "TypeScript",
+      "JavaScript",
+      "CSS"
+    ],
     "link": "https://github.com/devlopersabbir/awesome-links",
     "repo_link": "https://github.com/devlopersabbir/awesome-links"
   }
