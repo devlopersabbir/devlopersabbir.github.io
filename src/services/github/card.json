@@ -3,7 +3,11 @@
     "title": "simple-translate",
     "description": "WebExtensions for translating text on web pages",
     "date": "Jun 2026",
-    "tech": [],
+    "tech": [
+      "JavaScript",
+      "SCSS",
+      "HTML"
+    ],
     "link": "http://simple-translate.sienori.com/",
     "repo_link": "https://github.com/devlopersabbir/simple-translate"
   },
@@ -11,7 +15,12 @@
     "title": "dose-scan",
     "description": "This is for scanning repository for detecting and informing to our developer to fix and safely send code to the remote repository.",
     "date": "Jun 2026",
-    "tech": [],
+    "tech": [
+      "Shell",
+      "Python",
+      "PowerShell",
+      "Makefile"
+    ],
     "link": "https://github.com/devlopersabbir/dose-scan",
     "repo_link": "https://github.com/devlopersabbir/dose-scan"
   },
@@ -19,7 +28,12 @@
     "title": "randomkana",
     "description": "A web app that will randomly generate Japanese hiragana, katakana, and romaji to be used as a quiz for Japanese language learning",
     "date": "Jun 2026",
-    "tech": [],
+    "tech": [
+      "TypeScript",
+      "CSS",
+      "JavaScript",
+      "HTML"
+    ],
     "link": "https://randomkana.vercel.app",
     "repo_link": "https://github.com/devlopersabbir/randomkana"
   },
@@ -27,7 +41,11 @@
     "title": "next-auth-next13",
     "description": "Next-auth with next13",
     "date": "May 2026",
-    "tech": [],
+    "tech": [
+      "TypeScript",
+      "CSS",
+      "JavaScript"
+    ],
     "link": "https://next-auth-next13-eight.vercel.app",
     "repo_link": "https://github.com/devlopersabbir/next-auth-next13"
   },
@@ -61,7 +79,11 @@
     "title": "extension-builder",
     "description": "Cross platform web extension builder.",
     "date": "May 2026",
-    "tech": [],
+    "tech": [
+      "JavaScript",
+      "HTML",
+      "TypeScript"
+    ],
     "link": "https://github.com/devlopersabbir/extension-builder",
     "repo_link": "https://github.com/devlopersabbir/extension-builder"
   },
@@ -81,7 +103,11 @@
     "title": "digital-marketplace",
     "description": "Multi-vendor Digital Product Selling Website With Next 14",
     "date": "May 2026",
-    "tech": [],
+    "tech": [
+      "TypeScript",
+      "CSS",
+      "JavaScript"
+    ],
     "link": "https://digital-market-two.vercel.app",
     "repo_link": "https://github.com/devlopersabbir/digital-marketplace"
   },
@@ -89,7 +115,12 @@
     "title": "cross-browser-extension-builder",
     "description": "Cross Platform Browser extension builder with React + TypeScript",
     "date": "May 2026",
-    "tech": [],
+    "tech": [
+      "TypeScript",
+      "HTML",
+      "JavaScript",
+      "CSS"
+    ],
     "link": "https://github.com/devlopersabbir/cross-browser-extension-builder",
     "repo_link": "https://github.com/devlopersabbir/cross-browser-extension-builder"
   },
@@ -108,7 +139,11 @@
     "title": "chrome-extension-icon-generator",
     "description": "Easily create the multiple icons in their sizes you need for your chrome extension",
     "date": "May 2026",
-    "tech": [],
+    "tech": [
+      "TypeScript",
+      "CSS",
+      "JavaScript"
+    ],
     "link": "https://browser-extension-icon-generator.vercel.app",
     "repo_link": "https://github.com/devlopersabbir/chrome-extension-icon-generator"
   },
@@ -116,7 +151,11 @@
     "title": "awesome-links",
     "description": "Users browse through a list of curated links and bookmark their favorite ones. Code for prisma.io course. ",
     "date": "May 2026",
-    "tech": [],
+    "tech": [
+      "TypeScript",
+      "JavaScript",
+      "CSS"
+    ],
     "link": "https://github.com/devlopersabbir/awesome-links",
     "repo_link": "https://github.com/devlopersabbir/awesome-links"
   }
