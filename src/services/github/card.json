@@ -1,46 +1,30 @@
 [
   {
-    "title": "simple-translate",
-    "description": "WebExtensions for translating text on web pages",
-    "date": "Jun 2026",
-    "tech": [
-      "JavaScript",
-      "SCSS",
-      "HTML"
-    ],
-    "link": "http://simple-translate.sienori.com/",
-    "repo_link": "https://github.com/devlopersabbir/simple-translate"
-  },
-  {
-    "title": "dose-scan",
-    "description": "This is for scanning repository for detecting and informing to our developer to fix and safely send code to the remote repository.",
-    "date": "Jun 2026",
-    "tech": [
-      "Shell",
-      "Python",
-      "PowerShell",
-      "Makefile"
-    ],
-    "link": "https://github.com/devlopersabbir/dose-scan",
-    "repo_link": "https://github.com/devlopersabbir/dose-scan"
-  },
-  {
-    "title": "randomkana",
-    "description": "A web app that will randomly generate Japanese hiragana, katakana, and romaji to be used as a quiz for Japanese language learning",
+    "title": "video-downloader-extension",
+    "description": "YouTube Video downloader chrome extension using CRXjs vite plugin",
     "date": "Jun 2026",
     "tech": [
       "TypeScript",
-      "CSS",
       "JavaScript",
       "HTML"
     ],
-    "link": "https://randomkana.vercel.app",
-    "repo_link": "https://github.com/devlopersabbir/randomkana"
+    "link": "https://youtube-video-downloader-chrome-extension.vercel.app",
+    "repo_link": "https://github.com/devlopersabbir/video-downloader-extension"
+  },
+  {
+    "title": "nodejs-mail-sender",
+    "description": "NodeJs Mail sender",
+    "date": "Jun 2026",
+    "tech": [
+      "TypeScript"
+    ],
+    "link": "https://nodejs-mail-sender-ten.vercel.app",
+    "repo_link": "https://github.com/devlopersabbir/nodejs-mail-sender"
   },
   {
     "title": "next-auth-next13",
     "description": "Next-auth with next13",
-    "date": "May 2026",
+    "date": "Jun 2026",
     "tech": [
       "TypeScript",
       "CSS",
@@ -52,12 +36,12 @@
   {
     "title": "news-feed-remover-pro",
     "description": "FireFox | Chrome [ News Feed Remover Pro ] browser extension",
-    "date": "May 2026",
+    "date": "Jun 2026",
     "tech": [
       "TypeScript",
       "HTML",
-      "JavaScript",
-      "CSS"
+      "CSS",
+      "JavaScript"
     ],
     "link": "https://github.com/devlopersabbir/news-feed-remover-pro",
     "repo_link": "https://github.com/devlopersabbir/news-feed-remover-pro"
@@ -65,32 +49,87 @@
   {
     "title": "image-genrator-extension",
     "description": "AI image generator cors platfrom browser extension",
-    "date": "May 2026",
+    "date": "Jun 2026",
     "tech": [
       "TypeScript",
-      "JavaScript",
       "HTML",
+      "JavaScript",
       "CSS"
     ],
     "link": "https://github.com/devlopersabbir/image-genrator-extension",
     "repo_link": "https://github.com/devlopersabbir/image-genrator-extension"
   },
   {
+    "title": "hono-with-deno",
+    "description": "Hono with drizzle ORM CRUD API - deno runtime",
+    "date": "Jun 2026",
+    "tech": [
+      "TypeScript",
+      "Shell",
+      "Dockerfile"
+    ],
+    "link": "https://youtu.be/LGJLTFLE2Ek?list=PLdcGGiDG9Q0j7pLzVcWvFptCPbENkfl7S",
+    "repo_link": "https://github.com/devlopersabbir/hono-with-deno"
+  },
+  {
+    "title": "find-devs-pair",
+    "description": "FindDevs Pair application will help to pair programming with random devs online",
+    "date": "Jun 2026",
+    "tech": [
+      "TypeScript",
+      "JavaScript",
+      "CSS",
+      "Kotlin"
+    ],
+    "link": "https://find-devs-pair.vercel.app",
+    "repo_link": "https://github.com/devlopersabbir/find-devs-pair"
+  },
+  {
+    "title": "find-devs",
+    "description": "Find Devs is a kind of developer's Fair. An open-source platform to find all the developers in the world.",
+    "date": "Jun 2026",
+    "tech": [
+      "TypeScript",
+      "CSS",
+      "JavaScript"
+    ],
+    "link": "https://finddevs.vercel.app",
+    "repo_link": "https://github.com/devlopersabbir/find-devs"
+  },
+  {
     "title": "extension-builder",
     "description": "Cross platform web extension builder.",
-    "date": "May 2026",
+    "date": "Jun 2026",
     "tech": [
-      "JavaScript",
       "HTML",
+      "JavaScript",
       "TypeScript"
     ],
     "link": "https://github.com/devlopersabbir/extension-builder",
     "repo_link": "https://github.com/devlopersabbir/extension-builder"
   },
   {
+    "title": "executeme",
+    "description": "ExecuteMe allows users to write, execute, and test code in various programming languages directly in the browser. https://devlopersabbir.github.io/executeme",
+    "date": "Jun 2026",
+    "tech": [
+      "TypeScript",
+      "JavaScript",
+      "HTML",
+      "Shell",
+      "CSS",
+      "Dockerfile",
+      "Java",
+      "Python",
+      "Kotlin"
+    ],
+    "link": "https://executeme.vercel.app",
+    "repo_link": "https://github.com/devlopersabbir/executeme"
+  },
+  {
     "title": "dribbble-clone",
     "description": "Full-stack next 13 dribbble clone ",
-    "date": "May 2026",
+    "date": "Jun 2026",
     "tech": [
       "TypeScript",
       "CSS",
@@ -102,7 +141,7 @@
   {
     "title": "digital-marketplace",
     "description": "Multi-vendor Digital Product Selling Website With Next 14",
-    "date": "May 2026",
+    "date": "Jun 2026",
     "tech": [
       "TypeScript",
       "CSS",
@@ -114,7 +153,7 @@
   {
     "title": "cross-browser-extension-builder",
     "description": "Cross Platform Browser extension builder with React + TypeScript",
-    "date": "May 2026",
+    "date": "Jun 2026",
     "tech": [
       "TypeScript",
       "HTML",
@@ -127,10 +166,9 @@
   {
     "title": "count-native-app",
     "description": "Use this tally clicker for counting people as they go into an event or to keep track of multiple people in the outdoors, at meetings. This clicker counter can be used to count anything: sheep, pets, mushrooms picked, trees climbed, corn planted, students, cars, wins, goals, laps ran or walked, etc.",
-    "date": "May 2026",
+    "date": "Jun 2026",
     "tech": [
-      "TypeScript",
-      "JavaScript"
+      "TypeScript"
     ],
     "link": "https://play.google.com/store/apps/details?id=com.devlopersabbir.countnativeapp",
     "repo_link": "https://github.com/devlopersabbir/count-native-app"
@@ -138,19 +176,44 @@
   {
     "title": "chrome-extension-icon-generator",
     "description": "Easily create the multiple icons in their sizes you need for your chrome extension",
-    "date": "May 2026",
+    "date": "Jun 2026",
     "tech": [
+      "JavaScript",
       "TypeScript",
-      "CSS",
-      "JavaScript"
+      "CSS"
     ],
     "link": "https://browser-extension-icon-generator.vercel.app",
     "repo_link": "https://github.com/devlopersabbir/chrome-extension-icon-generator"
   },
   {
+    "title": "buy-me-coffee-clone",
+    "description": "Online payment application",
+    "date": "Jun 2026",
+    "tech": [
+      "TypeScript",
+      "CSS",
+      "JavaScript"
+    ],
+    "link": "https://github.com/devlopersabbir/buy-me-coffee-clone",
+    "repo_link": "https://github.com/devlopersabbir/buy-me-coffee-clone"
+  },
+  {
+    "title": "browserplugins",
+    "description": "Your trusted source for premium browser extensions. Handcrafted with care, tested for quality, and designed to enhance your digital experience.",
+    "date": "Jun 2026",
+    "tech": [
+      "TypeScript",
+      "JavaScript",
+      "CSS",
+      "Mermaid"
+    ],
+    "link": "https://browserplugins.vercel.app",
+    "repo_link": "https://github.com/devlopersabbir/browserplugins"
+  },
+  {
     "title": "awesome-links",
     "description": "Users browse through a list of curated links and bookmark their favorite ones. Code for prisma.io course. ",
-    "date": "May 2026",
+    "date": "Jun 2026",
     "tech": [
       "TypeScript",
       "JavaScript",
