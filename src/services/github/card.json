@@ -209,17 +209,5 @@
     ],
     "link": "https://browserplugins.vercel.app",
     "repo_link": "https://github.com/devlopersabbir/browserplugins"
-  },
-  {
-    "title": "awesome-links",
-    "description": "Users browse through a list of curated links and bookmark their favorite ones. Code for prisma.io course. ",
-    "date": "Jun 2026",
-    "tech": [
-      "TypeScript",
-      "JavaScript",
-      "CSS"
-    ],
-    "link": "https://github.com/devlopersabbir/awesome-links",
-    "repo_link": "https://github.com/devlopersabbir/awesome-links"
   }
 ]
