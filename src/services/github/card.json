@@ -1,5 +1,17 @@
 [
   {
+    "title": "video-downloader-extension",
+    "description": "YouTube Video downloader chrome extension using CRXjs vite plugin",
+    "date": "Jun 2026",
+    "tech": [
+      "TypeScript",
+      "JavaScript",
+      "HTML"
+    ],
+    "link": "https://youtube-video-downloader-chrome-extension.vercel.app",
+    "repo_link": "https://github.com/devlopersabbir/video-downloader-extension"
+  },
+  {
     "title": "tview-cli",
     "description": "tview is a terminal-based candlestick chart viewer built with Go, AsciiGraph, and Cobra. No browser required.",
     "date": "Jun 2026",
@@ -12,18 +24,6 @@
     ],
     "link": "https://github.com/devlopersabbir/tview-cli",
     "repo_link": "https://github.com/devlopersabbir/tview-cli"
-  },
-  {
-    "title": "video-downloader-extension",
-    "description": "YouTube Video downloader chrome extension using CRXjs vite plugin",
-    "date": "Jun 2026",
-    "tech": [
-      "TypeScript",
-      "JavaScript",
-      "HTML"
-    ],
-    "link": "https://youtube-video-downloader-chrome-extension.vercel.app",
-    "repo_link": "https://github.com/devlopersabbir/video-downloader-extension"
   },
   {
     "title": "nodejs-mail-sender",
