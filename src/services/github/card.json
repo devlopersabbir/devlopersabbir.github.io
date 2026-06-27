@@ -1,5 +1,30 @@
 [
   {
+    "title": "simple-translate",
+    "description": "WebExtensions for translating text on web pages",
+    "date": "Jun 2026",
+    "tech": [
+      "JavaScript",
+      "SCSS",
+      "HTML"
+    ],
+    "link": "http://simple-translate.sienori.com/",
+    "repo_link": "https://github.com/devlopersabbir/simple-translate"
+  },
+  {
+    "title": "randomkana",
+    "description": "A web app that will randomly generate Japanese hiragana, katakana, and romaji to be used as a quiz for Japanese language learning",
+    "date": "Jun 2026",
+    "tech": [
+      "TypeScript",
+      "CSS",
+      "JavaScript",
+      "HTML"
+    ],
+    "link": "https://randomkana.vercel.app",
+    "repo_link": "https://github.com/devlopersabbir/randomkana"
+  },
+  {
     "title": "video-downloader-extension",
     "description": "YouTube Video downloader chrome extension using CRXjs vite plugin",
     "date": "Jun 2026",
@@ -163,65 +188,5 @@
     ],
     "link": "https://digital-market-two.vercel.app",
     "repo_link": "https://github.com/devlopersabbir/digital-marketplace"
-  },
-  {
-    "title": "cross-browser-extension-builder",
-    "description": "Cross Platform Browser extension builder with React + TypeScript",
-    "date": "Jun 2026",
-    "tech": [
-      "TypeScript",
-      "HTML",
-      "JavaScript",
-      "CSS"
-    ],
-    "link": "https://github.com/devlopersabbir/cross-browser-extension-builder",
-    "repo_link": "https://github.com/devlopersabbir/cross-browser-extension-builder"
-  },
-  {
-    "title": "count-native-app",
-    "description": "Use this tally clicker for counting people as they go into an event or to keep track of multiple people in the outdoors, at meetings. This clicker counter can be used to count anything: sheep, pets, mushrooms picked, trees climbed, corn planted, students, cars, wins, goals, laps ran or walked, etc.",
-    "date": "Jun 2026",
-    "tech": [
-      "TypeScript"
-    ],
-    "link": "https://play.google.com/store/apps/details?id=com.devlopersabbir.countnativeapp",
-    "repo_link": "https://github.com/devlopersabbir/count-native-app"
-  },
-  {
-    "title": "chrome-extension-icon-generator",
-    "description": "Easily create the multiple icons in their sizes you need for your chrome extension",
-    "date": "Jun 2026",
-    "tech": [
-      "JavaScript",
-      "TypeScript",
-      "CSS"
-    ],
-    "link": "https://browser-extension-icon-generator.vercel.app",
-    "repo_link": "https://github.com/devlopersabbir/chrome-extension-icon-generator"
-  },
-  {
-    "title": "buy-me-coffee-clone",
-    "description": "Online payment application",
-    "date": "Jun 2026",
-    "tech": [
-      "TypeScript",
-      "CSS",
-      "JavaScript"
-    ],
-    "link": "https://github.com/devlopersabbir/buy-me-coffee-clone",
-    "repo_link": "https://github.com/devlopersabbir/buy-me-coffee-clone"
-  },
-  {
-    "title": "browserplugins",
-    "description": "Your trusted source for premium browser extensions. Handcrafted with care, tested for quality, and designed to enhance your digital experience.",
-    "date": "Jun 2026",
-    "tech": [
-      "TypeScript",
-      "JavaScript",
-      "CSS",
-      "Mermaid"
-    ],
-    "link": "https://browserplugins.vercel.app",
-    "repo_link": "https://github.com/devlopersabbir/browserplugins"
   }
 ]
