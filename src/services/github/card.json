@@ -1,5 +1,18 @@
 [
   {
+    "title": "terrorserver",
+    "description": "Terror Server is a small production-oriented HTTP router, reverse proxy, static file server, and automatic TLS gateway packaged as a single Go binary.",
+    "date": "Jul 2026",
+    "tech": [
+      "Go",
+      "Shell",
+      "HTML",
+      "Makefile"
+    ],
+    "link": "https://terrorserver.vercel.app",
+    "repo_link": "https://github.com/devlopersabbir/terrorserver"
+  },
+  {
     "title": "tview-cli",
     "description": "tview is a terminal-based candlestick chart viewer built with Go, AsciiGraph, and Cobra. No browser required.",
     "date": "Jul 2026",
