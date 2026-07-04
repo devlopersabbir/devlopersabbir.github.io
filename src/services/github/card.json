@@ -1,5 +1,19 @@
 [
   {
+    "title": "tview-cli",
+    "description": "tview is a terminal-based candlestick chart viewer built with Go, AsciiGraph, and Cobra. No browser required.",
+    "date": "Jul 2026",
+    "tech": [
+      "Go",
+      "Ruby",
+      "Shell",
+      "PowerShell",
+      "Makefile"
+    ],
+    "link": "https://github.com/devlopersabbir/tview-cli",
+    "repo_link": "https://github.com/devlopersabbir/tview-cli"
+  },
+  {
     "title": "simple-translate",
     "description": "WebExtensions for translating text on web pages",
     "date": "Jun 2026",
@@ -35,20 +49,6 @@
     ],
     "link": "https://youtube-video-downloader-chrome-extension.vercel.app",
     "repo_link": "https://github.com/devlopersabbir/video-downloader-extension"
-  },
-  {
-    "title": "tview-cli",
-    "description": "tview is a terminal-based candlestick chart viewer built with Go, AsciiGraph, and Cobra. No browser required.",
-    "date": "Jun 2026",
-    "tech": [
-      "Go",
-      "Ruby",
-      "Shell",
-      "PowerShell",
-      "Makefile"
-    ],
-    "link": "https://github.com/devlopersabbir/tview-cli",
-    "repo_link": "https://github.com/devlopersabbir/tview-cli"
   },
   {
     "title": "nodejs-mail-sender",
@@ -176,17 +176,5 @@
     ],
     "link": "https://dribbble-clone-roan.vercel.app",
     "repo_link": "https://github.com/devlopersabbir/dribbble-clone"
-  },
-  {
-    "title": "digital-marketplace",
-    "description": "Multi-vendor Digital Product Selling Website With Next 14",
-    "date": "Jun 2026",
-    "tech": [
-      "TypeScript",
-      "CSS",
-      "JavaScript"
-    ],
-    "link": "https://digital-market-two.vercel.app",
-    "repo_link": "https://github.com/devlopersabbir/digital-marketplace"
   }
 ]
