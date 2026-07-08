@@ -177,17 +177,5 @@
     ],
     "link": "https://executeme.vercel.app",
     "repo_link": "https://github.com/devlopersabbir/executeme"
-  },
-  {
-    "title": "dribbble-clone",
-    "description": "Full-stack next 13 dribbble clone ",
-    "date": "Jun 2026",
-    "tech": [
-      "TypeScript",
-      "CSS",
-      "JavaScript"
-    ],
-    "link": "https://dribbble-clone-roan.vercel.app",
-    "repo_link": "https://github.com/devlopersabbir/dribbble-clone"
   }
 ]
