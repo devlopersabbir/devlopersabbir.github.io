@@ -113,16 +113,5 @@
     ],
     "link": "https://github.com/devlopersabbir/spring-jwt",
     "repo_link": "https://github.com/devlopersabbir/spring-jwt"
-  },
-  {
-    "title": "spring-crud-api",
-    "description": "Java Spring CRUD API",
-    "date": "Jul 2026",
-    "tech": [
-      "Java",
-      "Dockerfile"
-    ],
-    "link": "https://github.com/devlopersabbir/spring-crud-api",
-    "repo_link": "https://github.com/devlopersabbir/spring-crud-api"
   }
 ]
