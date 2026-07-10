@@ -1,87 +1,7 @@
 [
   {
-    "title": "devlopersabbir",
-    "description": "About myself 🙂",
-    "date": "Jul 2026",
-    "tech": [],
-    "link": "https://github.com/devlopersabbir/devlopersabbir",
-    "repo_link": "https://github.com/devlopersabbir/devlopersabbir"
-  },
-  {
-    "title": "dev-unique-id",
-    "description": "Unique ID generator npm package",
-    "date": "Jul 2026",
-    "tech": [
-      "TypeScript"
-    ],
-    "link": "https://devlopersabbir.github.io/dev-unique-id/",
-    "repo_link": "https://github.com/devlopersabbir/dev-unique-id"
-  },
-  {
-    "title": "dev-http-logger",
-    "description": "We can able to log our http all history like METHOD request PATH etc with this middleware",
-    "date": "Jul 2026",
-    "tech": [
-      "TypeScript"
-    ],
-    "link": "https://www.npmjs.com/package/dev-http-logger",
-    "repo_link": "https://github.com/devlopersabbir/dev-http-logger"
-  },
-  {
-    "title": "dev-auth-middleware-jwt",
-    "description": "Auth middleware with JWT refresh token",
-    "date": "Jul 2026",
-    "tech": [
-      "TypeScript"
-    ],
-    "link": "https://github.com/devlopersabbir/dev-auth-middleware-jwt",
-    "repo_link": "https://github.com/devlopersabbir/dev-auth-middleware-jwt"
-  },
-  {
-    "title": "deno-crash-course",
-    "description": "DENO - Crash Course ",
-    "date": "Jul 2026",
-    "tech": [
-      "TypeScript",
-      "JavaScript"
-    ],
-    "link": "https://sabbirhossa-deno-crash-13.deno.dev/",
-    "repo_link": "https://github.com/devlopersabbir/deno-crash-course"
-  },
-  {
-    "title": "data-structure-algorithm",
-    "description": "DSA with (c)",
-    "date": "Jul 2026",
-    "tech": [
-      "C"
-    ],
-    "link": "https://github.com/devlopersabbir/data-structure-algorithm",
-    "repo_link": "https://github.com/devlopersabbir/data-structure-algorithm"
-  },
-  {
-    "title": "dart-all-about",
-    "description": "Learn dart programming lagnuage.",
-    "date": "Jul 2026",
-    "tech": [
-      "Dart"
-    ],
-    "link": "https://github.com/devlopersabbir/dart-all-about",
-    "repo_link": "https://github.com/devlopersabbir/dart-all-about"
-  },
-  {
-    "title": "csv-to-sql-insert",
-    "description": "Provide table data as a CSV (comma-separated values) file and output a SQL insert statement for a table with the same name as the file.",
-    "date": "Jul 2026",
-    "tech": [
-      "TypeScript",
-      "JavaScript"
-    ],
-    "link": "https://github.com/devlopersabbir/csv-to-sql-insert",
-    "repo_link": "https://github.com/devlopersabbir/csv-to-sql-insert"
-  },
-  {
-    "title": "cross-browser-extension-builder",
-    "description": "Cross Platform Browser extension builder with React + TypeScript",
+    "title": "world-time-clock",
+    "description": "World Time Clock: Your Ultimate Digital Companion for Global Time Management",
     "date": "Jul 2026",
     "tech": [
       "TypeScript",
@@ -89,102 +9,120 @@
       "JavaScript",
       "CSS"
     ],
-    "link": "https://github.com/devlopersabbir/cross-browser-extension-builder",
-    "repo_link": "https://github.com/devlopersabbir/cross-browser-extension-builder"
+    "link": "https://github.com/devlopersabbir/world-time-clock",
+    "repo_link": "https://github.com/devlopersabbir/world-time-clock"
   },
   {
-    "title": "Create-Login-Form-In-HTML-and-CSS",
-    "description": "In this video, I have shown you how to easily design a login form with HTML and CSS. I have explained it is very simple and simple Bengali words. I hope after watching this video you can easily create it without any coding.",
-    "date": "Jul 2026",
-    "tech": [],
-    "link": "https://github.com/devlopersabbir/Create-Login-Form-In-HTML-and-CSS",
-    "repo_link": "https://github.com/devlopersabbir/Create-Login-Form-In-HTML-and-CSS"
-  },
-  {
-    "title": "Create-freelancer.com-Login-Pages-In-HTML-and-CSS-st-sabbir",
-    "description": " I have shown you how to easily design freelancer.com login pages with HTML and CSS. I have explained it is very simple and simple Bengali words. I hope after watching this video you can easily create it without any coding.",
-    "date": "Jul 2026",
-    "tech": [
-      "CSS",
-      "HTML",
-      "JavaScript"
-    ],
-    "link": "https://github.com/devlopersabbir/Create-freelancer.com-Login-Pages-In-HTML-and-CSS-st-sabbir",
-    "repo_link": "https://github.com/devlopersabbir/Create-freelancer.com-Login-Pages-In-HTML-and-CSS-st-sabbir"
-  },
-  {
-    "title": "count-native-app",
-    "description": "Use this tally clicker for counting people as they go into an event or to keep track of multiple people in the outdoors, at meetings. This clicker counter can be used to count anything: sheep, pets, mushrooms picked, trees climbed, corn planted, students, cars, wins, goals, laps ran or walked, etc.",
+    "title": "windows-linux-macos-youtube-video-downloader-app",
+    "description": "Electron cors platform youtube video downloader app.",
     "date": "Jul 2026",
     "tech": [
       "TypeScript",
-      "JavaScript"
+      "HTML"
     ],
-    "link": "https://play.google.com/store/apps/details?id=com.devlopersabbir.countnativeapp",
-    "repo_link": "https://github.com/devlopersabbir/count-native-app"
+    "link": "https://github.com/devlopersabbir/windows-linux-macos-youtube-video-downloader-app",
+    "repo_link": "https://github.com/devlopersabbir/windows-linux-macos-youtube-video-downloader-app"
   },
   {
-    "title": "color-picker-google-chrome-extension",
-    "description": "Google chrome color picker extension with only javascript and html css",
+    "title": "website-blocker",
+    "description": "Website blocker",
     "date": "Jul 2026",
     "tech": [
-      "CSS",
+      "TypeScript",
+      "HTML",
+      "JavaScript"
+    ],
+    "link": "https://github.com/devlopersabbir/website-blocker",
+    "repo_link": "https://github.com/devlopersabbir/website-blocker"
+  },
+  {
+    "title": "video-downloader-extension",
+    "description": "YouTube Video downloader chrome extension using CRXjs vite plugin",
+    "date": "Jul 2026",
+    "tech": [
+      "TypeScript",
       "JavaScript",
       "HTML"
     ],
-    "link": "https://github.com/devlopersabbir/color-picker-google-chrome-extension",
-    "repo_link": "https://github.com/devlopersabbir/color-picker-google-chrome-extension"
+    "link": "https://youtube-video-downloader-chrome-extension.vercel.app",
+    "repo_link": "https://github.com/devlopersabbir/video-downloader-extension"
   },
   {
-    "title": "chrome-extension-tools",
-    "description": "Bundling Chrome Extensions can be pretty complex. It doesn't have to be.",
+    "title": "tview-cli",
+    "description": "tview is a terminal-based candlestick chart viewer built with Go, AsciiGraph, and Cobra. No browser required.",
     "date": "Jul 2026",
     "tech": [
-      "TypeScript",
-      "JavaScript",
-      "HTML",
-      "CSS",
-      "Svelte",
-      "Vue",
-      "MDX"
+      "Go",
+      "Ruby",
+      "Shell",
+      "PowerShell",
+      "Makefile"
     ],
-    "link": "https://crxjs.dev/vite-plugin",
-    "repo_link": "https://github.com/devlopersabbir/chrome-extension-tools"
+    "link": "https://github.com/devlopersabbir/tview-cli",
+    "repo_link": "https://github.com/devlopersabbir/tview-cli"
   },
   {
-    "title": "chrome-extension-icon-generator",
-    "description": "Easily create the multiple icons in their sizes you need for your chrome extension",
+    "title": "tpm",
+    "description": "Tmux Plugin Manager",
     "date": "Jul 2026",
     "tech": [
-      "TypeScript",
-      "CSS",
-      "JavaScript"
-    ],
-    "link": "https://browser-extension-icon-generator.vercel.app",
-    "repo_link": "https://github.com/devlopersabbir/chrome-extension-icon-generator"
-  },
-  {
-    "title": "chakra-ui-docs",
-    "description": "Documentation website for chakra ui",
-    "date": "Jul 2026",
-    "tech": [
-      "MDX",
-      "TypeScript",
-      "JavaScript",
-      "Handlebars",
       "Shell"
     ],
-    "link": "https://chakra-ui.com",
-    "repo_link": "https://github.com/devlopersabbir/chakra-ui-docs"
+    "link": "https://github.com/devlopersabbir/tpm",
+    "repo_link": "https://github.com/devlopersabbir/tpm"
   },
   {
-    "title": "c-sharp-app",
-    "description": "C-sharp practice app.",
+    "title": "terrorserver",
+    "description": "Terror Server is a small production-oriented HTTP router, reverse proxy, static file server, and automatic TLS gateway packaged as a single Go binary.",
     "date": "Jul 2026",
     "tech": [
-      "C#"
+      "Go",
+      "Shell",
+      "HTML",
+      "Makefile"
     ],
-    "link": "https://github.com/devlopersabbir/c-sharp-app",
-    "repo_link": "https://github.com/devlopersabbir/c-sharp-app"
+    "link": "https://terrorserver.vercel.app",
+    "repo_link": "https://github.com/devlopersabbir/terrorserver"
+  },
+  {
+    "title": "swift-all-about",
+    "description": "Learn swift programming language basic to advance",
+    "date": "Jul 2026",
+    "tech": [
+      "Swift"
+    ],
+    "link": "https://github.com/devlopersabbir/swift-all-about",
+    "repo_link": "https://github.com/devlopersabbir/swift-all-about"
+  },
+  {
+    "title": "stsabbir-npm",
+    "description": "simple npm package",
+    "date": "Jul 2026",
+    "tech": [
+      "TypeScript"
+    ],
+    "link": "https://github.com/devlopersabbir/stsabbir-npm",
+    "repo_link": "https://github.com/devlopersabbir/stsabbir-npm"
+  },
+  {
+    "title": "spring-jwt",
+    "description": "Java Spring boot jwt security",
+    "date": "Jul 2026",
+    "tech": [
+      "Java"
+    ],
+    "link": "https://github.com/devlopersabbir/spring-jwt",
+    "repo_link": "https://github.com/devlopersabbir/spring-jwt"
+  },
+  {
+    "title": "spring-crud-api",
+    "description": "Java Spring CRUD API",
+    "date": "Jul 2026",
+    "tech": [
+      "Java",
+      "Dockerfile"
+    ],
+    "link": "https://github.com/devlopersabbir/spring-crud-api",
+    "repo_link": "https://github.com/devlopersabbir/spring-crud-api"
   }
 ]
