@@ -1,181 +1,190 @@
 [
   {
-    "title": "terrorserver",
-    "description": "Terror Server is a small production-oriented HTTP router, reverse proxy, static file server, and automatic TLS gateway packaged as a single Go binary.",
+    "title": "devlopersabbir",
+    "description": "About myself 🙂",
     "date": "Jul 2026",
-    "tech": [
-      "Go",
-      "Shell",
-      "HTML",
-      "Makefile"
-    ],
-    "link": "https://terrorserver.vercel.app",
-    "repo_link": "https://github.com/devlopersabbir/terrorserver"
+    "tech": [],
+    "link": "https://github.com/devlopersabbir/devlopersabbir",
+    "repo_link": "https://github.com/devlopersabbir/devlopersabbir"
   },
   {
-    "title": "tview-cli",
-    "description": "tview is a terminal-based candlestick chart viewer built with Go, AsciiGraph, and Cobra. No browser required.",
+    "title": "dev-unique-id",
+    "description": "Unique ID generator npm package",
     "date": "Jul 2026",
-    "tech": [
-      "Go",
-      "Ruby",
-      "Shell",
-      "PowerShell",
-      "Makefile"
-    ],
-    "link": "https://github.com/devlopersabbir/tview-cli",
-    "repo_link": "https://github.com/devlopersabbir/tview-cli"
-  },
-  {
-    "title": "simple-translate",
-    "description": "WebExtensions for translating text on web pages",
-    "date": "Jun 2026",
-    "tech": [
-      "JavaScript",
-      "SCSS",
-      "HTML"
-    ],
-    "link": "http://simple-translate.sienori.com/",
-    "repo_link": "https://github.com/devlopersabbir/simple-translate"
-  },
-  {
-    "title": "randomkana",
-    "description": "A web app that will randomly generate Japanese hiragana, katakana, and romaji to be used as a quiz for Japanese language learning",
-    "date": "Jun 2026",
-    "tech": [
-      "TypeScript",
-      "CSS",
-      "JavaScript",
-      "HTML"
-    ],
-    "link": "https://randomkana.vercel.app",
-    "repo_link": "https://github.com/devlopersabbir/randomkana"
-  },
-  {
-    "title": "video-downloader-extension",
-    "description": "YouTube Video downloader chrome extension using CRXjs vite plugin",
-    "date": "Jun 2026",
-    "tech": [
-      "TypeScript",
-      "JavaScript",
-      "HTML"
-    ],
-    "link": "https://youtube-video-downloader-chrome-extension.vercel.app",
-    "repo_link": "https://github.com/devlopersabbir/video-downloader-extension"
-  },
-  {
-    "title": "nodejs-mail-sender",
-    "description": "NodeJs Mail sender",
-    "date": "Jun 2026",
     "tech": [
       "TypeScript"
     ],
-    "link": "https://nodejs-mail-sender-ten.vercel.app",
-    "repo_link": "https://github.com/devlopersabbir/nodejs-mail-sender"
+    "link": "https://devlopersabbir.github.io/dev-unique-id/",
+    "repo_link": "https://github.com/devlopersabbir/dev-unique-id"
   },
   {
-    "title": "next-auth-next13",
-    "description": "Next-auth with next13",
-    "date": "Jun 2026",
+    "title": "dev-http-logger",
+    "description": "We can able to log our http all history like METHOD request PATH etc with this middleware",
+    "date": "Jul 2026",
+    "tech": [
+      "TypeScript"
+    ],
+    "link": "https://www.npmjs.com/package/dev-http-logger",
+    "repo_link": "https://github.com/devlopersabbir/dev-http-logger"
+  },
+  {
+    "title": "dev-auth-middleware-jwt",
+    "description": "Auth middleware with JWT refresh token",
+    "date": "Jul 2026",
+    "tech": [
+      "TypeScript"
+    ],
+    "link": "https://github.com/devlopersabbir/dev-auth-middleware-jwt",
+    "repo_link": "https://github.com/devlopersabbir/dev-auth-middleware-jwt"
+  },
+  {
+    "title": "deno-crash-course",
+    "description": "DENO - Crash Course ",
+    "date": "Jul 2026",
     "tech": [
       "TypeScript",
-      "CSS",
       "JavaScript"
     ],
-    "link": "https://next-auth-next13-eight.vercel.app",
-    "repo_link": "https://github.com/devlopersabbir/next-auth-next13"
+    "link": "https://sabbirhossa-deno-crash-13.deno.dev/",
+    "repo_link": "https://github.com/devlopersabbir/deno-crash-course"
   },
   {
-    "title": "news-feed-remover-pro",
-    "description": "FireFox | Chrome [ News Feed Remover Pro ] browser extension",
-    "date": "Jun 2026",
+    "title": "data-structure-algorithm",
+    "description": "DSA with (c)",
+    "date": "Jul 2026",
+    "tech": [
+      "C"
+    ],
+    "link": "https://github.com/devlopersabbir/data-structure-algorithm",
+    "repo_link": "https://github.com/devlopersabbir/data-structure-algorithm"
+  },
+  {
+    "title": "dart-all-about",
+    "description": "Learn dart programming lagnuage.",
+    "date": "Jul 2026",
+    "tech": [
+      "Dart"
+    ],
+    "link": "https://github.com/devlopersabbir/dart-all-about",
+    "repo_link": "https://github.com/devlopersabbir/dart-all-about"
+  },
+  {
+    "title": "csv-to-sql-insert",
+    "description": "Provide table data as a CSV (comma-separated values) file and output a SQL insert statement for a table with the same name as the file.",
+    "date": "Jul 2026",
     "tech": [
       "TypeScript",
-      "HTML",
-      "CSS",
       "JavaScript"
     ],
-    "link": "https://github.com/devlopersabbir/news-feed-remover-pro",
-    "repo_link": "https://github.com/devlopersabbir/news-feed-remover-pro"
+    "link": "https://github.com/devlopersabbir/csv-to-sql-insert",
+    "repo_link": "https://github.com/devlopersabbir/csv-to-sql-insert"
   },
   {
-    "title": "image-genrator-extension",
-    "description": "AI image generator cors platfrom browser extension",
-    "date": "Jun 2026",
+    "title": "cross-browser-extension-builder",
+    "description": "Cross Platform Browser extension builder with React + TypeScript",
+    "date": "Jul 2026",
     "tech": [
       "TypeScript",
       "HTML",
       "JavaScript",
       "CSS"
     ],
-    "link": "https://github.com/devlopersabbir/image-genrator-extension",
-    "repo_link": "https://github.com/devlopersabbir/image-genrator-extension"
+    "link": "https://github.com/devlopersabbir/cross-browser-extension-builder",
+    "repo_link": "https://github.com/devlopersabbir/cross-browser-extension-builder"
   },
   {
-    "title": "hono-with-deno",
-    "description": "Hono with drizzle ORM CRUD API - deno runtime",
-    "date": "Jun 2026",
+    "title": "Create-Login-Form-In-HTML-and-CSS",
+    "description": "In this video, I have shown you how to easily design a login form with HTML and CSS. I have explained it is very simple and simple Bengali words. I hope after watching this video you can easily create it without any coding.",
+    "date": "Jul 2026",
+    "tech": [],
+    "link": "https://github.com/devlopersabbir/Create-Login-Form-In-HTML-and-CSS",
+    "repo_link": "https://github.com/devlopersabbir/Create-Login-Form-In-HTML-and-CSS"
+  },
+  {
+    "title": "Create-freelancer.com-Login-Pages-In-HTML-and-CSS-st-sabbir",
+    "description": " I have shown you how to easily design freelancer.com login pages with HTML and CSS. I have explained it is very simple and simple Bengali words. I hope after watching this video you can easily create it without any coding.",
+    "date": "Jul 2026",
+    "tech": [
+      "CSS",
+      "HTML",
+      "JavaScript"
+    ],
+    "link": "https://github.com/devlopersabbir/Create-freelancer.com-Login-Pages-In-HTML-and-CSS-st-sabbir",
+    "repo_link": "https://github.com/devlopersabbir/Create-freelancer.com-Login-Pages-In-HTML-and-CSS-st-sabbir"
+  },
+  {
+    "title": "count-native-app",
+    "description": "Use this tally clicker for counting people as they go into an event or to keep track of multiple people in the outdoors, at meetings. This clicker counter can be used to count anything: sheep, pets, mushrooms picked, trees climbed, corn planted, students, cars, wins, goals, laps ran or walked, etc.",
+    "date": "Jul 2026",
     "tech": [
       "TypeScript",
-      "Shell",
-      "Dockerfile"
+      "JavaScript"
     ],
-    "link": "https://youtu.be/LGJLTFLE2Ek?list=PLdcGGiDG9Q0j7pLzVcWvFptCPbENkfl7S",
-    "repo_link": "https://github.com/devlopersabbir/hono-with-deno"
+    "link": "https://play.google.com/store/apps/details?id=com.devlopersabbir.countnativeapp",
+    "repo_link": "https://github.com/devlopersabbir/count-native-app"
   },
   {
-    "title": "find-devs-pair",
-    "description": "FindDevs Pair application will help to pair programming with random devs online",
-    "date": "Jun 2026",
+    "title": "color-picker-google-chrome-extension",
+    "description": "Google chrome color picker extension with only javascript and html css",
+    "date": "Jul 2026",
+    "tech": [
+      "CSS",
+      "JavaScript",
+      "HTML"
+    ],
+    "link": "https://github.com/devlopersabbir/color-picker-google-chrome-extension",
+    "repo_link": "https://github.com/devlopersabbir/color-picker-google-chrome-extension"
+  },
+  {
+    "title": "chrome-extension-tools",
+    "description": "Bundling Chrome Extensions can be pretty complex. It doesn't have to be.",
+    "date": "Jul 2026",
     "tech": [
       "TypeScript",
       "JavaScript",
+      "HTML",
       "CSS",
-      "Kotlin"
+      "Svelte",
+      "Vue",
+      "MDX"
     ],
-    "link": "https://find-devs-pair.vercel.app",
-    "repo_link": "https://github.com/devlopersabbir/find-devs-pair"
+    "link": "https://crxjs.dev/vite-plugin",
+    "repo_link": "https://github.com/devlopersabbir/chrome-extension-tools"
   },
   {
-    "title": "find-devs",
-    "description": "Find Devs is a kind of developer's Fair. An open-source platform to find all the developers in the world.",
-    "date": "Jun 2026",
+    "title": "chrome-extension-icon-generator",
+    "description": "Easily create the multiple icons in their sizes you need for your chrome extension",
+    "date": "Jul 2026",
     "tech": [
       "TypeScript",
       "CSS",
       "JavaScript"
     ],
-    "link": "https://finddevs.vercel.app",
-    "repo_link": "https://github.com/devlopersabbir/find-devs"
+    "link": "https://browser-extension-icon-generator.vercel.app",
+    "repo_link": "https://github.com/devlopersabbir/chrome-extension-icon-generator"
   },
   {
-    "title": "extension-builder",
-    "description": "Cross platform web extension builder.",
-    "date": "Jun 2026",
+    "title": "chakra-ui-docs",
+    "description": "Documentation website for chakra ui",
+    "date": "Jul 2026",
     "tech": [
-      "HTML",
-      "JavaScript",
-      "TypeScript"
-    ],
-    "link": "https://github.com/devlopersabbir/extension-builder",
-    "repo_link": "https://github.com/devlopersabbir/extension-builder"
-  },
-  {
-    "title": "executeme",
-    "description": "ExecuteMe allows users to write, execute, and test code in various programming languages directly in the browser. https://devlopersabbir.github.io/executeme",
-    "date": "Jun 2026",
-    "tech": [
+      "MDX",
       "TypeScript",
       "JavaScript",
-      "HTML",
-      "Shell",
-      "CSS",
-      "Dockerfile",
-      "Java",
-      "Python",
-      "Kotlin"
+      "Handlebars",
+      "Shell"
     ],
-    "link": "https://executeme.vercel.app",
-    "repo_link": "https://github.com/devlopersabbir/executeme"
+    "link": "https://chakra-ui.com",
+    "repo_link": "https://github.com/devlopersabbir/chakra-ui-docs"
+  },
+  {
+    "title": "c-sharp-app",
+    "description": "C-sharp practice app.",
+    "date": "Jul 2026",
+    "tech": [
+      "C#"
+    ],
+    "link": "https://github.com/devlopersabbir/c-sharp-app",
+    "repo_link": "https://github.com/devlopersabbir/c-sharp-app"
   }
 ]
