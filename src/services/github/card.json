@@ -1,5 +1,56 @@
 [
   {
+    "title": "javascript-basic-to-advance-course",
+    "description": "JavaScript full course in Bangla 2023 by Sabbir Hossain Shuvo",
+    "date": "Jul 2026",
+    "tech": [
+      "JavaScript",
+      "HTML"
+    ],
+    "link": "https://github.com/devlopersabbir/javascript-basic-to-advance-course",
+    "repo_link": "https://github.com/devlopersabbir/javascript-basic-to-advance-course"
+  },
+  {
+    "title": "hospital-app-team-project-server",
+    "description": "Front-end Repository:  https://github.com/rakibulhasan-bu/hospital-app-team-project-client",
+    "date": "Jul 2026",
+    "tech": [
+      "JavaScript"
+    ],
+    "link": "https://github.com/devlopersabbir/hospital-app-team-project-server",
+    "repo_link": "https://github.com/devlopersabbir/hospital-app-team-project-server"
+  },
+  {
+    "title": "fast-crud-api",
+    "description": "CRUD REST API with FastApi",
+    "date": "Jul 2026",
+    "tech": [
+      "Python"
+    ],
+    "link": "https://fastapi.tiangolo.com/",
+    "repo_link": "https://github.com/devlopersabbir/fast-crud-api"
+  },
+  {
+    "title": "fast-jwt",
+    "description": "FastAPI development with JWT ",
+    "date": "Jul 2026",
+    "tech": [
+      "Python"
+    ],
+    "link": "https://github.com/devlopersabbir/fast-jwt",
+    "repo_link": "https://github.com/devlopersabbir/fast-jwt"
+  },
+  {
+    "title": "django-course",
+    "description": "Complete django course for all python developer",
+    "date": "Jul 2026",
+    "tech": [
+      "Python"
+    ],
+    "link": "https://github.com/devlopersabbir/django-course",
+    "repo_link": "https://github.com/devlopersabbir/django-course"
+  },
+  {
     "title": "chrome-extension-tools",
     "description": "Bundling Chrome Extensions can be pretty complex. It doesn't have to be.",
     "date": "Jul 2026",
@@ -98,28 +149,5 @@
     ],
     "link": "https://github.com/devlopersabbir/tview-cli",
     "repo_link": "https://github.com/devlopersabbir/tview-cli"
-  },
-  {
-    "title": "tpm",
-    "description": "Tmux Plugin Manager",
-    "date": "Jul 2026",
-    "tech": [
-      "Shell"
-    ],
-    "link": "https://github.com/devlopersabbir/tpm",
-    "repo_link": "https://github.com/devlopersabbir/tpm"
-  },
-  {
-    "title": "terrorserver",
-    "description": "Terror Server is a small production-oriented HTTP router, reverse proxy, static file server, and automatic TLS gateway packaged as a single Go binary.",
-    "date": "Jul 2026",
-    "tech": [
-      "Go",
-      "Shell",
-      "HTML",
-      "Makefile"
-    ],
-    "link": "https://terrorserver.vercel.app",
-    "repo_link": "https://github.com/devlopersabbir/terrorserver"
   }
 ]
