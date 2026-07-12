@@ -1,5 +1,43 @@
 [
   {
+    "title": "chrome-extension-tools",
+    "description": "Bundling Chrome Extensions can be pretty complex. It doesn't have to be.",
+    "date": "Jul 2026",
+    "tech": [
+      "TypeScript",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Svelte",
+      "Vue",
+      "MDX"
+    ],
+    "link": "https://crxjs.dev/vite-plugin",
+    "repo_link": "https://github.com/devlopersabbir/chrome-extension-tools"
+  },
+  {
+    "title": "adobe-scripting",
+    "description": "Adobe Script",
+    "date": "Jul 2026",
+    "tech": [
+      "JavaScript"
+    ],
+    "link": "https://github.com/devlopersabbir/adobe-scripting",
+    "repo_link": "https://github.com/devlopersabbir/adobe-scripting"
+  },
+  {
+    "title": "acpsitc",
+    "description": "ACPSITC Website",
+    "date": "Jul 2026",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "link": "https://acpsitc-project.vercel.app/",
+    "repo_link": "https://github.com/devlopersabbir/acpsitc"
+  },
+  {
     "title": "world-time-clock",
     "description": "World Time Clock: Your Ultimate Digital Companion for Global Time Management",
     "date": "Jul 2026",
@@ -83,35 +121,5 @@
     ],
     "link": "https://terrorserver.vercel.app",
     "repo_link": "https://github.com/devlopersabbir/terrorserver"
-  },
-  {
-    "title": "swift-all-about",
-    "description": "Learn swift programming language basic to advance",
-    "date": "Jul 2026",
-    "tech": [
-      "Swift"
-    ],
-    "link": "https://github.com/devlopersabbir/swift-all-about",
-    "repo_link": "https://github.com/devlopersabbir/swift-all-about"
-  },
-  {
-    "title": "stsabbir-npm",
-    "description": "simple npm package",
-    "date": "Jul 2026",
-    "tech": [
-      "TypeScript"
-    ],
-    "link": "https://github.com/devlopersabbir/stsabbir-npm",
-    "repo_link": "https://github.com/devlopersabbir/stsabbir-npm"
-  },
-  {
-    "title": "spring-jwt",
-    "description": "Java Spring boot jwt security",
-    "date": "Jul 2026",
-    "tech": [
-      "Java"
-    ],
-    "link": "https://github.com/devlopersabbir/spring-jwt",
-    "repo_link": "https://github.com/devlopersabbir/spring-jwt"
   }
 ]
