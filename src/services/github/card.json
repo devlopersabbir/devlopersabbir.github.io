@@ -1,5 +1,16 @@
 [
   {
+    "title": "python-api-development",
+    "description": "A python FastAPI framework",
+    "date": "Jul 2026",
+    "tech": [
+      "Python",
+      "HTML"
+    ],
+    "link": "https://github.com/devlopersabbir/python-api-development",
+    "repo_link": "https://github.com/devlopersabbir/python-api-development"
+  },
+  {
     "title": "javascript-basic-to-advance-course",
     "description": "JavaScript full course in Bangla 2023 by Sabbir Hossain Shuvo",
     "date": "Jul 2026",
@@ -135,19 +146,5 @@
     ],
     "link": "https://youtube-video-downloader-chrome-extension.vercel.app",
     "repo_link": "https://github.com/devlopersabbir/video-downloader-extension"
-  },
-  {
-    "title": "tview-cli",
-    "description": "tview is a terminal-based candlestick chart viewer built with Go, AsciiGraph, and Cobra. No browser required.",
-    "date": "Jul 2026",
-    "tech": [
-      "Go",
-      "Ruby",
-      "Shell",
-      "PowerShell",
-      "Makefile"
-    ],
-    "link": "https://github.com/devlopersabbir/tview-cli",
-    "repo_link": "https://github.com/devlopersabbir/tview-cli"
   }
 ]
