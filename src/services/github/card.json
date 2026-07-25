@@ -1,5 +1,18 @@
 [
   {
+    "title": "tab-refresher-pro",
+    "description": "Tab Refresher Pro is a browser extension for configuring reliable per-tab auto-refresh jobs with presets, countdown badges, page overlays, and saved refresh profiles.",
+    "date": "Jul 2026",
+    "tech": [
+      "TypeScript",
+      "CSS",
+      "HTML",
+      "Shell"
+    ],
+    "link": "https://github.com/devlopersabbir/tab-refresher-pro",
+    "repo_link": "https://github.com/devlopersabbir/tab-refresher-pro"
+  },
+  {
     "title": "python-api-development",
     "description": "A python FastAPI framework",
     "date": "Jul 2026",
