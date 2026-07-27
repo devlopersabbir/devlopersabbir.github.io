@@ -147,17 +147,5 @@
     ],
     "link": "https://github.com/devlopersabbir/website-blocker",
     "repo_link": "https://github.com/devlopersabbir/website-blocker"
-  },
-  {
-    "title": "video-downloader-extension",
-    "description": "YouTube Video downloader chrome extension using CRXjs vite plugin",
-    "date": "Jul 2026",
-    "tech": [
-      "TypeScript",
-      "JavaScript",
-      "HTML"
-    ],
-    "link": "https://youtube-video-downloader-chrome-extension.vercel.app",
-    "repo_link": "https://github.com/devlopersabbir/video-downloader-extension"
   }
 ]
