@@ -1,5 +1,18 @@
 [
   {
+    "title": "breez",
+    "description": "Instant, lightweight local tunneling for developers",
+    "date": "Aug 2026",
+    "tech": [
+      "Go",
+      "PowerShell",
+      "Shell",
+      "Makefile"
+    ],
+    "link": "https://github.com/devlopersabbir/breez",
+    "repo_link": "https://github.com/devlopersabbir/breez"
+  },
+  {
     "title": "tab-refresher-pro",
     "description": "Tab Refresher Pro is a browser extension for configuring reliable per-tab auto-refresh jobs with presets, countdown badges, page overlays, and saved refresh profiles.",
     "date": "Jul 2026",
