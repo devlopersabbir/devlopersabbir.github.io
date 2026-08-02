@@ -1,116 +1,135 @@
 [
   {
-    "title": "vpcm",
-    "description": "A zero-dependency, CGO-free, single-binary CLI and REST API engine built in Go to seamlessly manage, document, and connect to your remote virtual private servers.",
+    "title": "devlopersabbir",
+    "description": "About myself 🙂",
+    "date": "Aug 2026",
+    "tech": [],
+    "link": "https://github.com/devlopersabbir/devlopersabbir",
+    "repo_link": "https://github.com/devlopersabbir/devlopersabbir"
+  },
+  {
+    "title": "dev-unique-id",
+    "description": "Unique ID generator npm package",
     "date": "Aug 2026",
     "tech": [
-      "Go",
-      "TypeScript",
-      "Shell",
-      "NSIS",
-      "PowerShell",
-      "JavaScript",
-      "Makefile",
-      "CSS",
-      "Ruby",
-      "Dockerfile",
-      "HTML"
+      "TypeScript"
     ],
-    "link": "https://github.com/devlopersabbir/vpcm",
-    "repo_link": "https://github.com/devlopersabbir/vpcm"
+    "link": "https://devlopersabbir.github.io/dev-unique-id/",
+    "repo_link": "https://github.com/devlopersabbir/dev-unique-id"
   },
   {
-    "title": "breez",
-    "description": "Instant, lightweight local tunneling for developers",
+    "title": "dev-http-logger",
+    "description": "We can able to log our http all history like METHOD request PATH etc with this middleware",
     "date": "Aug 2026",
     "tech": [
-      "Go",
-      "PowerShell",
-      "Shell",
-      "Makefile"
+      "TypeScript"
     ],
-    "link": "https://github.com/devlopersabbir/breez",
-    "repo_link": "https://github.com/devlopersabbir/breez"
+    "link": "https://www.npmjs.com/package/dev-http-logger",
+    "repo_link": "https://github.com/devlopersabbir/dev-http-logger"
   },
   {
-    "title": "tab-refresher-pro",
-    "description": "Tab Refresher Pro is a browser extension for configuring reliable per-tab auto-refresh jobs with presets, countdown badges, page overlays, and saved refresh profiles.",
-    "date": "Jul 2026",
+    "title": "dev-auth-middleware-jwt",
+    "description": "Auth middleware with JWT refresh token",
+    "date": "Aug 2026",
+    "tech": [
+      "TypeScript"
+    ],
+    "link": "https://github.com/devlopersabbir/dev-auth-middleware-jwt",
+    "repo_link": "https://github.com/devlopersabbir/dev-auth-middleware-jwt"
+  },
+  {
+    "title": "deno-crash-course",
+    "description": "DENO - Crash Course ",
+    "date": "Aug 2026",
     "tech": [
       "TypeScript",
-      "CSS",
-      "HTML",
-      "Shell"
-    ],
-    "link": "https://github.com/devlopersabbir/tab-refresher-pro",
-    "repo_link": "https://github.com/devlopersabbir/tab-refresher-pro"
-  },
-  {
-    "title": "python-api-development",
-    "description": "A python FastAPI framework",
-    "date": "Jul 2026",
-    "tech": [
-      "Python",
-      "HTML"
-    ],
-    "link": "https://github.com/devlopersabbir/python-api-development",
-    "repo_link": "https://github.com/devlopersabbir/python-api-development"
-  },
-  {
-    "title": "javascript-basic-to-advance-course",
-    "description": "JavaScript full course in Bangla 2023 by Sabbir Hossain Shuvo",
-    "date": "Jul 2026",
-    "tech": [
-      "JavaScript",
-      "HTML"
-    ],
-    "link": "https://github.com/devlopersabbir/javascript-basic-to-advance-course",
-    "repo_link": "https://github.com/devlopersabbir/javascript-basic-to-advance-course"
-  },
-  {
-    "title": "hospital-app-team-project-server",
-    "description": "Front-end Repository:  https://github.com/rakibulhasan-bu/hospital-app-team-project-client",
-    "date": "Jul 2026",
-    "tech": [
       "JavaScript"
     ],
-    "link": "https://github.com/devlopersabbir/hospital-app-team-project-server",
-    "repo_link": "https://github.com/devlopersabbir/hospital-app-team-project-server"
+    "link": "https://sabbirhossa-deno-crash-13.deno.dev/",
+    "repo_link": "https://github.com/devlopersabbir/deno-crash-course"
   },
   {
-    "title": "fast-crud-api",
-    "description": "CRUD REST API with FastApi",
-    "date": "Jul 2026",
+    "title": "dart-all-about",
+    "description": "Learn dart programming lagnuage.",
+    "date": "Aug 2026",
     "tech": [
-      "Python"
+      "Dart"
     ],
-    "link": "https://fastapi.tiangolo.com/",
-    "repo_link": "https://github.com/devlopersabbir/fast-crud-api"
+    "link": "https://github.com/devlopersabbir/dart-all-about",
+    "repo_link": "https://github.com/devlopersabbir/dart-all-about"
   },
   {
-    "title": "fast-jwt",
-    "description": "FastAPI development with JWT ",
-    "date": "Jul 2026",
+    "title": "data-structure-algorithm",
+    "description": "DSA with (c)",
+    "date": "Aug 2026",
     "tech": [
-      "Python"
+      "C"
     ],
-    "link": "https://github.com/devlopersabbir/fast-jwt",
-    "repo_link": "https://github.com/devlopersabbir/fast-jwt"
+    "link": "https://github.com/devlopersabbir/data-structure-algorithm",
+    "repo_link": "https://github.com/devlopersabbir/data-structure-algorithm"
   },
   {
-    "title": "django-course",
-    "description": "Complete django course for all python developer",
-    "date": "Jul 2026",
+    "title": "csv-to-sql-insert",
+    "description": "Provide table data as a CSV (comma-separated values) file and output a SQL insert statement for a table with the same name as the file.",
+    "date": "Aug 2026",
     "tech": [
-      "Python"
+      "TypeScript",
+      "JavaScript"
     ],
-    "link": "https://github.com/devlopersabbir/django-course",
-    "repo_link": "https://github.com/devlopersabbir/django-course"
+    "link": "https://github.com/devlopersabbir/csv-to-sql-insert",
+    "repo_link": "https://github.com/devlopersabbir/csv-to-sql-insert"
+  },
+  {
+    "title": "cross-browser-extension-builder",
+    "description": "Cross Platform Browser extension builder with React + TypeScript",
+    "date": "Aug 2026",
+    "tech": [
+      "TypeScript",
+      "HTML",
+      "JavaScript",
+      "CSS"
+    ],
+    "link": "https://github.com/devlopersabbir/cross-browser-extension-builder",
+    "repo_link": "https://github.com/devlopersabbir/cross-browser-extension-builder"
+  },
+  {
+    "title": "Create-freelancer.com-Login-Pages-In-HTML-and-CSS-st-sabbir",
+    "description": " I have shown you how to easily design freelancer.com login pages with HTML and CSS. I have explained it is very simple and simple Bengali words. I hope after watching this video you can easily create it without any coding.",
+    "date": "Aug 2026",
+    "tech": [
+      "CSS",
+      "HTML",
+      "JavaScript"
+    ],
+    "link": "https://github.com/devlopersabbir/Create-freelancer.com-Login-Pages-In-HTML-and-CSS-st-sabbir",
+    "repo_link": "https://github.com/devlopersabbir/Create-freelancer.com-Login-Pages-In-HTML-and-CSS-st-sabbir"
+  },
+  {
+    "title": "count-native-app",
+    "description": "Use this tally clicker for counting people as they go into an event or to keep track of multiple people in the outdoors, at meetings. This clicker counter can be used to count anything: sheep, pets, mushrooms picked, trees climbed, corn planted, students, cars, wins, goals, laps ran or walked, etc.",
+    "date": "Aug 2026",
+    "tech": [
+      "TypeScript"
+    ],
+    "link": "https://play.google.com/store/apps/details?id=com.devlopersabbir.countnativeapp",
+    "repo_link": "https://github.com/devlopersabbir/count-native-app"
+  },
+  {
+    "title": "color-picker-google-chrome-extension",
+    "description": "Google chrome color picker extension with only javascript and html css",
+    "date": "Aug 2026",
+    "tech": [
+      "CSS",
+      "JavaScript",
+      "HTML"
+    ],
+    "link": "https://github.com/devlopersabbir/color-picker-google-chrome-extension",
+    "repo_link": "https://github.com/devlopersabbir/color-picker-google-chrome-extension"
   },
   {
     "title": "chrome-extension-tools",
     "description": "Bundling Chrome Extensions can be pretty complex. It doesn't have to be.",
-    "date": "Jul 2026",
+    "date": "Aug 2026",
     "tech": [
       "TypeScript",
       "JavaScript",
@@ -124,61 +143,51 @@
     "repo_link": "https://github.com/devlopersabbir/chrome-extension-tools"
   },
   {
-    "title": "adobe-scripting",
-    "description": "Adobe Script",
-    "date": "Jul 2026",
-    "tech": [
-      "JavaScript"
-    ],
-    "link": "https://github.com/devlopersabbir/adobe-scripting",
-    "repo_link": "https://github.com/devlopersabbir/adobe-scripting"
-  },
-  {
-    "title": "acpsitc",
-    "description": "ACPSITC Website",
-    "date": "Jul 2026",
-    "tech": [
-      "HTML",
-      "CSS",
-      "JavaScript"
-    ],
-    "link": "https://acpsitc-project.vercel.app/",
-    "repo_link": "https://github.com/devlopersabbir/acpsitc"
-  },
-  {
-    "title": "world-time-clock",
-    "description": "World Time Clock: Your Ultimate Digital Companion for Global Time Management",
-    "date": "Jul 2026",
+    "title": "chrome-extension-icon-generator",
+    "description": "Easily create the multiple icons in their sizes you need for your chrome extension",
+    "date": "Aug 2026",
     "tech": [
       "TypeScript",
-      "HTML",
       "JavaScript",
       "CSS"
     ],
-    "link": "https://github.com/devlopersabbir/world-time-clock",
-    "repo_link": "https://github.com/devlopersabbir/world-time-clock"
+    "link": "https://browser-extension-icon-generator.vercel.app",
+    "repo_link": "https://github.com/devlopersabbir/chrome-extension-icon-generator"
   },
   {
-    "title": "windows-linux-macos-youtube-video-downloader-app",
-    "description": "Electron cors platform youtube video downloader app.",
-    "date": "Jul 2026",
+    "title": "chakra-ui-docs",
+    "description": "Documentation website for chakra ui",
+    "date": "Aug 2026",
     "tech": [
+      "MDX",
       "TypeScript",
-      "HTML"
+      "JavaScript",
+      "Handlebars",
+      "Shell"
     ],
-    "link": "https://github.com/devlopersabbir/windows-linux-macos-youtube-video-downloader-app",
-    "repo_link": "https://github.com/devlopersabbir/windows-linux-macos-youtube-video-downloader-app"
+    "link": "https://chakra-ui.com",
+    "repo_link": "https://github.com/devlopersabbir/chakra-ui-docs"
   },
   {
-    "title": "website-blocker",
-    "description": "Website blocker",
-    "date": "Jul 2026",
+    "title": "c-sharp-app",
+    "description": "C-sharp practice app.",
+    "date": "Aug 2026",
+    "tech": [
+      "C#"
+    ],
+    "link": "https://github.com/devlopersabbir/c-sharp-app",
+    "repo_link": "https://github.com/devlopersabbir/c-sharp-app"
+  },
+  {
+    "title": "buy-me-coffee-clone",
+    "description": "Online payment application",
+    "date": "Aug 2026",
     "tech": [
       "TypeScript",
-      "HTML",
+      "CSS",
       "JavaScript"
     ],
-    "link": "https://github.com/devlopersabbir/website-blocker",
-    "repo_link": "https://github.com/devlopersabbir/website-blocker"
+    "link": "https://github.com/devlopersabbir/buy-me-coffee-clone",
+    "repo_link": "https://github.com/devlopersabbir/buy-me-coffee-clone"
   }
 ]
