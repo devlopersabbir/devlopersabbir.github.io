@@ -124,18 +124,5 @@
     ],
     "link": "https://terrorserver.vercel.app",
     "repo_link": "https://github.com/devlopersabbir/terrorserver"
-  },
-  {
-    "title": "socket-io",
-    "description": "WebSocket | Socket.io",
-    "date": "Aug 2026",
-    "tech": [
-      "TypeScript",
-      "JavaScript",
-      "HTML",
-      "CSS"
-    ],
-    "link": "https://github.com/devlopersabbir/socket-io",
-    "repo_link": "https://github.com/devlopersabbir/socket-io"
   }
 ]
