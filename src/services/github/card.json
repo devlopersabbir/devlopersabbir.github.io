@@ -1,5 +1,15 @@
 [
   {
+    "title": "nodejs-mail-sender",
+    "description": "NodeJs Mail sender",
+    "date": "Aug 2026",
+    "tech": [
+      "TypeScript"
+    ],
+    "link": "https://nodejs-mail-sender-ten.vercel.app",
+    "repo_link": "https://github.com/devlopersabbir/nodejs-mail-sender"
+  },
+  {
     "title": "website-blocker",
     "description": "Website blocker",
     "date": "Aug 2026",
