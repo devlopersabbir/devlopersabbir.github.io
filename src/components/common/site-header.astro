@@ -1,5 +1,6 @@
 ---
 import { menus } from "../../constants/menus";
+import ThemeSelect from "../../theme/ThemeSelect.astro";
 ---
 
 <header
@@ -10,7 +11,7 @@ import { menus } from "../../constants/menus";
     border-b border-zinc-200 dark:border-zinc-800
   "
 >
-  <nav class="container mx-auto px-4 py-3">
+  <nav class="container mx-auto px-4 py-3 flex items-center justify-between">
     <ul class="flex items-center gap-2">
       {
         menus.map((menu) => {
@@ -58,5 +59,11 @@ import { menus } from "../../constants/menus";
         })
       }
     </ul>
+
+    <!-- Theme Dropdown on Right Side of Header -->
+    <div>
+      <ThemeSelect />
+    </div>
   </nav>
 </header>
+
