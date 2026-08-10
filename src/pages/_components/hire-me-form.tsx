@@ -2,7 +2,7 @@ import axios from "axios";
 import { useRef, useState, useTransition, type FormEvent } from "react";
 import { formSchema, type FormSchema } from "../../libs/form-validation";
 import { toast, Toaster } from "sonner";
-import { baseUrl } from "../../constants";
+import { baseUrl, getContactEmailTemplate } from "../../constants";
 
 const HireMeForm = () => {
   const [pending, startTransition] = useTransition();
@@ -29,27 +29,24 @@ const HireMeForm = () => {
       return toast.error("Please fix the form errors.");
     }
 
-    if (parsed.data.email.endsWith(".com")) {
-      setErrors({ email: "Please use a personal email address." });
-      return toast.error("Please use a personal email address.");
-    }
-
-    if (parsed.data.name.split(" ").length < 2) {
-      setErrors({ name: "Please provide your full name." });
-      return toast.error("Please provide your full name.");
-    }
-    if (parsed.data.message.split(" ").length < 10) {
-      setErrors({ message: "Please provide a message." });
-      return toast.error("Please provide a message.");
+    const wordCount = parsed.data.message.trim().split(/\s+/).filter(Boolean).length;
+    if (wordCount < 10) {
+      setErrors({ message: "Message must be at least 10 words long." });
+      return toast.error("Message must be at least 10 words long.");
     }
 
     startTransition(async () => {
       try {
-        await axios.post(`${baseUrl}/api/v1/mail/send`, parsed.data);
+        await axios.post(`${baseUrl}/api/v1/mail/send`, {
+          ...parsed.data,
+          html: getContactEmailTemplate(parsed.data),
+          subject: `New Contact Form Message from ${parsed.data.name}`,
+        });
         toast.success("Your message has been sent successfully!");
 
         formRef.current?.reset();
       } catch (err: any) {
+        console.log(err);
         toast.error("Failed to send the message. Please try again.");
       }
     });

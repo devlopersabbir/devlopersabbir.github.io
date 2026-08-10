@@ -1,10 +1,8 @@
 import { z } from "astro/zod";
 
 export const formSchema = z.object({
-  name: z.string().min(3).max(30),
-  email: z.string().email().endsWith("@gmail.com", {
-    message: "Email must end with (@gmail.com)",
-  }),
-  message: z.string().min(5).max(300),
+  name: z.string().min(3, "Name must be at least 3 characters").max(50),
+  email: z.string().email("Please provide a valid email address."),
+  message: z.string().min(5, "Message must be at least 5 characters").max(500),
 });
 export type FormSchema = z.infer<typeof formSchema>;

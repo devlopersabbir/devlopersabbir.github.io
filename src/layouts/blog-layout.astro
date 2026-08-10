@@ -4,9 +4,11 @@ interface Props {
 }
 const { pageTitle } = Astro.props;
 import RootLayout from "./root-layout.astro";
-import "github-markdown-css/github-markdown.css";
+import "github-markdown-css/github-markdown-light.css";
+import "github-markdown-css/github-markdown-dark.css";
 ---
 
 <RootLayout pageTitle={pageTitle}>
   <slot />
 </RootLayout>
+

@@ -3,7 +3,10 @@ import { getCollection } from "astro:content";
 import RootLayout from "../../layouts/root-layout.astro";
 import BlogCard from "../_components/blog-card.astro";
 
-const posts = await getCollection("blogs");
+const posts = (await getCollection("blogs")).sort(
+  (a, b) =>
+    new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
+);
 ---
 
 <RootLayout pageTitle="Articles">

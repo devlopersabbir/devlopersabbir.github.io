@@ -24,22 +24,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # Setup pnpm
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v3
+      # Setup Bun package manager
+      - name: Setup Bun package manager
+        uses: oven-sh/setup-bun@v2
         with:
-          version: 8
-
-      # Setup Node.js
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: pnpm
+          bun-version: latest
 
       # Install dependencies
       - name: Install dependencies
-        run: pnpm install
+        run: bun install
 
       # Create environment file
       - name: Create .env
@@ -48,7 +41,7 @@ jobs:
 
       # Build Astro
       - name: Build project
-        run: pnpm build
+        run: bun run build
 
       # Disable Jekyll completely
       - name: Disable Jekyll

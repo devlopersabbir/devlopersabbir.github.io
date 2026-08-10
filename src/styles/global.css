@@ -36,3 +36,51 @@
 html {
   transition: background-color 0.2s ease, color 0.2s ease;
 }
+
+.markdown-body {
+  color: #1f2937;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6,
+.markdown-body p,
+.markdown-body li,
+.markdown-body td,
+.markdown-body th {
+  color: #1f2937;
+}
+
+.markdown-body :not(pre) > code {
+  color: #1f2937;
+  background-color: #f3f4f6;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+}
+
+.dark .markdown-body {
+  color: #f3f4f6;
+}
+
+.dark .markdown-body h1,
+.dark .markdown-body h2,
+.dark .markdown-body h3,
+.dark .markdown-body h4,
+.dark .markdown-body h5,
+.dark .markdown-body h6,
+.dark .markdown-body p,
+.dark .markdown-body li,
+.dark .markdown-body td,
+.dark .markdown-body th {
+  color: #f3f4f6;
+}
+
+.dark .markdown-body :not(pre) > code {
+  color: #f3f4f6;
+  background-color: #374151;
+}
+
+

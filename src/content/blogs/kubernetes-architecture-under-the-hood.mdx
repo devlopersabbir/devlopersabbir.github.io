@@ -1,0 +1,298 @@
+---
+title: "Kubernetes Under the Hood: How It Actually Works When You Deploy"
+description: "A battle-tested, zero-fluff engineering guide on Kubernetes internals—control plane API state machines, etcd Raft consensus, kubelet CRI/gRPC calls, and Linux cgroups, namespaces & CNI/eBPF networking."
+pubDate: 2026-08-10
+author: "Sabbir Hossain Shuvo"
+image: "/kubernetes_architecture.png"
+tags:
+  [
+    "kubernetes",
+    "devops",
+    "cloud-native",
+    "architecture",
+    "docker",
+    "system-design",
+  ]
+---
+
+If you ask most developers what Kubernetes is, they'll tell you it's a tool that runs containers across a cluster using `kubectl apply -f deployment.yaml`.
+
+That’s fine for high-level usage. But as a Senior DevOps / Infrastructure Engineer, when a production cluster experiences subtle IPVS connection drops, `etcd` disk commit stalls during high churn, or Pods getting stuck in `ContainerCreating` state, abstract definitions fall apart.
+
+In this deep dive, we're skipping generic marketing summaries. We will dissect the Kubernetes architecture layer by layer, tracing exact Linux primitives, gRPC calls, control loops, and kernel networking hooks under the hood.
+
+---
+
+## 1. High-Level Cluster Architecture
+
+A Kubernetes cluster is fundamentally a **distributed state machine** designed to continuously reconcile observed cluster state with declared desired state.
+
+```
++-----------------------------------------------------------------------------------+
+|                            CONTROL PLANE (MASTER NODE)                            |
+|                                                                                   |
+|  +--------------------+       +--------------------+       +-------------------+  |
+|  |   kube-apiserver   | <---> |        etcd        | <---> |  kube-scheduler   |  |
+|  +--------------------+       +--------------------+       +-------------------+  |
+|            ^                                                         |            |
+|            |                                                         v            |
+|            +-------------------------------------------+-----------------------+  |
+|                                                        | kube-controller-manager|  |
+|                                                        +-----------------------+  |
++-----------------------------------------------------------------------------------+
+                                          |
+                      TLS HTTP/2 (Protobuf / JSON Watch Streams)
+                                          |
+                                          v
++-----------------------------------------------------------------------------------+
+|                                   WORKER NODE                                     |
+|                                                                                   |
+|  +-----------------------+     +------------------------+     +----------------+  |
+|  |        kubelet        |     |       kube-proxy       |     | containerd     |  |
+|  | (CRI / gRPC Listener) |     |  (iptables/IPVS/eBPF)  |     | (runc / OCI)   |  |
+|  +-----------------------+     +------------------------+     +----------------+  |
+|            |                                                          |           |
+|            +------------------------> Pod Sandbox <-------------------+           |
++-----------------------------------------------------------------------------------+
+```
+
+The system is strictly divided into two zones:
+
+- **Control Plane:** Maintains global cluster state, enforces security, and executes scheduling and controller loops.
+- **Worker Nodes:** Hosts daemons (`kubelet`, `kube-proxy`, CNI/CRI runtimes) that isolate and manage container processes.
+
+---
+
+## 2. Control Plane Internals: The Engine Room
+
+### A. `kube-apiserver` — The Guarded Gateway
+
+The API Server is the **only** component allowed to talk directly to `etcd`. No other component reads from or writes to the database directly.
+
+When `kubectl` sends a request to `kube-apiserver`, it passes through a deterministic pipeline:
+
+```
+Request ---> [Authentication] ---> [Authorization (RBAC)] ---> [Mutating Webhooks] ---> [Object Validation] ---> [Validating Webhooks] ---> [etcd Persistence]
+```
+
+1. **Authentication (AuthN):** Extracts client identity using TLS X.509 client certs, Bearer tokens, or OIDC identity tokens.
+2. **Authorization (AuthZ):** Evaluates RBAC rules (`ClusterRole`, `RoleBinding`) to answer: _Does user X have permission to perform verb `create` on resource `deployments` in namespace `prod`?_
+3. **Mutating Admission Controllers:** Intercepts and modifies payloads (e.g., injecting sidecar containers or applying default storage classes).
+4. **Schema Validation:** Verifies structural adherence to OpenAPI definitions.
+5. **Validating Admission Controllers:** Performs final policy checks (e.g., block root user containers).
+6. **ETCD Persistence:** Serializes the object into Protobuf/JSON format and commits it to `etcd`.
+
+---
+
+### B. `etcd` — Distributed State & Concurrency Control
+
+`etcd` is a strongly consistent, distributed key-value store using the **Raft consensus protocol**.
+
+Key operational mechanics you must know:
+
+- **Optimistic Concurrency Control (MVCC):** `etcd` attaches a strictly increasing `resourceVersion` to every record. If two controllers update the same object concurrently, the transaction with the stale `resourceVersion` fails with HTTP `409 Conflict`. The failed client must re-read the object and re-apply its patch.
+- **Watch Streams:** Instead of controllers polling the API server every few seconds, clients maintain persistent HTTP/2 gRPC `watch` streams. When `etcd` modifies a key prefix, `kube-apiserver` streams `ADDED`, `MODIFIED`, or `DELETED` events instantly to listeners.
+
+---
+
+### C. `kube-scheduler` — The Placement Engine
+
+The scheduler's sole job is to take Pods that have `spec.nodeName == ""` and assign them to a suitable node. It operates in two phases:
+
+1. **Filtering Phase (Predicates):** Filters out nodes incapable of hosting the Pod.
+   - `PodFitsResources`: Checks if node CPU/memory capacity can satisfy request limits.
+   - `NodePorts`: Verifies host ports aren't already bound.
+   - `NodeSelectors` / `TaintsAndTolerations`: Checks label matches and taints.
+2. **Scoring Phase (Priorities):** Ranks the surviving nodes from 0 to 100.
+   - `ImageLocality`: Gives higher scores to nodes that already have the container image pulled locally.
+   - `NodeResourcesBalancedAllocation`: Scores nodes higher if placing the Pod leaves a balanced ratio of CPU to memory usage.
+
+Once a winner node is selected, `kube-scheduler` sends a **Binding object** back to `kube-apiserver` to populate `pod.spec.nodeName`.
+
+---
+
+### D. `kube-controller-manager` — The Reconciliation Engine
+
+`kube-controller-manager` runs dozens of decoupled control loops inside a single binary.
+
+Each controller executes an asynchronous **Reconciliation Loop**:
+
+```
+           +---------------------------------------+
+           |                                       |
+           v                                       |
+  [Get Desired State]                     [Observe Actual State]
+(from kube-apiserver)                   (from cluster events)
+           |                                       |
+           +-------------------+-------------------+
+                               |
+                               v
+                     [Diff Desired vs Actual]
+                               |
+                   +-----------+-----------+
+                   |                       |
+            (States Match)        (States Differ)
+                   |                       |
+                   v                       v
+               [Do Nothing]      [Execute Repair Action]
+                                 (Create/Delete Pods, etc)
+```
+
+For example:
+
+- **DeploymentController:** Watches `Deployments`. When a Deployment update occurs, it creates a new `ReplicaSet`.
+- **ReplicaSetController:** Watches `ReplicaSets` and `Pods`. If target replica count is `3` but only `2` Pods exist, it submits a request to `kube-apiserver` to spawn `1` new Pod.
+
+---
+
+## 3. Worker Node Mechanics: From API Object to Running Process
+
+```
+                                  WORKER NODE
+ ┌─────────────────────────────────────────────────────────────────────────────┐
+ │                                                                             │
+ │  kubelet  ──(gRPC over UDS)──> containerd ──(OCI CLI)──> containerd-shim    │
+ │                                                              │              │
+ │                                                              v              │
+ │                                                            runc             │
+ │                                                              │              │
+ │                                                              v              │
+ │                                                      [Container Process]    │
+ └─────────────────────────────────────────────────────────────────────────────┘
+```
+
+### A. `kubelet` — The Node Supervisor
+
+`kubelet` runs natively on the node OS (outside containers). It subscribes to `kube-apiserver` for PodSpecs assigned to its specific node name.
+
+When a new Pod is scheduled to its node:
+
+1. `kubelet` parses the `PodSpec`.
+2. It executes **CRI (Container Runtime Interface)** gRPC calls to the local runtime socket (e.g., `/run/containerd/containerd.sock`).
+3. It executes **CNI (Container Network Interface)** calls to set up network namespaces and IP routing.
+4. It periodically runs Liveness, Readiness, and Startup probes.
+
+---
+
+### B. CRI, `containerd`, `containerd-shim`, and `runc`
+
+Under the hood, `kubelet` does **not** manage low-level container namespaces or cgroups directly. It delegates to container runtimes using OCI standards:
+
+1. **`kubelet` -> `containerd` (CRI Call):** `kubelet` sends `RunPodSandbox` over gRPC to set up shared Pod namespaces (Network, IPC, UTS).
+2. **`containerd` -> `containerd-shim`:** `containerd` creates a lightweight daemon called `containerd-shim` for each container. This process keeps standard file descriptors (`stdout`/`stderr`) open even if `containerd` restarts.
+3. **`containerd-shim` -> `runc`:** `containerd-shim` executes **`runc`**, the OCI reference implementation.
+4. **Kernel Namespace & Cgroup Creation:**
+   - `runc` configures Linux **namespaces** (`pid`, `net`, `mnt`, `ipc`, `uts`, `user`) for isolation.
+   - `runc` sets **cgroups** (`cpu.max`, `memory.max`) in `/sys/fs/cgroup/` to enforce resource quotas.
+5. `runc` launches the container main process and exits. `containerd-shim` remains to monitor the running container process.
+
+---
+
+## 4. Cluster Networking: CNI & `kube-proxy`
+
+### A. The Kubernetes Network Model
+
+Kubernetes mandates three core networking invariants:
+
+1. Every Pod gets its own unique IP address.
+2. Pods on any node can communicate with Pods on all other nodes **without NAT**.
+3. Agents on a node (like `kubelet`) can communicate with all Pods on that node.
+
+---
+
+### B. CNI (Container Network Interface) in Action
+
+When `kubelet` creates a Pod sandbox, it invokes the configured CNI plugin (e.g., Calico, Flannel, Cilium):
+
+1. **veth pair creation:** CNI creates a virtual Ethernet pair (`veth0` inside the Pod namespace and `vethXXXX` in the host root namespace).
+2. **Bridge / Route Attachment:** CNI connects `vethXXXX` to a host bridge (`cni0`) or installs host routing table entries.
+3. **IP Allocation (IPAM):** Assigns a free IP address from the node's allocated subnet (e.g., `10.244.1.0/24`).
+
+---
+
+### C. `kube-proxy` & Service Traffic Routing
+
+Services provide stable VIPs (Virtual IPs) for pods that frequently die and get recreated. `kube-proxy` implements Service VIP routing using one of three mechanisms:
+
+#### 1. `iptables` Mode (Legacy Standard)
+
+`kube-proxy` installs netfilter rules into Linux `iptables`.
+When traffic hits a Service VIP:
+
+- `PREROUTING` rules intercept the packet.
+- `statistic --mode random` randomly picks one of the healthy backend Pod IPs.
+- DNAT (Destination Network Address Translation) rewrites the destination IP from Service VIP to target Pod IP.
+
+_Drawback:_ Scalability issues. `iptables` rules are evaluated sequentially ($O(N)$ lookup complexity). A cluster with 20,000 services generates hundreds of thousands of rules, causing CPU spikes during updates.
+
+#### 2. IPVS Mode (High Scale)
+
+`kube-proxy` uses Linux IPVS (IP Virtual Server) kernel module. IPVS uses **hash tables** ($O(1)$ lookup complexity), maintaining high performance even with 100,000+ services.
+
+#### 3. eBPF Mode (Modern / Cilium)
+
+Modern networking plugins bypass `iptables` and `kube-proxy` entirely using **eBPF (Extended Berkeley Packet Filter)**. Custom eBPF programs attached to Linux socket filters directly route packets at the kernel network interface level, eliminating netfilter stack overhead.
+
+---
+
+## 5. End-to-End Walkthrough: What Happens During `kubectl apply -f deployment.yaml`
+
+Let's trace the complete life-cycle step-by-step:
+
+```
+[User] ──(1. kubectl apply)──> [kube-apiserver] ──(2. Save State)──> [etcd]
+                                     │
+                                     ├─(3. Watch Event)──> [DeploymentController]
+                                     │                          │ (Creates ReplicaSet)
+                                     │                          v
+                                     ├<─────────────────────────┘
+                                     │
+                                     ├─(4. Watch Event)──> [ReplicaSetController]
+                                     │                          │ (Creates Pods: nodeName="")
+                                     │                          v
+                                     ├<─────────────────────────┘
+                                     │
+                                     ├─(5. Watch Event)──> [kube-scheduler]
+                                     │                          │ (Filters & Scores Nodes)
+                                     │                          v
+                                     ├<──(6. Bind to Node-A)────┘
+                                     │
+                                     └─(7. Watch Event)──> [kubelet (Node-A)]
+                                                                │
+                                                                ├─(8. CNI)──> Set up veth & IP
+                                                                └─(9. CRI)──> containerd -> runc
+                                                                                   │
+                                                                                   v
+                                                                        [Container Running]
+```
+
+1. **`kubectl`** parses your YAML, converts it to JSON, and sends an HTTP POST request to `kube-apiserver`.
+2. **`kube-apiserver`** authenticates, checks RBAC permissions, runs admission webhooks, validates schema, and writes the Deployment object into `etcd`.
+3. **`DeploymentController`** receives an `ADDED` event via its watch stream, generates a `ReplicaSet` spec, and POSTs it back to `kube-apiserver`.
+4. **`ReplicaSetController`** receives the `ReplicaSet` event, sees that `0/3` pods exist, and POSTs `3` unassigned `Pod` definitions (`spec.nodeName == ""`) to `kube-apiserver`.
+5. **`kube-scheduler`** picks up the pending Pods from its watch stream, filters and scores all cluster nodes, selects `Node-A`, and submits a `Binding` object updating `pod.spec.nodeName = "Node-A"`.
+6. **`kubelet` on Node-A** receives the `MODIFIED` Pod event matching its node name.
+7. **`kubelet`** invokes CNI to set up networking (`eth0`, IPAM allocation).
+8. **`kubelet`** sends `RunPodSandbox` and `CreateContainer` gRPC requests to `containerd`.
+9. **`containerd`** spawns `containerd-shim`, which invokes `runc` to create Linux namespaces, set cgroups limits, and start the container process.
+10. **`kubelet`** reports status back to `kube-apiserver`, marking the Pod as `Running`.
+
+---
+
+## 6. Summary Reference Architecture
+
+| Component                     | Layer / Scope | Main Subsystem / Primitives                        | Key Communication Protocol         |
+| :---------------------------- | :------------ | :------------------------------------------------- | :--------------------------------- |
+| **`kube-apiserver`**          | Control Plane | AuthN, AuthZ, Admission Control, Schema Validation | HTTPS REST / Protobuf / HTTP/2     |
+| **`etcd`**                    | Control Plane | Raft Consensus, MVCC, Watch API                    | gRPC over TLS                      |
+| **`kube-scheduler`**          | Control Plane | Predicates (Filtering) & Priorities (Scoring)      | HTTP/2 Watch Stream                |
+| **`kube-controller-manager`** | Control Plane | Reconciliation Loops (Deployment, RS, Node)        | HTTP/2 Watch Stream                |
+| **`kubelet`**                 | Worker Node   | Pod Lifecycle Manager, Health Checker              | gRPC (CRI) / Netlink (CNI)         |
+| **`containerd` / `runc`**     | Worker Node   | OCI Runtime, Linux namespaces, cgroups             | Unix Domain Sockets / System Calls |
+| **`kube-proxy`**              | Worker Node   | Service VIP load balancer                          | Linux `iptables` / `IPVS` / `eBPF` |
+
+---
+
+### Conclusion
+
+Kubernetes is not magic—it's a masterclass in distributed systems engineering. By combining **declarative state management**, **watch-based event loops**, **modular runtime interfaces (CRI/CNI)**, and core **Linux kernel isolation primitives (namespaces/cgroups)**, it builds a resilient engine capable of running global cloud infrastructure seamlessly.
