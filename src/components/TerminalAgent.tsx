@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import {
   executeStaticCommand,
-  fetchAiResponse,
+  fetchAiResponseStream,
   type HistoryItem,
 } from "../services/terminal-agent-service";
 import { TerminalHeader } from "./terminal/TerminalHeader";
@@ -137,9 +137,21 @@ export const TerminalAgent: React.FC = () => {
     }
 
     setLoading(true);
+
+    // Create a placeholder response item in history for real-time streaming
+    setHistory((prev) => [...prev, { type: "response", text: "" }]);
+
     try {
-      const reply = await fetchAiResponse(trimmed);
-      setHistory((prev) => [...prev, { type: "response", text: reply }]);
+      await fetchAiResponseStream(trimmed, history, (chunkText) => {
+        setHistory((prev) => {
+          const updated = [...prev];
+          const lastIdx = updated.length - 1;
+          if (lastIdx >= 0 && updated[lastIdx]?.type === "response") {
+            updated[lastIdx] = { type: "response", text: chunkText };
+          }
+          return updated;
+        });
+      });
     } catch (err: any) {
       setHistory((prev) => [
         ...prev,
@@ -174,6 +186,24 @@ export const TerminalAgent: React.FC = () => {
     }
   };
 
+  const handleResetSession = () => {
+    setHistory([
+      {
+        type: "system",
+        text: `Sabbir OS v2.5.0 (x86_64-pc-linux-gnu)\nType 'help' for available commands or ask any question to chat with Virtual Sabbir.`,
+      },
+    ]);
+    setCmdHistory([]);
+    setCmdIndex(-1);
+    try {
+      localStorage.removeItem("sabbir_ai_history");
+      localStorage.removeItem("sabbir_ai_cmd_history");
+      localStorage.removeItem("sabbir_ai_leave_time");
+    } catch (e) {
+      console.warn("Could not clear AI session cache", e);
+    }
+  };
+
   return (
     <>
       <TerminalTrigger isMac={isMac} onClick={() => setIsOpen(true)} />
@@ -191,6 +221,7 @@ export const TerminalAgent: React.FC = () => {
               isMaximized={isMaximized}
               onClose={() => setIsOpen(false)}
               onToggleMaximize={() => setIsMaximized(!isMaximized)}
+              onResetSession={handleResetSession}
             />
 
             <TerminalBody

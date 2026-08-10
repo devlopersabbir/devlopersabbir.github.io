@@ -1,4 +1,5 @@
 import React, { type RefObject } from "react";
+import { marked } from "marked";
 import type { HistoryItem } from "../../services/terminal-agent-service";
 
 interface TerminalBodyProps {
@@ -28,9 +29,10 @@ export const TerminalBody: React.FC<TerminalBodyProps> = ({
             </div>
           )}
           {item.type === "response" && (
-            <div className="text-zinc-200 whitespace-pre-wrap pl-3 border-l-2 border-green-500/40 bg-zinc-900/40 py-1 rounded-r">
-              {item.text}
-            </div>
+            <div
+              className="text-zinc-200 pl-3 border-l-2 border-green-500/40 bg-zinc-900/40 py-1 rounded-r prose prose-invert max-w-none text-xs md:text-sm [&_pre]:bg-zinc-950 [&_pre]:p-3 [&_pre]:rounded-md [&_pre]:border [&_pre]:border-zinc-800 [&_code]:text-emerald-400 [&_a]:text-blue-400 [&_a]:underline"
+              dangerouslySetInnerHTML={{ __html: marked.parse(item.text) as string }}
+            />
           )}
           {item.type === "error" && (
             <div className="text-red-400 bg-red-950/30 p-2 rounded border border-red-900/40 whitespace-pre-wrap">

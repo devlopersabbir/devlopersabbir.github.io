@@ -10,6 +10,7 @@ export const sabbirBio = {
     linkedin: "https://linkedin.com/in/devlopersabbir",
     email: "mailto:devlopersabbir@gmail.com",
     website: "https://devlopersabbir.github.io",
+    youtube: "https://youtube.com/stsabbir",
   },
 
   skills: [

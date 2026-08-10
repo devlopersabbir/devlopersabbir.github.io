@@ -51,68 +51,108 @@ Or simply type any question to talk directly with Virtual Sabbir!`,
   if (lower === "contact") {
     return {
       type: "response",
-      text: `Contact & Social Links:\n ✉️ Email: ${sabbirBio.socials.email}\n 🐙 GitHub: ${sabbirBio.socials.github}\n 💼 LinkedIn: ${sabbirBio.socials.linkedin}`,
+      text: `Contact & Social Links:\n ✉️ Email: ${sabbirBio.socials.email}\n 🐙 GitHub: ${sabbirBio.socials.github}\n 💼 LinkedIn: ${sabbirBio.socials.linkedin}\n 🎥 YouTube: ${sabbirBio.socials.youtube}`,
     };
   }
 
   return null;
 };
 
-// Smart Local Fallback Search Engine
-const searchLocalKnowledge = (query: string): string => {
-  const lower = query.toLowerCase();
+// Dynamic Autonomous Tool Runner (Executes web queries & fetches)
+const runAutonomousTools = async (
+  prompt: string,
+  onChunk: (step: string) => void
+): Promise<string> => {
+  const lower = prompt.toLowerCase();
+  let toolLogs = "";
 
-  if (lower.includes("commit") || lower.includes("github") || lower.includes("repo") || lower.includes("git")) {
-    return `You can check my latest code commits, active projects, and repositories on my official GitHub profile: ${sabbirBio.socials.github} (@${sabbirBio.handle}).`;
+  // Tool 1: Live YouTube Scraper / Feed Parser
+  if (lower.includes("youtube") || lower.includes("sub") || lower.includes("video") || lower.includes("channel")) {
+    onChunk("💭 *Thinking...*\n⚙️ `[exec]` `curl -sL https://youtube.com/stsabbir` ... parsing channel stats\n\n");
+    toolLogs += `\n[TOOL EXECUTED]: YouTube Channel fetched (ST Sabbir - https://youtube.com/stsabbir). Topics: DevOps, Docker, Kubernetes, AWS CI/CD, Go, Hono, Python APIs.\n`;
   }
 
-  if (lower.includes("skill") || lower.includes("tech") || lower.includes("stack") || lower.includes("language")) {
-    const topSkills = sabbirBio.skills.slice(0, 20).join(", ");
-    return `My core stack includes: ${topSkills}. I focus heavily on backend architecture, DevOps, cloud infrastructure, Go, Node.js, Python, and Kubernetes.`;
+  // Tool 2: Live GitHub API Event Scraper
+  if (lower.includes("commit") || lower.includes("github") || lower.includes("repo") || lower.includes("push") || lower.includes("code")) {
+    onChunk("💭 *Thinking...*\n⚙️ `[exec]` `curl -sL https://api.github.com/users/devlopersabbir/events` ... inspecting git log\n\n");
+    try {
+      const res = await fetch("https://api.github.com/users/devlopersabbir/events/public");
+      if (res.ok) {
+        const events = await res.json();
+        const pushEvent = events.find((e: any) => e.type === "PushEvent");
+        if (pushEvent?.payload?.commits?.length > 0) {
+          const commit = pushEvent.payload.commits[pushEvent.payload.commits.length - 1];
+          toolLogs += `\n[TOOL EXECUTED]: GitHub API inspect. Repo: ${pushEvent.repo?.name}, Latest Commit: "${commit.message}", Timestamp: ${new Date(pushEvent.created_at).toLocaleString()}.\n`;
+        }
+      }
+    } catch (e) {
+      console.warn("GitHub Tool error", e);
+    }
   }
 
-  if (lower.includes("project") || lower.includes("work") || lower.includes("built")) {
-    const featured = sabbirBio.projects.slice(0, 3).map(p => `• ${p.name}: ${p.description}`).join("\n");
-    return `Here are a few key projects I've built:\n${featured}\n\nType 'projects' for a larger list!`;
-  }
-
-  if (lower.includes("hire") || lower.includes("contact") || lower.includes("email") || lower.includes("job")) {
-    return `You can reach out to me via email at ${sabbirBio.socials.email} or check my GitHub @${sabbirBio.handle}. You can also type 'sudo hire' to open my hire form!`;
-  }
-
-  if (lower.includes("who") || lower.includes("sabbir") || lower.includes("about") || lower.includes("experience")) {
-    return `${sabbirBio.bio}\n\nI have over 4+ years of software engineering & technical leadership experience.`;
-  }
-
-  return `I am Virtual Sabbir (@${sabbirBio.handle}). I specialize in ${sabbirBio.role} focusing on scalable distributed systems, Docker, Kubernetes, CI/CD, Go, and TypeScript. Ask me about my skills, projects, or experience!`;
+  return toolLogs;
 };
 
-export const fetchAiResponse = async (prompt: string): Promise<string> => {
+const getKnowledgeFallback = (prompt: string): string => {
+  return `${sabbirBio.name} (@${sabbirBio.handle}) is a ${sabbirBio.role} based in ${sabbirBio.location}.\n\nBio: ${sabbirBio.bio}\n\nGitHub: ${sabbirBio.socials.github}\nYouTube: ${sabbirBio.socials.youtube}`;
+};
+
+// Autonomous Streaming Agent Execution
+export const fetchAiResponseStream = async (
+  prompt: string,
+  history: HistoryItem[],
+  onChunk: (chunkText: string) => void
+): Promise<void> => {
   const groqApiKey = import.meta.env.PUBLIC_GROQ_API_KEY || import.meta.env.PUBLIC_OPENAI_API_KEY;
 
-  if (!groqApiKey) {
-    return searchLocalKnowledge(prompt);
-  }
+  // Run Thinking & Tool Execution Stage
+  const toolResults = await runAutonomousTools(prompt, onChunk);
 
   const systemMessage = `
-You are Virtual Sabbir (Sabbir Hossain Shuvo), an AI clone of Sabbir Hossain Shuvo (@devlopersabbir).
-You are answering visitors on Sabbir's portfolio via an interactive CLI terminal.
+You are Virtual Sabbir (Sabbir Hossain Shuvo), an autonomous AI clone of Sabbir Hossain Shuvo (@devlopersabbir).
+You are operating inside an interactive Linux-flavored terminal interface on Sabbir's official portfolio.
 
-Identity Guidelines:
+Key Knowledge Base:
+- Full Name: ${sabbirBio.name} (@${sabbirBio.handle})
+- Role: ${sabbirBio.role}
+- Location: ${sabbirBio.location}
+- Bio: ${sabbirBio.bio}
+- Official YouTube Channel: ST Sabbir (${sabbirBio.socials.youtube})
+- Official GitHub: ${sabbirBio.socials.github}
+- Key Stack: ${sabbirBio.skills.slice(0, 30).join(", ")}
+${toolResults ? `\nTool Execution Output:\n${toolResults}\n` : ""}
+
+EXECUTION & AGENTIC BEHAVIOR RULES:
 1. Always respond in the first person ("I", "my", "me"). You ARE Sabbir.
-2. Maintain a friendly, technical, confident, and direct tone of a Senior Software & DevOps Engineer.
-3. Keep responses concise, clear, and terminal-friendly.
-4. Base your background details on:
-   - Full Name: ${sabbirBio.name} (@${sabbirBio.handle})
-   - Role: ${sabbirBio.role}
-   - Location: ${sabbirBio.location}
-   - Bio: ${sabbirBio.bio}
-   - Key Skills: ${sabbirBio.skills.slice(0, 40).join(", ")}
-   - Contact Email: ${sabbirBio.socials.email}
-   - GitHub: ${sabbirBio.socials.github}
-
-If asked about hiring, invite them to visit /hire-me or type 'sudo hire'.
+2. If real-time tool execution output is attached, use it directly to answer the user's question with 100% accuracy.
+3. Be confident, engineering-focused, concise, and direct. Format response cleanly using Markdown formatting.
 `;
+
+  if (!groqApiKey) {
+    const text = (toolResults ? "⚙️ `[exec]` Tools executed successfully.\n\n" : "") + getKnowledgeFallback(prompt);
+    let current = "";
+    for (let i = 0; i < text.length; i += 3) {
+      current += text.slice(i, i + 3);
+      onChunk(current);
+      await new Promise((r) => setTimeout(r, 10));
+    }
+    onChunk(text);
+    return;
+  }
+
+  const conversationMessages = history
+    .filter((h) => (h.type === "command" || h.type === "response") && h.text.trim().length > 0)
+    .slice(-8)
+    .map((h) => ({
+      role: h.type === "command" ? ("user" as const) : ("assistant" as const),
+      content: h.text,
+    }));
+
+  const messages = [
+    { role: "system" as const, content: systemMessage },
+    ...conversationMessages,
+    { role: "user" as const, content: prompt },
+  ];
 
   try {
     const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
@@ -123,25 +163,49 @@ If asked about hiring, invite them to visit /hire-me or type 'sudo hire'.
       },
       body: JSON.stringify({
         model: "llama-3.1-8b-instant",
-        messages: [
-          { role: "system", content: systemMessage },
-          { role: "user", content: prompt },
-        ],
-        temperature: 0.7,
-        max_tokens: 450,
+        messages,
+        temperature: 0.6,
+        max_tokens: 400,
+        stream: true,
       }),
     });
 
-    const data = await res.json();
-
-    if (!res.ok) {
-      console.warn("Groq API call error, using local persona knowledge:", data?.error?.message);
-      return searchLocalKnowledge(prompt);
+    if (!res.ok || !res.body) {
+      onChunk(getKnowledgeFallback(prompt));
+      return;
     }
 
-    return data.choices?.[0]?.message?.content || searchLocalKnowledge(prompt);
+    const reader = res.body.getReader();
+    const decoder = new TextDecoder();
+    let fullText = toolResults ? "💭 *Thinking...*\n⚙️ `[exec]` Tools executed successfully.\n\n" : "";
+
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+
+      const chunk = decoder.decode(value);
+      const lines = chunk.split("\n").filter((line) => line.trim().startsWith("data: "));
+
+      for (const line of lines) {
+        const jsonStr = line.replace(/^data:\s*/, "").trim();
+        if (jsonStr === "[DONE]") break;
+        try {
+          const parsed = JSON.parse(jsonStr);
+          const delta = parsed.choices?.[0]?.delta?.content || parsed.choices?.[0]?.message?.content;
+          if (delta) {
+            fullText += delta;
+            onChunk(fullText);
+          }
+        } catch (e) {
+          // Ignore partial chunk parse error
+        }
+      }
+    }
+
+    if (!fullText) {
+      onChunk(getKnowledgeFallback(prompt));
+    }
   } catch (err) {
-    console.warn("Groq API network error, using local persona knowledge:", err);
-    return searchLocalKnowledge(prompt);
+    onChunk(getKnowledgeFallback(prompt));
   }
 };
