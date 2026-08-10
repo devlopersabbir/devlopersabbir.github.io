@@ -38,9 +38,12 @@ jobs:
       - name: Create .env
         run: |
           echo "API_KEY=${{ secrets.API_KEY }}" >> .env
+          echo "PUBLIC_GROQ_API_KEY=${{ secrets.PUBLIC_GROQ_API_KEY }}" >> .env
 
       # Build Astro
       - name: Build project
+        env:
+          PUBLIC_GROQ_API_KEY: ${{ secrets.PUBLIC_GROQ_API_KEY }}
         run: bun run build
 
       # Disable Jekyll completely

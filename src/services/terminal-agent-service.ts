@@ -34,7 +34,12 @@ Or simply type any question to talk directly with Virtual Sabbir!`,
   if (lower === "skills") {
     return {
       type: "response",
-      text: `Technical Stack & Expertise:\n${sabbirBio.skills.slice(0, 35).map((s: string) => ` • ${s}`).join("\n")}\n ...and 100+ more across DevOps, cloud & backend engineering.`,
+      text: `Technical Stack & Expertise:\n${sabbirBio.skills
+        .slice(0, 35)
+        .map((s: string) => ` • ${s}`)
+        .join(
+          "\n",
+        )}\n ...and 100+ more across DevOps, cloud & backend engineering.`,
     };
   }
 
@@ -43,7 +48,10 @@ Or simply type any question to talk directly with Virtual Sabbir!`,
       type: "response",
       text: `Featured Projects:\n${sabbirBio.projects
         .slice(0, 6)
-        .map((p: { name: string; description: string; url: string }) => `🚀 ${p.name}\n   ${p.description}\n   URL: ${p.url}`)
+        .map(
+          (p: { name: string; description: string; url: string }) =>
+            `🚀 ${p.name}\n   ${p.description}\n   URL: ${p.url}`,
+        )
         .join("\n\n")}`,
     };
   }
@@ -62,25 +70,52 @@ Or simply type any question to talk directly with Virtual Sabbir!`,
 const searchLocalKnowledge = (query: string): string => {
   const lower = query.toLowerCase();
 
-  if (lower.includes("commit") || lower.includes("github") || lower.includes("repo") || lower.includes("git")) {
+  if (
+    lower.includes("commit") ||
+    lower.includes("github") ||
+    lower.includes("repo") ||
+    lower.includes("git")
+  ) {
     return `You can check my latest code commits, active projects, and repositories on my official GitHub profile: ${sabbirBio.socials.github} (@${sabbirBio.handle}).`;
   }
 
-  if (lower.includes("skill") || lower.includes("tech") || lower.includes("stack") || lower.includes("language")) {
+  if (
+    lower.includes("skill") ||
+    lower.includes("tech") ||
+    lower.includes("stack") ||
+    lower.includes("language")
+  ) {
     const topSkills = sabbirBio.skills.slice(0, 20).join(", ");
     return `My core stack includes: ${topSkills}. I focus heavily on backend architecture, DevOps, cloud infrastructure, Go, Node.js, Python, and Kubernetes.`;
   }
 
-  if (lower.includes("project") || lower.includes("work") || lower.includes("built")) {
-    const featured = sabbirBio.projects.slice(0, 3).map(p => `• ${p.name}: ${p.description}`).join("\n");
+  if (
+    lower.includes("project") ||
+    lower.includes("work") ||
+    lower.includes("built")
+  ) {
+    const featured = sabbirBio.projects
+      .slice(0, 3)
+      .map((p) => `• ${p.name}: ${p.description}`)
+      .join("\n");
     return `Here are a few key projects I've built:\n${featured}\n\nType 'projects' for a larger list!`;
   }
 
-  if (lower.includes("hire") || lower.includes("contact") || lower.includes("email") || lower.includes("job")) {
+  if (
+    lower.includes("hire") ||
+    lower.includes("contact") ||
+    lower.includes("email") ||
+    lower.includes("job")
+  ) {
     return `You can reach out to me via email at ${sabbirBio.socials.email} or check my GitHub @${sabbirBio.handle}. You can also type 'sudo hire' to open my hire form!`;
   }
 
-  if (lower.includes("who") || lower.includes("sabbir") || lower.includes("about") || lower.includes("experience")) {
+  if (
+    lower.includes("who") ||
+    lower.includes("sabbir") ||
+    lower.includes("about") ||
+    lower.includes("experience")
+  ) {
     return `${sabbirBio.bio}\n\nI have over 4+ years of software engineering & technical leadership experience.`;
   }
 
@@ -88,7 +123,7 @@ const searchLocalKnowledge = (query: string): string => {
 };
 
 export const fetchAiResponse = async (prompt: string): Promise<string> => {
-  const groqApiKey = import.meta.env.PUBLIC_GROQ_API_KEY || import.meta.env.PUBLIC_OPENAI_API_KEY;
+  const groqApiKey = import.meta.env.PUBLIC_GROQ_API_KEY;
 
   if (!groqApiKey) {
     return searchLocalKnowledge(prompt);
@@ -135,7 +170,10 @@ If asked about hiring, invite them to visit /hire-me or type 'sudo hire'.
     const data = await res.json();
 
     if (!res.ok) {
-      console.warn("Groq API call error, using local persona knowledge:", data?.error?.message);
+      console.warn(
+        "Groq API call error, using local persona knowledge:",
+        data?.error?.message,
+      );
       return searchLocalKnowledge(prompt);
     }
 
