@@ -21,28 +21,23 @@ export const buildSystemPrompt = (
 ): string => {
   const yt = sabbirBio.youtubeStats;
 
-  // ── Full skills list ────────────────────────────────────────────────────────
-  const allSkills = sabbirBio.skills.join(", ");
+  // ── Highlighted top skills ──────────────────────────────────────────────────
+  const topSkills = sabbirBio.skills.slice(0, 45).join(", ");
 
-  // ── Projects (all of them) ──────────────────────────────────────────────────
-  const projectsList = sabbirBio.projects
-    .map((p) => `  • ${p.name}: ${p.description} (${p.url})`)
+  // ── Featured projects ───────────────────────────────────────────────────────
+  const featuredProjects = sabbirBio.projects
+    .slice(0, 15)
+    .map((p) => `  • ${p.name}: ${p.description}`)
     .join("\n");
 
-  // ── Experience / milestones ─────────────────────────────────────────────────
-  const experienceList = sabbirBio.experience
-    .map((e) => {
-      if ("role" in e) {
-        return `  • ${e.role} @ ${e.company} [${e.period}]: ${e.description}`;
-      }
-      return `  • ${e.milestone}: ${e.description}`;
-    })
+  // ── Key experience ──────────────────────────────────────────────────────────
+  const keyExperience = sabbirBio.experience
+    .slice(0, 8)
+    .map((e) => ("role" in e ? `  • ${e.role} @ ${e.company} (${e.period})` : `  • ${e.milestone}`))
     .join("\n");
 
-  // ── Trivia / preferences ────────────────────────────────────────────────────
-  const triviaList = sabbirBio.triviaAndPreferences
-    .map((t) => `  • ${t}`)
-    .join("\n");
+  // ── Core persona traits ─────────────────────────────────────────────────────
+  const keyTrivia = sabbirBio.triviaAndPreferences.slice(0, 12).map((t) => `  • ${t}`).join("\n");
 
   return `
 You are Virtual Sabbir — an autonomous AI persona of ${sabbirBio.name} (@${sabbirBio.handle}).
@@ -78,17 +73,17 @@ YOUTUBE CHANNEL
   ⚠️  The RSS feed is hard-capped at 10 items — it does NOT reflect the real total.
       Always quote ${yt.videoCount} videos / ${yt.subscriberCount} subscribers when asked about counts.
 
-FULL TECH STACK
-  ${allSkills}
+KEY SKILLS & TECH STACK
+  ${topSkills}
 
-PROJECTS
-${projectsList}
+FEATURED PROJECTS
+${featuredProjects}
 
-EXPERIENCE & CAREER MILESTONES
-${experienceList}
+EXPERIENCE & CAREER HIGHLIGHTS
+${keyExperience}
 
-PERSONALITY & PREFERENCES
-${triviaList}
+PHILOSOPHY & PERSONALITY
+${keyTrivia}
 
 ═══════════════════════════════════════════════════════
  LIVE DATA (from sandbox execution, if any)
