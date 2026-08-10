@@ -6,8 +6,8 @@ const { pageTitle } = Astro.props;
 import SiteHeader from "../components/common/site-header.astro";
 import SiteFooter from "../components/common/site-footer.astro";
 import "../styles/global.css";
-import ThemeToggle from "../theme/ThemeToggle.astro";
 import ThemeScript from "../theme/ThemeScript.astro";
+import { TerminalAgent } from "../components/TerminalAgent";
 ---
 
 <html lang="en">
@@ -33,5 +33,6 @@ import ThemeScript from "../theme/ThemeScript.astro";
       <slot />
     </main>
     <SiteFooter />
+    <TerminalAgent client:load />
   </body>
 </html>
