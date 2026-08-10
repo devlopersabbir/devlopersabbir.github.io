@@ -12,74 +12,332 @@ export async function getStaticPaths() {
   }));
 }
 const { entry } = Astro.props;
-const { Content } = await entry.render();
+const { Content, headings } = await entry.render();
+
+// Calculate estimated read time (assuming 200 words per minute)
+const wordCount = entry.body ? entry.body.trim().split(/\s+/).length : 0;
+const readTimeMinutes = Math.max(1, Math.ceil(wordCount / 200));
+
+// Filter headings for Table of Contents (h2 and h3)
+const tocHeadings = headings.filter((h) => h.depth === 2 || h.depth === 3);
 ---
 
 <BlogLayout pageTitle={entry.data.title}>
-  <section class="container mx-auto px-4 py-10 max-w-4xl">
-    <div
-      class="rounded-lg overflow-hidden shadow-md transition-all duration-300"
-    >
-      <img
-        src={entry.data.image}
-        alt={entry.data.title}
-        class="w-full h-72 object-cover"
-      />
+  <!-- Top Reading Progress Bar -->
+  <div
+    id="reading-progress"
+    class="fixed top-0 left-0 h-1 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-600 z-50 transition-all duration-150"
+    style="width: 0%"
+  >
+  </div>
 
-      <div class="p-6">
-        <h1 class="text-4xl font-extrabold mb-4 text-gray-900 dark:text-white">
-          {entry.data.title}
-        </h1>
+  <!-- Toast Notification for Copy -->
+  <div
+    id="toast-notification"
+    class="fixed bottom-6 right-6 z-50 flex items-center gap-2.5 px-4 py-3 rounded-lg bg-zinc-900 dark:bg-zinc-100 text-zinc-100 dark:text-zinc-900 shadow-xl border border-zinc-800 dark:border-zinc-200 text-xs font-medium translate-y-16 opacity-0 transition-all duration-300 pointer-events-none"
+  >
+    <span class="text-green-400 dark:text-green-600 text-sm">✓</span>
+    <span id="toast-message">Link copied to clipboard!</span>
+  </div>
 
-        <p class="text-gray-500 dark:text-gray-400 text-sm mb-6">
-          By <span class="font-semibold">{entry.data.author}</span> on{" "}
-          {moment(entry.data.pubDate).format("LL")}
-        </p>
+  <section class="container mx-auto px-4 py-8 max-w-6xl">
+    <!-- Breadcrumb & Share Bar -->
+    <div class="mb-6 flex items-center justify-between">
+      <a
+        href="/blogs"
+        class="inline-flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+      >
+        <span>← Back to Articles</span>
+      </a>
 
-        <article class="markdown-body !bg-transparent">
+      <!-- Share Icons Bar -->
+      <div class="flex items-center gap-2">
+        <span class="text-xs font-medium text-zinc-400 dark:text-zinc-500 uppercase tracking-wider hidden sm:inline mr-1">Share:</span>
+        <button
+          id="share-twitter"
+          class="p-2 rounded-lg bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 hover:text-white hover:bg-black dark:hover:bg-zinc-700 transition-all cursor-pointer"
+          title="Share on X (Twitter)"
+        >
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+        </button>
+        <button
+          id="share-linkedin"
+          class="p-2 rounded-lg bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 hover:text-white hover:bg-blue-600 dark:hover:bg-blue-600 transition-all cursor-pointer"
+          title="Share on LinkedIn"
+        >
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.74a1.63 1.63 0 1 0 0 3.26 1.63 1.63 0 0 0 0-3.26z"/>
+          </svg>
+        </button>
+        <button
+          id="copy-link"
+          class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-blue-950 dark:hover:text-blue-400 transition-all text-xs font-medium cursor-pointer"
+          title="Copy Article Link"
+        >
+          <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+            <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/>
+          </svg>
+          <span id="copy-link-text">Copy Link</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Main Grid Layout -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+      <!-- Article Content Column -->
+      <article class="lg:col-span-9">
+        <!-- Hero Header Card -->
+        <div class="rounded-xl overflow-hidden shadow-lg bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 mb-8">
+          <img
+            src={entry.data.image}
+            alt={entry.data.title}
+            class="w-full h-80 object-cover"
+          />
+
+          <div class="p-6 md:p-8">
+            <h1 class="text-3xl md:text-4xl font-extrabold mb-4 text-zinc-900 dark:text-white leading-tight">
+              {entry.data.title}
+            </h1>
+
+            <div class="flex flex-wrap items-center gap-4 text-sm text-zinc-600 dark:text-zinc-400 pb-4 border-b border-zinc-200 dark:border-zinc-800">
+              <span class="flex items-center gap-1.5 font-medium text-zinc-800 dark:text-zinc-200">
+                👤 {entry.data.author}
+              </span>
+              <span>•</span>
+              <span>📅 {moment(entry.data.pubDate).format("LL")}</span>
+              <span>•</span>
+              <span class="flex items-center gap-1 bg-blue-100 text-blue-800 dark:bg-blue-900/40 dark:text-blue-300 px-2.5 py-0.5 rounded-full text-xs font-semibold">
+                ⏱️ {readTimeMinutes} min read
+              </span>
+            </div>
+
+            <!-- Dynamic Description / Excerpt -->
+            {entry.data.description && (
+              <p class="mt-4 text-base italic text-zinc-600 dark:text-zinc-300">
+                "{entry.data.description}"
+              </p>
+            )}
+          </div>
+        </div>
+
+        <!-- Markdown Content -->
+        <div class="markdown-body !bg-transparent text-zinc-900 dark:text-zinc-100">
           <Content />
-        </article>
+        </div>
 
+        <!-- Tags -->
         {
           entry.data.tags && (
-            <div class="mt-10">
-              <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-3">
-                Tags:
+            <div class="mt-12 pt-6 border-t border-zinc-200 dark:border-zinc-800">
+              <h3 class="text-sm font-semibold text-zinc-500 uppercase tracking-wider mb-3">
+                Topics & Tags
               </h3>
               <div class="flex flex-wrap gap-2">
                 {entry.data.tags.map((tag) => (
-                  <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full shadow-sm dark:bg-blue-900 dark:text-blue-200">
-                    {tag}
+                  <span class="bg-blue-50 text-blue-700 dark:bg-blue-950/60 dark:text-blue-300 border border-blue-200 dark:border-blue-800/60 text-xs font-medium px-3 py-1 rounded-full shadow-xs">
+                    #{tag}
                   </span>
                 ))}
               </div>
             </div>
           )
         }
-      </div>
+      </article>
+
+      <!-- Sidebar / Table of Contents -->
+      <aside class="lg:col-span-3 hidden lg:block">
+        <div class="sticky top-24 space-y-6">
+          {tocHeadings.length > 0 && (
+            <div class="p-5 rounded-xl bg-zinc-50 dark:bg-zinc-900/80 border border-zinc-200 dark:border-zinc-800 shadow-xs">
+              <h4 class="text-xs font-bold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-3 flex items-center gap-2">
+                <span>📌</span> Table of Contents
+              </h4>
+              <nav class="space-y-1.5 max-h-[60vh] overflow-y-auto pr-1 text-sm">
+                {tocHeadings.map((h) => (
+                  <a
+                    href={`#${h.slug}`}
+                    class={`toc-link block truncate py-1 px-2 rounded-md text-zinc-600 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-all ${
+                      h.depth === 3 ? "ml-3 text-xs" : "font-medium"
+                    }`}
+                  >
+                    {h.text}
+                  </a>
+                ))}
+              </nav>
+            </div>
+          )}
+
+          <!-- Share Box in Sidebar -->
+          <div class="p-5 rounded-xl bg-zinc-50 dark:bg-zinc-900/80 border border-zinc-200 dark:border-zinc-800 text-center">
+            <p class="text-xs font-medium text-zinc-500 dark:text-zinc-400 mb-3">
+              Found this article helpful?
+            </p>
+            <div class="flex items-center justify-center gap-2">
+              <button
+                id="sidebar-share-twitter"
+                class="flex-1 py-2 px-3 text-xs font-semibold text-white bg-black dark:bg-zinc-800 hover:bg-zinc-800 rounded-lg transition shadow-xs flex items-center justify-center gap-1.5 cursor-pointer"
+              >
+                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+                Post
+              </button>
+              <button
+                id="sidebar-share-linkedin"
+                class="flex-1 py-2 px-3 text-xs font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition shadow-xs flex items-center justify-center gap-1.5 cursor-pointer"
+              >
+                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.74a1.63 1.63 0 1 0 0 3.26 1.63 1.63 0 0 0 0-3.26z"/>
+                </svg>
+                Share
+              </button>
+            </div>
+          </div>
+        </div>
+      </aside>
     </div>
   </section>
 </BlogLayout>
 
-<!-- Optional Script for Click-to-Copy -->
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll("pre").forEach((block) => {
-      if (!block) return;
-      const button = document.createElement("button");
-      button.innerText = "📋 Copy";
-      button.className =
-        "absolute top-2 right-2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-75 hover:opacity-100 transition cursor-pointer";
-      button.onclick = () => {
-        navigator.clipboard.writeText(block.innerText.trim());
-        button.innerText = "✅ Copied!";
-        setTimeout(() => (button.innerText = "📋 Copy"), 1500);
-      };
-      const wrapper = document.createElement("div");
-      wrapper.className = "relative";
-      block.parentNode && block.parentNode.insertBefore(wrapper, block);
-      wrapper.appendChild(block);
-      wrapper.appendChild(button);
+    // Toast Notification helper
+    const showToast = (message = "Link copied to clipboard!") => {
+      const toast = document.getElementById("toast-notification");
+      const toastMsg = document.getElementById("toast-message");
+      if (!toast) return;
+      if (toastMsg) toastMsg.innerText = message;
+      
+      toast.classList.remove("translate-y-16", "opacity-0");
+      toast.classList.add("translate-y-0", "opacity-100");
+
+      setTimeout(() => {
+        toast.classList.remove("translate-y-0", "opacity-100");
+        toast.classList.add("translate-y-16", "opacity-0");
+      }, 2500);
+    };
+
+    // 1. Reading Progress Bar
+    const progressBar = document.getElementById("reading-progress");
+    window.addEventListener("scroll", () => {
+      const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      if (progressBar) {
+        progressBar.style.width = scrolled + "%";
+      }
     });
+
+    // 2. Enhanced Code Blocks (Copy Button + Language Badge)
+    document.querySelectorAll("pre").forEach((block) => {
+      if (!block || block.dataset.hasEnhancement) return;
+      block.dataset.hasEnhancement = "true";
+
+      const codeEl = block.querySelector("code");
+      let lang = "code";
+      if (codeEl) {
+        const langClass = Array.from(codeEl.classList).find((c) => c.startsWith("language-"));
+        if (langClass) {
+          lang = langClass.replace("language-", "");
+        }
+      }
+
+      const wrapper = document.createElement("div");
+      wrapper.className = "relative group my-4 rounded-lg overflow-hidden border border-zinc-700/50 shadow-md";
+      
+      const header = document.createElement("div");
+      header.className = "flex items-center justify-between px-4 py-1.5 bg-zinc-800 text-zinc-300 text-xs font-mono border-b border-zinc-700/50";
+      header.innerHTML = `<span class="uppercase font-semibold tracking-wider text-blue-400">${lang}</span>`;
+
+      const copyBtn = document.createElement("button");
+      copyBtn.innerHTML = "📋 Copy";
+      copyBtn.className = "px-2 py-0.5 rounded text-xs text-zinc-300 bg-zinc-700/60 hover:bg-zinc-600 hover:text-white transition cursor-pointer";
+      copyBtn.onclick = () => {
+        const textToCopy = codeEl ? codeEl.innerText : block.innerText;
+        navigator.clipboard.writeText(textToCopy.trim());
+        copyBtn.innerHTML = "✅ Copied!";
+        setTimeout(() => (copyBtn.innerHTML = "📋 Copy"), 2000);
+      };
+
+      header.appendChild(copyBtn);
+
+      if (block.parentNode) {
+        block.parentNode.insertBefore(wrapper, block);
+        wrapper.appendChild(header);
+        wrapper.appendChild(block);
+      }
+    });
+
+    // 3. Header Anchor Links (#)
+    const headings = document.querySelectorAll(".markdown-body h2, .markdown-body h3, .markdown-body h4");
+    headings.forEach((heading) => {
+      if (!heading.id) return;
+      const anchor = document.createElement("a");
+      anchor.className = "anchor-link ml-2 opacity-0 hover:opacity-100 text-blue-500 transition-opacity text-base font-normal";
+      anchor.href = `#${heading.id}`;
+      anchor.innerHTML = "#";
+      heading.appendChild(anchor);
+      heading.classList.add("group");
+      anchor.classList.add("group-hover:opacity-100");
+    });
+
+    // 4. Table of Contents Active Link Highlight
+    const tocLinks = document.querySelectorAll(".toc-link");
+    if (tocLinks.length > 0) {
+      const observerOptions = {
+        root: null,
+        rootMargin: "0px 0px -60% 0px",
+        threshold: 0,
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute("id");
+            tocLinks.forEach((link) => {
+              if (link.getAttribute("href") === `#${id}`) {
+                link.classList.add("text-blue-600", "dark:text-blue-400", "font-bold", "bg-blue-50", "dark:bg-blue-900/30");
+              } else {
+                link.classList.remove("text-blue-600", "dark:text-blue-400", "font-bold", "bg-blue-50", "dark:bg-blue-900/30");
+              }
+            });
+          }
+        });
+      }, observerOptions);
+
+      headings.forEach((h) => observer.observe(h));
+    }
+
+    // 5. Social Share Actions & Silent Copy
+    const currentUrl = window.location.href;
+    const pageTitle = document.title;
+
+    const shareTwitter = () => {
+      window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(pageTitle)}&url=${encodeURIComponent(currentUrl)}`, "_blank");
+    };
+
+    const shareLinkedin = () => {
+      window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(currentUrl)}`, "_blank");
+    };
+
+    const handleCopy = () => {
+      navigator.clipboard.writeText(currentUrl);
+      const copyTextEl = document.getElementById("copy-link-text");
+      if (copyTextEl) copyTextEl.innerText = "Copied!";
+      showToast("Article link copied to clipboard!");
+      setTimeout(() => {
+        if (copyTextEl) copyTextEl.innerText = "Copy Link";
+      }, 2500);
+    };
+
+    document.getElementById("share-twitter")?.addEventListener("click", shareTwitter);
+    document.getElementById("sidebar-share-twitter")?.addEventListener("click", shareTwitter);
+
+    document.getElementById("share-linkedin")?.addEventListener("click", shareLinkedin);
+    document.getElementById("sidebar-share-linkedin")?.addEventListener("click", shareLinkedin);
+
+    document.getElementById("copy-link")?.addEventListener("click", handleCopy);
   });
 </script>
