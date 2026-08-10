@@ -12,7 +12,7 @@ import { sabbirBio } from "../../constants/sabbir-persona";
  * In all other cases (network errors, empty responses) the LLM handles it.
  */
 export const getKnowledgeFallback = (_prompt: string): string => {
-  return `Hey! I'm Virtual Sabbir — an AI clone of ${sabbirBio.name}. I'm currently running in offline mode (no API key configured), but here's what I can tell you:\n\n👤 ${sabbirBio.name} (@${sabbirBio.handle})\n🎯 ${sabbirBio.role} · ${sabbirBio.location}\n\n${sabbirBio.bio}\n\n📬 Contact:\n  ✉️  ${sabbirBio.socials.email}\n  🐙  ${sabbirBio.socials.github}\n  💼  ${sabbirBio.socials.linkedin}\n  🎥  ${sabbirBio.socials.youtube}\n\nType \`help\` for built-in commands.`;
+  return `Sorry, I'm having trouble connecting to my AI service right now. Please verify your internet connection or check back in a moment!\n\nIn the meantime, you can ask about my skills or type \`help\` to see available terminal commands.`;
 };
 
 export const buildSystemPrompt = (
