@@ -62,8 +62,12 @@ Or simply type any question to talk directly with Virtual Sabbir!`,
 const searchLocalKnowledge = (query: string): string => {
   const lower = query.toLowerCase();
 
+  if (lower.includes("commit") || lower.includes("github") || lower.includes("repo") || lower.includes("git")) {
+    return `You can check my latest code commits, active projects, and repositories on my official GitHub profile: ${sabbirBio.socials.github} (@${sabbirBio.handle}).`;
+  }
+
   if (lower.includes("skill") || lower.includes("tech") || lower.includes("stack") || lower.includes("language")) {
-    const topSkills = sabbirBio.skills.slice(0, 25).join(", ");
+    const topSkills = sabbirBio.skills.slice(0, 20).join(", ");
     return `My core stack includes: ${topSkills}. I focus heavily on backend architecture, DevOps, cloud infrastructure, Go, Node.js, Python, and Kubernetes.`;
   }
 
