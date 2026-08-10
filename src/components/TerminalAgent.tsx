@@ -28,27 +28,69 @@ export const TerminalAgent: React.FC = () => {
   const bottomRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
+  // 2 minutes (120,000 ms) timeout after completely leaving the site
+  const LEAVE_SITE_TIMEOUT_MS = 2 * 60 * 1000;
+
   useEffect(() => {
     setIsMac(navigator.platform.toUpperCase().indexOf("MAC") >= 0);
+
+    try {
+      const lastLeaveTime = localStorage.getItem("sabbir_ai_leave_time");
+      const storedHistory = localStorage.getItem("sabbir_ai_history");
+      const storedCmdHistory = localStorage.getItem("sabbir_ai_cmd_history");
+
+      // Check if user left the site completely for more than 2 minutes
+      if (lastLeaveTime && Date.now() - parseInt(lastLeaveTime, 10) > LEAVE_SITE_TIMEOUT_MS) {
+        localStorage.removeItem("sabbir_ai_history");
+        localStorage.removeItem("sabbir_ai_cmd_history");
+        localStorage.removeItem("sabbir_ai_leave_time");
+      } else {
+        if (storedHistory) setHistory(JSON.parse(storedHistory));
+        if (storedCmdHistory) setCmdHistory(JSON.parse(storedCmdHistory));
+        // Reset leave timer since user is currently on site
+        localStorage.removeItem("sabbir_ai_leave_time");
+      }
+    } catch (e) {
+      console.warn("Could not restore AI session", e);
+    }
+
+    // When tab/browser is closed or user navigates away from domain, record leave timestamp
+    const handleUnload = () => {
+      localStorage.setItem("sabbir_ai_leave_time", Date.now().toString());
+    };
+
+    window.addEventListener("beforeunload", handleUnload);
+    return () => window.removeEventListener("beforeunload", handleUnload);
   }, []);
+
+  // Sync active chat history to storage continuously while user is browsing portfolio
+  useEffect(() => {
+    try {
+      localStorage.setItem("sabbir_ai_history", JSON.stringify(history));
+      localStorage.setItem("sabbir_ai_cmd_history", JSON.stringify(cmdHistory));
+    } catch (e) {
+      console.warn("Could not persist AI session", e);
+    }
+  }, [history, cmdHistory]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      const isK = e.key?.toLowerCase() === "k" || e.code === "KeyK";
       const activeEl = document.activeElement;
       const isInput =
         activeEl instanceof HTMLInputElement ||
         activeEl instanceof HTMLTextAreaElement ||
         (activeEl as HTMLElement)?.isContentEditable;
 
-      if (isK && (e.metaKey || e.ctrlKey || !isInput)) {
+      const isK = e.key?.toLowerCase() === "k" || e.code === "KeyK";
+
+      if (isK && ((e.metaKey || e.ctrlKey) || !isInput)) {
         e.preventDefault();
         setIsOpen((prev) => !prev);
       }
     };
 
-    window.addEventListener("keydown", handleKeyDown, true);
-    return () => window.removeEventListener("keydown", handleKeyDown, true);
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
   useEffect(() => {
@@ -137,7 +179,7 @@ export const TerminalAgent: React.FC = () => {
       <TerminalTrigger isMac={isMac} onClick={() => setIsOpen(true)} />
 
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-3 md:p-6 bg-black/60 backdrop-blur-xs animate-in fade-in duration-200">
+        <div className="fixed inset-0 z-[99999] flex items-center justify-center p-3 md:p-6 bg-black/70 backdrop-blur-xs animate-in fade-in duration-200">
           <div
             className={`flex flex-col bg-zinc-950 text-zinc-100 rounded-xl border border-zinc-800 shadow-2xl overflow-hidden transition-all duration-200 ${
               isMaximized
@@ -171,3 +213,5 @@ export const TerminalAgent: React.FC = () => {
     </>
   );
 };
+
+export default TerminalAgent;
