@@ -1,6 +1,41 @@
 @import "tailwindcss";
+@import "highlight.js/styles/github-dark.css";
 @custom-variant dark (&:where(.dark, .dark *));
 @plugin '@tailwindcss/typography';
+
+/* Terminal highlight.js overrides — ensure no white background leaks */
+.hljs {
+  background: transparent !important;
+  padding: 0 !important;
+  font-size: 11px;
+  line-height: 1.6;
+}
+/* Keyword / control flow */
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-built_in,
+.hljs-name,
+.hljs-tag { color: #c792ea; }
+/* Strings */
+.hljs-string,
+.hljs-attr,
+.hljs-symbol,
+.hljs-bullet { color: #c3e88d; }
+/* Numbers, booleans */
+.hljs-number,
+.hljs-literal { color: #f78c6c; }
+/* Comments */
+.hljs-comment,
+.hljs-quote { color: #546e7a; font-style: italic; }
+/* Functions */
+.hljs-title,
+.hljs-section { color: #82aaff; }
+/* Variables */
+.hljs-variable,
+.hljs-template-variable { color: #eeffff; }
+/* Type / class names */
+.hljs-type,
+.hljs-class .hljs-title { color: #ffcb6b; }
 
 /* theme */
 

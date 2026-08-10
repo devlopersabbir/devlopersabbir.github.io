@@ -13,6 +13,21 @@ export const sabbirBio = {
     youtube: "https://youtube.com/stsabbir",
   },
 
+  /**
+   * YouTube channel static ground-truth stats.
+   * Update manually when the numbers change.
+   * These are used as authoritative fallback because YouTube's public RSS API
+   * is hard-capped at 10 items and never exposes total video/subscriber counts.
+   */
+  youtubeStats: {
+    channelId: "UC-kwgB_vfZlCtI_eXijNhMw",
+    channelName: "ST Sabbir",
+    handle: "@STSabbir",
+    subscriberCount: "1.39K",
+    videoCount: 175,
+    channelUrl: "https://youtube.com/@STSabbir",
+  },
+
   skills: [
     // Programming Languages
     "TypeScript",

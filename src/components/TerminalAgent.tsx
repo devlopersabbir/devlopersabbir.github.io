@@ -2,12 +2,12 @@ import React, { useState, useEffect, useRef } from "react";
 import {
   executeStaticCommand,
   fetchAiResponseStream,
-  type HistoryItem,
 } from "../services/terminal-agent-service";
 import { TerminalHeader } from "./terminal/TerminalHeader";
 import { TerminalBody } from "./terminal/TerminalBody";
 import { TerminalInput } from "./terminal/TerminalInput";
 import { TerminalTrigger } from "./terminal/TerminalTrigger";
+import { useTerminalSession } from "./terminal/useTerminalSession";
 
 export const TerminalAgent: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,63 +15,23 @@ export const TerminalAgent: React.FC = () => {
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const [isMac, setIsMac] = useState(false);
-  const [history, setHistory] = useState<HistoryItem[]>([
-    {
-      type: "system",
-      text: `Sabbir OS v2.5.0 (x86_64-pc-linux-gnu)\nType 'help' for available commands or ask any question to chat with Virtual Sabbir.`,
-    },
-  ]);
 
-  const [cmdHistory, setCmdHistory] = useState<string[]>([]);
-  const [cmdIndex, setCmdIndex] = useState<number>(-1);
+  const {
+    history,
+    setHistory,
+    cmdHistory,
+    setCmdHistory,
+    cmdIndex,
+    setCmdIndex,
+    resetSession,
+  } = useTerminalSession();
 
   const bottomRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  // 2 minutes (120,000 ms) timeout after completely leaving the site
-  const LEAVE_SITE_TIMEOUT_MS = 2 * 60 * 1000;
-
   useEffect(() => {
     setIsMac(navigator.platform.toUpperCase().indexOf("MAC") >= 0);
-
-    try {
-      const lastLeaveTime = localStorage.getItem("sabbir_ai_leave_time");
-      const storedHistory = localStorage.getItem("sabbir_ai_history");
-      const storedCmdHistory = localStorage.getItem("sabbir_ai_cmd_history");
-
-      // Check if user left the site completely for more than 2 minutes
-      if (lastLeaveTime && Date.now() - parseInt(lastLeaveTime, 10) > LEAVE_SITE_TIMEOUT_MS) {
-        localStorage.removeItem("sabbir_ai_history");
-        localStorage.removeItem("sabbir_ai_cmd_history");
-        localStorage.removeItem("sabbir_ai_leave_time");
-      } else {
-        if (storedHistory) setHistory(JSON.parse(storedHistory));
-        if (storedCmdHistory) setCmdHistory(JSON.parse(storedCmdHistory));
-        // Reset leave timer since user is currently on site
-        localStorage.removeItem("sabbir_ai_leave_time");
-      }
-    } catch (e) {
-      console.warn("Could not restore AI session", e);
-    }
-
-    // When tab/browser is closed or user navigates away from domain, record leave timestamp
-    const handleUnload = () => {
-      localStorage.setItem("sabbir_ai_leave_time", Date.now().toString());
-    };
-
-    window.addEventListener("beforeunload", handleUnload);
-    return () => window.removeEventListener("beforeunload", handleUnload);
   }, []);
-
-  // Sync active chat history to storage continuously while user is browsing portfolio
-  useEffect(() => {
-    try {
-      localStorage.setItem("sabbir_ai_history", JSON.stringify(history));
-      localStorage.setItem("sabbir_ai_cmd_history", JSON.stringify(cmdHistory));
-    } catch (e) {
-      console.warn("Could not persist AI session", e);
-    }
-  }, [history, cmdHistory]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -137,17 +97,15 @@ export const TerminalAgent: React.FC = () => {
     }
 
     setLoading(true);
-
-    // Create a placeholder response item in history for real-time streaming
     setHistory((prev) => [...prev, { type: "response", text: "" }]);
 
     try {
-      await fetchAiResponseStream(trimmed, history, (chunkText) => {
+      await fetchAiResponseStream(trimmed, history, (chunkText, trace) => {
         setHistory((prev) => {
           const updated = [...prev];
           const lastIdx = updated.length - 1;
           if (lastIdx >= 0 && updated[lastIdx]?.type === "response") {
-            updated[lastIdx] = { type: "response", text: chunkText };
+            updated[lastIdx] = { type: "response", text: chunkText, trace };
           }
           return updated;
         });
@@ -186,24 +144,6 @@ export const TerminalAgent: React.FC = () => {
     }
   };
 
-  const handleResetSession = () => {
-    setHistory([
-      {
-        type: "system",
-        text: `Sabbir OS v2.5.0 (x86_64-pc-linux-gnu)\nType 'help' for available commands or ask any question to chat with Virtual Sabbir.`,
-      },
-    ]);
-    setCmdHistory([]);
-    setCmdIndex(-1);
-    try {
-      localStorage.removeItem("sabbir_ai_history");
-      localStorage.removeItem("sabbir_ai_cmd_history");
-      localStorage.removeItem("sabbir_ai_leave_time");
-    } catch (e) {
-      console.warn("Could not clear AI session cache", e);
-    }
-  };
-
   return (
     <>
       <TerminalTrigger isMac={isMac} onClick={() => setIsOpen(true)} />
@@ -221,7 +161,7 @@ export const TerminalAgent: React.FC = () => {
               isMaximized={isMaximized}
               onClose={() => setIsOpen(false)}
               onToggleMaximize={() => setIsMaximized(!isMaximized)}
-              onResetSession={handleResetSession}
+              onResetSession={resetSession}
             />
 
             <TerminalBody
