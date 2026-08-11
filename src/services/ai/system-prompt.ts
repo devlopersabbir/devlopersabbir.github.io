@@ -22,17 +22,17 @@ export const buildSystemPrompt = (
   const yt = sabbirBio.youtubeStats;
 
   // ── Highlighted top skills ──────────────────────────────────────────────────
-  const topSkills = sabbirBio.skills.slice(0, 45).join(", ");
+  const topSkills = sabbirBio.skills.slice(0, 20).join(", ");
 
   // ── Featured projects ───────────────────────────────────────────────────────
   const featuredProjects = sabbirBio.projects
-    .slice(0, 15)
+    .slice(0, 5)
     .map((p) => `  • ${p.name}: ${p.description}`)
     .join("\n");
 
   // ── Key experience ──────────────────────────────────────────────────────────
   const keyExperience = sabbirBio.experience
-    .slice(0, 8)
+    .slice(0, 4)
     .map((e) => ("role" in e ? `  • ${e.role} @ ${e.company} (${e.period})` : `  • ${e.milestone}`))
     .join("\n");
 
