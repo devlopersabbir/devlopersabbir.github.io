@@ -1,138 +1,192 @@
 [
   {
-    "title": "nodejs-mail-sender",
-    "description": "NodeJs Mail sender",
+    "title": "deno-crash-course",
+    "description": "DENO - Crash Course ",
+    "date": "Aug 2026",
+    "tech": [
+      "TypeScript",
+      "JavaScript"
+    ],
+    "link": "https://sabbirhossa-deno-crash-13.deno.dev/",
+    "repo_link": "https://github.com/devlopersabbir/deno-crash-course"
+  },
+  {
+    "title": "data-structure-algorithm",
+    "description": "DSA with (c)",
+    "date": "Aug 2026",
+    "tech": [
+      "C"
+    ],
+    "link": "https://github.com/devlopersabbir/data-structure-algorithm",
+    "repo_link": "https://github.com/devlopersabbir/data-structure-algorithm"
+  },
+  {
+    "title": "dart-all-about",
+    "description": "Learn dart programming lagnuage.",
+    "date": "Aug 2026",
+    "tech": [
+      "Dart"
+    ],
+    "link": "https://github.com/devlopersabbir/dart-all-about",
+    "repo_link": "https://github.com/devlopersabbir/dart-all-about"
+  },
+  {
+    "title": "csv-to-sql-insert",
+    "description": "Provide table data as a CSV (comma-separated values) file and output a SQL insert statement for a table with the same name as the file.",
+    "date": "Aug 2026",
+    "tech": [
+      "TypeScript",
+      "JavaScript"
+    ],
+    "link": "https://github.com/devlopersabbir/csv-to-sql-insert",
+    "repo_link": "https://github.com/devlopersabbir/csv-to-sql-insert"
+  },
+  {
+    "title": "cross-browser-extension-builder",
+    "description": "Cross Platform Browser extension builder with React + TypeScript",
+    "date": "Aug 2026",
+    "tech": [
+      "TypeScript",
+      "HTML",
+      "JavaScript",
+      "CSS"
+    ],
+    "link": "https://github.com/devlopersabbir/cross-browser-extension-builder",
+    "repo_link": "https://github.com/devlopersabbir/cross-browser-extension-builder"
+  },
+  {
+    "title": "Create-freelancer.com-Login-Pages-In-HTML-and-CSS-st-sabbir",
+    "description": " I have shown you how to easily design freelancer.com login pages with HTML and CSS. I have explained it is very simple and simple Bengali words. I hope after watching this video you can easily create it without any coding.",
+    "date": "Aug 2026",
+    "tech": [
+      "CSS",
+      "HTML",
+      "JavaScript"
+    ],
+    "link": "https://github.com/devlopersabbir/Create-freelancer.com-Login-Pages-In-HTML-and-CSS-st-sabbir",
+    "repo_link": "https://github.com/devlopersabbir/Create-freelancer.com-Login-Pages-In-HTML-and-CSS-st-sabbir"
+  },
+  {
+    "title": "count-native-app",
+    "description": "Use this tally clicker for counting people as they go into an event or to keep track of multiple people in the outdoors, at meetings. This clicker counter can be used to count anything: sheep, pets, mushrooms picked, trees climbed, corn planted, students, cars, wins, goals, laps ran or walked, etc.",
     "date": "Aug 2026",
     "tech": [
       "TypeScript"
     ],
-    "link": "https://nodejs-mail-sender-ten.vercel.app",
-    "repo_link": "https://github.com/devlopersabbir/nodejs-mail-sender"
+    "link": "https://play.google.com/store/apps/details?id=com.devlopersabbir.countnativeapp",
+    "repo_link": "https://github.com/devlopersabbir/count-native-app"
   },
   {
-    "title": "website-blocker",
-    "description": "Website blocker",
-    "date": "Aug 2026",
-    "tech": [
-      "TypeScript",
-      "HTML",
-      "JavaScript"
-    ],
-    "link": "https://github.com/devlopersabbir/website-blocker",
-    "repo_link": "https://github.com/devlopersabbir/website-blocker"
-  },
-  {
-    "title": "spring-boot-rest-api",
-    "description": "Java Spring Boot Rest API",
-    "date": "Aug 2026",
-    "tech": [
-      "Java"
-    ],
-    "link": "https://github.com/devlopersabbir/spring-boot-rest-api",
-    "repo_link": "https://github.com/devlopersabbir/spring-boot-rest-api"
-  },
-  {
-    "title": "simple-translate",
-    "description": "WebExtensions for translating text on web pages",
-    "date": "Aug 2026",
-    "tech": [
-      "JavaScript",
-      "SCSS",
-      "HTML"
-    ],
-    "link": "http://simple-translate.sienori.com/",
-    "repo_link": "https://github.com/devlopersabbir/simple-translate"
-  },
-  {
-    "title": "shall-scripting",
-    "description": "A Bourne Shell Programming / Scripting Tutorial for learning about using the Unix shell",
-    "date": "Aug 2026",
-    "tech": [
-      "Shell",
-      "R"
-    ],
-    "link": "https://github.com/devlopersabbir/shall-scripting",
-    "repo_link": "https://github.com/devlopersabbir/shall-scripting"
-  },
-  {
-    "title": "sabbir-code-snippet",
-    "description": "This is a simple extension that provides code snippets for all programming, framework. It helps to speed up the coding process by providing handy snippets for commonly 😍",
-    "date": "Aug 2026",
-    "tech": [],
-    "link": "https://marketplace.visualstudio.com/items?itemName=devlopersabbir.sabbir-code-snippet",
-    "repo_link": "https://github.com/devlopersabbir/sabbir-code-snippet"
-  },
-  {
-    "title": "react-19",
-    "description": "create react app git clone repository",
+    "title": "color-picker-google-chrome-extension",
+    "description": "Google chrome color picker extension with only javascript and html css",
     "date": "Aug 2026",
     "tech": [
       "CSS",
-      "TypeScript",
       "JavaScript",
       "HTML"
     ],
-    "link": "create-react-app-rho-sable.vercel.app",
-    "repo_link": "https://github.com/devlopersabbir/react-19"
+    "link": "https://github.com/devlopersabbir/color-picker-google-chrome-extension",
+    "repo_link": "https://github.com/devlopersabbir/color-picker-google-chrome-extension"
   },
   {
-    "title": "python-api-development",
-    "description": "A python FastAPI framework",
-    "date": "Aug 2026",
-    "tech": [
-      "Python",
-      "HTML"
-    ],
-    "link": "https://github.com/devlopersabbir/python-api-development",
-    "repo_link": "https://github.com/devlopersabbir/python-api-development"
-  },
-  {
-    "title": "profit-calculator",
-    "description": "Rust, with slint",
-    "date": "Aug 2026",
-    "tech": [
-      "Slint",
-      "Rust"
-    ],
-    "link": "https://github.com/devlopersabbir/profit-calculator",
-    "repo_link": "https://github.com/devlopersabbir/profit-calculator"
-  },
-  {
-    "title": "multi-vendor-full-stack-ecommerce",
-    "description": "Full-stack multi-vendor e-commerce website with #typescript react typeorm",
-    "date": "Aug 2026",
-    "tech": [
-      "TypeScript",
-      "HTML",
-      "JavaScript"
-    ],
-    "link": "https://multi-vendor-full-stack-ecommerce-client.vercel.app",
-    "repo_link": "https://github.com/devlopersabbir/multi-vendor-full-stack-ecommerce"
-  },
-  {
-    "title": "simple-cors-platform-calculator-app",
-    "description": "A simple cors platform calculator app. This app supported for both like Android, iOS, macOS, Windows, also chrome extesnion",
+    "title": "chrome-extension-tools",
+    "description": "Bundling Chrome Extensions can be pretty complex. It doesn't have to be.",
     "date": "Aug 2026",
     "tech": [
       "TypeScript",
       "JavaScript",
       "HTML",
+      "CSS",
+      "Svelte",
+      "Vue",
+      "MDX"
+    ],
+    "link": "https://crxjs.dev/vite-plugin",
+    "repo_link": "https://github.com/devlopersabbir/chrome-extension-tools"
+  },
+  {
+    "title": "chrome-extension-icon-generator",
+    "description": "Easily create the multiple icons in their sizes you need for your chrome extension",
+    "date": "Aug 2026",
+    "tech": [
+      "TypeScript",
+      "JavaScript",
       "CSS"
     ],
-    "link": "https://github.com/devlopersabbir/simple-cors-platform-calculator-app",
-    "repo_link": "https://github.com/devlopersabbir/simple-cors-platform-calculator-app"
+    "link": "https://browser-extension-icon-generator.vercel.app",
+    "repo_link": "https://github.com/devlopersabbir/chrome-extension-icon-generator"
   },
   {
-    "title": "terrorserver",
-    "description": "Terror Server is a small production-oriented HTTP router, reverse proxy, static file server, and automatic TLS gateway packaged as a single Go binary.",
+    "title": "chakra-ui-docs",
+    "description": "Documentation website for chakra ui",
+    "date": "Aug 2026",
+    "tech": [
+      "MDX",
+      "TypeScript",
+      "JavaScript",
+      "Handlebars",
+      "Shell"
+    ],
+    "link": "https://chakra-ui.com",
+    "repo_link": "https://github.com/devlopersabbir/chakra-ui-docs"
+  },
+  {
+    "title": "browserplugins",
+    "description": "Your trusted source for premium browser extensions. Handcrafted with care, tested for quality, and designed to enhance your digital experience.",
+    "date": "Aug 2026",
+    "tech": [
+      "TypeScript",
+      "JavaScript",
+      "CSS",
+      "Mermaid"
+    ],
+    "link": "https://browserplugins.vercel.app",
+    "repo_link": "https://github.com/devlopersabbir/browserplugins"
+  },
+  {
+    "title": "c-sharp-app",
+    "description": "C-sharp practice app.",
+    "date": "Aug 2026",
+    "tech": [
+      "C#"
+    ],
+    "link": "https://github.com/devlopersabbir/c-sharp-app",
+    "repo_link": "https://github.com/devlopersabbir/c-sharp-app"
+  },
+  {
+    "title": "buy-me-coffee-clone",
+    "description": "Online payment application",
+    "date": "Aug 2026",
+    "tech": [
+      "TypeScript",
+      "CSS",
+      "JavaScript"
+    ],
+    "link": "https://github.com/devlopersabbir/buy-me-coffee-clone",
+    "repo_link": "https://github.com/devlopersabbir/buy-me-coffee-clone"
+  },
+  {
+    "title": "breez",
+    "description": "Instant, lightweight local tunneling for developers",
     "date": "Aug 2026",
     "tech": [
       "Go",
+      "PowerShell",
       "Shell",
-      "HTML",
       "Makefile"
     ],
-    "link": "https://terrorserver.vercel.app",
-    "repo_link": "https://github.com/devlopersabbir/terrorserver"
+    "link": "https://github.com/devlopersabbir/breez",
+    "repo_link": "https://github.com/devlopersabbir/breez"
+  },
+  {
+    "title": "BookListApp",
+    "description": "Vanilla JavaScript Book List simple app",
+    "date": "Aug 2026",
+    "tech": [
+      "HTML",
+      "JavaScript"
+    ],
+    "link": "https://github.com/devlopersabbir/BookListApp",
+    "repo_link": "https://github.com/devlopersabbir/BookListApp"
   }
 ]
