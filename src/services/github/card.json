@@ -1,5 +1,43 @@
 [
   {
+    "title": "devlopersabbir",
+    "description": "About myself 🙂",
+    "date": "Aug 2026",
+    "tech": [],
+    "link": "https://github.com/devlopersabbir/devlopersabbir",
+    "repo_link": "https://github.com/devlopersabbir/devlopersabbir"
+  },
+  {
+    "title": "dev-http-logger",
+    "description": "We can able to log our http all history like METHOD request PATH etc with this middleware",
+    "date": "Aug 2026",
+    "tech": [
+      "TypeScript"
+    ],
+    "link": "https://www.npmjs.com/package/dev-http-logger",
+    "repo_link": "https://github.com/devlopersabbir/dev-http-logger"
+  },
+  {
+    "title": "dev-unique-id",
+    "description": "Unique ID generator npm package",
+    "date": "Aug 2026",
+    "tech": [
+      "TypeScript"
+    ],
+    "link": "https://devlopersabbir.github.io/dev-unique-id/",
+    "repo_link": "https://github.com/devlopersabbir/dev-unique-id"
+  },
+  {
+    "title": "dev-auth-middleware-jwt",
+    "description": "Auth middleware with JWT refresh token",
+    "date": "Aug 2026",
+    "tech": [
+      "TypeScript"
+    ],
+    "link": "https://github.com/devlopersabbir/dev-auth-middleware-jwt",
+    "repo_link": "https://github.com/devlopersabbir/dev-auth-middleware-jwt"
+  },
+  {
     "title": "deno-crash-course",
     "description": "DENO - Crash Course ",
     "date": "Aug 2026",
@@ -152,41 +190,5 @@
     ],
     "link": "https://github.com/devlopersabbir/c-sharp-app",
     "repo_link": "https://github.com/devlopersabbir/c-sharp-app"
-  },
-  {
-    "title": "buy-me-coffee-clone",
-    "description": "Online payment application",
-    "date": "Aug 2026",
-    "tech": [
-      "TypeScript",
-      "CSS",
-      "JavaScript"
-    ],
-    "link": "https://github.com/devlopersabbir/buy-me-coffee-clone",
-    "repo_link": "https://github.com/devlopersabbir/buy-me-coffee-clone"
-  },
-  {
-    "title": "breez",
-    "description": "Instant, lightweight local tunneling for developers",
-    "date": "Aug 2026",
-    "tech": [
-      "Go",
-      "PowerShell",
-      "Shell",
-      "Makefile"
-    ],
-    "link": "https://github.com/devlopersabbir/breez",
-    "repo_link": "https://github.com/devlopersabbir/breez"
-  },
-  {
-    "title": "BookListApp",
-    "description": "Vanilla JavaScript Book List simple app",
-    "date": "Aug 2026",
-    "tech": [
-      "HTML",
-      "JavaScript"
-    ],
-    "link": "https://github.com/devlopersabbir/BookListApp",
-    "repo_link": "https://github.com/devlopersabbir/BookListApp"
   }
 ]
