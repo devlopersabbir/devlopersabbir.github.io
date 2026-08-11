@@ -137,15 +137,5 @@
     ],
     "link": "https://github.com/devlopersabbir/spring-crud-api",
     "repo_link": "https://github.com/devlopersabbir/spring-crud-api"
-  },
-  {
-    "title": "spring-jwt",
-    "description": "Java Spring boot jwt security",
-    "date": "Aug 2026",
-    "tech": [
-      "Java"
-    ],
-    "link": "https://github.com/devlopersabbir/spring-jwt",
-    "repo_link": "https://github.com/devlopersabbir/spring-jwt"
   }
 ]
