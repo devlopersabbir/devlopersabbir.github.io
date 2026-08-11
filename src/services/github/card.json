@@ -1,194 +1,163 @@
 [
   {
-    "title": "devlopersabbir",
-    "description": "About myself 🙂",
-    "date": "Aug 2026",
-    "tech": [],
-    "link": "https://github.com/devlopersabbir/devlopersabbir",
-    "repo_link": "https://github.com/devlopersabbir/devlopersabbir"
-  },
-  {
-    "title": "dev-http-logger",
-    "description": "We can able to log our http all history like METHOD request PATH etc with this middleware",
+    "title": "stsabbir-npm",
+    "description": "simple npm package",
     "date": "Aug 2026",
     "tech": [
       "TypeScript"
     ],
-    "link": "https://www.npmjs.com/package/dev-http-logger",
-    "repo_link": "https://github.com/devlopersabbir/dev-http-logger"
+    "link": "https://github.com/devlopersabbir/stsabbir-npm",
+    "repo_link": "https://github.com/devlopersabbir/stsabbir-npm"
   },
   {
-    "title": "dev-unique-id",
-    "description": "Unique ID generator npm package",
+    "title": "spring-crud-api",
+    "description": "Java Spring CRUD API",
     "date": "Aug 2026",
     "tech": [
-      "TypeScript"
+      "Java",
+      "Dockerfile"
     ],
-    "link": "https://devlopersabbir.github.io/dev-unique-id/",
-    "repo_link": "https://github.com/devlopersabbir/dev-unique-id"
+    "link": "https://github.com/devlopersabbir/spring-crud-api",
+    "repo_link": "https://github.com/devlopersabbir/spring-crud-api"
   },
   {
-    "title": "dev-auth-middleware-jwt",
-    "description": "Auth middleware with JWT refresh token",
+    "title": "spring-jwt",
+    "description": "Java Spring boot jwt security",
     "date": "Aug 2026",
     "tech": [
-      "TypeScript"
+      "Java"
     ],
-    "link": "https://github.com/devlopersabbir/dev-auth-middleware-jwt",
-    "repo_link": "https://github.com/devlopersabbir/dev-auth-middleware-jwt"
+    "link": "https://github.com/devlopersabbir/spring-jwt",
+    "repo_link": "https://github.com/devlopersabbir/spring-jwt"
   },
   {
-    "title": "deno-crash-course",
-    "description": "DENO - Crash Course ",
+    "title": "spring-boot-rest-api",
+    "description": "Java Spring Boot Rest API",
+    "date": "Aug 2026",
+    "tech": [
+      "Java"
+    ],
+    "link": "https://github.com/devlopersabbir/spring-boot-rest-api",
+    "repo_link": "https://github.com/devlopersabbir/spring-boot-rest-api"
+  },
+  {
+    "title": "socket-io",
+    "description": "WebSocket | Socket.io",
     "date": "Aug 2026",
     "tech": [
       "TypeScript",
-      "JavaScript"
-    ],
-    "link": "https://sabbirhossa-deno-crash-13.deno.dev/",
-    "repo_link": "https://github.com/devlopersabbir/deno-crash-course"
-  },
-  {
-    "title": "data-structure-algorithm",
-    "description": "DSA with (c)",
-    "date": "Aug 2026",
-    "tech": [
-      "C"
-    ],
-    "link": "https://github.com/devlopersabbir/data-structure-algorithm",
-    "repo_link": "https://github.com/devlopersabbir/data-structure-algorithm"
-  },
-  {
-    "title": "dart-all-about",
-    "description": "Learn dart programming lagnuage.",
-    "date": "Aug 2026",
-    "tech": [
-      "Dart"
-    ],
-    "link": "https://github.com/devlopersabbir/dart-all-about",
-    "repo_link": "https://github.com/devlopersabbir/dart-all-about"
-  },
-  {
-    "title": "csv-to-sql-insert",
-    "description": "Provide table data as a CSV (comma-separated values) file and output a SQL insert statement for a table with the same name as the file.",
-    "date": "Aug 2026",
-    "tech": [
-      "TypeScript",
-      "JavaScript"
-    ],
-    "link": "https://github.com/devlopersabbir/csv-to-sql-insert",
-    "repo_link": "https://github.com/devlopersabbir/csv-to-sql-insert"
-  },
-  {
-    "title": "cross-browser-extension-builder",
-    "description": "Cross Platform Browser extension builder with React + TypeScript",
-    "date": "Aug 2026",
-    "tech": [
-      "TypeScript",
+      "JavaScript",
       "HTML",
+      "CSS"
+    ],
+    "link": "https://github.com/devlopersabbir/socket-io",
+    "repo_link": "https://github.com/devlopersabbir/socket-io"
+  },
+  {
+    "title": "simple-cors-platform-calculator-app",
+    "description": "A simple cors platform calculator app. This app supported for both like Android, iOS, macOS, Windows, also chrome extesnion",
+    "date": "Aug 2026",
+    "tech": [
+      "TypeScript",
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
+    "link": "https://github.com/devlopersabbir/simple-cors-platform-calculator-app",
+    "repo_link": "https://github.com/devlopersabbir/simple-cors-platform-calculator-app"
+  },
+  {
+    "title": "simple-translate",
+    "description": "WebExtensions for translating text on web pages",
+    "date": "Aug 2026",
+    "tech": [
+      "JavaScript",
+      "SCSS",
+      "HTML"
+    ],
+    "link": "http://simple-translate.sienori.com/",
+    "repo_link": "https://github.com/devlopersabbir/simple-translate"
+  },
+  {
+    "title": "resume",
+    "description": "resume",
+    "date": "Aug 2026",
+    "tech": [
       "JavaScript",
       "CSS"
     ],
-    "link": "https://github.com/devlopersabbir/cross-browser-extension-builder",
-    "repo_link": "https://github.com/devlopersabbir/cross-browser-extension-builder"
+    "link": "https://github.com/devlopersabbir/resume",
+    "repo_link": "https://github.com/devlopersabbir/resume"
   },
   {
-    "title": "Create-freelancer.com-Login-Pages-In-HTML-and-CSS-st-sabbir",
-    "description": " I have shown you how to easily design freelancer.com login pages with HTML and CSS. I have explained it is very simple and simple Bengali words. I hope after watching this video you can easily create it without any coding.",
+    "title": "react-tenstack-table",
+    "description": "Full Customizable and full functionality react tenstack table ",
     "date": "Aug 2026",
     "tech": [
+      "TypeScript",
+      "JavaScript",
+      "HTML"
+    ],
+    "link": "https://github.com/devlopersabbir/react-tenstack-table",
+    "repo_link": "https://github.com/devlopersabbir/react-tenstack-table"
+  },
+  {
+    "title": "react-documentation",
+    "description": "In this repo, I will share my react knowledge as much as possible. hope it will help you :) ",
+    "date": "Aug 2026",
+    "tech": [],
+    "link": "https://github.com/devlopersabbir/react-documentation",
+    "repo_link": "https://github.com/devlopersabbir/react-documentation"
+  },
+  {
+    "title": "react-otp-input",
+    "description": ":heavy_check_mark:  OTP Input Component for React",
+    "date": "Aug 2026",
+    "tech": [
+      "TypeScript",
       "CSS",
       "HTML",
       "JavaScript"
     ],
-    "link": "https://github.com/devlopersabbir/Create-freelancer.com-Login-Pages-In-HTML-and-CSS-st-sabbir",
-    "repo_link": "https://github.com/devlopersabbir/Create-freelancer.com-Login-Pages-In-HTML-and-CSS-st-sabbir"
+    "link": "http://devfolioco.github.io/react-otp-input",
+    "repo_link": "https://github.com/devlopersabbir/react-otp-input"
   },
   {
-    "title": "count-native-app",
-    "description": "Use this tally clicker for counting people as they go into an event or to keep track of multiple people in the outdoors, at meetings. This clicker counter can be used to count anything: sheep, pets, mushrooms picked, trees climbed, corn planted, students, cars, wins, goals, laps ran or walked, etc.",
+    "title": "react-chrome-extension-tools-with-chakra-ui",
+    "description": "This is the tools to create any kind of chrome extension with react js and chakra ui components based UI library",
     "date": "Aug 2026",
     "tech": [
-      "TypeScript"
+      "TypeScript",
+      "HTML",
+      "JavaScript"
     ],
-    "link": "https://play.google.com/store/apps/details?id=com.devlopersabbir.countnativeapp",
-    "repo_link": "https://github.com/devlopersabbir/count-native-app"
+    "link": "https://github.com/devlopersabbir/react-chrome-extension-tools-with-chakra-ui",
+    "repo_link": "https://github.com/devlopersabbir/react-chrome-extension-tools-with-chakra-ui"
   },
   {
-    "title": "color-picker-google-chrome-extension",
-    "description": "Google chrome color picker extension with only javascript and html css",
+    "title": "react-19",
+    "description": "create react app git clone repository",
     "date": "Aug 2026",
     "tech": [
+      "CSS",
+      "TypeScript",
+      "JavaScript",
+      "HTML"
+    ],
+    "link": "create-react-app-rho-sable.vercel.app",
+    "repo_link": "https://github.com/devlopersabbir/react-19"
+  },
+  {
+    "title": "randomkana",
+    "description": "A web app that will randomly generate Japanese hiragana, katakana, and romaji to be used as a quiz for Japanese language learning",
+    "date": "Aug 2026",
+    "tech": [
+      "TypeScript",
       "CSS",
       "JavaScript",
       "HTML"
     ],
-    "link": "https://github.com/devlopersabbir/color-picker-google-chrome-extension",
-    "repo_link": "https://github.com/devlopersabbir/color-picker-google-chrome-extension"
-  },
-  {
-    "title": "chrome-extension-tools",
-    "description": "Bundling Chrome Extensions can be pretty complex. It doesn't have to be.",
-    "date": "Aug 2026",
-    "tech": [
-      "TypeScript",
-      "JavaScript",
-      "HTML",
-      "CSS",
-      "Svelte",
-      "Vue",
-      "MDX"
-    ],
-    "link": "https://crxjs.dev/vite-plugin",
-    "repo_link": "https://github.com/devlopersabbir/chrome-extension-tools"
-  },
-  {
-    "title": "chrome-extension-icon-generator",
-    "description": "Easily create the multiple icons in their sizes you need for your chrome extension",
-    "date": "Aug 2026",
-    "tech": [
-      "TypeScript",
-      "JavaScript",
-      "CSS"
-    ],
-    "link": "https://browser-extension-icon-generator.vercel.app",
-    "repo_link": "https://github.com/devlopersabbir/chrome-extension-icon-generator"
-  },
-  {
-    "title": "chakra-ui-docs",
-    "description": "Documentation website for chakra ui",
-    "date": "Aug 2026",
-    "tech": [
-      "MDX",
-      "TypeScript",
-      "JavaScript",
-      "Handlebars",
-      "Shell"
-    ],
-    "link": "https://chakra-ui.com",
-    "repo_link": "https://github.com/devlopersabbir/chakra-ui-docs"
-  },
-  {
-    "title": "browserplugins",
-    "description": "Your trusted source for premium browser extensions. Handcrafted with care, tested for quality, and designed to enhance your digital experience.",
-    "date": "Aug 2026",
-    "tech": [
-      "TypeScript",
-      "JavaScript",
-      "CSS",
-      "Mermaid"
-    ],
-    "link": "https://browserplugins.vercel.app",
-    "repo_link": "https://github.com/devlopersabbir/browserplugins"
-  },
-  {
-    "title": "c-sharp-app",
-    "description": "C-sharp practice app.",
-    "date": "Aug 2026",
-    "tech": [
-      "C#"
-    ],
-    "link": "https://github.com/devlopersabbir/c-sharp-app",
-    "repo_link": "https://github.com/devlopersabbir/c-sharp-app"
+    "link": "https://randomkana.vercel.app",
+    "repo_link": "https://github.com/devlopersabbir/randomkana"
   }
 ]
