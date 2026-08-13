@@ -6,7 +6,7 @@ on:
       - main
   schedule:
     # Rebuild and redeploy every 6 hours
-    - cron: "0 */6 * * *"
+    - cron: "0 */3 * * *"
   workflow_dispatch:
 
 permissions:
