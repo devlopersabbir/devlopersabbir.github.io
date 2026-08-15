@@ -4,10 +4,6 @@ on:
   push:
     branches:
       - main
-  schedule:
-    # Rebuild and redeploy every 3 hours
-    - cron: "0 */2 * * *"
-  workflow_dispatch:
 
 permissions:
   contents: read
