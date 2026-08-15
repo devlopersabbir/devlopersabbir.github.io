@@ -3,7 +3,7 @@ name: Website Keep-Alive & Health Check
 on:
   schedule:
     # Runs every 15 minutes to keep site/services warm
-    - cron: "*/15 * * * *"
+    - cron: "0 * * * *"
   workflow_dispatch:
 
 jobs:
