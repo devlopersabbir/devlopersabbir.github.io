@@ -1,12 +1,15 @@
 export const about = {
   name: "Sabbir Hossain Shuvo",
-  title: "Software Engineer | Leadership  - API - DevOps - System Design",
+  title: "DevOps Engineer | Cloud Infrastructure | Automation & Reliability",
   description: `
-  I’m Sabbir, a backend-focused software engineer and engineering leader building scalable, production-grade systems used in real-world environments.
-  I specialize in designing and delivering high- performance backend architectures, microservice systems, and DevOps-driven infrastructure.My focus is simple: build systems that scale, perform, and don’t break under pressure.
-  Over the years, I’ve evolved from backend development into leading engineering teams, owning architecture decisions, and driving end - to - end delivery across complex products.I work across distributed systems, APIs, cloud infrastructure, and automation with a strong focus on reliability and system design.
-  My stack is not the identity engineering is.I use backend, DevOps, and system design principles to solve problems, not frameworks.
-  If a system needs to be fast, scalable, and production - ready that’s where I operate.
-  Let’s build something that actually performs.`,
+  I’m a DevOps Engineer with 4+ years of experience in software engineering and more than a year working hands-on with DevOps, cloud infrastructure, and automation.
+
+  I started my career building software and backend systems, which eventually led me deeper into the infrastructure side — servers, cloud architecture, networking, containers, CI/CD, and reliability.
+
+  I enjoy figuring out how things work under the hood, solving infrastructure problems, troubleshooting production issues, automating repetitive work, and building systems that are reliable and easy to scale.
+
+  I work mainly with AWS, Linux, Docker, Kubernetes, Terraform, CI/CD, monitoring, and observability, while continuing to explore system design, distributed systems, cloud architecture, and infrastructure automation.
+
+  For me, DevOps isn't just about using tools. It's about understanding the whole system, knowing how to troubleshoot it, and making it work better.`,
   image: "/sabbir-profile.jpeg",
 } as const;
