@@ -1,5 +1,73 @@
 [
   {
+    "title": "devlopersabbir",
+    "description": "About myself 🙂",
+    "date": "Aug 2026",
+    "tech": [],
+    "link": "https://github.com/devlopersabbir/devlopersabbir",
+    "repo_link": "https://github.com/devlopersabbir/devlopersabbir"
+  },
+  {
+    "title": "java-bank-account-app",
+    "description": "Simple console java bank account app with full functionality ",
+    "date": "Aug 2026",
+    "tech": [
+      "Java"
+    ],
+    "link": "https://github.com/devlopersabbir/java-bank-account-app",
+    "repo_link": "https://github.com/devlopersabbir/java-bank-account-app"
+  },
+  {
+    "title": "image-genrator-extension",
+    "description": "AI image generator cors platfrom browser extension",
+    "date": "Aug 2026",
+    "tech": [
+      "TypeScript",
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
+    "link": "https://github.com/devlopersabbir/image-genrator-extension",
+    "repo_link": "https://github.com/devlopersabbir/image-genrator-extension"
+  },
+  {
+    "title": "extension-builder",
+    "description": "Cross platform web extension builder.",
+    "date": "Aug 2026",
+    "tech": [
+      "JavaScript",
+      "HTML",
+      "TypeScript"
+    ],
+    "link": "https://github.com/devlopersabbir/extension-builder",
+    "repo_link": "https://github.com/devlopersabbir/extension-builder"
+  },
+  {
+    "title": "dribbble-clone",
+    "description": "Full-stack next 13 dribbble clone ",
+    "date": "Aug 2026",
+    "tech": [
+      "TypeScript",
+      "CSS",
+      "JavaScript"
+    ],
+    "link": "https://dribbble-clone-roan.vercel.app",
+    "repo_link": "https://github.com/devlopersabbir/dribbble-clone"
+  },
+  {
+    "title": "breez",
+    "description": "Instant, lightweight local tunneling for developers",
+    "date": "Aug 2026",
+    "tech": [
+      "Go",
+      "PowerShell",
+      "Shell",
+      "Makefile"
+    ],
+    "link": "https://github.com/devlopersabbir/breez",
+    "repo_link": "https://github.com/devlopersabbir/breez"
+  },
+  {
     "title": "world-time-clock",
     "description": "World Time Clock: Your Ultimate Digital Companion for Global Time Management",
     "date": "Aug 2026",
@@ -16,10 +84,7 @@
     "title": "windows-linux-macos-youtube-video-downloader-app",
     "description": "Electron cors platform youtube video downloader app.",
     "date": "Aug 2026",
-    "tech": [
-      "TypeScript",
-      "HTML"
-    ],
+    "tech": [],
     "link": "https://github.com/devlopersabbir/windows-linux-macos-youtube-video-downloader-app",
     "repo_link": "https://github.com/devlopersabbir/windows-linux-macos-youtube-video-downloader-app"
   },
@@ -27,19 +92,7 @@
     "title": "vpcm",
     "description": "A zero-dependency, CGO-free, single-binary CLI and REST API engine built in Go to seamlessly manage, document, and connect to your remote virtual private servers.",
     "date": "Aug 2026",
-    "tech": [
-      "Go",
-      "TypeScript",
-      "Shell",
-      "NSIS",
-      "PowerShell",
-      "JavaScript",
-      "Makefile",
-      "CSS",
-      "Ruby",
-      "Dockerfile",
-      "HTML"
-    ],
+    "tech": [],
     "link": "https://github.com/devlopersabbir/vpcm",
     "repo_link": "https://github.com/devlopersabbir/vpcm"
   },
@@ -47,11 +100,7 @@
     "title": "website-blocker",
     "description": "Website blocker",
     "date": "Aug 2026",
-    "tech": [
-      "TypeScript",
-      "HTML",
-      "JavaScript"
-    ],
+    "tech": [],
     "link": "https://github.com/devlopersabbir/website-blocker",
     "repo_link": "https://github.com/devlopersabbir/website-blocker"
   },
@@ -59,13 +108,7 @@
     "title": "tview-cli",
     "description": "tview is a terminal-based candlestick chart viewer built with Go, AsciiGraph, and Cobra. No browser required.",
     "date": "Aug 2026",
-    "tech": [
-      "Go",
-      "Ruby",
-      "Shell",
-      "PowerShell",
-      "Makefile"
-    ],
+    "tech": [],
     "link": "https://github.com/devlopersabbir/tview-cli",
     "repo_link": "https://github.com/devlopersabbir/tview-cli"
   },
@@ -73,69 +116,8 @@
     "title": "video-downloader-extension",
     "description": "YouTube Video downloader chrome extension using CRXjs vite plugin",
     "date": "Aug 2026",
-    "tech": [
-      "TypeScript",
-      "JavaScript",
-      "HTML"
-    ],
+    "tech": [],
     "link": "https://youtube-video-downloader-chrome-extension.vercel.app",
     "repo_link": "https://github.com/devlopersabbir/video-downloader-extension"
-  },
-  {
-    "title": "terrorserver",
-    "description": "Terror Server is a small production-oriented HTTP router, reverse proxy, static file server, and automatic TLS gateway packaged as a single Go binary.",
-    "date": "Aug 2026",
-    "tech": [
-      "Go",
-      "Shell",
-      "HTML",
-      "Makefile"
-    ],
-    "link": "https://terrorserver.vercel.app",
-    "repo_link": "https://github.com/devlopersabbir/terrorserver"
-  },
-  {
-    "title": "swift-all-about",
-    "description": "Learn swift programming language basic to advance",
-    "date": "Aug 2026",
-    "tech": [
-      "Swift"
-    ],
-    "link": "https://github.com/devlopersabbir/swift-all-about",
-    "repo_link": "https://github.com/devlopersabbir/swift-all-about"
-  },
-  {
-    "title": "tab-refresher-pro",
-    "description": "Tab Refresher Pro is a browser extension for configuring reliable per-tab auto-refresh jobs with presets, countdown badges, page overlays, and saved refresh profiles.",
-    "date": "Aug 2026",
-    "tech": [
-      "TypeScript",
-      "CSS",
-      "HTML",
-      "Shell"
-    ],
-    "link": "https://github.com/devlopersabbir/tab-refresher-pro",
-    "repo_link": "https://github.com/devlopersabbir/tab-refresher-pro"
-  },
-  {
-    "title": "stsabbir-npm",
-    "description": "simple npm package",
-    "date": "Aug 2026",
-    "tech": [
-      "TypeScript"
-    ],
-    "link": "https://github.com/devlopersabbir/stsabbir-npm",
-    "repo_link": "https://github.com/devlopersabbir/stsabbir-npm"
-  },
-  {
-    "title": "spring-crud-api",
-    "description": "Java Spring CRUD API",
-    "date": "Aug 2026",
-    "tech": [
-      "Java",
-      "Dockerfile"
-    ],
-    "link": "https://github.com/devlopersabbir/spring-crud-api",
-    "repo_link": "https://github.com/devlopersabbir/spring-crud-api"
   }
 ]
