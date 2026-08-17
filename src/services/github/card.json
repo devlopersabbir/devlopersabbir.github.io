@@ -1,5 +1,19 @@
 [
   {
+    "title": "terrorserver",
+    "description": "Terror Server is a small production-oriented HTTP router, reverse proxy, static file server, and automatic TLS gateway packaged as a single Go binary.",
+    "date": "Aug 2026",
+    "tech": [
+      "Go",
+      "Shell",
+      "HTML",
+      "Makefile",
+      "Dockerfile"
+    ],
+    "link": "https://terrorserver.vercel.app",
+    "repo_link": "https://github.com/devlopersabbir/terrorserver"
+  },
+  {
     "title": "devlopersabbir",
     "description": "About myself 🙂",
     "date": "Aug 2026",
@@ -84,7 +98,10 @@
     "title": "windows-linux-macos-youtube-video-downloader-app",
     "description": "Electron cors platform youtube video downloader app.",
     "date": "Aug 2026",
-    "tech": [],
+    "tech": [
+      "TypeScript",
+      "HTML"
+    ],
     "link": "https://github.com/devlopersabbir/windows-linux-macos-youtube-video-downloader-app",
     "repo_link": "https://github.com/devlopersabbir/windows-linux-macos-youtube-video-downloader-app"
   },
@@ -92,7 +109,19 @@
     "title": "vpcm",
     "description": "A zero-dependency, CGO-free, single-binary CLI and REST API engine built in Go to seamlessly manage, document, and connect to your remote virtual private servers.",
     "date": "Aug 2026",
-    "tech": [],
+    "tech": [
+      "Go",
+      "TypeScript",
+      "Shell",
+      "NSIS",
+      "PowerShell",
+      "JavaScript",
+      "Makefile",
+      "CSS",
+      "Ruby",
+      "Dockerfile",
+      "HTML"
+    ],
     "link": "https://github.com/devlopersabbir/vpcm",
     "repo_link": "https://github.com/devlopersabbir/vpcm"
   },
@@ -100,7 +129,11 @@
     "title": "website-blocker",
     "description": "Website blocker",
     "date": "Aug 2026",
-    "tech": [],
+    "tech": [
+      "TypeScript",
+      "HTML",
+      "JavaScript"
+    ],
     "link": "https://github.com/devlopersabbir/website-blocker",
     "repo_link": "https://github.com/devlopersabbir/website-blocker"
   },
@@ -108,7 +141,13 @@
     "title": "tview-cli",
     "description": "tview is a terminal-based candlestick chart viewer built with Go, AsciiGraph, and Cobra. No browser required.",
     "date": "Aug 2026",
-    "tech": [],
+    "tech": [
+      "Go",
+      "Ruby",
+      "Shell",
+      "PowerShell",
+      "Makefile"
+    ],
     "link": "https://github.com/devlopersabbir/tview-cli",
     "repo_link": "https://github.com/devlopersabbir/tview-cli"
   },
@@ -116,7 +155,11 @@
     "title": "video-downloader-extension",
     "description": "YouTube Video downloader chrome extension using CRXjs vite plugin",
     "date": "Aug 2026",
-    "tech": [],
+    "tech": [
+      "TypeScript",
+      "JavaScript",
+      "HTML"
+    ],
     "link": "https://youtube-video-downloader-chrome-extension.vercel.app",
     "repo_link": "https://github.com/devlopersabbir/video-downloader-extension"
   }
