@@ -1,5 +1,27 @@
 [
   {
+    "title": "webroom",
+    "description": "Decentralized real-time presence layer for every webpage. See how many people are browsing the same page as you in real time.",
+    "date": "Aug 2026",
+    "tech": [
+      "TypeScript"
+    ],
+    "link": "https://github.com/devlopersabbir/webroom",
+    "repo_link": "https://github.com/devlopersabbir/webroom"
+  },
+  {
+    "title": "acpsitc",
+    "description": "ACPSITC Website",
+    "date": "Aug 2026",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "link": "https://acpsitc-project.vercel.app/",
+    "repo_link": "https://github.com/devlopersabbir/acpsitc"
+  },
+  {
     "title": "devlopersabbir",
     "description": "About myself 🙂",
     "date": "Aug 2026",
