@@ -1,5 +1,76 @@
 [
   {
+    "title": "terrorserver",
+    "description": "Terror Server is a small production-oriented HTTP router, reverse proxy, static file server, and automatic TLS gateway packaged as a single Go binary.",
+    "date": "Aug 2026",
+    "tech": [
+      "Go",
+      "Shell",
+      "HTML",
+      "Makefile",
+      "Dockerfile"
+    ],
+    "link": "https://terrorserver.vercel.app",
+    "repo_link": "https://github.com/devlopersabbir/terrorserver"
+  },
+  {
+    "title": "tab-refresher-pro",
+    "description": "Tab Refresher Pro is a browser extension for configuring reliable per-tab auto-refresh jobs with presets, countdown badges, page overlays, and saved refresh profiles.",
+    "date": "Aug 2026",
+    "tech": [
+      "TypeScript",
+      "CSS",
+      "HTML",
+      "Shell"
+    ],
+    "link": "https://github.com/devlopersabbir/tab-refresher-pro",
+    "repo_link": "https://github.com/devlopersabbir/tab-refresher-pro"
+  },
+  {
+    "title": "simple-translate",
+    "description": "WebExtensions for translating text on web pages",
+    "date": "Aug 2026",
+    "tech": [
+      "JavaScript",
+      "SCSS",
+      "HTML"
+    ],
+    "link": "http://simple-translate.sienori.com/",
+    "repo_link": "https://github.com/devlopersabbir/simple-translate"
+  },
+  {
+    "title": "ops-toolkit",
+    "description": "A fast and interactive tool to safely remove services like Nginx, Caddy, and Docker from your system.",
+    "date": "Aug 2026",
+    "tech": [
+      "Shell"
+    ],
+    "link": "https://github.com/devlopersabbir/ops-toolkit",
+    "repo_link": "https://github.com/devlopersabbir/ops-toolkit"
+  },
+  {
+    "title": "nodejs-mail-sender",
+    "description": "NodeJs Mail sender",
+    "date": "Aug 2026",
+    "tech": [
+      "TypeScript"
+    ],
+    "link": "https://nodejs-mail-sender-ten.vercel.app",
+    "repo_link": "https://github.com/devlopersabbir/nodejs-mail-sender"
+  },
+  {
+    "title": "MERN-STACK-client-side",
+    "description": "full MERN-STACK client side with react and tailwind css",
+    "date": "Aug 2026",
+    "tech": [
+      "JavaScript",
+      "CSS",
+      "HTML"
+    ],
+    "link": "https://github.com/devlopersabbir/MERN-STACK-client-side",
+    "repo_link": "https://github.com/devlopersabbir/MERN-STACK-client-side"
+  },
+  {
     "title": "devlopersabbir",
     "description": "About myself 🙂",
     "date": "Aug 2026",
@@ -64,18 +135,6 @@
     "repo_link": "https://github.com/devlopersabbir/windows-linux-macos-youtube-video-downloader-app"
   },
   {
-    "title": "simple-translate",
-    "description": "WebExtensions for translating text on web pages",
-    "date": "Aug 2026",
-    "tech": [
-      "JavaScript",
-      "SCSS",
-      "HTML"
-    ],
-    "link": "http://simple-translate.sienori.com/",
-    "repo_link": "https://github.com/devlopersabbir/simple-translate"
-  },
-  {
     "title": "world-time-clock",
     "description": "World Time Clock: Your Ultimate Digital Companion for Global Time Management",
     "date": "Aug 2026",
@@ -87,45 +146,5 @@
     ],
     "link": "https://github.com/devlopersabbir/world-time-clock",
     "repo_link": "https://github.com/devlopersabbir/world-time-clock"
-  },
-  {
-    "title": "terrorserver",
-    "description": "Terror Server is a small production-oriented HTTP router, reverse proxy, static file server, and automatic TLS gateway packaged as a single Go binary.",
-    "date": "Aug 2026",
-    "tech": [
-      "Go",
-      "Shell",
-      "HTML",
-      "Makefile",
-      "Dockerfile"
-    ],
-    "link": "https://terrorserver.vercel.app",
-    "repo_link": "https://github.com/devlopersabbir/terrorserver"
-  },
-  {
-    "title": "video-downloader-extension",
-    "description": "YouTube Video downloader chrome extension using CRXjs vite plugin",
-    "date": "Aug 2026",
-    "tech": [
-      "TypeScript",
-      "JavaScript",
-      "HTML"
-    ],
-    "link": "https://youtube-video-downloader-chrome-extension.vercel.app",
-    "repo_link": "https://github.com/devlopersabbir/video-downloader-extension"
-  },
-  {
-    "title": "tview-cli",
-    "description": "tview is a terminal-based candlestick chart viewer built with Go, AsciiGraph, and Cobra. No browser required.",
-    "date": "Aug 2026",
-    "tech": [
-      "Go",
-      "Ruby",
-      "Shell",
-      "PowerShell",
-      "Makefile"
-    ],
-    "link": "https://github.com/devlopersabbir/tview-cli",
-    "repo_link": "https://github.com/devlopersabbir/tview-cli"
   }
 ]
