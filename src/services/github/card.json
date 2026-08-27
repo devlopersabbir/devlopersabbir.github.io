@@ -7,8 +7,8 @@
       "Go",
       "TypeScript",
       "Shell",
-      "NSIS",
       "PowerShell",
+      "NSIS",
       "JavaScript",
       "Makefile",
       "CSS",
@@ -159,18 +159,5 @@
     ],
     "link": "https://github.com/devlopersabbir/windows-linux-macos-youtube-video-downloader-app",
     "repo_link": "https://github.com/devlopersabbir/windows-linux-macos-youtube-video-downloader-app"
-  },
-  {
-    "title": "world-time-clock",
-    "description": "World Time Clock: Your Ultimate Digital Companion for Global Time Management",
-    "date": "Aug 2026",
-    "tech": [
-      "TypeScript",
-      "HTML",
-      "JavaScript",
-      "CSS"
-    ],
-    "link": "https://github.com/devlopersabbir/world-time-clock",
-    "repo_link": "https://github.com/devlopersabbir/world-time-clock"
   }
 ]
