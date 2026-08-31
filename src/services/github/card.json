@@ -1,5 +1,109 @@
 [
   {
+    "title": "count-native-app",
+    "description": "Use this tally clicker for counting people as they go into an event or to keep track of multiple people in the outdoors, at meetings. This clicker counter can be used to count anything: sheep, pets, mushrooms picked, trees climbed, corn planted, students, cars, wins, goals, laps ran or walked, etc.",
+    "date": "Aug 2026",
+    "tech": [
+      "TypeScript"
+    ],
+    "link": "https://play.google.com/store/apps/details?id=com.devlopersabbir.countnativeapp",
+    "repo_link": "https://github.com/devlopersabbir/count-native-app"
+  },
+  {
+    "title": "cross-browser-extension-builder",
+    "description": "Cross Platform Browser extension builder with React + TypeScript",
+    "date": "Aug 2026",
+    "tech": [
+      "TypeScript",
+      "HTML",
+      "JavaScript",
+      "CSS"
+    ],
+    "link": "https://github.com/devlopersabbir/cross-browser-extension-builder",
+    "repo_link": "https://github.com/devlopersabbir/cross-browser-extension-builder"
+  },
+  {
+    "title": "buy-me-coffee-clone",
+    "description": "Online payment application",
+    "date": "Aug 2026",
+    "tech": [
+      "TypeScript",
+      "CSS",
+      "JavaScript"
+    ],
+    "link": "https://github.com/devlopersabbir/buy-me-coffee-clone",
+    "repo_link": "https://github.com/devlopersabbir/buy-me-coffee-clone"
+  },
+  {
+    "title": "browserplugins",
+    "description": "Your trusted source for premium browser extensions. Handcrafted with care, tested for quality, and designed to enhance your digital experience.",
+    "date": "Aug 2026",
+    "tech": [
+      "TypeScript",
+      "JavaScript",
+      "CSS",
+      "Mermaid"
+    ],
+    "link": "https://browserplugins.vercel.app",
+    "repo_link": "https://github.com/devlopersabbir/browserplugins"
+  },
+  {
+    "title": "breez",
+    "description": "Instant, lightweight local tunneling for developers",
+    "date": "Aug 2026",
+    "tech": [
+      "Go",
+      "PowerShell",
+      "Makefile",
+      "Shell"
+    ],
+    "link": "https://github.com/devlopersabbir/breez",
+    "repo_link": "https://github.com/devlopersabbir/breez"
+  },
+  {
+    "title": "async-storage",
+    "description": "An asynchronous, persistent, key-value storage system for React Native.",
+    "date": "Aug 2026",
+    "tech": [
+      "TypeScript",
+      "Objective-C",
+      "Java",
+      "C++",
+      "Kotlin",
+      "JavaScript",
+      "Shell",
+      "Ruby",
+      "CSS",
+      "C"
+    ],
+    "link": "https://react-native-async-storage.github.io/async-storage/",
+    "repo_link": "https://github.com/devlopersabbir/async-storage"
+  },
+  {
+    "title": "awesome-links",
+    "description": "Users browse through a list of curated links and bookmark their favorite ones. Code for prisma.io course. ",
+    "date": "Aug 2026",
+    "tech": [
+      "TypeScript",
+      "JavaScript",
+      "CSS"
+    ],
+    "link": "https://github.com/devlopersabbir/awesome-links",
+    "repo_link": "https://github.com/devlopersabbir/awesome-links"
+  },
+  {
+    "title": "acpsitc",
+    "description": "ACPSITC Website",
+    "date": "Aug 2026",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "link": "https://acpsitc-project.vercel.app/",
+    "repo_link": "https://github.com/devlopersabbir/acpsitc"
+  },
+  {
     "title": "devlopersabbir",
     "description": "About myself 🙂",
     "date": "Aug 2026",
@@ -123,41 +227,5 @@
     ],
     "link": "https://github.com/devlopersabbir/MERN-STACK-client-side",
     "repo_link": "https://github.com/devlopersabbir/MERN-STACK-client-side"
-  },
-  {
-    "title": "breez",
-    "description": "Instant, lightweight local tunneling for developers",
-    "date": "Aug 2026",
-    "tech": [
-      "Go",
-      "PowerShell",
-      "Makefile",
-      "Shell"
-    ],
-    "link": "https://github.com/devlopersabbir/breez",
-    "repo_link": "https://github.com/devlopersabbir/breez"
-  },
-  {
-    "title": "acpsitc",
-    "description": "ACPSITC Website",
-    "date": "Aug 2026",
-    "tech": [
-      "HTML",
-      "CSS",
-      "JavaScript"
-    ],
-    "link": "https://acpsitc-project.vercel.app/",
-    "repo_link": "https://github.com/devlopersabbir/acpsitc"
-  },
-  {
-    "title": "windows-linux-macos-youtube-video-downloader-app",
-    "description": "Electron cors platform youtube video downloader app.",
-    "date": "Aug 2026",
-    "tech": [
-      "TypeScript",
-      "HTML"
-    ],
-    "link": "https://github.com/devlopersabbir/windows-linux-macos-youtube-video-downloader-app",
-    "repo_link": "https://github.com/devlopersabbir/windows-linux-macos-youtube-video-downloader-app"
   }
 ]
