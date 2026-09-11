@@ -13,6 +13,18 @@
     "repo_link": "https://github.com/devlopersabbir/webroom"
   },
   {
+    "title": "screen-recoder-pro",
+    "description": "Screen Recorder Pro - Is a Browser Extension that will allows us to record screen. Remember Chrome & Firefox both support this plugin",
+    "date": "Sep 2026",
+    "tech": [
+      "TypeScript",
+      "CSS",
+      "HTML"
+    ],
+    "link": "https://github.com/devlopersabbir/screen-recoder-pro",
+    "repo_link": "https://github.com/devlopersabbir/screen-recoder-pro"
+  },
+  {
     "title": "devlopersabbir",
     "description": "About myself 🙂",
     "date": "Sep 2026",
@@ -164,18 +176,5 @@
     ],
     "link": "https://github.com/devlopersabbir/MERN-STACK-client-side",
     "repo_link": "https://github.com/devlopersabbir/MERN-STACK-client-side"
-  },
-  {
-    "title": "image-genrator-extension",
-    "description": "AI image generator cors platfrom browser extension",
-    "date": "Aug 2026",
-    "tech": [
-      "TypeScript",
-      "HTML",
-      "JavaScript",
-      "CSS"
-    ],
-    "link": "https://github.com/devlopersabbir/image-genrator-extension",
-    "repo_link": "https://github.com/devlopersabbir/image-genrator-extension"
   }
 ]
