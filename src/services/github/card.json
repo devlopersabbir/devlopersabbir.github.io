@@ -13,6 +13,19 @@
     "repo_link": "https://github.com/devlopersabbir/webroom"
   },
   {
+    "title": "breez",
+    "description": "Instant, lightweight local tunneling for developers",
+    "date": "Sep 2026",
+    "tech": [
+      "Go",
+      "PowerShell",
+      "Makefile",
+      "Shell"
+    ],
+    "link": "https://github.com/devlopersabbir/breez",
+    "repo_link": "https://github.com/devlopersabbir/breez"
+  },
+  {
     "title": "screen-recoder-pro",
     "description": "Screen Recorder Pro - Is a Browser Extension that will allows us to record screen. Remember Chrome & Firefox both support this plugin",
     "date": "Sep 2026",
