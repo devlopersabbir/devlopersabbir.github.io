@@ -1,5 +1,28 @@
 [
   {
+    "title": "digital-marketplace",
+    "description": "Multi-vendor Digital Product Selling Website With Next 14",
+    "date": "Oct 2026",
+    "tech": [
+      "TypeScript",
+      "CSS",
+      "JavaScript"
+    ],
+    "link": "https://digital-market-two.vercel.app",
+    "repo_link": "https://github.com/devlopersabbir/digital-marketplace"
+  },
+  {
+    "title": "BookListApp",
+    "description": "Vanilla JavaScript Book List simple app",
+    "date": "Oct 2026",
+    "tech": [
+      "HTML",
+      "JavaScript"
+    ],
+    "link": "https://github.com/devlopersabbir/BookListApp",
+    "repo_link": "https://github.com/devlopersabbir/BookListApp"
+  },
+  {
     "title": "Authenticator",
     "description": "Authenticator generates 2-Step Verification codes in your browser.",
     "date": "Oct 2026",
@@ -14,15 +37,16 @@
     "repo_link": "https://github.com/devlopersabbir/Authenticator"
   },
   {
-    "title": "BookListApp",
-    "description": "Vanilla JavaScript Book List simple app",
+    "title": "acpsitc",
+    "description": "ACPSITC Website",
     "date": "Oct 2026",
     "tech": [
       "HTML",
+      "CSS",
       "JavaScript"
     ],
-    "link": "https://github.com/devlopersabbir/BookListApp",
-    "repo_link": "https://github.com/devlopersabbir/BookListApp"
+    "link": "https://acpsitc-project.vercel.app/",
+    "repo_link": "https://github.com/devlopersabbir/acpsitc"
   },
   {
     "title": "async-storage",
@@ -44,18 +68,6 @@
     "repo_link": "https://github.com/devlopersabbir/async-storage"
   },
   {
-    "title": "acpsitc",
-    "description": "ACPSITC Website",
-    "date": "Oct 2026",
-    "tech": [
-      "HTML",
-      "CSS",
-      "JavaScript"
-    ],
-    "link": "https://acpsitc-project.vercel.app/",
-    "repo_link": "https://github.com/devlopersabbir/acpsitc"
-  },
-  {
     "title": "awesome-links",
     "description": "Users browse through a list of curated links and bookmark their favorite ones. Code for prisma.io course. ",
     "date": "Oct 2026",
@@ -68,16 +80,6 @@
     "repo_link": "https://github.com/devlopersabbir/awesome-links"
   },
   {
-    "title": "adobe-scripting",
-    "description": "Adobe Script",
-    "date": "Oct 2026",
-    "tech": [
-      "JavaScript"
-    ],
-    "link": "https://github.com/devlopersabbir/adobe-scripting",
-    "repo_link": "https://github.com/devlopersabbir/adobe-scripting"
-  },
-  {
     "title": "All-Friend-Request-Cancel",
     "description": "In this video I have shown you how you can cancel your friend request from your friend. I have seen it in a very simple and easy way so I hope you can do it very easily.",
     "date": "Oct 2026",
@@ -86,6 +88,16 @@
     ],
     "link": "https://github.com/devlopersabbir/All-Friend-Request-Cancel",
     "repo_link": "https://github.com/devlopersabbir/All-Friend-Request-Cancel"
+  },
+  {
+    "title": "adobe-scripting",
+    "description": "Adobe Script",
+    "date": "Oct 2026",
+    "tech": [
+      "JavaScript"
+    ],
+    "link": "https://github.com/devlopersabbir/adobe-scripting",
+    "repo_link": "https://github.com/devlopersabbir/adobe-scripting"
   },
   {
     "title": "100-Java-Project-in-Bangla",
@@ -164,17 +176,5 @@
     ],
     "link": "https://github.com/devlopersabbir/vpcm",
     "repo_link": "https://github.com/devlopersabbir/vpcm"
-  },
-  {
-    "title": "video-downloader-extension",
-    "description": "YouTube Video downloader chrome extension using CRXjs vite plugin",
-    "date": "Aug 2026",
-    "tech": [
-      "TypeScript",
-      "JavaScript",
-      "HTML"
-    ],
-    "link": "https://youtube-video-downloader-chrome-extension.vercel.app",
-    "repo_link": "https://github.com/devlopersabbir/video-downloader-extension"
   }
 ]
