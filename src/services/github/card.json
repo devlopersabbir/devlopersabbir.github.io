@@ -1,15 +1,5 @@
 [
   {
-    "title": "fast-crud-api",
-    "description": "CRUD REST API with FastApi",
-    "date": "Oct 2026",
-    "tech": [
-      "Python"
-    ],
-    "link": "https://fastapi.tiangolo.com/",
-    "repo_link": "https://github.com/devlopersabbir/fast-crud-api"
-  },
-  {
     "title": "find-devs-pair",
     "description": "FindDevs Pair application will help to pair programming with random devs online",
     "date": "Oct 2026",
@@ -33,6 +23,36 @@
     "repo_link": "https://github.com/devlopersabbir/fast-jwt"
   },
   {
+    "title": "fast-crud-api",
+    "description": "CRUD REST API with FastApi",
+    "date": "Oct 2026",
+    "tech": [
+      "Python"
+    ],
+    "link": "https://fastapi.tiangolo.com/",
+    "repo_link": "https://github.com/devlopersabbir/fast-crud-api"
+  },
+  {
+    "title": "devlopersabbir",
+    "description": "About myself 🙂",
+    "date": "Oct 2026",
+    "tech": [],
+    "link": "https://github.com/devlopersabbir/devlopersabbir",
+    "repo_link": "https://github.com/devlopersabbir/devlopersabbir"
+  },
+  {
+    "title": "dribbble-clone",
+    "description": "Full-stack next 13 dribbble clone ",
+    "date": "Oct 2026",
+    "tech": [
+      "TypeScript",
+      "CSS",
+      "JavaScript"
+    ],
+    "link": "https://dribbble-clone-roan.vercel.app",
+    "repo_link": "https://github.com/devlopersabbir/dribbble-clone"
+  },
+  {
     "title": "executeme",
     "description": "ExecuteMe allows users to write, execute, and test code in various programming languages directly in the browser. https://devlopersabbir.github.io/executeme",
     "date": "Oct 2026",
@@ -51,28 +71,6 @@
     "repo_link": "https://github.com/devlopersabbir/executeme"
   },
   {
-    "title": "dribbble-clone",
-    "description": "Full-stack next 13 dribbble clone ",
-    "date": "Oct 2026",
-    "tech": [
-      "TypeScript",
-      "CSS",
-      "JavaScript"
-    ],
-    "link": "https://dribbble-clone-roan.vercel.app",
-    "repo_link": "https://github.com/devlopersabbir/dribbble-clone"
-  },
-  {
-    "title": "dev-http-logger",
-    "description": "We can able to log our http all history like METHOD request PATH etc with this middleware",
-    "date": "Oct 2026",
-    "tech": [
-      "TypeScript"
-    ],
-    "link": "https://www.npmjs.com/package/dev-http-logger",
-    "repo_link": "https://github.com/devlopersabbir/dev-http-logger"
-  },
-  {
     "title": "digital-marketplace",
     "description": "Multi-vendor Digital Product Selling Website With Next 14",
     "date": "Oct 2026",
@@ -85,12 +83,14 @@
     "repo_link": "https://github.com/devlopersabbir/digital-marketplace"
   },
   {
-    "title": "devlopersabbir",
-    "description": "About myself 🙂",
+    "title": "django-course",
+    "description": "Complete django course for all python developer",
     "date": "Oct 2026",
-    "tech": [],
-    "link": "https://github.com/devlopersabbir/devlopersabbir",
-    "repo_link": "https://github.com/devlopersabbir/devlopersabbir"
+    "tech": [
+      "Python"
+    ],
+    "link": "https://github.com/devlopersabbir/django-course",
+    "repo_link": "https://github.com/devlopersabbir/django-course"
   },
   {
     "title": "dev-unique-id",
@@ -103,25 +103,24 @@
     "repo_link": "https://github.com/devlopersabbir/dev-unique-id"
   },
   {
-    "title": "django-course",
-    "description": "Complete django course for all python developer",
+    "title": "dev-http-logger",
+    "description": "We can able to log our http all history like METHOD request PATH etc with this middleware",
     "date": "Oct 2026",
     "tech": [
-      "Python"
+      "TypeScript"
     ],
-    "link": "https://github.com/devlopersabbir/django-course",
-    "repo_link": "https://github.com/devlopersabbir/django-course"
+    "link": "https://www.npmjs.com/package/dev-http-logger",
+    "repo_link": "https://github.com/devlopersabbir/dev-http-logger"
   },
   {
-    "title": "csv-to-sql-insert",
-    "description": "Provide table data as a CSV (comma-separated values) file and output a SQL insert statement for a table with the same name as the file.",
+    "title": "data-structure-algorithm",
+    "description": "DSA with (c)",
     "date": "Oct 2026",
     "tech": [
-      "TypeScript",
-      "JavaScript"
+      "C"
     ],
-    "link": "https://github.com/devlopersabbir/csv-to-sql-insert",
-    "repo_link": "https://github.com/devlopersabbir/csv-to-sql-insert"
+    "link": "https://github.com/devlopersabbir/data-structure-algorithm",
+    "repo_link": "https://github.com/devlopersabbir/data-structure-algorithm"
   },
   {
     "title": "dev-auth-middleware-jwt",
@@ -155,15 +154,5 @@
     ],
     "link": "https://github.com/devlopersabbir/Create-freelancer.com-Login-Pages-In-HTML-and-CSS-st-sabbir",
     "repo_link": "https://github.com/devlopersabbir/Create-freelancer.com-Login-Pages-In-HTML-and-CSS-st-sabbir"
-  },
-  {
-    "title": "data-structure-algorithm",
-    "description": "DSA with (c)",
-    "date": "Oct 2026",
-    "tech": [
-      "C"
-    ],
-    "link": "https://github.com/devlopersabbir/data-structure-algorithm",
-    "repo_link": "https://github.com/devlopersabbir/data-structure-algorithm"
   }
 ]
