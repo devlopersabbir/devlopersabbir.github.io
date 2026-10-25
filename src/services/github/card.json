@@ -1,5 +1,47 @@
 [
   {
+    "title": "express",
+    "description": "Fast, unopinionated, minimalist web framework for node.",
+    "date": "Oct 2026",
+    "tech": [
+      "JavaScript",
+      "Makefile",
+      "Shell"
+    ],
+    "link": "https://expressjs.com",
+    "repo_link": "https://github.com/devlopersabbir/express"
+  },
+  {
+    "title": "first-contributions",
+    "description": "🚀✨ Contribute to open source projects",
+    "date": "Oct 2026",
+    "tech": [],
+    "link": "https://firstcontributions.github.io",
+    "repo_link": "https://github.com/devlopersabbir/first-contributions"
+  },
+  {
+    "title": "find-devs",
+    "description": "Find Devs is a kind of developer's Fair. An open-source platform to find all the developers in the world.",
+    "date": "Oct 2026",
+    "tech": [
+      "TypeScript",
+      "CSS",
+      "JavaScript"
+    ],
+    "link": "https://finddevs.vercel.app",
+    "repo_link": "https://github.com/devlopersabbir/find-devs"
+  },
+  {
+    "title": "fast-jwt",
+    "description": "FastAPI development with JWT ",
+    "date": "Oct 2026",
+    "tech": [
+      "Python"
+    ],
+    "link": "https://github.com/devlopersabbir/fast-jwt",
+    "repo_link": "https://github.com/devlopersabbir/fast-jwt"
+  },
+  {
     "title": "find-devs-pair",
     "description": "FindDevs Pair application will help to pair programming with random devs online",
     "date": "Oct 2026",
@@ -13,16 +55,6 @@
     "repo_link": "https://github.com/devlopersabbir/find-devs-pair"
   },
   {
-    "title": "fast-jwt",
-    "description": "FastAPI development with JWT ",
-    "date": "Oct 2026",
-    "tech": [
-      "Python"
-    ],
-    "link": "https://github.com/devlopersabbir/fast-jwt",
-    "repo_link": "https://github.com/devlopersabbir/fast-jwt"
-  },
-  {
     "title": "fast-crud-api",
     "description": "CRUD REST API with FastApi",
     "date": "Oct 2026",
@@ -31,14 +63,6 @@
     ],
     "link": "https://fastapi.tiangolo.com/",
     "repo_link": "https://github.com/devlopersabbir/fast-crud-api"
-  },
-  {
-    "title": "devlopersabbir",
-    "description": "About myself 🙂",
-    "date": "Oct 2026",
-    "tech": [],
-    "link": "https://github.com/devlopersabbir/devlopersabbir",
-    "repo_link": "https://github.com/devlopersabbir/devlopersabbir"
   },
   {
     "title": "dribbble-clone",
@@ -51,6 +75,14 @@
     ],
     "link": "https://dribbble-clone-roan.vercel.app",
     "repo_link": "https://github.com/devlopersabbir/dribbble-clone"
+  },
+  {
+    "title": "devlopersabbir",
+    "description": "About myself 🙂",
+    "date": "Oct 2026",
+    "tech": [],
+    "link": "https://github.com/devlopersabbir/devlopersabbir",
+    "repo_link": "https://github.com/devlopersabbir/devlopersabbir"
   },
   {
     "title": "executeme",
@@ -83,16 +115,6 @@
     "repo_link": "https://github.com/devlopersabbir/digital-marketplace"
   },
   {
-    "title": "django-course",
-    "description": "Complete django course for all python developer",
-    "date": "Oct 2026",
-    "tech": [
-      "Python"
-    ],
-    "link": "https://github.com/devlopersabbir/django-course",
-    "repo_link": "https://github.com/devlopersabbir/django-course"
-  },
-  {
     "title": "dev-unique-id",
     "description": "Unique ID generator npm package",
     "date": "Oct 2026",
@@ -103,6 +125,16 @@
     "repo_link": "https://github.com/devlopersabbir/dev-unique-id"
   },
   {
+    "title": "django-course",
+    "description": "Complete django course for all python developer",
+    "date": "Oct 2026",
+    "tech": [
+      "Python"
+    ],
+    "link": "https://github.com/devlopersabbir/django-course",
+    "repo_link": "https://github.com/devlopersabbir/django-course"
+  },
+  {
     "title": "dev-http-logger",
     "description": "We can able to log our http all history like METHOD request PATH etc with this middleware",
     "date": "Oct 2026",
@@ -111,48 +143,5 @@
     ],
     "link": "https://www.npmjs.com/package/dev-http-logger",
     "repo_link": "https://github.com/devlopersabbir/dev-http-logger"
-  },
-  {
-    "title": "data-structure-algorithm",
-    "description": "DSA with (c)",
-    "date": "Oct 2026",
-    "tech": [
-      "C"
-    ],
-    "link": "https://github.com/devlopersabbir/data-structure-algorithm",
-    "repo_link": "https://github.com/devlopersabbir/data-structure-algorithm"
-  },
-  {
-    "title": "dev-auth-middleware-jwt",
-    "description": "Auth middleware with JWT refresh token",
-    "date": "Oct 2026",
-    "tech": [
-      "TypeScript"
-    ],
-    "link": "https://github.com/devlopersabbir/dev-auth-middleware-jwt",
-    "repo_link": "https://github.com/devlopersabbir/dev-auth-middleware-jwt"
-  },
-  {
-    "title": "deno-crash-course",
-    "description": "DENO - Crash Course ",
-    "date": "Oct 2026",
-    "tech": [
-      "TypeScript",
-      "JavaScript"
-    ],
-    "link": "https://sabbirhossa-deno-crash-13.deno.dev/",
-    "repo_link": "https://github.com/devlopersabbir/deno-crash-course"
-  },
-  {
-    "title": "Create-freelancer.com-Login-Pages-In-HTML-and-CSS-st-sabbir",
-    "description": " I have shown you how to easily design freelancer.com login pages with HTML and CSS. I have explained it is very simple and simple Bengali words. I hope after watching this video you can easily create it without any coding.",
-    "date": "Oct 2026",
-    "tech": [
-      "CSS",
-      "HTML",
-      "JavaScript"
-    ],
-    "link": "https://github.com/devlopersabbir/Create-freelancer.com-Login-Pages-In-HTML-and-CSS-st-sabbir",
-    "repo_link": "https://github.com/devlopersabbir/Create-freelancer.com-Login-Pages-In-HTML-and-CSS-st-sabbir"
   }
 ]
