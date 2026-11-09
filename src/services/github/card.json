@@ -1,5 +1,92 @@
 [
   {
+    "title": "Authenticator",
+    "description": "Authenticator generates 2-Step Verification codes in your browser.",
+    "date": "Nov 2026",
+    "tech": [
+      "TypeScript",
+      "Vue",
+      "SCSS",
+      "Shell",
+      "HTML"
+    ],
+    "link": "https://authenticator.cc",
+    "repo_link": "https://github.com/devlopersabbir/Authenticator"
+  },
+  {
+    "title": "async-storage",
+    "description": "An asynchronous, persistent, key-value storage system for React Native.",
+    "date": "Nov 2026",
+    "tech": [
+      "TypeScript",
+      "Objective-C",
+      "Java",
+      "C++",
+      "Kotlin",
+      "JavaScript",
+      "Shell",
+      "Ruby",
+      "CSS",
+      "C"
+    ],
+    "link": "https://react-native-async-storage.github.io/async-storage/",
+    "repo_link": "https://github.com/devlopersabbir/async-storage"
+  },
+  {
+    "title": "awesome-links",
+    "description": "Users browse through a list of curated links and bookmark their favorite ones. Code for prisma.io course. ",
+    "date": "Nov 2026",
+    "tech": [
+      "TypeScript",
+      "JavaScript",
+      "CSS"
+    ],
+    "link": "https://github.com/devlopersabbir/awesome-links",
+    "repo_link": "https://github.com/devlopersabbir/awesome-links"
+  },
+  {
+    "title": "adobe-scripting",
+    "description": "Adobe Script",
+    "date": "Nov 2026",
+    "tech": [
+      "JavaScript"
+    ],
+    "link": "https://github.com/devlopersabbir/adobe-scripting",
+    "repo_link": "https://github.com/devlopersabbir/adobe-scripting"
+  },
+  {
+    "title": "acpsitc",
+    "description": "ACPSITC Website",
+    "date": "Nov 2026",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "link": "https://acpsitc-project.vercel.app/",
+    "repo_link": "https://github.com/devlopersabbir/acpsitc"
+  },
+  {
+    "title": "100-Java-Project-in-Bangla",
+    "description": "100+ Java Project in Bangla by Sabbir Hossain Shuvo",
+    "date": "Nov 2026",
+    "tech": [
+      "Java"
+    ],
+    "link": "https://github.com/devlopersabbir/100-Java-Project-in-Bangla",
+    "repo_link": "https://github.com/devlopersabbir/100-Java-Project-in-Bangla"
+  },
+  {
+    "title": "All-Friend-Request-Cancel",
+    "description": "In this video I have shown you how you can cancel your friend request from your friend. I have seen it in a very simple and easy way so I hope you can do it very easily.",
+    "date": "Nov 2026",
+    "tech": [
+      "JavaScript"
+    ],
+    "link": "https://github.com/devlopersabbir/All-Friend-Request-Cancel",
+    "repo_link": "https://github.com/devlopersabbir/All-Friend-Request-Cancel"
+  },
+  {
     "title": "webroom",
     "description": "Decentralized real-time presence layer for every webpage. See how many people are browsing the same page as you in real time.",
     "date": "Nov 2026",
@@ -76,85 +163,5 @@
     ],
     "link": "https://fastapi.tiangolo.com/",
     "repo_link": "https://github.com/devlopersabbir/fast-crud-api"
-  },
-  {
-    "title": "dribbble-clone",
-    "description": "Full-stack next 13 dribbble clone ",
-    "date": "Oct 2026",
-    "tech": [
-      "TypeScript",
-      "CSS",
-      "JavaScript"
-    ],
-    "link": "https://dribbble-clone-roan.vercel.app",
-    "repo_link": "https://github.com/devlopersabbir/dribbble-clone"
-  },
-  {
-    "title": "devlopersabbir",
-    "description": "About myself 🙂",
-    "date": "Oct 2026",
-    "tech": [],
-    "link": "https://github.com/devlopersabbir/devlopersabbir",
-    "repo_link": "https://github.com/devlopersabbir/devlopersabbir"
-  },
-  {
-    "title": "executeme",
-    "description": "ExecuteMe allows users to write, execute, and test code in various programming languages directly in the browser. https://devlopersabbir.github.io/executeme",
-    "date": "Oct 2026",
-    "tech": [
-      "TypeScript",
-      "JavaScript",
-      "HTML",
-      "Shell",
-      "CSS",
-      "Dockerfile",
-      "Java",
-      "Python",
-      "Kotlin"
-    ],
-    "link": "https://executeme.vercel.app",
-    "repo_link": "https://github.com/devlopersabbir/executeme"
-  },
-  {
-    "title": "dev-unique-id",
-    "description": "Unique ID generator npm package",
-    "date": "Oct 2026",
-    "tech": [
-      "TypeScript"
-    ],
-    "link": "https://devlopersabbir.github.io/dev-unique-id/",
-    "repo_link": "https://github.com/devlopersabbir/dev-unique-id"
-  },
-  {
-    "title": "django-course",
-    "description": "Complete django course for all python developer",
-    "date": "Oct 2026",
-    "tech": [
-      "Python"
-    ],
-    "link": "https://github.com/devlopersabbir/django-course",
-    "repo_link": "https://github.com/devlopersabbir/django-course"
-  },
-  {
-    "title": "digital-marketplace",
-    "description": "Multi-vendor Digital Product Selling Website With Next 14",
-    "date": "Oct 2026",
-    "tech": [
-      "TypeScript",
-      "CSS",
-      "JavaScript"
-    ],
-    "link": "https://digital-market-two.vercel.app",
-    "repo_link": "https://github.com/devlopersabbir/digital-marketplace"
-  },
-  {
-    "title": "dev-http-logger",
-    "description": "We can able to log our http all history like METHOD request PATH etc with this middleware",
-    "date": "Oct 2026",
-    "tech": [
-      "TypeScript"
-    ],
-    "link": "https://www.npmjs.com/package/dev-http-logger",
-    "repo_link": "https://github.com/devlopersabbir/dev-http-logger"
   }
 ]
