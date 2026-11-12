@@ -9,5 +9,5 @@ I started my journey building backend systems, which gradually led me deeper int
 I enjoy solving infrastructure problems, troubleshooting production issues, automating repetitive work, and exploring system vulnerabilities. My work primarily involves AWS, Linux, Docker, Kubernetes, and Terraform, alongside CI/CD, monitoring, observability, and infrastructure security.
 
 For me, engineering isn't just about building systems. It's about understanding how they work, how they can fail, and how to make them more reliable and secure.`,
-  image: "/sabbir-profile.jpeg",
+  image: "/sabbir-profile.png",
 } as const;
