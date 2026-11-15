@@ -166,9 +166,7 @@
     "title": "fast-jwt",
     "description": "FastAPI development with JWT ",
     "date": "Oct 2026",
-    "tech": [
-      "Python"
-    ],
+    "tech": [],
     "link": "https://github.com/devlopersabbir/fast-jwt",
     "repo_link": "https://github.com/devlopersabbir/fast-jwt"
   }
