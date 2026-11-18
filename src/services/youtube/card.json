@@ -1,5 +1,12 @@
 [
   {
+    "title": "Complete DevOps Engineer Assessment | Go, Docker, AWS, Terraform, Kubernetes & CI/CD",
+    "videoId": "dCzHTVFT8d4",
+    "link": "https://www.youtube.com/watch?v=dCzHTVFT8d4",
+    "thumbnail": "https://img.youtube.com/vi/dCzHTVFT8d4/mqdefault.jpg",
+    "pubDate": "2026-11-17T17:44:54+00:00"
+  },
+  {
     "title": "CI/CD Crash Course: Deploy Docker Apps to AWS EC2 with GitHub Actions & Caddy (Beginner to Advanced)",
     "videoId": "FRJ_C-sZJB8",
     "link": "https://www.youtube.com/watch?v=FRJ_C-sZJB8",
@@ -19,12 +26,5 @@
     "link": "https://www.youtube.com/watch?v=Na101joyZCI",
     "thumbnail": "https://img.youtube.com/vi/Na101joyZCI/mqdefault.jpg",
     "pubDate": "2025-03-11T15:02:53+00:00"
-  },
-  {
-    "title": "Mastering lsc-storage: Simplify Web Storage Management NPM Package",
-    "videoId": "iFdokUQltgk",
-    "link": "https://www.youtube.com/watch?v=iFdokUQltgk",
-    "thumbnail": "https://img.youtube.com/vi/iFdokUQltgk/mqdefault.jpg",
-    "pubDate": "2025-02-23T17:03:15+00:00"
   }
 ]
